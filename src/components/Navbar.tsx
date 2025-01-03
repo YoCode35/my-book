@@ -17,79 +17,87 @@ export default function Navbar() {
     pathname === path ? 'text-navText' : 'text-[#3d5b79]';
 
   return (
-    <nav className="relative bg-transparent h-[490px] flex items-center justify-center">
+    <nav className="relative bg-transparent h-[595px] lg:h-[490px] flex items-center justify-center">
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(
-              to bottom,
-              rgba(255, 255, 255, 0) 0%,
-              rgba(0, 0, 0, 1) 100%
-            ),
-            radial-gradient(rgba(255, 255, 255, 0.1) calc(20vw / 300), transparent calc(20vw / 200))
-          `,
-          backgroundSize: `100% 100%, calc(35vw / 80) calc(35vw / 80)`,
-        }}
+      className="absolute inset-0"
+      style={{
+        backgroundImage: `
+        linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 1) 100%
+        ),
+        radial-gradient(rgba(255, 255, 255, 0.1) calc(20vw / 300), transparent calc(20vw / 200))
+        `,
+        backgroundSize: `100% 100%, calc(35vw / 80) calc(35vw / 80)`,
+      }}
       ></div>
 
-      <div className="relative z-10 flex items-center justify-between w-full max-w-[1200px] px-6 mr-4 sm:mr-6 md:mr-8">
-        {/* Texte à gauche */}
-        <div className="text-left flex flex-col items-start justify-center ml-4">
-          <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubyk font-light tracking-wider z-10 text-left">
-            <span>Concepteur & Développeur</span>
-            <br />
-            <span>d&apos;applications Fullstack</span>
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] px-6 mr-4 sm:mr-6 md:mr-8 mt-16 lg:mt-20">
+        <div className="text-left flex flex-col items-start justify-center ml-4 mt-16 lg:mt-0 relative">
+          <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubik font-light tracking-wider z-10 text-left">
+        <span>Concepteur & Développeur</span>
+        <br />
+        <span>d&apos;applications Fullstack</span>
           </h1>
 
-          <p className="text-white font-orbitron text-lg sm:text-xl md:text-2xl mt-4 z-10 text-left">
-            Yoann
-            <br />
-            GREGOIRE
-          </p>
+          <div className="flex items-center justify-between w-full">
+        <p className="text-white font-orbitron text-lg sm:text-xl md:text-2xl mt-2 z-10 text-left">
+          Yoann
+          <br />
+          GREGOIRE
+        </p>
 
-          <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-8 z-10 font-rubyk font-light text-left pl-4 border-l-4 border-[#4d94ff]">
-            &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
-          </p>
-
+        {/* CV block for mobile */}
+        <div className="lg:hidden relative flex justify-center items-center ml-4">
+          <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
+        <FcDownload className="text-white sm:text-xl" />
+        <span className="text-white font-clash-display font-light sm:text-base">CV</span>
+          </div>
+          <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
+          <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
+          <a
+        href="/path/to/CV-YoannGREGOIRE_(CDA).pdf"
+        download="CV-YoannGREGOIRE_(CDA).pdf"
+        className="absolute inset-0 z-30"
+        aria-label="Télécharger mon CV"
+          />
         </div>
-
-        {/* Conteneur relatif pour le centrage des cercles */}
-        <div className="relative flex justify-center items-center">
-          {/* Premier cercle bleu (plus petit) avec icône et texte */}
-          <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[80px] md:h-[80px] lg:w-[90px] lg:h-[90px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
-            {/* Icône de téléchargement en blanc */}
-            <FcDownload className="text-white sm:text-xl md:text-2xl lg:text-3xl" />
-            {/* Texte "CV" */}
-            <span className="text-white font-clash-display font-light sm:text-base md:text-lg lg:text-xl">CV</span>
           </div>
 
-          {/* Deuxième cercle (plus grand et plus transparent) */}
-          <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
+            <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-12 lg:mt-8 z-10 font-rubik font-light text-left pl-4 border-l-4 border-[#4d94ff]">
+          &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
+            </p>
+        </div>
 
-          {/* Troisième cercle (encore plus grand et plus transparent) */}
-          <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] md:w-[125px] md:h-[125px] lg:w-[135px] lg:h-[135px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
-
-          {/* Lien de téléchargement */}
+        {/* CV block for desktop */}
+        <div className="hidden lg:flex relative justify-center items-center lg:mt-0">
+          <div className="w-[90px] h-[90px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
+        <FcDownload className="text-white text-3xl" />
+        <span className="text-white font-clash-display font-light text-xl">CV</span>
+          </div>
+          <div className="w-[110px] h-[110px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
+          <div className="w-[135px] h-[135px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
           <a
-            href="/path/to/CV-YoannGREGOIRE_(CDA).pdf"  // Chemin vers le fichier PDF
-            download="CV-YoannGREGOIRE_(CDA).pdf"   // Nom du fichier téléchargé
-            className="absolute inset-0 z-30"
-            aria-label="Télécharger mon CV"
+        href="/path/to/CV-YoannGREGOIRE_(CDA).pdf"
+        download="CV-YoannGREGOIRE_(CDA).pdf"
+        className="absolute inset-0 z-30"
+        aria-label="Télécharger mon CV"
           />
         </div>
 
-        {/* Image à droite avec marge ajustée */}
-        <div className="relative w-[300px] h-[350px] ml-8 sm:ml-12 md:ml-16 lg:ml-20">
+        {/* Image */}
+        <div className="relative w-[300px] h-[350px] mt-8 lg:mt-0 lg:w-[350px] lg:h-[400px] lg:ml-8 lg:ml-12 xl:ml-16">
           <Image
             src="/img/moi.png"
             alt="Photo Identité"
-            layout="fill" // Remplit le conteneur en respectant le ratio d'aspect
-            objectFit="contain" // Maintient le ratio et s'adapte au conteneur
+            layout="fill"
+            objectFit="contain"
             className="rounded-md shadow-lg"
           />
         </div>
+
       </div>
 
       <div className="absolute top-3 left-0 w-full flex justify-center z-10">
@@ -124,7 +132,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Bouton "Me contacter" visible uniquement sur les grands écrans */}
+          {/* Bouton "Me contacter" Desktop */}
           <div className="ml-4 hidden lg:block">
             <Link href="/contact">
               <button
@@ -138,11 +146,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu mobile qui apparaît lorsque 'menuOpen' est vrai */}
+      {/* Menu mobile */}
       {menuOpen && (
         <div
           className="lg:hidden absolute top-0 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[400px] bg-[rgba(1,22,39,0.8)] py-4 px-6 rounded-lg shadow-lg space-y-4 z-20"
-          style={{ backdropFilter: "blur(8px)" }} // Effet de flou en arrière-plan (optionnel)
+          style={{ backdropFilter: "blur(8px)" }}
         >
           {[
             { href: "/", label: "Accueil" },

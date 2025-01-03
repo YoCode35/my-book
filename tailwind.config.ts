@@ -16,17 +16,14 @@ export default {
         },
         navText: "#fff000",
         navTitle: "#2c3e50",
-        navLinkInactive: "#ccc", // Ajout de la couleur grise pour les liens inactifs
+        navLinkInactive: "#ccc",
         navLinkHover: "#fff000",
       },
       fontFamily: {
         quicksand: ['Quicksand', 'sans-serif'],
-        rubyk: ['Rubyk', 'sans-serif'],
+        rubik: ['Rubik', 'sans-serif'],
         clash: ['Clash Display', 'serif'],
       },
-      /* backgroundImage: {
-        'bkgd-black-colored-spots': "url('/img/bkgd_black-&-colored-spots.png')",
-      }, */
     },
   },
   plugins: [],
