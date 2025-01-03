@@ -52,6 +52,26 @@ a {
 }
 
 @font-face {
+  font-family: 'Orbitron-Black';
+  src: url('/fonts/Orbitron-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Orbitron-Bold';
+  src: url('/fonts/Orbitron-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Orbitron-Medium';
+  src: url('/fonts/Orbitron-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Orbitron-Regular';
+  src: url('/fonts/Orbitron-Regular.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Quicksand';
   src: url('/fonts/Quicksand_Bold_Oblique.otf') format('opentype');
   font-weight: 700;
