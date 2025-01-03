@@ -73,7 +73,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
       {/* Menu mobile */}
       {menuOpen && (
         <div
-          className="lg:hidden absolute top-0 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[400px] bg-[rgba(1,22,39,0.8)] py-4 px-6 rounded-lg shadow-lg space-y-4 z-20"
+          className="lg:hidden absolute top-0 left-1/2 transform -translate-x-1/2 w-[70%] max-w-[400px] bg-[rgba(1,22,39,0.8)] py-4 px-6 rounded-lg shadow-lg space-y-4 z-20"
           style={{ backdropFilter: "blur(8px)" }}
         >
           {[
@@ -85,14 +85,14 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               key={href}
               href={href}
               className={`block text-center px-4 py-2 rounded-md text-navLinkInactive hover:text-navLinkHover ${isActive(href)}`}
-              onClick={() => setMenuOpen(false)} // Fermer le menu quand un lien est cliqué
+              onClick={() => setMenuOpen(false)}
             >
               {label}
             </Link>
           ))}
           <Link href="/contact">
             <button
-              onClick={() => setMenuOpen(false)} // Fermer le menu lorsque le bouton est cliqué
+              onClick={() => setMenuOpen(false)}
               className="block w-[150px] mx-auto px-4 py-2 mt-6 rounded-full bg-[rgba(128,0,128,0.3)] text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300"
             >
               Me contacter

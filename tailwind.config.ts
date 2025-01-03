@@ -19,6 +19,11 @@ export default {
         navLinkInactive: "#ccc",
         navLinkHover: "#fff000",
       },
+      fontFamily: {
+        orbitron: ['var(--font-orbitron)', 'sans-serif'],
+        quicksand: ['var(--font-quicksand)', 'sans-serif'],
+        rubik: ['var(--font-rubik)', 'sans-serif'],
+      }
     },
   },
   plugins: [],
