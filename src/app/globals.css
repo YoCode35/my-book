@@ -41,186 +41,186 @@ a {
 /* Déclarations des polices */
 @font-face {
   font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Regular.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/ClashDisplay-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Clash Display Variable';
-  src: url('/fonts/ClashDisplay-Variable.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/ClashDisplay-Variable.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Orbitron-Black';
-  src: url('/fonts/Orbitron-Black.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Orbitron-Black.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Orbitron-Bold';
-  src: url('/fonts/Orbitron-Bold.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Orbitron-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Orbitron-Medium';
-  src: url('/fonts/Orbitron-Medium.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Orbitron-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Orbitron-Regular';
-  src: url('/fonts/Orbitron-Regular.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Orbitron-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand_Bold_Oblique.otf') format('opentype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand_Bold_Oblique.otf') format('opentype');
   font-weight: 700;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand_Bold.otf') format('opentype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand_Bold.otf') format('opentype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand_Book_Oblique.otf') format('opentype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand_Book_Oblique.otf') format('opentype');
   font-weight: 400;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand_Book.otf') format('opentype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand_Book.otf') format('opentype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand_Dash.otf') format('opentype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand_Dash.otf') format('opentype');
   font-weight: 100;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand_Light_Oblique.otf') format('opentype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand_Light_Oblique.otf') format('opentype');
   font-weight: 300;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand_Lightotf') format('opentype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand_Lightotf') format('opentype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-Light.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand-Light.ttf') format('truetype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-Medium.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Quicksand-Medium.ttf') format('truetype');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-Regular.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/onts/Quicksand-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Black.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Black.ttf') format('truetype');
   font-weight: 900;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Blackltalic.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Blackltalic.ttf') format('truetype');
   font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Bold.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Boldltalic.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Boldltalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-ExtraBold.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-ExtraBold.ttf') format('truetype');
   font-weight: 800;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-ExtraBoldltalic.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-ExtraBoldltalic.ttf') format('truetype');
   font-weight: 800;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Italic.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Light.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Light.ttf') format('truetype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Lightitalic.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Lightitalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Medium.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Medium.ttf') format('truetype');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Mediumltalic.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Mediumltalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-Regular.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-SemiBold.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/Rubik-SemiBoldltalic.ttf') format('truetype');
+  src: url('https://my-book-black.vercel.app/fonts/Rubik-SemiBoldltalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
 }
