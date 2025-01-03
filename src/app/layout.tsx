@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Layout({
@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <html lang="fr">
       <body className="bg-bkgd-black-colored-spots bg-cover bg-top min-h-screen flex flex-col">
-        <Navbar />
+        <Header />
         <div className="flex-grow">
           <main>{children}</main>
         </div>
