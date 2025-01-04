@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HiMenu } from "react-icons/hi";
+import { FiMenu } from "react-icons/fi";
 
 interface NavbarProps {
   menuOpen: boolean;
@@ -17,17 +17,16 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
 
   return (
     <>
-      <div className="absolute top-3 left-0 w-full flex justify-center z-10">
-        <div className="w-full max-w-[900px] px-2 py-2 bg-[rgba(1,22,39,0.6)] rounded-full border border-gray-800 flex justify-between items-center">
-          {/* Nom */}
+      <nav className="absolute top-3 left-0 w-full flex justify-center z-10">
+      <div className="w-[95%] sm:w-[90%] md:w-[85%] lg:max-w-[900px] px-2 py-2 bg-[rgba(1,22,39,0.6)] rounded-full border border-gray-800 flex justify-between items-center">
           <div className="text-white font-orbitron text-[8px] sm:text-[10px] md:text-[12px] lg:text-[14px] ml-2 sm:ml-4 md:ml-6 lg:ml-8">
             Yoann GREGOIRE
           </div>
 
-          {/* Icône Hamburger pour petits écrans */}
-          <div className="lg:hidden flex items-center">
+          {/* Icône Sandwich (Hamburger) sur les petits écrans */}
+          <div className="lg:hidden flex items-center" style={{ transform: 'translateX(-10px)' }}> {/* Ajuste ici le -5px */}
             <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
-              <HiMenu size={30} />
+              <FiMenu size={30} />
             </button>
           </div>
 
@@ -68,7 +67,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             </Link>
           </div>
         </div>
-      </div>
+      </nav>
 
       {/* Menu mobile */}
       {menuOpen && (
@@ -85,16 +84,12 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               key={href}
               href={href}
               className={`block text-center px-4 py-2 rounded-md text-navLinkInactive hover:text-navLinkHover ${isActive(href)}`}
-              onClick={() => setMenuOpen(false)}
             >
               {label}
             </Link>
           ))}
           <Link href="/contact">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="block w-[150px] mx-auto px-4 py-2 mt-6 rounded-full bg-[rgba(128,0,128,0.3)] text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300"
-            >
+            <button className="block w-[150px] mx-auto px-4 py-2 mt-6 rounded-full bg-[rgba(128,0,128,0.3)] text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300">
               Me contacter
             </button>
           </Link>

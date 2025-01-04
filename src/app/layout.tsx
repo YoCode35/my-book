@@ -1,12 +1,11 @@
-import './globals.css'; // Conserve tes styles globaux
+import './globals.css';
 import Navbar from '../components/Header';
 import Footer from '../components/Footer';
 import { Orbitron, Quicksand, Rubik } from 'next/font/google';
 
-// Configuration des polices
 const orbitron = Orbitron({
   subsets: ['latin'],
-  weight: ['400', '700'], // Les poids utilisés
+  weight: ['400', '700'],
   variable: '--font-orbitron',
 });
 

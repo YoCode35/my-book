@@ -9,9 +9,20 @@ import Navbar from './Navbar';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-
   return (
-    <nav className="relative bg-transparent h-[595px] lg:h-[490px] flex items-center justify-center">
+    <div className="relative bg-transparent flex flex-col items-center justify-center">
+      {/* Traits obliques à gauche */}
+      <div className="absolute left-0 top-0 w-[50px] h-[595px] lg:h-[490px] bg-transparent">
+        <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-20 lg:mt-48"></div>
+        <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
+        <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
+        <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
+        <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
+      </div>
+
+      {/* Navbar */}
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       <div
         className="absolute inset-0"
@@ -29,7 +40,7 @@ export default function Header() {
       ></div>
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] px-6 mr-4 sm:mr-6 md:mr-8 mt-16 lg:mt-20">
-        <div className="text-left flex flex-col items-start justify-center ml-4 mt-16 lg:mt-0 relative">
+        <div className="text-left flex flex-col items-start justify-center ml-4 md:ml-12 mt-16 lg:mt-0 relative">
           <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubik font-normal tracking-wider z-10 text-left">
             <span>Concepteur & Développeur</span>
             <br />
@@ -60,7 +71,7 @@ export default function Header() {
             </div>
           </div>
 
-          <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-12 lg:mt-8 z-10 font-rubik font-light text-left pl-4 border-l-4 border-[#4d94ff]">
+          <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-12 lg:mt-8 z-10 font-rubik font-light text-left pl-4 md:pl-8 border-l-4 border-[#4d94ff]">
             &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
           </p>
         </div>
@@ -82,7 +93,7 @@ export default function Header() {
         </div>
 
         {/* Image */}
-        <div className="relative w-[300px] h-[350px] mt-8 lg:mt-0 lg:w-[350px] lg:h-[400px] lg:ml-8 lg:ml-12 xl:ml-16">
+        <div className="relative w-[300px] h-[350px] mt-8 lg:mt-0 lg:w-[350px] lg:h-[400px] lg:ml-8 lg:ml-0 xl:ml-0">
           <Image
             src="/img/moi.png"
             alt="Image de moi"
@@ -94,9 +105,6 @@ export default function Header() {
           />
         </div>
       </div>
-
-      {/* Navbar */}
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-    </nav>
+    </div>
   );
 }
