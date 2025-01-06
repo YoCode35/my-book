@@ -1,18 +1,32 @@
 "use client";
 
-import Image from 'next/image';
-import { useState } from 'react';
-import '../app/globals.css';
+import Image from "next/image";
+import { useState } from "react";
+import "../app/globals.css";
 import { FcDownload } from "react-icons/fc";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="relative bg-transparent flex flex-col items-center justify-center">
+      {/* Vidéo en arrière-plan */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/img/universe_xips.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay pour rendre le texte plus lisible */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-5"></div>
+
       {/* Traits obliques à gauche */}
-      <div className="absolute left-0 top-0 w-[50px] h-[595px] lg:h-[490px] bg-transparent">
+      <div className="absolute left-0 top-0 w-[50px] h-[595px] lg:h-[490px] bg-transparent z-10">
         <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-20 lg:mt-48"></div>
         <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
         <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
@@ -23,18 +37,18 @@ export default function Header() {
       {/* Navbar */}
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+      {/* Effets supplémentaires (gradient & radial) */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-5"
         style={{
           backgroundImage: `
-        linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(0, 0, 0, 1) 100%
-        ),
-        radial-gradient(rgba(255, 255, 255, 0.1) calc(20vw / 300), transparent calc(20vw / 200))
-        `,
+            linear-gradient(
+              to bottom,
+              rgba(255, 255, 255, 0) 50%,
+              rgba(0, 0, 0, 1) 100%
+            ),
+            radial-gradient(rgba(255, 255, 255, 0.05) calc(20vw / 300), transparent calc(20vw / 200))
+          `,
           backgroundSize: `100% 100%, calc(35vw / 80) calc(35vw / 80)`,
         }}
       ></div>
@@ -98,9 +112,8 @@ export default function Header() {
             src="/img/moi.png"
             alt="Image de moi"
             fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="rounded-md shadow-lg"
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 684px) 100vw, 50vw"
             priority
           />
         </div>
