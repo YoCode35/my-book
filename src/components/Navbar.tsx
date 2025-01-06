@@ -81,7 +81,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             <Link
               key={href}
               href={href}
-              onClick={() => setMenuOpen(false)} // Fermeture du menu au clic
+              onClick={() => setMenuOpen(false)}
               className={`block text-center px-4 py-2 rounded-md text-navLinkInactive hover:text-navLinkHover ${isActive(href)}`}
             >
               {label}
@@ -89,7 +89,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           ))}
           <Link href="/contact">
             <button
-              onClick={() => setMenuOpen(false)} // Fermeture du menu lorsque "Me contacter" est cliqué
+              onClick={() => setMenuOpen(false)}
               className="block w-[150px] mx-auto px-4 py-2 mt-6 rounded-full bg-[rgba(128,0,128,0.3)] text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300"
             >
               Me contacter
