@@ -58,7 +58,7 @@ export default function Header() {
             <div className="lg:hidden relative flex justify-center items-center ml-4">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
                 <FcDownload className="text-white sm:text-xl" />
-                <span className="text-white font-rubik font-light sm:text-base">CV</span>
+                <span className="text-white font-clash-display font-bold sm:text-base">CV</span>
               </div>
               <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
               <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
@@ -80,7 +80,7 @@ export default function Header() {
         <div className="hidden lg:flex relative justify-center items-center lg:mt-0">
           <div className="w-[90px] h-[90px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
             <FcDownload className="text-white text-3xl" />
-            <span className="text-white font-rubik font-light text-xl">CV</span>
+            <span className="text-white font-clash-display font-semi-bold text-xl">CV</span>
           </div>
           <div className="w-[110px] h-[110px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
           <div className="w-[135px] h-[135px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />

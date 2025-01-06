@@ -23,6 +23,7 @@ export default {
         orbitron: ['var(--font-orbitron)', 'sans-serif'],
         quicksand: ['var(--font-quicksand)', 'sans-serif'],
         rubik: ['var(--font-rubik)', 'sans-serif'],
+        clash: ['var(--font-clash-display)', 'sans-serif'],
       }
     },
   },
