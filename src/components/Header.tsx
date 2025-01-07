@@ -10,16 +10,16 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="relative bg-transparent flex flex-col items-center justify-center">
+    <div id="header" className="relative bg-transparent flex flex-col items-center justify-center">
       {/* Vidéo en arrière-plan */}
       <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      autoPlay
+      loop
+      muted
+      className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0"
       >
-        <source src="/img/universe_xips.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+      <source src="/img/universe_002.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
       </video>
 
       {/* Overlay pour rendre le texte plus lisible */}
@@ -44,51 +44,53 @@ export default function Header() {
           backgroundImage: `
             linear-gradient(
               to bottom,
-              rgba(255, 255, 255, 0) 50%,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(0, 0, 0, 0.3) 20%,
               rgba(0, 0, 0, 1) 100%
             ),
-            radial-gradient(rgba(255, 255, 255, 0.05) calc(20vw / 300), transparent calc(20vw / 200))
+            radial-gradient(rgba(255, 255, 255, 0.1) calc(20vw / 300), transparent calc(20vw / 200))
           `,
           backgroundSize: `100% 100%, calc(35vw / 80) calc(35vw / 80)`,
         }}
       ></div>
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] px-6 mr-4 sm:mr-6 md:mr-8 mt-16 lg:mt-20">
-        <div className="text-left flex flex-col items-start justify-center ml-4 md:ml-12 mt-16 lg:mt-0 relative">
-          <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubik font-normal tracking-wider z-10 text-left">
-            <span>Concepteur & Développeur</span>
-            <br />
-            <span>d&apos;applications Fullstack</span>
-          </h1>
+      <div className="text-left flex flex-col items-start justify-center ml-4 md:ml-12 mt-8 lg:mt-0 relative">
+  <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubik font-normal tracking-wider z-10 text-left">
+    <span>Concepteur & Développeur</span>
+    <br />
+    <span>d&apos;applications Fullstack</span>
+  </h1>
 
-          <div className="flex items-center justify-between w-full">
-            <p className="text-white font-orbitron text-lg sm:text-xl md:text-2xl mt-2 z-10 text-left">
-              Yoann
-              <br />
-              GREGOIRE
-            </p>
+  <div className="flex items-center justify-between w-full">
+    <p className="text-white font-orbitron text-lg sm:text-xl md:text-2xl mt-2 z-10 text-left">
+      Yoann
+      <br />
+      GREGOIRE
+    </p>
 
-            {/* CV block for mobile */}
-            <div className="lg:hidden relative flex justify-center items-center ml-4">
-              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
-                <FcDownload className="text-white sm:text-xl" />
-                <span className="text-white font-clash-display font-bold sm:text-base">CV</span>
-              </div>
-              <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
-              <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
-              <a
-                href="/path/to/CV-YoannGREGOIRE_(CDA).pdf"
-                download="CV-YoannGREGOIRE_(CDA).pdf"
-                className="absolute inset-0 z-30"
-                aria-label="Télécharger mon CV"
-              />
-            </div>
-          </div>
+    {/* CV block for mobile */}
+    <div className="lg:hidden relative flex justify-center items-center ml-4">
+      <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
+        <FcDownload className="text-white sm:text-xl" />
+        <span className="text-white font-clash-display font-semi-bold sm:text-base">CV</span>
+      </div>
+      <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
+      <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
+      <a
+        href="/path/to/CV-YoannGREGOIRE_(CDA).pdf"
+        download="CV-YoannGREGOIRE_(CDA).pdf"
+        className="absolute inset-0 z-30"
+        aria-label="Télécharger mon CV"
+      />
+    </div>
+  </div>
 
-          <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-12 lg:mt-8 z-10 font-rubik font-light text-left pl-4 md:pl-8 border-l-4 border-[#4d94ff]">
-            &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
-          </p>
-        </div>
+  <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-8 lg:mt-8 z-10 font-rubik font-light text-left pl-4 md:pl-8 border-l-4 border-[#4d94ff]">
+    &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
+  </p>
+</div>
+
 
         {/* CV block for desktop */}
         <div className="hidden lg:flex relative justify-center items-center lg:mt-0">
@@ -114,6 +116,7 @@ export default function Header() {
             fill
             style={{ objectFit: "cover" }}
             sizes="(max-width: 684px) 100vw, 50vw"
+            className="rounded-md shadow-lg"
             priority
           />
         </div>

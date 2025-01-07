@@ -18,13 +18,23 @@ export default {
         navTitle: "#2c3e50",
         navLinkInactive: "#ccc",
         navLinkHover: "#fff000",
+        titlePrimary: "#ffffff", // Nouvelle couleur principale pour le titre
+        titleAccent: "#ff5733", // Accentuation pour certains mots
       },
       fontFamily: {
         orbitron: ['var(--font-orbitron)', 'sans-serif'],
         quicksand: ['var(--font-quicksand)', 'sans-serif'],
         rubik: ['var(--font-rubik)', 'sans-serif'],
         clash: ['var(--font-clash-display)', 'sans-serif'],
-      }
+      },
+      fontSize: {
+        'title-lg': ['4rem', '1.2'], // Grande taille pour les titres principaux
+        'title-sm': ['2rem', '1.5'], // Petite taille pour les titres secondaires
+      },
+      textShadow: {
+        default: "2px 2px 4px rgba(0, 0, 0, 0.5)", // Ombre pour le texte
+        strong: "4px 4px 6px rgba(0, 0, 0, 0.7)",
+      },
     },
   },
   plugins: [],

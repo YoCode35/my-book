@@ -14,14 +14,25 @@
   }
 }
 
+html { 
+  scroll-padding-top: 120px;
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('/img/bkgd_black-&-colored-spots.png');
+  background-image: url('/img/bkgd_black-and-colored-spots.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('/img/bkgd_black-and-colored-spots.png');
+  }
 }
 
 .font-orbitron {
@@ -29,11 +40,19 @@ body {
 }
 
 h1 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Clash-display', sans-serif;
+  font-weight: 600;
+  color: white;
 }
 
 a {
   font-family: 'Quicksand', sans-serif;
+}
+
+.paragraph-custom {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: white;
 }
 
 @layer utilities {
