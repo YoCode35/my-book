@@ -141,7 +141,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               ]
               : [
                 pathname !== "/about" && {
-                  href: "/about",
+                  href: "/about#about-me",
                   label: "À propos",
                 },
               ].filter(Boolean)
