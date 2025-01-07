@@ -14,6 +14,7 @@ export default function Header() {
       {/* Vidéo en arrière-plan */}
       <video
       autoPlay
+      playsInline
       loop
       muted
       className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0"
@@ -78,7 +79,7 @@ export default function Header() {
       <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
       <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
       <a
-        href="/path/to/CV-YoannGREGOIRE_(CDA).pdf"
+        href="/docs/CV-YoannGREGOIRE_(CDA).pdf"
         download="CV-YoannGREGOIRE_(CDA).pdf"
         className="absolute inset-0 z-30"
         aria-label="Télécharger mon CV"
