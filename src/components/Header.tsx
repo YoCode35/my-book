@@ -1,48 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import "../app/globals.css";
 import { FcDownload } from "react-icons/fc";
 import Navbar from "./Navbar";
-import videojs from "video.js";
-import "video.js/dist/video-js.css"; // Importer les styles de Video.js
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const videoRef = useRef(null); // Référence pour la vidéo
-
-  useEffect(() => {
-    if (videoRef.current) {
-      const player = videojs(videoRef.current, {
-        autoplay: true,
-        loop: true,
-        muted: true,
-        controls: true,
-        sources: [
-          {
-            src: "/img/universe.mp4", // Votre vidéo
-            type: "video/mp4",
-          },
-        ],
-      });
-
-      return () => {
-        player.dispose(); // Nettoyage du lecteur lorsque le composant est démonté
-      };
-    }
-  }, []);
 
   return (
     <div id="header" className="relative bg-transparent flex flex-col items-center justify-center">
-      {/* Vidéo en arrière-plan avec Video.js */}
-      <div className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0">
-        <video
-          ref={videoRef} // Lien vers la référence du lecteur
-          className="video-js vjs-default-skin w-full h-full"
-          poster="/img/video-poster.jpg" // Affiche une image avant la lecture de la vidéo
-        ></video>
-      </div>
+      {/* Vidéo en arrière-plan */}
+      <video
+        autoPlay
+        playsInline
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0"
+      >
+        <source src="/img/universe.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Overlay pour rendre le texte plus lisible */}
       <div className="absolute inset-0 bg-black bg-opacity-40 z-5"></div>
