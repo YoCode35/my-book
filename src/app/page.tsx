@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="bg-[url('/img/bkgd_black-and-colored-spots.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/img/colored_spots.png')]">
       <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] font-bold text-white leading-tight text-center mt-8 mb-32">
-        Home
+        Home en cours de développement
       </h1>
 
       <div style={{ height: '200px' }}></div>
