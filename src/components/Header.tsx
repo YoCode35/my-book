@@ -1,13 +1,21 @@
 "use client";
 
+//import { useEffect } from 'react'
+import { useState } from 'react'
 import Image from "next/image";
-import { useState } from "react";
 import "../app/globals.css";
 import { FcDownload } from "react-icons/fc";
 import Navbar from "./Navbar";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  /*const [isClient, setIsClient] = useState(false);
+  
+    useEffect(() => {
+      setIsClient(true);
+    }, []);
+  
+    if (!isClient) return null;*/
 
   return (
     <div id="header" className="relative bg-transparent flex flex-col items-center justify-center">
@@ -19,11 +27,10 @@ export default function Header() {
         muted
         className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0"
       >
-        <source src="/img/universe.mov" type="video/mp4" />
+        <source src="/img/universe.mov" type="video/quicktime" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay pour rendre le texte plus lisible */}
       <div className="absolute inset-0 bg-black bg-opacity-40 z-5"></div>
 
       {/* Traits obliques à gauche */}

@@ -1,17 +1,6 @@
-"use client"; // Force l'utilisation côté client uniquement
-
-import { useEffect, useState } from "react";
+"use client";
 
 export default function Portfolio() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null;
-  }
 
   return (
     <section
