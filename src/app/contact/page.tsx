@@ -71,7 +71,7 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col justify-start items-center h-screen bg-[url('/img/bkgd_black-and-colored-spots.png')] bg-no-repeat bg-center bg-cover bg-[size:33%] bg-[position:center top-20%] md:bg-[url('/img/colored_spots.png')] md:bg-[position:center_0%]">
-      <div style={{ height: '100px' }}></div>
+      <div style={{ height: '150px' }}></div>
       <h1 className="text-4xl font-bold text-navTitle text-shadow mt-[0px]">Me contacter</h1>
       <p className="text-red-500 text-sm mt-2 font-quicksand">* champs obligatoires</p>
 
@@ -86,7 +86,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Votre nom"
-                className={`p-2 border rounded-md w-full ${
+                className={`p-2 border rounded-md w-full text-gray-900 focus:outline-none focus:ring-0 ${
                   errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -102,7 +102,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Votre email"
-                className={`p-2 border rounded-md w-full ${
+                className={`p-2 border rounded-md w-full text-gray-900 focus:outline-none focus:ring-0 ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -118,7 +118,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Votre message"
                 rows={5}
-                className={`p-2 border rounded-md w-full ${
+                className={`p-2 border rounded-md w-full text-gray-900 focus:outline-none focus:ring-0 ${
                   errors.message ? 'border-red-500' : 'border-gray-300'
                 }`}
               ></textarea>

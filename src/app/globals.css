@@ -3,15 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ccc;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ccc;
-  }
+  --background: #000;
+  --foreground: #fff; /* Couleur du texte en gris clair */
 }
 
 html { 
@@ -23,16 +16,15 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('/img/bkgd_black-and-colored-spots.png');
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-@media (min-width: 768px) {
-  body {
-    background-image: url('/img/bkgd_black-and-colored-spots.png');
-  }
+.page-bg {
+  background-image: url('/img/colored_spots.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .font-orbitron {
@@ -42,6 +34,10 @@ body {
 h1 {
   font-family: 'Clash-display', sans-serif;
   font-weight: 600;
+  color: white;
+}
+
+.page-title {
   color: white;
 }
 
