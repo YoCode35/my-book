@@ -1,27 +1,48 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../app/globals.css";
 import { FcDownload } from "react-icons/fc";
 import Navbar from "./Navbar";
+import videojs from "video.js";
+import "video.js/dist/video-js.css"; // Importer les styles de Video.js
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const videoRef = useRef(null); // Référence pour la vidéo
+
+  useEffect(() => {
+    if (videoRef.current) {
+      const player = videojs(videoRef.current, {
+        autoplay: true,
+        loop: true,
+        muted: true,
+        controls: true,
+        sources: [
+          {
+            src: "/img/universe.mp4", // Votre vidéo
+            type: "video/mp4",
+          },
+        ],
+      });
+
+      return () => {
+        player.dispose(); // Nettoyage du lecteur lorsque le composant est démonté
+      };
+    }
+  }, []);
 
   return (
     <div id="header" className="relative bg-transparent flex flex-col items-center justify-center">
-      {/* Vidéo en arrière-plan */}
-      <video
-      autoPlay
-      playsInline
-      loop
-      muted
-      className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0"
-      >
-      <source src="/img/universe.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-      </video>
+      {/* Vidéo en arrière-plan avec Video.js */}
+      <div className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0">
+        <video
+          ref={videoRef} // Lien vers la référence du lecteur
+          className="video-js vjs-default-skin w-full h-full"
+          poster="/img/video-poster.jpg" // Affiche une image avant la lecture de la vidéo
+        ></video>
+      </div>
 
       {/* Overlay pour rendre le texte plus lisible */}
       <div className="absolute inset-0 bg-black bg-opacity-40 z-5"></div>
@@ -56,42 +77,41 @@ export default function Header() {
       ></div>
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] px-6 mr-4 sm:mr-6 md:mr-8 mt-16 lg:mt-20">
-      <div className="text-left flex flex-col items-start justify-center ml-4 md:ml-12 mt-8 lg:mt-0 relative">
-  <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubik font-normal tracking-wider z-10 text-left">
-    <span>Concepteur & Développeur</span>
-    <br />
-    <span>d&apos;applications Fullstack</span>
-  </h1>
+        <div className="text-left flex flex-col items-start justify-center ml-4 md:ml-12 mt-8 lg:mt-0 relative">
+          <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubik font-normal tracking-wider z-10 text-left">
+            <span>Concepteur & Développeur</span>
+            <br />
+            <span>d&apos;applications Fullstack</span>
+          </h1>
 
-  <div className="flex items-center justify-between w-full">
-    <p className="text-white font-orbitron text-lg sm:text-xl md:text-2xl mt-2 z-10 text-left">
-      Yoann
-      <br />
-      GREGOIRE
-    </p>
+          <div className="flex items-center justify-between w-full">
+            <p className="text-white font-orbitron text-lg sm:text-xl md:text-2xl mt-2 z-10 text-left">
+              Yoann
+              <br />
+              GREGOIRE
+            </p>
 
-    {/* CV block for mobile */}
-    <div className="lg:hidden relative flex justify-center items-center ml-4">
-      <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
-        <FcDownload className="text-white sm:text-xl" />
-        <span className="text-white font-clash-display font-semi-bold sm:text-base">CV</span>
-      </div>
-      <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
-      <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
-      <a
-        href="/docs/CV-YoannGREGOIRE_(CDA).pdf"
-        download="CV-YoannGREGOIRE_(CDA).pdf"
-        className="absolute inset-0 z-30"
-        aria-label="Télécharger mon CV"
-      />
-    </div>
-  </div>
+            {/* CV block for mobile */}
+            <div className="lg:hidden relative flex justify-center items-center ml-4">
+              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] bg-blue-500 rounded-full z-20 flex flex-col items-center justify-center space-y-1">
+                <FcDownload className="text-white sm:text-xl" />
+                <span className="text-white font-clash-display font-semi-bold sm:text-base">CV</span>
+              </div>
+              <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
+              <div className="w-[105px] h-[105px] sm:w-[115px] sm:h-[115px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
+              <a
+                href="/docs/CV-YoannGREGOIRE_(CDA).pdf"
+                download="CV-YoannGREGOIRE_(CDA).pdf"
+                className="absolute inset-0 z-30"
+                aria-label="Télécharger mon CV"
+              />
+            </div>
+          </div>
 
-  <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-8 lg:mt-8 z-10 font-rubik font-light text-left pl-4 md:pl-8 border-l-4 border-[#4d94ff]">
-    &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
-  </p>
-</div>
-
+          <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-8 lg:mt-8 z-10 font-rubik font-light text-left pl-4 md:pl-8 border-l-4 border-[#4d94ff]">
+            &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
+          </p>
+        </div>
 
         {/* CV block for desktop */}
         <div className="hidden lg:flex relative justify-center items-center lg:mt-0">
@@ -102,7 +122,7 @@ export default function Header() {
           <div className="w-[110px] h-[110px] bg-blue-500 bg-opacity-30 rounded-full absolute z-10" />
           <div className="w-[135px] h-[135px] bg-blue-500 bg-opacity-20 rounded-full absolute z-0" />
           <a
-            href="/path/to/CV-YoannGREGOIRE_(CDA).pdf"
+            href="/docs/CV-YoannGREGOIRE_(CDA).pdf"
             download="CV-YoannGREGOIRE_(CDA).pdf"
             className="absolute inset-0 z-30"
             aria-label="Télécharger mon CV"
