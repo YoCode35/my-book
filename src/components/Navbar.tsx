@@ -56,18 +56,32 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             </div>
 
             {/* Menu Desktop */}
-            <ul className="hidden lg:flex space-x-4">
-              {[ 
+            <ul className="hidden lg:flex space-x-4 list-none"> {/* Ajout de list-none */}
+              {[
                 { href: "/", label: "Accueil" },
-                ...(pathname !== "/about" ? [{ href: "#about-me", label: "À propos" }] : []),
-                { href: "/portfolio", label: "Portfolio" },
+                ...(pathname !== "/about"
+                  ? [
+                      {
+                        href: pathname === "/portfolio" ? "/about" : "#about-me", // Condition dynamique pour "À propos"
+                        label: "À propos",
+                      },
+                    ]
+                  : []), // Supprimer "À propos" sur la page "/about"
+                ...(pathname !== "/portfolio"
+                  ? [
+                      {
+                        href: "/portfolio",
+                        label: "Portfolio",
+                      },
+                    ]
+                  : []), // Supprimer "Portfolio" sur la page "/portfolio"
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className={`px-6 py-2 text-navLinkInactive hover:text-navLinkHover ${isActive(href) === "text-navText"
-                      ? "border-b-2 border-yellow-500"
-                      : ""} ${isActive(href)}`}
+                    className={`px-6 py-2 text-navLinkInactive hover:text-navLinkHover ${
+                      isActive(href) === "text-navText" ? "border-b-2 border-yellow-500" : ""
+                    } ${isActive(href)}`}
                   >
                     {label}
                   </Link>
@@ -76,19 +90,17 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             </ul>
 
             {/* Bouton "Me contacter" Desktop */}
-            <div className="ml-4 hidden lg:block">
-              <Link href="/contact">
-                <button
-                  className={`px-6 py-2 rounded-full text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300 ${
-                    pathname === "/contact"
-                      ? "bg-yellow-500"
-                      : "bg-[rgba(128,0,128,0.3)]"
-                  }`}
-                >
-                  Me contacter
-                </button>
-              </Link>
-            </div>
+            {pathname !== "/contact" && (
+  <div className="ml-4 hidden lg:block">
+    <Link href="/contact#contact-form">
+      <button
+        className={`px-6 py-2 rounded-full text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300 ${pathname === "/contact" ? "bg-yellow-500" : "bg-[rgba(128,0,128,0.3)]"}`}
+      >
+        Me contacter
+      </button>
+    </Link>
+  </div>
+)}
           </div>
         </nav>
       )}
@@ -105,38 +117,57 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
       )}
 
       {/* Menu mobile */}
-      {menuOpen && (
-        <div
-          className="lg:hidden absolute left-1/2 transform -translate-x-1/2 w-[70%] max-w-[400px] bg-[rgba(1,22,39,0.8)] py-4 px-6 rounded-lg shadow-lg space-y-4 z-50"
-          style={{
-            top: `${scrollTop + 50}px`, // Positionner le menu mobile selon la position de scroll
-            backdropFilter: "blur(8px)"
-          }}
+{menuOpen && (
+  <div
+    className="lg:hidden absolute left-1/2 transform -translate-x-1/2 w-[70%] max-w-[400px] bg-[rgba(1,22,39,0.8)] py-4 px-6 rounded-lg shadow-lg space-y-4 z-50 list-none"
+    style={{
+      top: `${scrollTop + 50}px`, // Positionner le menu mobile selon la position de scroll
+      backdropFilter: "blur(8px)",
+    }}
+  >
+    {[ 
+      { href: "/", label: "Accueil" },
+      ...(pathname !== "/about"
+        ? [
+            {
+              href: pathname === "/portfolio" ? "/about" : "#about-me", // Condition dynamique pour "À propos"
+              label: "À propos",
+            },
+          ]
+        : []), // Supprimer "À propos" sur la page "/about"
+      ...(pathname !== "/portfolio"
+        ? [
+            {
+              href: "/portfolio#portfolio", // Ajouter l'ancre pour "Portfolio"
+              label: "Portfolio",
+            },
+          ]
+        : []), // Supprimer "Portfolio" sur la page "/portfolio"
+    ].map(({ href, label }) => (
+      <Link
+        key={href}
+        href={href}
+        onClick={() => setMenuOpen(false)}
+        className={`block text-center px-4 py-2 rounded-md text-navLinkInactive hover:text-navLinkHover ${isActive(href)}`}
+      >
+        {label}
+      </Link>
+    ))}
+
+    {/* Vérifier si l'utilisateur n'est pas sur la page "Me contacter" avant d'afficher le bouton */}
+    {pathname !== "/contact" && (
+      <Link href="/contact#contact-form">
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="block w-[150px] mx-auto px-4 py-2 mt-6 rounded-full bg-[rgba(128,0,128,0.3)] text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300"
         >
-          {[ 
-            { href: "/", label: "Accueil" },
-            ...(pathname !== "/about" ? [{ href: "#about-me", label: "À propos" }] : []),
-            { href: "/portfolio", label: "Portfolio" },
-          ].map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setMenuOpen(false)}
-              className={`block text-center px-4 py-2 rounded-md text-navLinkInactive hover:text-navLinkHover ${isActive(href)}`}
-            >
-              {label}
-            </Link>
-          ))}
-          <Link href="/contact">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="block w-[150px] mx-auto px-4 py-2 mt-6 rounded-full bg-[rgba(128,0,128,0.3)] text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300"
-            >
-              Me contacter
-            </button>
-          </Link>
-        </div>
-      )}
+          Me contacter
+        </button>
+      </Link>
+    )}
+  </div>
+)}
+
     </>
   );
 }
