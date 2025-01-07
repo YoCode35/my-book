@@ -94,7 +94,6 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 ))}
             </ul>
 
-
             {/* Bouton "Me contacter" Desktop */}
             {pathname !== "/contact" && (
               <div className="ml-4 hidden lg:block">

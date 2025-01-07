@@ -9,13 +9,6 @@ import Navbar from "./Navbar";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  /*const [isClient, setIsClient] = useState(false);
-  
-    useEffect(() => {
-      setIsClient(true);
-    }, []);
-  
-    if (!isClient) return null;*/
 
   return (
     <div id="header" className="relative bg-transparent flex flex-col items-center justify-center">
@@ -27,7 +20,7 @@ export default function Header() {
         muted
         className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0"
       >
-        <source src="/img/universe.mov" type="video/quicktime" />
+        <source src="/img/universe.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
