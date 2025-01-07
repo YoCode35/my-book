@@ -19,7 +19,7 @@ export default function Header() {
         muted
         className="absolute top-0 left-0 w-full h-[595px] lg:h-full object-cover z-0"
       >
-        <source src="/img/universe.mp4" type="video/mp4" />
+        <source src="/img/universe.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
