@@ -71,27 +71,27 @@ export default function Home() {
           </h1>
 
           <div className="absolute">
-          {/* Image */}
-          <Image
-            src="/img/img_a-propos.png"
-            alt="À propos"
-            width={300}
-            height={280}
-            className=" sm:w-[400px]
-                        sm:h-[374px]
-                        sm:mr-[10rem] md:mr-[50rem]
-                        ml-[5%]"
+            {/* Image */}
+            <Image
+              src="/img/img_a-propos.png"
+              alt="À propos"
+              width={300}
+              height={280}
+              className=" sm:w-[400px]
+                          sm:h-[374px]
+                          sm:mr-[10rem] md:mr-[50rem]
+                          ml-[5%]"
           />
 
-          {/* Paragraphe */}
-          <p className="paragraph-custom
-                        w-full sm:w-[100%] md:w-[100%] lg:w-[60%]
-                        lg:absolute
-                        lg:top-[40%]
-                        lg:left-[40%]
-                        px-6 sm:px-8 md:px-12
-                        mt-6 sm:mt-8 md:mt-12             
-          ">
+            {/* Paragraphe */}
+            <p className="paragraph-custom
+                          w-full sm:w-[100%] md:w-[100%] lg:w-[60%]
+                          lg:absolute
+                          lg:top-[40%]
+                          lg:left-[40%]
+                          px-6 sm:px-8 md:px-12
+                          mt-6 sm:mt-8 md:mt-12             
+            ">
             <span className="mb-2 block break-words whitespace-normal sm:whitespace-normal md:whitespace-normal max-w-full">
               Le développement logiciel : Une véritable <span className="text-[1.2rem] sm:text-[1.5rem]">vocation</span> qui m&apos;anime au quotidien !
             </span>

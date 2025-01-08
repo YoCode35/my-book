@@ -79,7 +79,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             {/* Menu Desktop */}
             <ul className="hidden lg:flex space-x-4 list-none">
               {[
-                { href: "/", label: "Accueil" },
+                { href: "/#header", label: "Accueil" },
                 ...(pathname === "/"
                   ? [
                     {
@@ -176,7 +176,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           }}
         >
           {[
-            { href: "/", label: "Accueil" },
+            { href: "/#header", label: "Accueil" },
             ...(pathname === "/"
               ? [
                 {

@@ -18,7 +18,7 @@ export default function About() {
                       max-w-screen-lg
                       mx-auto"
       >
-        <p className="text-white mt-4 text-justify">
+        <p className="paragraph-custom text-white mt-4 text-justify">
           Passionné par l’informatique et la programmation, j’ai débuté en tant
           qu’autodidacte avant de me professionnaliser et d’exercer dans le secteur
           du numérique depuis une vingtaine d’années. Mon parcours atypique a
@@ -26,7 +26,7 @@ export default function About() {
           maîtrisant l’HTML, le CSS, le JavaScript, le PHP et MySQL.
         </p>
 
-        <p className="text-white mt-4 text-justify">
+        <p className="paragraph-custom text-white mt-4 text-justify">
           Récemment, j’ai renforcé mes compétences en back-end grâce à une
           formation à l’ENI, qui m’a permis d’obtenir une certification de niveau 5
           (équivalent Bac+2) en tant que Développeur Web et Web Mobile. Dans le cadre
@@ -46,7 +46,7 @@ export default function About() {
           continu.
         </p>
 
-        <p className="text-white mt-4 text-justify">
+        <p className="paragraph-custom text-white mt-4 text-justify">
           Aujourd’hui, je poursuis ma montée en compétences en explorant des stacks
           modernes comme Node.js, Next.js, TypeScript, Angular, React.js, Flutter tout en
           travaillant activement sur des projets personnels en full-stack. Mon
@@ -55,7 +55,7 @@ export default function About() {
           utilisateur et optimiser les interactions numériques.
         </p>
 
-        <p className="text-white mt-4 text-justify">
+        <p className="paragraph-custom text-white mt-4 text-justify">
           Ce qui m’anime particulièrement dans le métier de Concepteur et Développeur
           d’Applications, c’est la stratégie mise en place pour transformer la
           technologie en outils concrets. Je suis convaincu que la technologie, bien
@@ -64,13 +64,13 @@ export default function About() {
           processus pour atteindre ses objectifs.
         </p>
 
-        <p className="text-white mt-4 text-justify">
+        <p className="paragraph-custom text-white mt-4 text-justify">
           Toujours curieux et en quête de nouveaux défis, je suis motivé par l’idée
           de m’investir dans des projets mêlant innovation, performance et
           collaboration.
         </p>
 
-        <p className="text-white mt-4 text-justify">
+        <p className="paragraph-custom text-white mt-4 text-justify">
           Bien plus qu’une passion, c’est une véritable vocation qui me pousse chaque
           jour à m’investir pleinement dans des projets technologiques.
         </p>
