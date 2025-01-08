@@ -3,9 +3,9 @@
 export default function About() {
   
   return (
-    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:400%] lg:bg-[size:100%] bg-[position:center_0] flex flex-col items-center min-h-screen pb-16">
+    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:500px] lg:bg-[size:100%] bg-[position:center_0] flex flex-col items-center min-h-screen pb-16">
 
-      <div className="h-12"></div>
+      <div className="h-0"></div>
 
       <h1 id="about" className="page-title text-2xl sm:text-3xl md:text-4xl font-bold text-shadow mt-0">
         Plus d&apos;infos à propos de moi
