@@ -26,6 +26,7 @@ export default {
         quicksand: ['var(--font-quicksand)', 'sans-serif'],
         rubik: ['var(--font-rubik)', 'sans-serif'],
         clash: ['var(--font-clash-display)', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
       fontSize: {
         'title-lg': ['4rem', '1.2'], // Grande taille pour les titres principaux

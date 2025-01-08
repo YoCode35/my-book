@@ -57,7 +57,7 @@ export default function Header() {
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] px-6 mr-4 sm:mr-6 md:mr-8 mt-16 lg:mt-20">
         <div className="text-left flex flex-col items-start justify-center ml-4 md:ml-12 mt-8 lg:mt-0 relative">
-          <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#3d5b79] font-rubik font-normal tracking-wider z-10 text-left">
+          <h1 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-[#5385b7] font-rubik font-normal tracking-wider z-10 text-left">
             <span>Concepteur & Développeur</span>
             <br />
             <span>d&apos;applications Fullstack</span>
@@ -87,7 +87,7 @@ export default function Header() {
             </div>
           </div>
 
-          <p className="text-[#3a5977] text-sm sm:text-sm md:text-base italic mt-8 lg:mt-8 z-10 font-rubik font-light text-left pl-4 md:pl-8 border-l-4 border-[#4d94ff]">
+          <p className="text-[#5385b7] text-sm sm:text-sm md:text-base italic mt-8 lg:mt-8 z-10 font-rubik font-light text-left pl-4 md:pl-8 border-l-4 border-[#4d94ff]">
             &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
           </p>
         </div>

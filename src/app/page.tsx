@@ -2,13 +2,13 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="bg-[url('/img/bkgd_black-and-colored-spots.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/img/colored_spots.png')]">
-      <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] leading-tight text-shadow text-center mt-8 mb-32">
-        Home en cours de développement
-      </h1>
-
-      <div style={{ height: '200px' }}></div>
-
+    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:150%] lg:bg-[size:100%] bg-[position:center_15%] flex flex-col items-center min-h-screen pb-16">
+      <p className="text-[1rem] sm:text-[1.125rem] md:text-[1.1rem] leading-relaxed text-shadow text-center mt-0 mb-32 italic font-rubik font-light px-36">
+        &quot;Explorez ici une sélection de mes travaux les plus significatifs. <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
+      </p>
+      
+      <div style={{ height: '100px' }}></div>
+      
       <div
         id="about-me"
         className="flex justify-center items-start h-[calc(100vh+20rem)] sm:h-[calc(100vh+15rem)] md:h-[calc(100vh+10rem)]"
