@@ -224,7 +224,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             ...(pathname === "/"
               ? [
                   {
-                    href: "#about",
+                    href: "#abouthome",
                     label: "À propos",
                   },
                 ]
