@@ -1,4 +1,4 @@
-"use client"; // Force l'utilisation côté client uniquement
+"use client";
 
 export default function About() {
   
@@ -36,7 +36,7 @@ export default function About() {
           <a
             href="https://www.mytodolist.tech"
             target="_blank"
-            rel="noopener noreferrer"  // Pour des raisons de sécurité
+            rel="noopener noreferrer"  // Security
             className="text-pink-500 hover:underline"
           >
             https://www.mytodolist.tech

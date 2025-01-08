@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiHome } from "react-icons/fi";
 import { useState, useEffect } from "react";
-import { FiArrowUp } from "react-icons/fi"; // Importer l'icône de la flèche
+import { FiArrowUp } from "react-icons/fi";
 
 interface NavbarProps {
   menuOpen: boolean;
@@ -16,18 +16,33 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
+  const [isAboutActive, setIsAboutActive] = useState(false);
 
-  // Fonction pour vérifier la position du scroll
+  const checkAboutVisibility = () => {
+    if (typeof window !== "undefined") {
+      const aboutSection = document.querySelector("#about-me");
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.top <= window.innerHeight / 2;
+        setIsAboutActive(isVisible);
+      }
+    }
+  };
+
   const checkScroll = () => {
     if (typeof window !== "undefined") {
       setScrollTop(window.scrollY);
       setIsScrolled(window.scrollY > 50);
+      checkAboutVisibility();
     }
   };
 
   useEffect(() => {
     setIsClient(true);
     window.addEventListener("scroll", checkScroll);
+
+    checkScroll();
+
     return () => {
       window.removeEventListener("scroll", checkScroll);
     };
@@ -40,16 +55,13 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
     <>
       {isClient && (
         <nav
-          className={
-                      `fixed
+          className={`fixed
                       top-0 left-0
                       w-full
                       flex
                       justify-center
                       z-40
-                      ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-60'}`
-                    }
-          style={{ position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '40' }}
+                      ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-60'}`}
         >
           <div className="w-[95%] sm:w-[90%] md:w-[85%] lg:max-w-[900px]
                           px-2 py-2
@@ -69,17 +81,27 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               Yoann GREGOIRE
             </div>
 
-            {/* Icône Sandwich (Hamburger) sur les petits écrans */}
+            {/* Hamburger Icon */}
             <div className="lg:hidden flex items-center" style={{ transform: 'translateX(-10px)' }}>
               <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
                 <FiMenu size={30} />
               </button>
             </div>
 
-            {/* Menu Desktop */}
+            {/* Desktop Navbar */}
             <ul className="hidden lg:flex space-x-4 list-none">
+              <li className="flex items-center">
+                <Link
+                  href="/#header"
+                  className={`px-6 py-2 
+                              text-navLinkInactive
+                              hover:text-navLinkHover
+                              ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                >
+                  <FiHome size={24} />
+                </Link>
+              </li>
               {[
-                { href: "/#header", label: "Accueil" },
                 ...(pathname === "/"
                   ? [
                     {
@@ -104,35 +126,40 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                   : []),
               ].filter((item): item is { href: string; label: string } => item !== false)
                 .map(({ href, label }) => (
-                  <li key={href}>
+                  <li key={href} className="flex items-center">
                     <Link
                       href={href}
-                      className={
-                                  `px-6 py-2 
+                      className={`px-6 py-2 
                                   text-navLinkInactive
                                   hover:text-navLinkHover
-                                  ${isActive(href) === "text-navText" ? "border-b-2 border-yellow-500" : ""} ${isActive(href)}`
-                                }
+                                  ${href === "#about-me" && isAboutActive
+                                    ? "text-navLinkHover"
+                                    : isActive(href) === "text-navText"
+                                    ? "text-navLinkHover"
+                                    : "text-navLinkInactive"}`}
                     >
                       {label}
                     </Link>
                   </li>
                 ))}
             </ul>
-
-            {/* Bouton "Me contacter" Desktop */}
             {pathname !== "/contact" && (
               <div className="ml-4 hidden lg:block">
                 <Link href="/contact#contact">
                   <button
-                    className={
-                                `px-6 py-2
-                                rounded-full
-                                text-white
-                                hover:bg-[rgba(128,0,128,0.6)]
-                                focus:outline-none focus:ring-2 focus:ring-purple-300
-                                ${pathname === "/contact" ? "bg-yellow-500" : "bg-[rgba(128,0,128,0.3)]"}`
-                              }
+                    className={`
+                      px-6 py-2
+                      rounded-full
+                      text-white
+                      hover:bg-navLinkHover
+                      hover:text-black
+                      hover:font-bold
+                      focus:outline-none focus:ring-2 focus:ring-purple-300
+                      ${pathname === "/contact" ? "bg-navLinkHover" : "bg-[rgba(128,0,128,0.3)]"}
+                    `}
+                    style={{
+                      minWidth: "160px",
+                    }}
                   >
                     Me contacter
                   </button>
@@ -143,7 +170,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         </nav>
       )}
 
-      {/* Flèche qui apparaît après avoir scrollé */}
+      {/* "back-to-top arrow */}
       {isScrolled && (
         <div className="fixed bottom-10 right-10 z-30">
           <Link href="#header">
@@ -154,10 +181,10 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         </div>
       )}
 
-      {/* Menu mobile */}
+      {/* Mobile Navbar */}
       {menuOpen && (
         <div
-          className=" lg:hidden
+          className="lg:hidden
                       absolute 
                       left-1/2 
                       transform 
@@ -176,66 +203,78 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           }}
         >
           {[
-            { href: "/#header", label: "Accueil" },
+            {
+              href: "/#header",
+              label: (
+                <div
+                  className={`flex justify-center items-center w-full ${
+                    pathname === "/" ? "text-navLinkHover" : "text-white"
+                  } hover:text-navLinkHover`}
+                >
+                  <FiHome size={24} />
+                </div>
+              ),
+            },
             ...(pathname === "/"
               ? [
-                {
-                  href: "#about-me",
-                  label: "À propos",
-                },
-              ]
+                  {
+                    href: "#about-me",
+                    label: "À propos",
+                  },
+                ]
               : [
-                pathname !== "/about" && {
-                  href: "/about#about-me",
-                  label: "À propos",
-                },
-              ].filter(Boolean)
+                  pathname !== "/about" && {
+                    href: "/about#about-me",
+                    label: "À propos",
+                  },
+                ].filter(Boolean)
             ),
             ...(pathname !== "/portfolio"
               ? [
-                {
-                  href: "/portfolio#portfolio",
-                  label: "Portfolio",
-                },
-              ]
+                  {
+                    href: "/portfolio#portfolio",
+                    label: "Portfolio",
+                  },
+                ]
               : []),
-          ].filter((item): item is { href: string; label: string } => item !== false).map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setMenuOpen(false)}
-              className={
-                          `block
-                          text-center
-                          px-4 py-2
-                          rounded-md
-                          text-navLinkInactive
-                          hover:text-navLinkHover ${isActive(href)}`
-                        }
-            >
-              {label}
-            </Link>
-          ))}
-
-          {pathname !== "/contact" && (
-            <Link href="/contact#contact">
-              <button
+          ]
+            .filter((item): item is { href: string; label: string } => item !== false)
+            .map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
                 onClick={() => setMenuOpen(false)}
-                className=" block 
-                            w-[150px]
-                            mx-auto
+                className={`block
+                            text-center
                             px-4 py-2
-                            mt-6
-                            rounded-full
-                            bg-[rgba(128,0,128,0.3)]
-                            hover:bg-[rgba(128,0,128,0.6)]
-                            text-white
-                            focus:outline-none focus:ring-2 focus:ring-purple-300"
+                            rounded-md
+                            text-navLinkInactive
+                            hover:text-navLinkHover ${isActive(href)}`}
               >
-                Me contacter
-              </button>
-            </Link>
-          )}
+                {label}
+              </Link>
+            ))}
+            {pathname !== "/contact" && (
+              <Link href="/contact#contact">
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="block
+                              w-[150px]
+                              mx-auto
+                              px-4 py-2
+                              mt-6
+                              rounded-full
+                              bg-[rgba(128,0,128,0.3)]
+                              hover:bg-navLinkHover
+                              hover:text-black
+                              hover:font-bold
+                              text-white
+                              focus:outline-none focus:ring-2 focus:ring-purple-300"
+                >
+                  Me contacter
+                </button>
+              </Link>
+            )}
         </div>
       )}
     </>

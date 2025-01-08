@@ -61,7 +61,7 @@ export default function Contact() {
       }
 
       setSuccessMessage('Votre message a été envoyé avec succès !');
-      setFormData({ name: '', email: '', message: '' }); // Réinitialiser le formulaire
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       setErrorMessage((error as Error).message || 'Une erreur est survenue.');
     } finally {
@@ -90,7 +90,7 @@ export default function Contact() {
       >
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col space-y-4">
-            {/* Champ Nom */}
+            {/* Name field */}
             <div className="relative">
               <input
                 type="text"
@@ -110,7 +110,7 @@ export default function Contact() {
               {errors.name && <p className="text-red-500 text-sm mt-1">Le nom est requis.</p>}
             </div>
 
-            {/* Champ Email */}
+            {/* Email field */}
             <div className="relative">
               <input
                 type="email"
@@ -130,7 +130,7 @@ export default function Contact() {
               {errors.email && <p className="text-red-500 text-sm mt-1">Un email valide est requis.</p>}
             </div>
 
-            {/* Champ Message */}
+            {/* Message field */}
             <div className="relative">
               <textarea
                 name="message"
@@ -150,7 +150,7 @@ export default function Contact() {
               {errors.message && <p className="text-red-500 text-sm mt-1">Le message est requis.</p>}
             </div>
 
-            {/* Bouton d'envoi */}
+            {/* Send button */}
             <button
               type="submit"
               disabled={isSubmitting}
@@ -161,7 +161,7 @@ export default function Contact() {
               {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
             </button>
 
-            {/* Messages de feedback */}
+            {/* Feedback messages */}
             {successMessage && <p className="text-green-500 text-sm mt-4">{successMessage}</p>}
             {errorMessage && <p className="text-red-500 text-sm mt-4">{errorMessage}</p>}
           </div>

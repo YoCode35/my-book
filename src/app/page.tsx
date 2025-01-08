@@ -47,7 +47,7 @@ export default function Home() {
                     md:pt-16"
       >
 
-          {/* Titre */}
+          {/* Title */}
           <h1 className=" relative
                           z-10
                           sm:top-[-5%] md:top-[0%] lg:top-[-10%]
@@ -63,7 +63,7 @@ export default function Home() {
                                 ml-12 sm:ml-24 md:ml-24
                                 text-pink-500">➜
               </span>
-              {/* Info bulle */}
+              {/* Info bubble */}
               <span className="absolute top-0 left-full ml-2 px-4 py-2 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap">
                 + d&apos;infos
               </span>
@@ -83,7 +83,7 @@ export default function Home() {
                           ml-[5%]"
           />
 
-            {/* Paragraphe */}
+            {/* Paragraph */}
             <p className="paragraph-custom
                           w-full sm:w-[100%] md:w-[100%] lg:w-[60%]
                           lg:absolute

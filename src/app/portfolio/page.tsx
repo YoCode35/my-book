@@ -18,7 +18,7 @@ export default function Portfolio() {
                       max-w-screen-lg
                       mx-auto"
       >
-        <p className="text-white mt-4 text-center">
+        <p className="text-white text-center font-quicksand">
           Mes réalisations
         </p>
       </div>
