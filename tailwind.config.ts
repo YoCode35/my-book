@@ -17,7 +17,7 @@ export default {
         navText: "#fff000",
         navTitle: "#2c3e50",
         navLinkInactive: "#ccc",
-        navLinkHover: "#fff000",
+        navLinkHover: "#fff000", // Couleur jaune ici
         titlePrimary: "#ffffff",
         titleAccent: "#ff5733",
       },

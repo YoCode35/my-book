@@ -20,29 +20,29 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
 
   const checkAboutVisibility = () => {
     if (typeof window !== "undefined") {
-      const aboutSection = document.querySelector("#about-me");
+      const aboutSection = document.querySelector("#abouthome");
       if (aboutSection) {
         const rect = aboutSection.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.top <= window.innerHeight / 2;
+        const isVisible = rect.top <= window.innerHeight / 2 && rect.bottom >= 0;
         setIsAboutActive(isVisible);
       }
     }
-  };
-
-  const checkScroll = () => {
-    if (typeof window !== "undefined") {
-      setScrollTop(window.scrollY);
-      setIsScrolled(window.scrollY > 50);
-      checkAboutVisibility();
-    }
-  };
+  };  
 
   useEffect(() => {
+    const checkScroll = () => {
+      if (typeof window !== "undefined") {
+        setScrollTop(window.scrollY);
+        setIsScrolled(window.scrollY > 50);
+        checkAboutVisibility();
+      }
+    };
+  
     setIsClient(true);
     window.addEventListener("scroll", checkScroll);
-
-    checkScroll();
-
+  
+    checkScroll(); // Appel initial pour vérifier l'état dès que le composant est monté.
+  
     return () => {
       window.removeEventListener("scroll", checkScroll);
     };
@@ -98,20 +98,25 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                               hover:text-navLinkHover
                               ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
                 >
-                  <FiHome size={24} />
+                  <FiHome
+                    size={24}
+                    className={`${
+                      pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"
+                    } hover:text-navLinkHover`} // Appliquer hover sur l'icône aussi
+                  />
                 </Link>
               </li>
               {[
                 ...(pathname === "/"
                   ? [
                     {
-                      href: "#about-me",
+                      href: "#abouthome",
                       label: "À propos",
                     },
                   ]
                   : [
                     pathname !== "/about" && {
-                      href: "/about#about-me",
+                      href: "/about#about",
                       label: "À propos",
                     },
                   ].filter(Boolean)
@@ -132,11 +137,12 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                       className={`px-6 py-2 
                                   text-navLinkInactive
                                   hover:text-navLinkHover
-                                  ${href === "#about-me" && isAboutActive
+                                  ${href === "#abouthome" && isAboutActive
                                     ? "text-navLinkHover"
                                     : isActive(href) === "text-navText"
                                     ? "text-navLinkHover"
                                     : "text-navLinkInactive"}`}
+                                    style={{ color: href === "#abouthome" && isAboutActive ? '#fff000' : '' }}
                     >
                       {label}
                     </Link>
@@ -218,13 +224,13 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             ...(pathname === "/"
               ? [
                   {
-                    href: "#about-me",
+                    href: "#about",
                     label: "À propos",
                   },
                 ]
               : [
                   pathname !== "/about" && {
-                    href: "/about#about-me",
+                    href: "/about#about",
                     label: "À propos",
                   },
                 ].filter(Boolean)

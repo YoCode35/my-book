@@ -37,7 +37,7 @@ export default function Home() {
       </p>
       
       <div
-        id="about-me"
+        id="abouthome"
         className=" flex
                     justify-center
                     items-start
@@ -55,7 +55,8 @@ export default function Home() {
                           text-[3rem] sm:text-[4rem] md:text-[5rem]
                           leading-tight
                           text-shadow
-                          text-left">
+                          text-left"
+          >
             À propos<br />de moi
             <a href="/about#about" className="relative group">
               <span className=" inline-block 
@@ -64,7 +65,20 @@ export default function Home() {
                                 text-pink-500">➜
               </span>
               {/* Info bubble */}
-              <span className="absolute top-0 left-full ml-2 px-4 py-2 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap">
+              <span className=" absolute 
+                                top-0 left-full 
+                                ml-2 
+                                px-4 py-2 
+                                text-white 
+                                bg-black 
+                                rounded 
+                                opacity-0 
+                                group-hover:opacity-100 
+                                transition-opacity 
+                                duration-300 
+                                text-sm 
+                                whitespace-nowrap"
+              >
                 + d&apos;infos
               </span>
             </a>
