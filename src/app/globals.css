@@ -40,6 +40,8 @@ h1 {
 .page-title {
   color: white;
   font-family: 'Clash-display', sans-serif;
+  text-align: center;
+  font-weight: bold;
 }
 
 a {
@@ -47,9 +49,9 @@ a {
 }
 
 .paragraph-custom {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
   color: white;
+  text-align: justify;
 }
 
 @layer utilities {

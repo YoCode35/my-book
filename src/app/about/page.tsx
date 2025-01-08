@@ -3,15 +3,21 @@
 export default function About() {
   
   return (
-    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:500px] lg:bg-[size:70%] flex flex-col items-center min-h-screen pb-16">
+    <div className="bg-cover
+                    bg-no-repeat
+                    bg-[url('/img/colored_spots.png')]
+                    pb-24"
+    >
 
-      <div className="h-0"></div>
-
-      <h1 id="about" className="page-title text-2xl sm:text-3xl md:text-4xl font-bold text-shadow mt-0">
+      <h1 id="about" className="page-title text-2xl sm:text-3xl md:text-4xl mb-12">
         Plus d&apos;infos à propos de moi
       </h1>
 
-      <div className="px-4 sm:px-8 md:px-16 max-w-screen-lg mx-auto"> {/* Ajout des marges et du max-width */}
+      <div className="px-4
+                      sm:px-8 md:px-16
+                      max-w-screen-lg
+                      mx-auto"
+      >
         <p className="text-white mt-4 text-justify">
           Passionné par l’informatique et la programmation, j’ai débuté en tant
           qu’autodidacte avant de me professionnaliser et d’exercer dans le secteur
@@ -26,7 +32,7 @@ export default function About() {
           (équivalent Bac+2) en tant que Développeur Web et Web Mobile. Dans le cadre
           de cet examen, j’ai conçu un projet avec Flutter, un framework
           cross-platform, qui m’a ouvert les portes du développement d’applications
-          mobiles. Ce projet, MyTodoList ({" "}
+          mobiles. Ce projet, MyTodoList ({""}
           <a
             href="https://www.mytodolist.tech"
             target="_blank"

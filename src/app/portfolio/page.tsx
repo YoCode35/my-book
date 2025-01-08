@@ -2,12 +2,26 @@
 
 export default function Portfolio() {
   return (
-    <div className="flex flex-col items-center bg-[url('/img/colored_spots.png')]">
-      <div className="h-12"></div>
-      <h1 id="portfolio" className="page-title text-2xl sm:text-3xl md:text-4xl font-bold text-shadow mt-0">
+    <div
+      className="bg-cover
+                 bg-no-repeat
+                 bg-[url('/img/colored_spots.png')]
+                 pb-24"
+    >
+      <h1 id="portfolio" className="page-title
+                                    text-2xl sm:text-3xl md:text-4xl
+                                    mb-12"
+      >
         Portfolio
       </h1>
-      <p className="text-white mt-4">Mes réalisations</p>
+      <div className="px-4 sm:px-8 md:px-16
+                      max-w-screen-lg
+                      mx-auto"
+      >
+        <p className="text-white mt-4 text-center">
+          Mes réalisations
+        </p>
       </div>
+    </div>
   );
 }

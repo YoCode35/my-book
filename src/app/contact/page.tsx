@@ -70,12 +70,24 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:500px] lg:bg-[size:100%] bg-[position:center_0] flex flex-col items-center min-h-screen pb-16">
-      <div style={{ height: '20px' }}></div>
-      <h1 id="contact" className="page-title text-2xl sm:text-3xl md:text-4xl font-bold text-shadow mt-0">Me contacter</h1>
-      <p className="text-red-500 text-sm mt-2 font-quicksand">* champs obligatoires</p>
+    <div
+    className="bg-cover
+               bg-no-repeat
+               bg-[url('/img/colored_spots.png')]
+               pb-24"
+  >
 
-      <div id="contact-form" className="w-11/12 sm:w-10/12 lg:w-6/12 mx-auto p-6 rounded-lg shadow-md">
+<h1 id="contact" className="page-title text-2xl sm:text-3xl md:text-4xl">Me contacter</h1>
+
+<p className="text-red-500 text-sm font-quicksand text-center">* champs obligatoires</p>
+
+
+      <div id="contact-form" className="w-11/12 sm:w-6/12 lg:w-6/12
+                                        mx-auto
+                                        p-6
+                                        rounded-lg
+                                        shadow-md"
+      >
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col space-y-4">
             {/* Champ Nom */}
@@ -86,9 +98,13 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Votre nom"
-                className={`p-2 border rounded-md w-full text-gray-900 focus:outline-none focus:ring-0 ${
-                  errors.name ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`p-2 border
+                            rounded-md
+                            w-full
+                            text-gray-900
+                            focus:outline-none focus:ring-0
+                            ${errors.name ? 'border-red-500' : 'border-gray-300'}`
+                          }
               />
               <span className="absolute right-2 top-2 text-red-500 text-lg">*</span>
               {errors.name && <p className="text-red-500 text-sm mt-1">Le nom est requis.</p>}
@@ -102,9 +118,13 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Votre email"
-                className={`p-2 border rounded-md w-full text-gray-900 focus:outline-none focus:ring-0 ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`p-2 border
+                            rounded-md
+                            w-full
+                            text-gray-900
+                            focus:outline-none focus:ring-0 
+                            ${errors.email ? 'border-red-500' : 'border-gray-300'}`
+                          }
               />
               <span className="absolute right-2 top-2 text-red-500 text-lg">*</span>
               {errors.email && <p className="text-red-500 text-sm mt-1">Un email valide est requis.</p>}
@@ -118,9 +138,13 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Votre message"
                 rows={5}
-                className={`p-2 border rounded-md w-full text-gray-900 focus:outline-none focus:ring-0 ${
-                  errors.message ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`p-2 border
+                            rounded-md
+                            w-full
+                            text-gray-900
+                            focus:outline-none focus:ring-0
+                            ${errors.message ? 'border-red-500' : 'border-gray-300'}`
+                          }
               ></textarea>
               <span className="absolute right-2 top-2 text-red-500 text-lg">*</span>
               {errors.message && <p className="text-red-500 text-sm mt-1">Le message est requis.</p>}
