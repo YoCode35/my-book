@@ -70,12 +70,12 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center h-screen bg-[url('/img/bkgd_black-and-colored-spots.png')] bg-no-repeat bg-center bg-cover bg-[size:33%] bg-[position:center top-20%] md:bg-[url('/img/colored_spots.png')] md:bg-[position:center_0%]">
-      <div style={{ height: '150px' }}></div>
-      <h1 className="text-4xl font-bold text-navTitle text-shadow mt-[0px]">Me contacter</h1>
+    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:500px] lg:bg-[size:100%] bg-[position:center_0] flex flex-col items-center min-h-screen pb-16">
+      <div style={{ height: '20px' }}></div>
+      <h1 id="contact" className="page-title text-2xl sm:text-3xl md:text-4xl font-bold text-shadow mt-0">Me contacter</h1>
       <p className="text-red-500 text-sm mt-2 font-quicksand">* champs obligatoires</p>
 
-      <div id="contact-form" className="w-full max-w-md mt-8">
+      <div id="contact-form" className="w-11/12 sm:w-10/12 lg:w-6/12 mx-auto p-6 rounded-lg shadow-md">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col space-y-4">
             {/* Champ Nom */}

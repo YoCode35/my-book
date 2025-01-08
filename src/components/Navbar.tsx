@@ -97,7 +97,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             {/* Bouton "Me contacter" Desktop */}
             {pathname !== "/contact" && (
               <div className="ml-4 hidden lg:block">
-                <Link href="/contact#contact-form">
+                <Link href="/contact#contact">
                   <button
                     className={`px-6 py-2 rounded-full text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300 ${pathname === "/contact" ? "bg-yellow-500" : "bg-[rgba(128,0,128,0.3)]"}`}
                   >
@@ -166,7 +166,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           ))}
 
           {pathname !== "/contact" && (
-            <Link href="/contact#contact-form">
+            <Link href="/contact#contact">
               <button
                 onClick={() => setMenuOpen(false)}
                 className="block w-[150px] mx-auto px-4 py-2 mt-6 rounded-full bg-[rgba(128,0,128,0.3)] text-white hover:bg-[rgba(128,0,128,0.6)] focus:outline-none focus:ring-2 focus:ring-purple-300"
