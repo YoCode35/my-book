@@ -3,11 +3,11 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:150%] lg:bg-[size:100%] bg-[position:center_15%] flex flex-col items-center min-h-screen pb-16">
-      <p className="text-[1rem] sm:text-[1.125rem] md:text-[1.1rem] leading-relaxed text-shadow text-center mt-0 mb-32 italic font-rubik font-light px-36">
+      <p className="text-[1rem] sm:text-[1.125rem] md:text-[1.1rem] leading-relaxed text-shadow text-center mt-0 mb-32 italic font-rubik font-light px-8">
         &quot;Explorez ici une sélection de mes travaux les plus significatifs. <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
       </p>
-      
-      <div style={{ height: '100px' }}></div>
+
+      <div style={{ height: '60px' }}></div>
       
       <div
         id="about-me"

@@ -1,8 +1,9 @@
 "use client"; // Force l'utilisation côté client uniquement
 
 export default function About() {
+  
   return (
-    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:400%] lg:bg-[size:225%] bg-[position:center_15%] flex flex-col items-center min-h-screen pb-16">
+    <div className="bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')] bg-[size:400%] sm:bg-[size:400%] md:bg-[size:400%] lg:bg-[size:100%] bg-[position:center_0] flex flex-col items-center min-h-screen pb-16">
 
       <div className="h-12"></div>
 
