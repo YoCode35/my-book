@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import DotsRectangle from "../components/DotsRectangle";
+//import { FiArrowRight } from "react-icons/fi";
 
 export default function Home() {
   return (
@@ -39,10 +41,9 @@ export default function Home() {
       <div
         id="abouthome"
         className="flex items-start w-full
-                  h-[calc(100vh+20rem)] sm:h-[calc(100vh+15rem)] md:h-[calc(100vh+10rem)]
+                  h-[calc(50vh+60rem)] sm:h-[calc(60vh+15rem)] md:h-[calc(60vh+10rem)] lg:h-[calc(70vh+10rem)]
                   md:pt-16"
       >
-
 
         <div className="relative">
           {/* Image */}
@@ -57,7 +58,7 @@ export default function Home() {
                         ml-[10%]"
           />
 
-          {/* Title */}
+          {/* About Title */}
           <h1 className=" absolute
                           z-10
                           top-[-5%] sm:top-[-5%] md:top-[0%] lg:top-[-25%]
@@ -118,37 +119,63 @@ export default function Home() {
             Je m&apos;engage pleinement dans la conception d&apos;outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l&apos;expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d&apos;améliorer la vie quotidienne.
           </p>
 
-
         </div>
-        {/* Rectangle sous le paragraphe */}
-        <div className="  w-full
-                          w-[40%] sm:w-[40%] md:w-[20%] lg:w-[20%]
-                          absolute sm:absolute md:absolute lg:relative
-                          top-[250%] sm:top-[250%] md:top-[250%] lg:top-80
-                          right-0 sm:right-0 md:right-0 lg:right-0
-                          mt-6 sm:mt-8 md:mt-12 bg-transparent
-                          h-[55px]"
-        >
-          <div className="w-full h-full 
-                          flex flex-col 
-                          justify-between 
-                          items-center"
-          >
-            {/* Génération des lignes de petits points */}
-            {[...Array(3)].map((_, index) => (
-              <div key={index} className="flex justify-between w-full">
-                {[...Array(10)].map((_, pointIndex) => (
-                  <span
-                    key={pointIndex}
-                    className="w-1 h-1 rounded-full"
-                    style={{ backgroundColor: 'rgba(128,0,128,1)' }}
-                  ></span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* DotsRectangle Components */}
+        <DotsRectangle
+          className=" w-full
+                      w-[40%] sm:w-[40%] md:w-[20%] lg:w-[20%]
+                      absolute sm:absolute md:absolute lg:relative
+                      top-[230%] sm:top-[250%] md:top-[250%] lg:top-80
+                      right-0 sm:right-0 md:right-0 lg:right-0
+                      mt-6 sm:mt-8 md:mt-12 bg-transparent
+                      h-[55px]"
+          rows={3}
+          dotsPerRow={10}
+          dotColor="rgba(128,0,128,1)"
+        />
       </div>
+
+      {/* Skills Title */}
+      <div
+  id="skills"
+  className="h-[calc(50vh+20rem)] sm:h-[calc(50vh+15rem)] md:h-[calc(50vh+10rem)] lg:h-[calc(70vh+10rem)] relative flex items-center"
+>
+  <h1
+    className=" relative
+                z-10 
+                text-[3rem] sm:text-[4rem] md:text-[5rem] 
+                leading-tight 
+                text-shadow 
+                text-left 
+                flex 
+                items-center 
+                top-[-280px] 
+                ml-32"
+  >
+    Skills
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className=" text-pink-500
+                  w-[8rem] 
+                  h-[8rem] 
+                  ml-8 sm:ml-12 md:ml-12"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+      />
+    </svg>
+  </h1>
+</div>
+
+
     </div>
   );
 }
+
+{/*➡️*/ }

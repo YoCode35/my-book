@@ -32,16 +32,16 @@ body {
 }
 
 h1 {
-  font-family: 'Clash-display', sans-serif;
+  font-family: 'Clash-display-variable', sans-serif;
   font-weight: 600;
   color: white;
 }
 
 .page-title {
   color: white;
-  font-family: 'Clash-display', sans-serif;
+  font-family: 'Clash-display-variable', sans-serif;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 a {

@@ -12,6 +12,21 @@ export default function Header() {
 
   return (
     <div id="header" className="relative bg-transparent flex flex-col items-center justify-center">
+
+          {/* Skills Title */}
+          <h2 className=" absolute
+                          z-10
+                          top-[0]
+                          left-[0]
+                          text-[3rem] sm:text-[4rem] md:text-[5rem]
+                          leading-tight
+                          text-left
+                          font-rubik font-bold
+                          text-[rgba(31,41,55,0.55)]"
+          >
+          My universe
+        </h2>
+
       {/* Vidéo en arrière-plan */}
       <video
         autoPlay
