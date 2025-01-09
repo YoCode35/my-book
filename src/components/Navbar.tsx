@@ -102,7 +102,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                     size={24}
                     className={`${
                       pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"
-                    } hover:text-navLinkHover`} // Appliquer hover sur l'icône aussi
+                    } hover:text-navLinkHover`}
                   />
                 </Link>
               </li>
@@ -178,9 +178,18 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
 
       {/* "back-to-top arrow */}
       {isScrolled && (
-        <div className="fixed bottom-10 right-10 z-30">
+        <div className="fixed 
+                        bottom-5 
+                        center lg:right-5 
+                        z-30"
+        >
           <Link href="#header">
-            <div className="bg-blue-500 p-4 rounded-full text-white shadow-lg hover:bg-blue-600">
+            <div className="bg-blue-500
+                            p-4 rounded-full 
+                            text-white 
+                            shadow-lg 
+                            hover:bg-blue-600"
+            >
               <FiArrowUp size={24} />
             </div>
           </Link>

@@ -35,23 +35,33 @@ export default function Home() {
       >
         [EN COURS DE DEVELOPPEMENT]
       </p>
-      
+
       <div
         id="abouthome"
-        className=" flex
-                    justify-center
-                    items-start
-                    h-[calc(100vh+20rem)]
-                    sm:h-[calc(100vh+15rem)]
-                    md:h-[calc(100vh+10rem)]
-                    md:pt-16"
+        className="flex items-start w-full
+                  h-[calc(100vh+20rem)] sm:h-[calc(100vh+15rem)] md:h-[calc(100vh+10rem)]
+                  md:pt-16"
       >
 
+
+        <div className="relative">
+          {/* Image */}
+          <Image
+            src="/img/img_a-propos.png"
+            alt="À propos"
+            width={300}
+            height={280}
+            className=" sm:w-[400px]
+                        sm:h-[374px]
+                        sm:mr-[10rem] md:mr-[50rem]
+                        ml-[10%]"
+          />
+
           {/* Title */}
-          <h1 className=" relative
+          <h1 className=" absolute
                           z-10
-                          sm:top-[-5%] md:top-[0%] lg:top-[-10%]
-                          left-[10%] sm:left-[20%] md:left-[10%] lg:left-[-10%]
+                          top-[-5%] sm:top-[-5%] md:top-[0%] lg:top-[-25%]
+                          left-[30%] sm:left-[20%] md:left-[30%] lg:left-[30%]
                           text-[3rem] sm:text-[4rem] md:text-[5rem]
                           leading-tight
                           text-shadow
@@ -84,36 +94,62 @@ export default function Home() {
             </a>
           </h1>
 
-          <div className="absolute">
-            {/* Image */}
-            <Image
-              src="/img/img_a-propos.png"
-              alt="À propos"
-              width={300}
-              height={280}
-              className=" sm:w-[400px]
-                          sm:h-[374px]
-                          sm:mr-[10rem] md:mr-[50rem]
-                          ml-[5%]"
-          />
-
-            {/* Paragraph */}
-            <p className="paragraph-custom
-                          w-full sm:w-[100%] md:w-[100%] lg:w-[60%]
-                          lg:absolute
-                          lg:top-[40%]
-                          lg:left-[40%]
-                          px-6 sm:px-8 md:px-12
-                          mt-6 sm:mt-8 md:mt-12             
+          {/* Paragraph */}
+          <p className="paragraph-custom
+                        w-full sm:w-full md:w-[100%] lg:w-[65%]
+                        relative sm:relative md:relative lg:absolute
+                        center
+                        justify
+                        lg:top-[25%]
+                        left-[0%] sm:left-[0%] md:left-[0%] lg:left-[50%]                          
+                        px-12 sm:px-24 md:px-12
+                        mt-6 sm:mt-8 md:mt-12             
             ">
-            <span className="mb-2 block break-words whitespace-normal sm:whitespace-normal md:whitespace-normal max-w-full">
+            <span className="mb-2
+                              block 
+                              break-words 
+                              whitespace-normal 
+                              sm:whitespace-normal md:whitespace-normal 
+                              max-w-full"
+            >
               Le développement logiciel : Une véritable <span className="text-[1.2rem] sm:text-[1.5rem]">vocation</span> qui m&apos;anime au quotidien !
             </span>
             <br />
             Je m&apos;engage pleinement dans la conception d&apos;outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l&apos;expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d&apos;améliorer la vie quotidienne.
           </p>
+
+
+        </div>
+        {/* Rectangle sous le paragraphe */}
+        <div className="  w-full
+                          w-[45%] sm:w-[40%] md:w-[20%] lg:w-[20%]
+                          absolute sm:absolute md:absolute lg:relative
+                          top-[225%] sm:top-[240%] md:top-[200%] lg:top-[40%]
+                          right-0 sm:right-0 md:right-0 lg:right-0
+                          mt-6 sm:mt-8 md:mt-12 bg-transparent
+                          h-[55px]"
+        >
+          <div className="w-full h-full 
+                            flex flex-col 
+                            justify-between 
+                            items-center"
+          >
+            {/* Génération des lignes de petits points */}
+            {[...Array(3)].map((_, index) => (
+              <div key={index} className="flex justify-between w-full">
+                {[...Array(10)].map((_, pointIndex) => (
+                  <span
+                    key={pointIndex}
+                    className="w-1 h-1 rounded-full"
+                    style={{ backgroundColor: 'rgba(128,0,128,1)' }}
+                  ></span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
     </div>
   );
 }
