@@ -137,11 +137,11 @@ export default function Home() {
 
       {/* Skills Title */}
       <div
-  id="skills"
-  className="h-[calc(50vh+20rem)] sm:h-[calc(50vh+15rem)] md:h-[calc(50vh+10rem)] lg:h-[calc(70vh+10rem)] relative flex items-center"
->
-  <h1
-    className=" relative
+        id="skills"
+        className="h-[calc(50vh+20rem)] sm:h-[calc(50vh+15rem)] md:h-[calc(50vh+10rem)] lg:h-[calc(70vh+10rem)] relative flex items-center"
+      >
+        <h1
+          className=" relative
                 z-10 
                 text-[3rem] sm:text-[4rem] md:text-[5rem] 
                 leading-tight 
@@ -151,29 +151,28 @@ export default function Home() {
                 items-center 
                 top-[-280px] 
                 ml-32"
-  >
-    Skills
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className=" text-pink-500
-                  w-[8rem] 
-                  h-[8rem] 
-                  ml-8 sm:ml-12 md:ml-12"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
-      />
-    </svg>
-  </h1>
-</div>
-
-
+        >
+          Skills
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className=" text-pink-500 
+                        w-[8rem]
+                        h-[8rem] 
+                        ml-8 sm:ml-12 md:ml-12 lg:ml-48 
+                        lg:mt-[1rem]"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+            />
+          </svg>
+        </h1>
+      </div>
     </div>
   );
 }

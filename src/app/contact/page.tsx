@@ -4,25 +4,6 @@ import DotsRectangle from "../../components/DotsRectangle";
 
 export default function Contact() {
 
-  const [dotsPerRow, setDotsPerRow] = useState(40); // Valeur par défaut
-
-  useEffect(() => {
-    const updateDots = () => {
-      if (window.innerWidth < 640) {
-        setDotsPerRow(20); // Mobile
-      } else if (window.innerWidth < 1024) {
-        setDotsPerRow(30); // Tablette
-      } else {
-        setDotsPerRow(50); // Desktop
-      }
-    };
-
-    updateDots(); // Initial call
-    window.addEventListener("resize", updateDots); // Écoute des redimensionnements
-
-    return () => window.removeEventListener("resize", updateDots); // Nettoyage
-  }, []);
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -89,6 +70,25 @@ export default function Contact() {
     }
   };
 
+  const [dotsPerRow, setDotsPerRow] = useState(40); // Valeur par défaut
+
+  useEffect(() => {
+    const updateDots = () => {
+      if (window.innerWidth < 640) {
+        setDotsPerRow(20); // Mobile
+      } else if (window.innerWidth < 1024) {
+        setDotsPerRow(30); // Tablette
+      } else {
+        setDotsPerRow(50); // Desktop
+      }
+    };
+
+    updateDots(); // Initial call
+    window.addEventListener("resize", updateDots); // Écoute des redimensionnements
+
+    return () => window.removeEventListener("resize", updateDots); // Nettoyage
+  }, []);
+
   return (
     <div
       className="bg-cover
@@ -102,7 +102,7 @@ export default function Contact() {
         className=" w-full
                       w-[100%]
                       relative sm:relative md:relative lg:relative
-                      top-[-50] sm:top-[-60] md:top-[-50] lg:top-[-50]
+                      top-[-50] sm:top-[-60] md:top-[-50] lg:top-[-100]
                       right-0 sm:right-0 md:right-0 lg:right-0
                       mt-6 sm:mt-8 md:mt-12 bg-transparent
                       h-[55px]

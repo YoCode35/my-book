@@ -36,7 +36,7 @@ export default function Portfolio() {
         className=" w-full
                       w-[100%]
                       relative sm:relative md:relative lg:relative
-                      top-[-50] sm:top-[-60] md:top-[-50] lg:top-[-50]
+                      top-[-50] sm:top-[-60] md:top-[-50] lg:top-[-100]
                       right-0 sm:right-0 md:right-0 lg:right-0
                       mt-6 sm:mt-8 md:mt-12 bg-transparent
                       h-[55px]
