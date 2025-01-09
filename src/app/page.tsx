@@ -105,7 +105,7 @@ export default function Home() {
                         px-12 sm:px-24 md:px-12
                         mt-6 sm:mt-8 md:mt-12             
             ">
-            <span className="mb-2
+            <span className=" mb-2
                               block 
                               break-words 
                               whitespace-normal 
@@ -122,17 +122,17 @@ export default function Home() {
         </div>
         {/* Rectangle sous le paragraphe */}
         <div className="  w-full
-                          w-[45%] sm:w-[40%] md:w-[20%] lg:w-[20%]
+                          w-[40%] sm:w-[40%] md:w-[20%] lg:w-[20%]
                           absolute sm:absolute md:absolute lg:relative
-                          top-[225%] sm:top-[240%] md:top-[200%] lg:top-[40%]
+                          top-[250%] sm:top-[250%] md:top-[250%] lg:top-80
                           right-0 sm:right-0 md:right-0 lg:right-0
                           mt-6 sm:mt-8 md:mt-12 bg-transparent
                           h-[55px]"
         >
           <div className="w-full h-full 
-                            flex flex-col 
-                            justify-between 
-                            items-center"
+                          flex flex-col 
+                          justify-between 
+                          items-center"
           >
             {/* Génération des lignes de petits points */}
             {[...Array(3)].map((_, index) => (
@@ -149,7 +149,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

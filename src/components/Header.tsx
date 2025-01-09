@@ -29,11 +29,24 @@ export default function Header() {
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-5"></div>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-40 z-5"></div> */}
 
       {/* Traits obliques à gauche */}
-      <div className="absolute left-0 top-0 w-[50px] h-[595px] lg:h-[490px] bg-transparent z-10">
-        <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-20 lg:mt-48"></div>
+      <div className="absolute 
+                      left-0 top-0
+                      w-[50px] 
+                      h-[595px] lg:h-[490px] 
+                      bg-transparent 
+                      z-10"
+      >
+        <div className="w-[50px]
+                        h-[3px] 
+                        bg-[#4d94ff] 
+                        rotate-45 
+                        origin-left 
+                        mt-20 
+                        lg:mt-44"
+        ></div>
         <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
         <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
         <div className="w-[50px] h-[3px] bg-[#4d94ff] rotate-45 origin-left mt-8 lg:mt-9"></div>
