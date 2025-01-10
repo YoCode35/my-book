@@ -17,9 +17,11 @@ export default {
         navText: "#fff000",
         navTitle: "#2c3e50",
         navLinkInactive: "#ccc",
-        navLinkHover: "#fff000", // Couleur jaune ici
+        navLinkHover: "#fff000",
         titlePrimary: "#ffffff",
         titleAccent: "#ff5733",
+        buttonColorBkgd: "#4d94ff",
+        colorChart:"#fff000",
       },
       fontFamily: {
         orbitron: ['var(--font-orbitron)', 'sans-serif'],

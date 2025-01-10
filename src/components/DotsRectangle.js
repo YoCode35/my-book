@@ -1,6 +1,6 @@
 export default function DotsRectangle({
     className = "",
-    dotColor = "rgba(128,0,128,1)",
+    dotColor = "#fff000",
     rows = 3,
     dotsPerRow = 10,
   }) {

@@ -17,24 +17,31 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
   const [isClient, setIsClient] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
   const [isAboutActive, setIsAboutActive] = useState(false);
-
-  const checkAboutVisibility = () => {
-    if (typeof window !== "undefined") {
-      const aboutSection = document.querySelector("#abouthome");
-      if (aboutSection) {
-        const rect = aboutSection.getBoundingClientRect();
-        const isVisible = rect.top <= window.innerHeight / 2 && rect.bottom >= 0;
-        setIsAboutActive(isVisible);
-      }
-    }
-  };
+  const [isSkillsActive, setIsSkillsActive] = useState(false);
 
   useEffect(() => {
     const checkScroll = () => {
       if (typeof window !== "undefined") {
         setScrollTop(window.scrollY);
         setIsScrolled(window.scrollY > 50);
-        checkAboutVisibility();
+
+        // Vérification de la visibilité de la section "A propos"
+        const aboutSection = document.querySelector("#abouthome");
+        if (aboutSection) {
+          const aboutRect = aboutSection.getBoundingClientRect();
+          // Le lien "A propos" reprend sa couleur initiale quand la section quitte 25% de la fenêtre
+          const isAboutVisible = aboutRect.top <= window.innerHeight * 0.3 && aboutRect.bottom >= 0;
+          setIsAboutActive(isAboutVisible);
+        }
+
+        // Vérification de la visibilité de la section "Skills"
+        const skillsSection = document.querySelector("#skills");
+        if (skillsSection) {
+          const skillsRect = skillsSection.getBoundingClientRect();
+          // Le lien "Skills" devient jaune quand la section entre dans la vue à 75%
+          const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.3 && skillsRect.bottom >= 0;
+          setIsSkillsActive(isSkillsVisible);
+        }
       }
     };
 
@@ -46,7 +53,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
     return () => {
       window.removeEventListener("scroll", checkScroll);
     };
-  }, []);
+  }, [isAboutActive]);
 
   const isActive = (path: string) =>
     pathname === path ? "text-navText" : "text-[#3d5b79]";
@@ -94,75 +101,68 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 <Link
                   href="/#header"
                   className={`px-6 py-2 
-                  text-navLinkInactive
-                  hover:text-navLinkHover
-                  ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                    text-navLinkInactive
+                    hover:text-navLinkHover
+                    ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`
+                  }
                 >
                   <FiHome
                     size={24}
-                    className={`${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"
-                      } hover:text-navLinkHover`}
+                    className={`${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"} hover:text-navLinkHover`}
                   />
                 </Link>
               </li>
-              {[
-                ...(pathname === "/"
-                  ? [
-                    {
-                      href: "#abouthome",
-                      label: "À propos",
-                    },
-                    {
-                      href: "#skills", // Ajout du lien "Skills"
-                      label: "Skills",
-                    },
-                  ]
-                  : [
-                    pathname !== "/about" && {
-                      href: "/about#about",
-                      label: "À propos",
-                    },
-                    pathname !== "/skills" && {
-                      href: "/skills#skills",
-                      label: "Skills",
-                    },
-                  ].filter(Boolean)
-                ),
-                ...(pathname !== "/portfolio"
-                  ? [
-                    {
-                      href: "/portfolio#portfolio",
-                      label: "Portfolio",
-                    },
-                  ]
-                  : []),
-              ]
-                .filter((item): item is { href: string; label: string } => item !== false)
-                .map(({ href, label }) => (
-                  <li key={href} className="flex items-center">
-                    <Link
-                      href={href}
-                      className={`px-6 py-2 
-                      text-navLinkInactive
-                      hover:text-navLinkHover
-                      ${href === "#abouthome" && isAboutActive && window.location.hash !== "#skills"
-                          ? "text-navLinkHover"
-                          : isActive(href) === "text-navText"
-                            ? "text-navLinkHover"
-                            : "text-navLinkInactive"}`}
-                      style={{
-                        color: href === "#abouthome" && isAboutActive && window.location.hash !== "#skills"
-                          ? "#fff000"
-                          : href === "#skills" && pathname === "/" && window.location.hash === "#skills"
-                            ? "#fff000"
-                            : "",
-                      }}
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                ))}
+
+              {/* Lien À propos */}
+              <li key="about" className="flex items-center">
+                <Link
+                  href={pathname === "/" ? "#abouthome" : "/about#about"}
+                  className={`px-6 py-2 
+                    text-navLinkInactive
+                    hover:text-navLinkHover
+                    ${pathname === "/about" || (pathname === "/" && isAboutActive) ? "text-navLinkHover" : "text-navLinkInactive"}`
+                  }
+                  style={{
+                    color: pathname === "/about" || (pathname === "/" && isAboutActive) ? "#fff000" : "",
+                  }}
+                >
+                  À propos
+                </Link>
+              </li>
+
+              {/* Lien Skills */}
+              <li className="flex items-center">
+                <Link
+                  href={pathname === "/" ? "#skills" : "/skills#skills"}
+                  className={`px-6 py-2 
+                    text-navLinkInactive
+                    hover:text-navLinkHover
+                    ${pathname === "/skills" || (pathname === "/" && isSkillsActive) ? "text-navLinkHover" : "text-navLinkInactive"}`
+                  }
+                  style={{
+                    color: pathname === "/skills" || (pathname === "/" && isSkillsActive) ? "#fff000" : "",
+                  }}
+                >
+                  Skills
+                </Link>
+              </li>
+
+              {/* Lien Portfolio */}
+              <li className="flex items-center">
+                <Link
+                  href="/portfolio#portfolio"
+                  className={`px-6 py-2 
+                    text-navLinkInactive
+                    hover:text-navLinkHover
+                    ${pathname === "/portfolio" ? "text-navLinkHover" : "text-navLinkInactive"}`
+                  }
+                >
+                  Portfolio
+                </Link>
+              </li>
             </ul>
+
+            {/* Bouton Me Contacter */}
             {pathname !== "/contact" && (
               <div className="ml-4 hidden lg:block">
                 <Link href="/contact#contact">
@@ -175,8 +175,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                       hover:text-black
                       hover:font-bold
                       focus:outline-none focus:ring-2 focus:ring-purple-300
-                      ${pathname === "/contact" ? "bg-navLinkHover" : "bg-[rgba(128,0,128,0.3)]"}
-                    `}
+                      ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}`
+                    }
                     style={{
                       minWidth: "160px",
                     }}
@@ -302,7 +302,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                       px-4 py-2
                       mt-6
                       rounded-full
-                      bg-[rgba(128,0,128,0.3)]
+                      bg-buttonColorBkgd
                       hover:bg-navLinkHover
                       hover:text-black
                       hover:font-bold

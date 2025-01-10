@@ -22,7 +22,7 @@ export default function Header() {
                           leading-tight
                           text-left
                           font-rubik font-bold
-                          text-[rgba(31,41,55,0.55)]"
+                          text-[rgba(68,90,120,0.55)]"
           >
           My universe
         </h2>
