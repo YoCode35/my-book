@@ -133,7 +133,7 @@ export default function Home() {
       </div>
 
       {/* SEPARATEUR */}
-      <div className="h-0 sm:h-80 md:h-72 lg:h-32 xl:h-32"></div>
+      <div className="h-32 sm:h-80 md:h-72 lg:h-32 xl:h-64"></div>
       {/* SEPARATEUR */}
 
       {/* Skills Section */}

@@ -19,17 +19,17 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
   const [isAboutActive, setIsAboutActive] = useState(false);
   const [isSkillsActive, setIsSkillsActive] = useState(false);
 
+  // Logique pour détecter si l'on est dans la section "À propos" et "Skills"
   useEffect(() => {
     const checkScroll = () => {
       if (typeof window !== "undefined") {
         setScrollTop(window.scrollY);
         setIsScrolled(window.scrollY > 50);
 
-        // Vérification de la visibilité de la section "A propos"
+        // Vérification de la visibilité de la section "À propos"
         const aboutSection = document.querySelector("#abouthome");
         if (aboutSection) {
           const aboutRect = aboutSection.getBoundingClientRect();
-          // Le lien "A propos" reprend sa couleur initiale quand la section quitte 25% de la fenêtre
           const isAboutVisible = aboutRect.top <= window.innerHeight * 0.3 && aboutRect.bottom >= 0;
           setIsAboutActive(isAboutVisible);
         }
@@ -38,7 +38,6 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         const skillsSection = document.querySelector("#skills");
         if (skillsSection) {
           const skillsRect = skillsSection.getBoundingClientRect();
-          // Le lien "Skills" devient jaune quand la section entre dans la vue à 75%
           const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.3 && skillsRect.bottom >= 0;
           setIsSkillsActive(isSkillsVisible);
         }
@@ -102,10 +101,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 <Link
                   href="/#header"
                   className={`px-6 py-2 
-                    text-navLinkInactive
-                    hover:text-navLinkHover
-                    ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`
-                  }
+                              text-navLinkInactive
+                              hover:text-navLinkHover
+                              ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
                 >
                   <FiHome
                     size={24}
@@ -115,52 +113,55 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               </li>
 
               {/* Lien À propos */}
-              <li key="about" className="flex items-center">
-                <Link
-                  href={pathname === "/" ? "#abouthome" : "/about#about"}
-                  className={`px-6 py-2 
-                    text-navLinkInactive
-                    hover:text-navLinkHover
-                    ${pathname === "/about" || (pathname === "/" && isAboutActive) ? "text-navLinkHover" : "text-navLinkInactive"}`
-                  }
-                  style={{
-                    color: pathname === "/about" || (pathname === "/" && isAboutActive) ? "#fff000" : "",
-                  }}
-                >
-                  À propos
-                </Link>
-              </li>
+              {pathname !== "/about" && (
+                <li key="about" className="flex items-center">
+                  <Link
+                    href={pathname === "/" ? "#abouthome" : "/about#about"}
+                    className={`px-6 py-2 
+                                text-navLinkInactive
+                                hover:text-navLinkHover
+                                ${pathname === "/" && isAboutActive ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                    style={{
+                      color: pathname === "/" && isAboutActive ? "#fff000" : "",
+                    }}
+                  >
+                    À propos
+                  </Link>
+                </li>
+              )}
 
               {/* Lien Skills */}
-              <li className="flex items-center">
-                <Link
-                  href={pathname === "/" ? "#skills" : "/skills#skills"}
-                  className={`px-6 py-2 
-                    text-navLinkInactive
-                    hover:text-navLinkHover
-                    ${pathname === "/skills" || (pathname === "/" && isSkillsActive) ? "text-navLinkHover" : "text-navLinkInactive"}`
-                  }
-                  style={{
-                    color: pathname === "/skills" || (pathname === "/" && isSkillsActive) ? "#fff000" : "",
-                  }}
-                >
-                  Skills
-                </Link>
-              </li>
+              {pathname !== "/skills" && (
+                <li key="skills" className="flex items-center">
+                  <Link
+                    href={pathname === "/" ? "#skills" : "/skills#skills"}
+                    className={`px-6 py-2 
+                                text-navLinkInactive
+                                hover:text-navLinkHover
+                                ${pathname === "/" && isSkillsActive ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                    style={{
+                      color: pathname === "/" && isSkillsActive ? "#fff000" : "",
+                    }}
+                  >
+                    Skills
+                  </Link>
+                </li>
+              )}
 
               {/* Lien Portfolio */}
-              <li className="flex items-center">
-                <Link
-                  href="/portfolio#portfolio"
-                  className={`px-6 py-2 
-                    text-navLinkInactive
-                    hover:text-navLinkHover
-                    ${pathname === "/portfolio" ? "text-navLinkHover" : "text-navLinkInactive"}`
-                  }
-                >
-                  Portfolio
-                </Link>
-              </li>
+              {pathname !== "/portfolio" && (
+                <li key="portfolio" className="flex items-center">
+                  <Link
+                    href="/portfolio#portfolio"
+                    className={`px-6 py-2 
+                                text-navLinkInactive
+                                hover:text-navLinkHover
+                                ${pathname === "/portfolio" ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+              )}
             </ul>
 
             {/* Bouton Me Contacter */}
@@ -168,16 +169,14 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               <div className="ml-4 hidden lg:block">
                 <Link href="/contact#contact">
                   <button
-                    className={`
-                      px-6 py-2
-                      rounded-full
-                      text-white
-                      hover:bg-navLinkHover
-                      hover:text-black
-                      hover:font-bold
-                      focus:outline-none focus:ring-2 focus:ring-purple-300
-                      ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}`
-                    }
+                    className={`px-6 py-2
+                                rounded-full
+                                text-white
+                                hover:bg-navLinkHover
+                                hover:text-black
+                                hover:font-bold
+                                focus:outline-none focus:ring-2 focus:ring-purple-300
+                                ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}`}
                     style={{
                       minWidth: "160px",
                     }}
@@ -191,7 +190,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         </nav>
       )}
 
-      {/* "back-to-top arrow */}
+      {/* "back-to-top arrow" */}
       {isScrolled && (
         <div className="fixed 
                         bottom-5 
@@ -214,65 +213,34 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
       {/* Mobile Navbar */}
       {menuOpen && (
         <div
-          className="lg:hidden
-                absolute 
-                left-1/2 
-                transform 
-                -translate-x-1/2 
-                w-[70%] max-w-[400px]
-                bg-[rgba(1,22,39,0.8)]
-                py-4 px-6
-                rounded-lg
-                shadow-lg
-                space-y-4
-                z-50
-                list-none"
+          className=" lg:hidden
+                      absolute 
+                      left-1/2 
+                      transform 
+                      -translate-x-1/2 
+                      w-[70%] max-w-[400px]
+                      bg-[rgba(1,22,39,0.8)]
+                      py-4 px-6
+                      rounded-lg
+                      shadow-lg
+                      space-y-4
+                      z-50
+                      list-none"
           style={{
             top: `${scrollTop + 50}px`,
             backdropFilter: "blur(8px)",
           }}
         >
-          {[
-            {
-              href: "/#header",
-              label: (
-                <div
-                  className={`flex justify-center items-center w-full ${pathname === "/" ? "text-navLinkHover" : "text-white"} hover:text-navLinkHover`}
-                >
-                  <FiHome size={24} />
-                </div>
-              ),
-            },
-            ...(pathname === "/"
-              ? [
-                {
-                  href: "#abouthome",
-                  label: "À propos",
-                },
-                {
-                  href: "#skills", // Ajout du lien "Skills"
-                  label: "Skills",
-                },
-              ]
-              : [
-                pathname !== "/about" && {
-                  href: "/about#about",
-                  label: "À propos",
-                },
-                pathname !== "/skills" && {
-                  href: "/skills#skills",
-                  label: "Skills",
-                },
-              ].filter(Boolean)
-            ),
-            ...(pathname !== "/portfolio"
-              ? [
-                {
-                  href: "/portfolio#portfolio",
-                  label: "Portfolio",
-                },
-              ]
-              : []),
+          {[ 
+            { href: "/#header", label: <div className={`flex justify-center items-center w-full ${pathname === "/" ? "text-navLinkHover" : "text-white"} hover:text-navLinkHover`}><FiHome size={24} /></div> },
+            ...(pathname === "/" ? [
+              { href: "#abouthome", label: <span className={`${isAboutActive ? "text-navLinkHover" : "text-white"}`}>À propos</span> },
+              { href: "#skills", label: <span className={`${isSkillsActive ? "text-navLinkHover" : "text-white"}`}>Skills</span> }
+            ] : [
+              pathname !== "/about" && { href: "/about#about", label: "À propos" },
+              pathname !== "/skills" && { href: "/skills#skills", label: "Skills" },
+            ].filter(Boolean)),
+            ...(pathname !== "/portfolio" ? [{ href: "/portfolio#portfolio", label: "Portfolio" }] : [])
           ]
             .filter((item): item is { href: string; label: string } => item !== false)
             .map(({ href, label }) => (
@@ -281,14 +249,12 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 href={href}
                 onClick={() => setMenuOpen(false)}
                 className={`block
-                      text-center
-                      px-4 py-2
-                      rounded-md
-                      text-navLinkInactive
-                      hover:text-navLinkHover 
-                      ${isActive(href)}
-                      ${href === "#skills" && pathname === "/" && window.location.hash === "#skills" ? "text-navLinkHover" : ""}
-                      ${href === "#abouthome" && window.location.hash !== "#skills" && pathname === "/" && isAboutActive ? "text-navLinkHover" : ""}`}
+                            text-center
+                            px-4 py-2
+                            rounded-md
+                            text-navLinkInactive
+                            hover:text-navLinkHover 
+                            ${isActive(href)}`}
               >
                 {label}
               </Link>
@@ -297,18 +263,18 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             <Link href="/contact#contact">
               <button
                 onClick={() => setMenuOpen(false)}
-                className="block
-                      w-[150px]
-                      mx-auto
-                      px-4 py-2
-                      mt-6
-                      rounded-full
-                      bg-buttonColorBkgd
-                      hover:bg-navLinkHover
-                      hover:text-black
-                      hover:font-bold
-                      text-white
-                      focus:outline-none focus:ring-2 focus:ring-purple-300"
+                className=" block
+                            w-[150px]
+                            mx-auto
+                            px-4 py-2
+                            mt-6
+                            rounded-full
+                            bg-buttonColorBkgd
+                            hover:bg-navLinkHover
+                            hover:text-black
+                            hover:font-bold
+                            text-white
+                            focus:outline-none focus:ring-2 focus:ring-purple-300"
               >
                 Me contacter
               </button>
@@ -316,7 +282,6 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           )}
         </div>
       )}
-
     </>
   );
 }
