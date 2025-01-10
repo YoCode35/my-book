@@ -36,25 +36,26 @@ export default function Portfolio() {
                 className=" w-full
                             w-[100%]
                             relative sm:relative md:relative lg:relative
-                            top-[-80] sm:top-[-60] md:top-[-50] lg:top-[-100]
+                            top-[0] sm:top-[0] md:top-[0] lg:top-[0]
                             right-0 sm:right-0 md:right-0 lg:right-0
-                            mt-6 sm:mt-8 md:mt-12 bg-transparent
                             h-[55px]
                             z-1"
                 rows={3}
                 dotsPerRow={dotsPerRow}
                 dotColor="#fff000"
             />
-
-            <h1 id="skills" className=" page-title
-                                        text-2xl sm:text-3xl md:text-4xl
-                                        mb-12"
+            <h1
+                id="skills"
+                className=" page-title
+                            text-2xl sm:text-3xl md:text-4xl
+                            pt-16 sm:pt-20 md:pt-24 lg:pt-32
+                            mb-12"
             >
                 Skills
             </h1>
             <div className="px-4 sm:px-8 md:px-16
-                      max-w-screen-lg
-                      mx-auto"
+                            max-w-screen-lg
+                            mx-auto"
             >
                 <div className="flex justify-center">
 
