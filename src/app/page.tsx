@@ -16,7 +16,7 @@ export default function Home() {
                     text-shadow 
                     text-center 
                     mt-0 
-                    mb-3 sm:mb-4 md:mb-8 lg:mb-8
+                    mb-0 sm:mb-4 md:mb-8 lg:mb-8
                     italic 
                     font-rubik font-light 
                     px-8"
@@ -38,11 +38,14 @@ export default function Home() {
         [EN COURS DE DEVELOPPEMENT]
       </p>
 
+      {/* About Section */}
       <div
         id="abouthome"
-        className="flex items-start w-full
-                  h-[calc(50vh+25rem)] sm:h-[calc(50vh+15rem)] md:h-[calc(60vh+10rem)] lg:h-[calc(70vh+10rem)]
-                  md:pt-16"
+        className=" lg:flex 
+                    items-start
+                    w-full
+                    h-[calc(65vh+20rem)] sm:h-[calc(50vh+15rem)] md:h-[calc(60vh+10rem)] lg:h-[calc(70vh+10rem)]
+                    md:pt-16"
       >
 
         <div className="relative">
@@ -53,16 +56,15 @@ export default function Home() {
             width={300}
             height={280}
             className=" sm:w-[400px] md:w-[350px]
-                        sm:h-[374px] md:h-[332px]
+                        sm:h-[auto] md:h-[auto]
                         sm:mr-[10rem] md:mr-[50rem]
                         ml-[10%]"
           />
 
-          {/* About Title */}
           <h1 className=" absolute
                           z-10
-                          top-[-5%] sm:top-[-5%] md:top-[-20%] lg:top-[-25%]
-                          left-[30%] sm:left-[20%] md:left-[30%] lg:left-[30%]
+                          top-[-7%] sm:top-[-5%] md:top-[-20%] lg:top-[-25%]
+                          left-[35%] sm:left-[35%] md:left-[30%] lg:left-[30%]
                           text-[3rem] sm:text-[4rem] md:text-[5rem]
                           leading-tight
                           text-shadow
@@ -97,15 +99,15 @@ export default function Home() {
 
           {/* Paragraph */}
           <p className="paragraph-custom
-                        w-full sm:w-full md:w-[100%] lg:w-[65%]
+                        w-full sm:w-full md:w-full lg:w-[65%]
                         relative sm:relative md:relative lg:absolute
                         center
                         justify
                         lg:top-[25%]
-                        left-[0%] sm:left-[0%] md:left-[0%] lg:left-[50%]                          
+                        left-[0%] sm:left-[0%] md:left-[0%] lg:left-[50%]                         
                         px-12 sm:px-24 md:px-12
-                        mt-6 sm:mt-8 md:mt-12             
-            ">
+                        mt-6 sm:mt-8 md:mt-12"
+          >
             <span className=" mb-2
                               block 
                               break-words 
@@ -119,15 +121,11 @@ export default function Home() {
           </p>
 
         </div>
-        {/* DotsRectangle Components */}
         <DotsRectangle
-          className=" w-full
-                      w-[40%] sm:w-[40%] md:w-[20%] lg:w-[20%]
-                      absolute sm:absolute md:absolute lg:relative
-                      top-[220%] sm:top-[250%] md:top-[270%] lg:top-80
-                      right-0 sm:right-0 md:right-0 lg:right-0
-                      mt-6 sm:mt-8 md:mt-12 bg-transparent
-                      h-[55px]"
+          className=" w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%]                    
+                      mt-8 sm:mt-8 md:mt-8 lg:mt-48
+                      self-center
+                      ml-auto"
           rows={3}
           dotsPerRow={10}
           dotColor="#fff000"
@@ -135,12 +133,14 @@ export default function Home() {
       </div>
 
       {/* SEPARATEUR */}
-      <div className="h-0 sm:h-80 md:h-48 lg:h-32 xl:h-32"></div>
+      <div className="h-0 sm:h-80 md:h-72 lg:h-32 xl:h-32"></div>
       {/* SEPARATEUR */}
 
-      {/* Skills Title */}
-      <div id="skills" className="h-[calc(50vh+10rem)] sm:h-[calc(50vh+60rem)] md:h-[calc(50vh+60rem)] lg:h-[calc(70vh+10rem)]
-                                  flex-1 ml-8"
+      {/* Skills Section */}
+      <div
+        id="skills"
+        className=" h-[calc(130vh+25rem)] sm:h-[calc(90vh+15rem)] md:h-[calc(90vh+15rem)] lg:h-[calc(70vh+10rem)]
+                    flex flex-col justify-center items-center"
       >
         <h1 className="relative
                        z-10 
@@ -151,10 +151,9 @@ export default function Home() {
                        text-center 
                        flex items-center 
                        justify-center 
-                       top-[-70px] 
-                       sm:top-[-65px] md:top-[50px] lg:top-[-65px] 
+                       top-[0px] sm:top-[0px] md:top-[0px] lg:top-[110px] 
                        mx-auto"
-      >
+        >
           Skills
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" text-colorChart
                                                                                                                                     w-[8rem] 
@@ -166,13 +165,12 @@ export default function Home() {
           </svg>
         </h1>
 
-
         <div className="flex justify-center">
-          <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[-40px] md:top-[-50px] text-left justify-center">
+          <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[20px] md:top-[40px] lg:top-[150px] text-left justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-24 sm:pb-96 md:pb-96 lg:pb-96">
               {/* Première colonne */}
-              <div className="text-center sm:text-left">
-                <strong>Front end</strong>
+              <div className="text-center sm:text-left ">
+                <strong className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Front end</strong>
                 <div className="pt-6">
                   <div className="flex justify-center sm:justify-between"><span>ReactJS</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>Angular</span></div>
@@ -185,7 +183,7 @@ export default function Home() {
                 </div>
 
                 <div className="pt-6">
-                  <strong>Prototypage et Design</strong>
+                  <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Prototypage & Design</strong>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>Figma</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>Balsamiq</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>Photoshop</span></div>
@@ -194,13 +192,13 @@ export default function Home() {
 
               {/* Deuxième colonne */}
               <div className="text-center sm:text-left">
-                <strong>Back end</strong>
+                <strong className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Back end</strong>
                 <div className="pt-6">
                   <div className="flex justify-center sm:justify-between"><span>NodeJS</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>NestJS</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>TypeScript</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Java (Java EE)</span></div>
+                  <div className="mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>PostgreSQL</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>MySQL</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>SQL Server</span></div>
@@ -208,26 +206,26 @@ export default function Home() {
                 </div>
 
                 <div className="pt-6">
-                  <strong>Modélisation et Conception</strong>
+                  <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Modélisation & Conception</strong>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>UML (Unified Modeling Language)</span></div>
                 </div>
               </div>
 
               {/* Troisième colonne */}
               <div className="text-center sm:text-left">
-                <strong>Web Services et APIs</strong>
+                <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Web Services & APIs</strong>
                 <div className="pt-6">
                   <div className="flex justify-center sm:justify-between"><span>Firebase</span></div>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>APIs REST</span></div>
                 </div>
 
                 <div className="pt-6">
-                  <strong>Versioning</strong>
+                  <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Versioning</strong>
                   <div className="mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
                 </div>
 
                 {/* Lien vers la page Skills */}
-                <div className="relative right-0 mt-8 mr-8">
+                <div className="relative left-8 right-0 mt-8 mr-8">
                   <a href="/skills#skills" className="text-[#4d94ff] hover:text-navLinkHover font-medium flex items-center justify-end gap-2">
                     Niveaux de compétences estimés (Auto-évaluation)
                     <span>➡️</span>

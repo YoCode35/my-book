@@ -81,7 +81,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           >
             <div className="text-white
                             font-orbitron
-                            text-[8px]
+                            text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17px]
+                            tracking-wider sm:tracking-widest md:tracking-[0.1em] lg:tracking-[0.15em]
                             sm:text-[10px] md:text-[12px] lg:text-[14px]
                             ml-2 sm:ml-4 md:ml-6 lg:ml-8"
             >
