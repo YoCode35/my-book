@@ -71,22 +71,25 @@ export default function Header() {
       {/* Navbar */}
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      {/* Effets supplémentaires (gradient & radial) */}
-      <div
-        className="absolute inset-0 z-5"
-        style={{
-          backgroundImage: `
-            linear-gradient(
-              to bottom,
-              rgba(255, 255, 255, 0) 0%,
-              rgba(0, 0, 0, 0.3) 20%,
-              rgba(0, 0, 0, 1) 100%
-            ),
-            radial-gradient(rgba(255, 255, 255, 0.1) calc(20vw / 300), transparent calc(20vw / 200))
-          `,
-          backgroundSize: `100% 100%, calc(35vw / 80) calc(35vw / 80)`,
-        }}
-      ></div>
+{/* Gradient */}
+<div
+  className="absolute inset-0 z-5"
+  style={{
+    backgroundImage: `
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      radial-gradient(rgba(255, 255, 255, 0.1) calc(20vw / 100), transparent calc(20vw / 50))
+    `,
+    backgroundSize: window.innerWidth <= 640
+      ? `100% 100%, calc(50vw / 40) calc(50vw / 40)` // Points plus gros sur mobile
+      : `100% 100%, calc(35vw / 80) calc(35vw / 80)`, // Taille normale sur desktop
+  }}
+></div>
+
 
       <div className="relative
                       z-10

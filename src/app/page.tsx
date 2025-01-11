@@ -30,7 +30,7 @@ export default function Home() {
                     leading-relaxed 
                     text-shadow 
                     text-center 
-                    mt-0
+                    mt-8
                     mb-36 sm:mb-32 md:mb-64 lg:mb-40px
                     font-rubik font-bold 
                     px-8"
