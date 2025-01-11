@@ -44,7 +44,7 @@ export default function Home() {
                                       w-full
                                       lg:flex 
                                       items-start 
-                                      w-full h-[600px] sm:h-[500px] md:h-[550px] lg:h-0px]
+                                      w-full h-[700px] sm:h-[500px] md:h-[550px] lg:h-0px]
                                       md:pt-0"
       >
 
@@ -55,17 +55,17 @@ export default function Home() {
             alt="À propos"
             width={500}
             height={500}
-            className=" w-[400px] sm:w-[400px] md:w-[500px] lg:w-[500px]
+            className=" w-[320px] sm:w-[400px] md:w-[500px] lg:w-[500px]
                         h-[auto] sm:h-[auto] md:h-[auto] lg:h-[auto]
                         mr-[5rem] sm:mr-[10rem] md:mr-[50rem] lg:mr-[50rem]
-                        ml-[5%] sm:ml-[10%] md:ml-[5%] lg:ml-[0%]"
+                        ml-[0%] sm:ml-[10%] md:ml-[5%] lg:ml-[0%]"
           />
 
           <h1 className=" absolute
                           z-10
                           top-[-4%] sm:top-[-5%] md:top-[-5%] lg:top-[-5%]
                           left-[30%] sm:left-[35%] md:left-[40%] lg:left-[30%]
-                          text-[3rem] sm:text-[4rem] md:text-[5rem]
+                          text-[2rem] sm:text-[4rem] md:text-[5rem]
                           leading-tight
                           text-shadow
                           text-left"
@@ -137,25 +137,24 @@ export default function Home() {
       {/* SEPARATEUR */}
 
       {/* Skills Section */}
-      <div id="skills" className=" h-[1400px] sm:h-[600px] md:h-[850px] lg:h-[850px] flex flex-col justify-center items-center
+      <div id="skills" className=" h-[1150px] sm:h-[600px] md:h-[850px] lg:h-[850px] flex flex-col justify-center items-center
                                    flex flex-col justify-center items-center"
       >
         <h1 className=" relative
                                     z-10 
-                                    text-[3rem] 
-                                    sm:text-[4rem] md:text-[5rem] 
+                                    text-[2rem] sm:text-[4rem] md:text-[5rem] 
                                     leading-tight 
                                     text-shadow 
                                     text-center 
                                     flex items-center 
                                     justify-center 
-                                    top-[0px] sm:top-[0px] md:top-[0px] lg:top-[0px] 
+                                    top-[40px] sm:top-[0px] md:top-[0px] lg:top-[0px] 
                                     mx-auto"
         >
           Skills
           {/* Arrow */}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" text-colorChart
-                                                                                                                                    w-[8rem] 
+                                                                                                                                    w-[4rem] sm:w-[8rem] md:w-[8rem] lg:w-[8rem]
                                                                                                                                     h-[8rem] 
                                                                                                                                     ml-4 sm:ml-6 md:ml-6 lg:ml-48 
                                                                                                                                     lg:mt-[1rem]"
