@@ -42,8 +42,10 @@ export default function Home() {
       <div id="abouthome" className=" lg:flex 
                                       items-start
                                       w-full
-                                      lg:flex items-start w-full h-[600px] sm:h-[500px] md:h-[550px] lg:h-0px]
-                                      md:pt-16"
+                                      lg:flex 
+                                      items-start 
+                                      w-full h-[600px] sm:h-[500px] md:h-[550px] lg:h-0px]
+                                      md:pt-0"
       >
 
         <div className="relative">
@@ -51,18 +53,18 @@ export default function Home() {
           <Image
             src="/img/img_a-propos.png"
             alt="À propos"
-            width={300}
-            height={280}
-            className=" sm:w-[400px] md:w-[350px]
-                        sm:h-[auto] md:h-[auto]
-                        sm:mr-[10rem] md:mr-[50rem]
-                        ml-[10%]"
+            width={500}
+            height={500}
+            className=" w-[400px] sm:w-[400px] md:w-[500px] lg:w-[500px]
+                        h-[auto] sm:h-[auto] md:h-[auto] lg:h-[auto]
+                        mr-[5rem] sm:mr-[10rem] md:mr-[50rem] lg:mr-[50rem]
+                        ml-[5%] sm:ml-[10%] md:ml-[5%] lg:ml-[0%]"
           />
 
           <h1 className=" absolute
                           z-10
-                          top-[-7%] sm:top-[-5%] md:top-[-20%] lg:top-[-25%]
-                          left-[20%] sm:left-[35%] md:left-[30%] lg:left-[30%]
+                          top-[-4%] sm:top-[-5%] md:top-[-5%] lg:top-[-5%]
+                          left-[30%] sm:left-[35%] md:left-[40%] lg:left-[30%]
                           text-[3rem] sm:text-[4rem] md:text-[5rem]
                           leading-tight
                           text-shadow
@@ -101,8 +103,8 @@ export default function Home() {
                         relative sm:relative md:relative lg:absolute
                         center
                         justify
-                        lg:top-[25%]
-                        left-[0%] sm:left-[0%] md:left-[0%] lg:left-[50%]                         
+                        lg:top-[30%]
+                        left-[0%] sm:left-[0%] md:left-[0%] lg:left-[54%]                         
                         px-12 sm:px-24 md:px-12
                         mt-6 sm:mt-8 md:mt-12"
           >
@@ -121,7 +123,7 @@ export default function Home() {
         </div>
         <DotsRectangle
           className=" w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%]                    
-                      mt-8 sm:mt-8 md:mt-8 lg:mt-96
+                      mt-8 sm:mt-8 md:mt-8 lg:mt-80
                       self-center
                       ml-auto"
           rows={3}

@@ -77,7 +77,7 @@ export default function About() {
             href="https://www.mytodolist.tech"
             target="_blank"
             rel="noopener noreferrer"  // Security
-            className="text-pink-500 hover:underline"
+            className="text-navLinkHover hover:underline"
           >
             https://www.mytodolist.tech
           </a>
