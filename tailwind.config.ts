@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xsm': '375px', // Taille spécifique pour les petits smartphones
+        'xxl': '1440px', // Taille pour les grands écrans
+      },
       colors: {
         navBackground: "#ccc", 
         boxShadow: {

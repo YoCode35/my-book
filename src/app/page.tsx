@@ -31,7 +31,7 @@ export default function Home() {
                     text-shadow 
                     text-center 
                     mt-0
-                    mb-36 sm:mb-32 md:mb-64 lg:mb-64
+                    mb-36 sm:mb-32 md:mb-64 lg:mb-40px
                     font-rubik font-bold 
                     px-8"
       >
@@ -39,13 +39,11 @@ export default function Home() {
       </p>
 
       {/* About Section */}
-      <div
-        id="abouthome"
-        className=" lg:flex 
-                    items-start
-                    w-full
-                    h-[calc(65vh+20rem)] sm:h-[calc(50vh+15rem)] md:h-[calc(60vh+10rem)] lg:h-[calc(70vh+10rem)]
-                    md:pt-16"
+      <div id="abouthome" className=" lg:flex 
+                                      items-start
+                                      w-full
+                                      lg:flex items-start w-full h-[600px] sm:h-[500px] md:h-[550px] lg:h-0px]
+                                      md:pt-16"
       >
 
         <div className="relative">
@@ -64,7 +62,7 @@ export default function Home() {
           <h1 className=" absolute
                           z-10
                           top-[-7%] sm:top-[-5%] md:top-[-20%] lg:top-[-25%]
-                          left-[35%] sm:left-[35%] md:left-[30%] lg:left-[30%]
+                          left-[20%] sm:left-[35%] md:left-[30%] lg:left-[30%]
                           text-[3rem] sm:text-[4rem] md:text-[5rem]
                           leading-tight
                           text-shadow
@@ -123,7 +121,7 @@ export default function Home() {
         </div>
         <DotsRectangle
           className=" w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%]                    
-                      mt-8 sm:mt-8 md:mt-8 lg:mt-48
+                      mt-8 sm:mt-8 md:mt-8 lg:mt-96
                       self-center
                       ml-auto"
           rows={3}
@@ -133,28 +131,27 @@ export default function Home() {
       </div>
 
       {/* SEPARATEUR */}
-      <div className="h-32 sm:h-80 md:h-72 lg:h-32 xl:h-64"></div>
+      <div className="h-[128px] sm:h-[320px] md:h-[288px] lg:h-[200px]"></div>
       {/* SEPARATEUR */}
 
       {/* Skills Section */}
-      <div
-        id="skills"
-        className=" h-[calc(130vh+25rem)] sm:h-[calc(90vh+15rem)] md:h-[calc(90vh+15rem)] lg:h-[calc(70vh+10rem)]
-                    flex flex-col justify-center items-center"
+      <div id="skills" className=" h-[1400px] sm:h-[600px] md:h-[850px] lg:h-[850px] flex flex-col justify-center items-center
+                                   flex flex-col justify-center items-center"
       >
-        <h1 className="relative
-                       z-10 
-                       text-[3rem] 
-                       sm:text-[4rem] md:text-[5rem] 
-                       leading-tight 
-                       text-shadow 
-                       text-center 
-                       flex items-center 
-                       justify-center 
-                       top-[0px] sm:top-[0px] md:top-[0px] lg:top-[110px] 
-                       mx-auto"
+        <h1 className=" relative
+                                    z-10 
+                                    text-[3rem] 
+                                    sm:text-[4rem] md:text-[5rem] 
+                                    leading-tight 
+                                    text-shadow 
+                                    text-center 
+                                    flex items-center 
+                                    justify-center 
+                                    top-[0px] sm:top-[0px] md:top-[0px] lg:top-[0px] 
+                                    mx-auto"
         >
           Skills
+          {/* Arrow */}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" text-colorChart
                                                                                                                                     w-[8rem] 
                                                                                                                                     h-[8rem] 
@@ -165,8 +162,8 @@ export default function Home() {
           </svg>
         </h1>
 
-        <div className="flex justify-center">
-          <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[20px] md:top-[40px] lg:top-[150px] text-left justify-center">
+        <div className="flex justify-center px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[20px] md:top-[40px] lg:top-[50px] text-left justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-24 sm:pb-96 md:pb-96 lg:pb-96">
               {/* Première colonne */}
               <div className="text-center sm:text-left ">

@@ -30,7 +30,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         const aboutSection = document.querySelector("#abouthome");
         if (aboutSection) {
           const aboutRect = aboutSection.getBoundingClientRect();
-          const isAboutVisible = aboutRect.top <= window.innerHeight * 0.3 && aboutRect.bottom >= 0;
+          const isAboutVisible = aboutRect.top <= window.innerHeight * 0.2 && aboutRect.bottom >= 0;
           setIsAboutActive(isAboutVisible);
         }
 
