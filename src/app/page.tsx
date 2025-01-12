@@ -39,11 +39,7 @@ export default function Home() {
       </p>
 
       {/* About Section */}
-      <div id="abouthome" className=" lg:flex 
-                                      items-start
-                                      w-full
-                                      lg:flex 
-                                      items-start 
+      <div id="abouthome" className=" lg:flex                                      
                                       w-full h-[600px] sm:h-[550px] md:h-[550px] lg:h-0px]
                                       md:pt-0"
       >
@@ -137,11 +133,11 @@ export default function Home() {
       <div className="my-80 sm:my-64 md:my-72 lg:my-64 xl:my-32"></div>
 
       {/* Skills Section */}
-      <div className="w-full flex flex-col items-center">
+      <div className="">
 
-      <div id="skills" className="min-h-[70vh] flex flex-col justify-start items-center">
+      <div id="skills" className="flex flex-col justify-start items-center">
   {/* Conteneur flex pour aligner le titre et la flèche */}
-  <div className="flex items-center mt-[-15%] sm:mt-[-10%] md:mt-[-10%] lg:mt-[-5%]">
+  <div className="flex items-center mt-[-100] md:mt-6 lg:mt-4">
     <h1 className="section-title leading-tight">Skills</h1>
     
     {/* Flèche */}
