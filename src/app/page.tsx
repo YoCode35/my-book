@@ -134,19 +134,19 @@ export default function Home() {
       </div>
 
       {/* SEPARATEUR */}
-      <div className="my-80 sm:my-64 md:my-72 lg:my-32 xl:my-32"></div>
+      <div className="my-80 sm:my-64 md:my-72 lg:my-64 xl:my-32"></div>
 
       {/* Skills Section */}
       <div className="w-full flex flex-col items-center">
 
       <div id="skills" className="min-h-[70vh] flex flex-col justify-start items-center">
   {/* Conteneur flex pour aligner le titre et la flèche */}
-  <div className="flex items-center">
-    <h1 className="section-title leading-tight !mt-[-20%] sm:mt-0 !md:mt-[-80] !lg:mt-[-40]">Skills</h1>
+  <div className="flex items-center mt-[-15%] sm:mt-[-10%] md:mt-[-10%] lg:mt-[-5%]">
+    <h1 className="section-title leading-tight">Skills</h1>
     
     {/* Flèche */}
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
-      className="section-arrow ml-16 text-colorChart !mt-[-20%] sm:mt-0 !md:mt-[-80] !lg:mt-[-40]">
+      className="section-arrow ml-16 text-colorChart mt-0 sm:mt-0 md:mt-0 lg:mt-0">
       <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
     </svg>
   </div>
