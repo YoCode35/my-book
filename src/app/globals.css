@@ -10,6 +10,8 @@
 html { 
   scroll-padding-top: 120px;
   scroll-behavior: smooth;
+  height: 100%;
+  /*overflow: hidden;*/
 }
 
 body {
@@ -18,6 +20,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100%;
+  overflow: auto
 }
 
 .page-bg {
@@ -52,6 +56,18 @@ a {
   font-family: 'Quicksand', sans-serif;
   color: white;
   text-align: justify;
+}
+
+.section-title {
+  @apply text-[10vw] sm:text-[4rem] md:text-[5rem] xl:text-[6rem] 2xl:text-[5rem];
+}
+
+.section-arrow {
+  @apply w-[22vw] sm:w-[20vw] md:w-[18vw] lg:w-[14vw] xl:w-[16vw] 2xl:w-[14vw];
+}
+
+.skills-text {
+  @apply text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px];
 }
 
 @layer utilities {

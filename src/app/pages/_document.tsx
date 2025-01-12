@@ -10,7 +10,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-bkgd-black-colored-spots bg-cover bg-top min-h-screen flex flex-col">
+        <body>
           <Main />
           <NextScript />
         </body>

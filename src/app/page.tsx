@@ -16,7 +16,7 @@ export default function Home() {
                     text-shadow 
                     text-center 
                     mt-0 
-                    mb-0 sm:mb-4 md:mb-8 lg:mb-8
+                    mb-12 sm:mb-4 md:mb-8 lg:mb-8
                     italic 
                     font-rubik font-light 
                     px-8"
@@ -30,7 +30,7 @@ export default function Home() {
                     leading-relaxed 
                     text-shadow 
                     text-center 
-                    mt-8
+                    mt-20px
                     mb-36 sm:mb-32 md:mb-64 lg:mb-40px
                     font-rubik font-bold 
                     px-8"
@@ -44,28 +44,30 @@ export default function Home() {
                                       w-full
                                       lg:flex 
                                       items-start 
-                                      w-full h-[700px] sm:h-[500px] md:h-[550px] lg:h-0px]
+                                      w-full h-[600px] sm:h-[550px] md:h-[550px] lg:h-0px]
                                       md:pt-0"
       >
 
         <div className="relative">
-          {/* Image */}
           <Image
             src="/img/img_a-propos.png"
             alt="À propos"
             width={500}
             height={500}
-            className=" w-[320px] sm:w-[400px] md:w-[500px] lg:w-[500px]
-                        h-[auto] sm:h-[auto] md:h-[auto] lg:h-[auto]
-                        mr-[5rem] sm:mr-[10rem] md:mr-[50rem] lg:mr-[50rem]
+            className=" w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] 
+                        h-auto
+                        mr-[5rem] sm:mr-[10rem] md:mr-[50rem] lg:mr-[50rem] 
                         ml-[0%] sm:ml-[10%] md:ml-[5%] lg:ml-[0%]"
+            style={{
+              maxWidth: "500px",
+            }}
           />
 
           <h1 className=" absolute
+                          section-title
                           z-10
                           top-[-4%] sm:top-[-5%] md:top-[-5%] lg:top-[-5%]
-                          left-[30%] sm:left-[35%] md:left-[40%] lg:left-[30%]
-                          text-[2rem] sm:text-[4rem] md:text-[5rem]
+                          left-[30%] sm:left-[35%] md:left-[40%] lg:left-[30%]                          
                           leading-tight
                           text-shadow
                           text-left"
@@ -78,8 +80,7 @@ export default function Home() {
                                 text-colorChart">➜
               </span>
               {/* Info bubble */}
-              <span className=" absolute 
-                                top-0 left-full 
+              <span className=" top-0 left-full 
                                 ml-2 
                                 px-4 py-2 
                                 text-white 
@@ -133,109 +134,114 @@ export default function Home() {
       </div>
 
       {/* SEPARATEUR */}
-      <div className="h-[128px] sm:h-[320px] md:h-[288px] lg:h-[200px]"></div>
-      {/* SEPARATEUR */}
+      <div className="my-80 sm:my-64 md:my-72 lg:my-32 xl:my-32"></div>
 
       {/* Skills Section */}
-      <div id="skills" className=" h-[1150px] sm:h-[600px] md:h-[850px] lg:h-[850px] flex flex-col justify-center items-center
-                                   flex flex-col justify-center items-center"
-      >
-        <h1 className=" relative
-                                    z-10 
-                                    text-[2rem] sm:text-[4rem] md:text-[5rem] 
-                                    leading-tight 
-                                    text-shadow 
-                                    text-center 
-                                    flex items-center 
-                                    justify-center 
-                                    top-[40px] sm:top-[0px] md:top-[0px] lg:top-[0px] 
-                                    mx-auto"
-        >
-          Skills
-          {/* Arrow */}
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" text-colorChart
-                                                                                                                                    w-[4rem] sm:w-[8rem] md:w-[8rem] lg:w-[8rem]
-                                                                                                                                    h-[8rem] 
-                                                                                                                                    ml-4 sm:ml-6 md:ml-6 lg:ml-48 
-                                                                                                                                    lg:mt-[1rem]"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
-          </svg>
-        </h1>
+      <div className="w-full flex flex-col items-center">
 
-        <div className="flex justify-center px-4 sm:px-8 md:px-12 lg:px-16">
-          <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[20px] md:top-[40px] lg:top-[50px] text-left justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-24 sm:pb-96 md:pb-96 lg:pb-96">
-              {/* Première colonne */}
-              <div className="text-center sm:text-left ">
-                <strong className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Front end</strong>
-                <div className="pt-6">
-                  <div className="flex justify-center sm:justify-between"><span>ReactJS</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Angular</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Flutter</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>WordPress</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>JavaScript</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>CSS</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Tailwind CSS</span></div>
+      <div id="skills" className="min-h-[70vh] flex flex-col justify-start items-center">
+  {/* Conteneur flex pour aligner le titre et la flèche */}
+  <div className="flex items-center">
+    <h1 className="section-title leading-tight mt-[-50] sm:mt-0 md:mt-[-80] lg:mt-[-40]">Skills</h1>
+    
+    {/* Flèche */}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+      className="section-arrow ml-16 text-colorChart mt-[-50] sm:mt-0 md:mt-[-80] lg:mt-[-40]">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+    </svg>
+  </div>
+
+          <div className="flex justify-center px-4 sm:px-8 md:px-12 lg:px-16">
+            <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[40px] md:top-[40px] lg:top-[50px] text-left justify-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-24 sm:pb-96 md:pb-96 lg:pb-96">
+                {/* Première colonne */}
+                <div className="text-center sm:text-left ">
+                  <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Front end</strong>
+                  <div className="pt-6">
+                    <div className="skills-text flex justify-center sm:justify-between"><span>ReactJS</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>NextJS</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Angular</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Flutter</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>WordPress</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>JavaScript</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>CSS</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Tailwind CSS</span></div>
+                  </div>
+
+                  <div className="pt-6">
+                    <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Prototypage & Design</strong>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Figma</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Balsamiq</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Photoshop</span></div>
+                  </div>
                 </div>
 
-                <div className="pt-6">
-                  <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Prototypage & Design</strong>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Figma</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Balsamiq</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Photoshop</span></div>
-                </div>
-              </div>
+                {/* Deuxième colonne */}
+                <div className="text-center sm:text-left">
+                  <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Back end</strong>
+                  <div className="pt-6">
+                    <div className="skills-text flex justify-center sm:justify-between"><span>NodeJS</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>TypeScript</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>PostgreSQL</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>MySQL</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>SQL Server</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Sécurité Web et Web Mobile</span></div>
+                  </div>
 
-              {/* Deuxième colonne */}
-              <div className="text-center sm:text-left">
-                <strong className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Back end</strong>
-                <div className="pt-6">
-                  <div className="flex justify-center sm:justify-between"><span>NodeJS</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>NestJS</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>TypeScript</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>PostgreSQL</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>MySQL</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>SQL Server</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>Sécurité Web et Web Mobile</span></div>
+                  <div className="pt-6">
+                    <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Modélisation & Conception</strong>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>UML (Unified Modeling Language)</span></div>
+                  </div>
                 </div>
 
-                <div className="pt-6">
-                  <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Modélisation & Conception</strong>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>UML (Unified Modeling Language)</span></div>
-                </div>
-              </div>
+                {/* Troisième colonne */}
+                <div className="text-center sm:text-left">
+                  <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Web Services & APIs</strong>
+                  <div className="pt-6">
+                    <div className="skills-text flex justify-center sm:justify-between"><span>Firebase</span></div>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>APIs REST</span></div>
+                  </div>
 
-              {/* Troisième colonne */}
-              <div className="text-center sm:text-left">
-                <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Web Services & APIs</strong>
-                <div className="pt-6">
-                  <div className="flex justify-center sm:justify-between"><span>Firebase</span></div>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>APIs REST</span></div>
-                </div>
+                  <div className="pt-6">
+                    <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Versioning</strong>
+                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
+                  </div>
 
-                <div className="pt-6">
-                  <strong className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-1xl">Versioning</strong>
-                  <div className="mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
-                </div>
-
-                {/* Lien vers la page Skills */}
-                <div className="relative left-8 right-0 mt-8 mr-8">
-                  <a href="/skills#skills" className="text-[#4d94ff] hover:text-navLinkHover font-medium flex items-center justify-end gap-2">
-                    Niveaux de compétences estimés (Auto-évaluation)
-                    <span>➡️</span>
-                  </a>
+                  {/* Lien vers la page Skills */}
+                  <div className="relative left-8 right-0 mt-8 mr-2">
+                    <a href="/skills#skills"
+                      className="text-[#4d94ff] 
+                                hover:text-navLinkHover 
+                                font-medium 
+                                flex 
+                                items-center 
+                                justify-end 
+                                gap-1 
+                                group"
+                    >
+                      Niveaux de compétences estimés (Auto-évaluation)
+                      <span className=" transition-all 
+                                      group-hover:bg-yellow-500 
+                                      group-hover:text-white 
+                                      group-hover:rounded 
+                                      p-1
+                                      -ml-1"
+                      >
+                        ➡️
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
 
       </div>
-
     </div>
   );
 }

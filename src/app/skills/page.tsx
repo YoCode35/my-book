@@ -2,25 +2,25 @@
 import { useState, useEffect } from "react";
 import DotsRectangle from "../../components/DotsRectangle";
 
-export default function Portfolio() {
+export default function Skills() {
 
-    const [dotsPerRow, setDotsPerRow] = useState(40); // Valeur par défaut
+    const [dotsPerRow, setDotsPerRow] = useState(40);
 
     useEffect(() => {
         const updateDots = () => {
             if (window.innerWidth < 640) {
-                setDotsPerRow(20); // Mobile
+                setDotsPerRow(20);
             } else if (window.innerWidth < 1024) {
-                setDotsPerRow(30); // Tablette
+                setDotsPerRow(30);
             } else {
-                setDotsPerRow(50); // Desktop
+                setDotsPerRow(50);
             }
         };
 
-        updateDots(); // Initial call
-        window.addEventListener("resize", updateDots); // Écoute des redimensionnements
+        updateDots();
+        window.addEventListener("resize", updateDots);
 
-        return () => window.removeEventListener("resize", updateDots); // Nettoyage
+        return () => window.removeEventListener("resize", updateDots);
     }, []);
 
     return (
@@ -30,8 +30,6 @@ export default function Portfolio() {
                         bg-[url('/img/colored_spots.png')]
                         pb-24"
         >
-
-            {/* DotsRectangle Components */}
             <DotsRectangle
                 className=" w-full
                             w-[100%]
@@ -78,6 +76,15 @@ export default function Portfolio() {
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div className="h-2 rounded-full" style={{ backgroundColor: '#61dafb', width: '50%' }}></div>
+                                    </div>
+                                </div>
+                                <div className="mt-2">
+                                    <div className="flex justify-between">
+                                        <span>NextJS</span>
+                                        <span>Débutant</span>
+                                    </div>
+                                    <div className="w-full bg-gray-200 rounded-full h-2">
+                                        <div className="bg-gray-700 h-2 rounded-full" style={{ width: '30%' }}></div>
                                     </div>
                                 </div>
                                 <div className="mt-2">
@@ -185,15 +192,6 @@ export default function Portfolio() {
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div className="h-2 rounded-full" style={{ backgroundColor: '#66a060', width: '30%' }}></div>
-                                    </div>
-                                </div>
-                                <div className="mt-2">
-                                    <div className="flex justify-between">
-                                        <span>NestJS</span>
-                                        <span>Débutant</span>
-                                    </div>
-                                    <div className="w-full bg-gray-200 rounded-full h-2">
-                                        <div className="h-2 rounded-full" style={{ backgroundColor: '#e0234e', width: '30%' }}></div>
                                     </div>
                                 </div>
                                 <div className="mt-2">

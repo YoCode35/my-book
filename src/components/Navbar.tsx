@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiHome } from "react-icons/fi";
-import { useState, useEffect } from "react";
 import { FiArrowUp } from "react-icons/fi";
+import { useNavbarLogic } from "./useNavbarLogic";
 
 interface NavbarProps {
   menuOpen: boolean;
@@ -13,70 +13,31 @@ interface NavbarProps {
 
 export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-  const [scrollTop, setScrollTop] = useState(0);
-  const [isAboutActive, setIsAboutActive] = useState(false);
-  const [isSkillsActive, setIsSkillsActive] = useState(false);
-
-  // Logique pour détecter si l'on est dans la section "À propos" et "Skills"
-  useEffect(() => {
-    const checkScroll = () => {
-      if (typeof window !== "undefined") {
-        setScrollTop(window.scrollY);
-        setIsScrolled(window.scrollY > 50);
-
-        // Vérification de la visibilité de la section "À propos"
-        const aboutSection = document.querySelector("#abouthome");
-        if (aboutSection) {
-          const aboutRect = aboutSection.getBoundingClientRect();
-          const isAboutVisible = aboutRect.top <= window.innerHeight * 0.2 && aboutRect.bottom >= 0;
-          setIsAboutActive(isAboutVisible);
-        }
-
-        // Vérification de la visibilité de la section "Skills"
-        const skillsSection = document.querySelector("#skills");
-        if (skillsSection) {
-          const skillsRect = skillsSection.getBoundingClientRect();
-          const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.3 && skillsRect.bottom >= 0;
-          setIsSkillsActive(isSkillsVisible);
-        }
-      }
-    };
-
-    setIsClient(true);
-    window.addEventListener("scroll", checkScroll);
-
-    checkScroll(); // Appel initial pour vérifier l'état dès que le composant est monté.
-
-    return () => {
-      window.removeEventListener("scroll", checkScroll);
-    };
-  }, [isAboutActive]);
+  const { isScrolled, scrollTop, isAboutActive, isSkillsActive } = useNavbarLogic();
 
   const isActive = (path: string) =>
     pathname === path ? "text-navText" : "text-[#3d5b79]";
 
   return (
     <>
-      {isClient && (
-        <nav
+      <nav
           className={`fixed
-                      top-0 left-0
+                      top-0
                       w-full
                       flex
-                      justify-center
+                      justify-center items-center
                       z-40
                       ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-60'}`}
         >
-          <div className="w-[95%] sm:w-[90%] md:w-[85%] lg:max-w-[900px]
+          <div className="w-[70%] sm:w-[90%] md:w-[85%] lg:max-w-[900px]
                           px-2 py-2
                           bg-[rgba(1,22,39,0.6)]
                           rounded-full
                           border border-gray-800
                           flex
                           justify-between
-                          items-center"
+                          items-center
+                          mx-auto"
           >
             <div className="text-white
                             font-orbitron
@@ -188,7 +149,6 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             )}
           </div>
         </nav>
-      )}
 
       {/* "back-to-top arrow" */}
       {isScrolled && (
@@ -215,10 +175,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         <div
           className=" lg:hidden
                       absolute 
-                      left-1/2 
-                      transform 
-                      -translate-x-1/2 
-                      w-[70%] max-w-[400px]
+                      inset-x-0
+                      mx-auto
+                      w-[70%] max-w-[300px]
                       bg-[rgba(1,22,39,0.8)]
                       py-4 px-6
                       rounded-lg

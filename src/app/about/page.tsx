@@ -4,23 +4,23 @@ import DotsRectangle from "../../components/DotsRectangle";
 
 export default function About() {
 
-  const [dotsPerRow, setDotsPerRow] = useState(40); // Valeur par défaut
+  const [dotsPerRow, setDotsPerRow] = useState(40);
 
   useEffect(() => {
     const updateDots = () => {
       if (window.innerWidth < 640) {
-        setDotsPerRow(20); // Mobile
+        setDotsPerRow(20);
       } else if (window.innerWidth < 1024) {
-        setDotsPerRow(30); // Tablette
+        setDotsPerRow(30);
       } else {
-        setDotsPerRow(50); // Desktop
+        setDotsPerRow(50);
       }
     };
 
-    updateDots(); // Initial call
-    window.addEventListener("resize", updateDots); // Écoute des redimensionnements
+    updateDots();
+    window.addEventListener("resize", updateDots);
 
-    return () => window.removeEventListener("resize", updateDots); // Nettoyage
+    return () => window.removeEventListener("resize", updateDots);
   }, []);
 
   return (
@@ -29,7 +29,6 @@ export default function About() {
                     bg-[url('/img/colored_spots.png')]
                     pb-24"
     >
-      {/* DotsRectangle Components */}
       <DotsRectangle
         className=" w-full
                       w-[100%]

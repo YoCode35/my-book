@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xsm': '375px', // Taille spécifique pour les petits smartphones
-        'xxl': '1440px', // Taille pour les grands écrans
+        'xsm': '375px',
+        'xxl': '1440px',
       },
       colors: {
         navBackground: "#ccc", 
