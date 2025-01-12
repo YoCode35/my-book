@@ -5,6 +5,7 @@ export function useNavbarLogic() {
   const [scrollTop, setScrollTop] = useState(0);
   const [isAboutActive, setIsAboutActive] = useState(false);
   const [isSkillsActive, setIsSkillsActive] = useState(false);
+  const [isMyProjectsActive, setIsMyProjectsActive] = useState(false); // Ton état pour My Projects
 
   useEffect(() => {
     const checkScroll = () => {
@@ -30,6 +31,14 @@ export function useNavbarLogic() {
           const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.2 && skillsRect.bottom >= 0;
           setIsSkillsActive(isSkillsVisible);
         }
+
+        // Vérification de la visibilité de la section "My Projects"
+        const myProjectsSection = document.querySelector("#myprojects");
+        if (myProjectsSection) {
+          const myProjectsRect = myProjectsSection.getBoundingClientRect();
+          const isMyProjectsVisible = myProjectsRect.top <= window.innerHeight * 0.2 && myProjectsRect.bottom >= 0;
+          setIsMyProjectsActive(isMyProjectsVisible);
+        }
       }
     };
 
@@ -42,5 +51,5 @@ export function useNavbarLogic() {
     };
   }, []);
 
-  return { isScrolled, scrollTop, isAboutActive, isSkillsActive };
+  return { isScrolled, scrollTop, isAboutActive, isSkillsActive, isMyProjectsActive }; // Retourner isMyProjectsActive ici
 }

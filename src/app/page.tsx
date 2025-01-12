@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import DotsRectangle from "../components/DotsRectangle";
-//import { FiArrowRight } from "react-icons/fi";
+import { ImCross } from "react-icons/im"
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -59,7 +60,7 @@ export default function Home() {
             }}
           />
 
-          <h1 className=" absolute
+          <h2 className=" absolute
                           section-title
                           z-10
                           top-[0] sm:top-[0] md:top-[0] lg:top-[25]
@@ -92,7 +93,7 @@ export default function Home() {
                 + d&apos;infos
               </span>
             </a>
-          </h1>
+          </h2>
 
           {/* Paragraph */}
           <p className="paragraph-custom
@@ -129,85 +130,85 @@ export default function Home() {
         />
       </div>
 
-      {/* SEPARATEUR */}
+      {/* SEPARATOR */}
       <div className="min-h-[300px] sm:min-h-[0px] md:min-h-[225px] lg:min-h-[100px] xl:min-h-[50px]"></div>
 
       {/* Skills Section */}
-        <div className="flex flex-col justify-start items-center">
-          {/* Conteneur flex pour aligner le titre et la flèche */}
-          <div className="flex items-center">
-            <h1 id="skills" className="section-title leading-tight">Skills</h1>
+      <div className="flex flex-col justify-start items-center">
+        {/* Conteneur flex pour aligner le titre et la flèche */}
+        <div className="flex items-center">
+          <h2 id="skills" className="section-title leading-tight">Skills</h2>
 
-            {/* Flèche */}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
-              className="section-arrow ml-16 text-colorChart">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
-            </svg>
-          </div>
+          {/* Flèche */}
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+            className="section-arrow ml-16 text-colorChart">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+          </svg>
+        </div>
 
-          <div className="flex justify-center px-4 sm:px-8 md:px-12 lg:px-16">
-            <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[40px] md:top-[40px] lg:top-[50px] text-left justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-24 sm:pb-96 md:pb-96 lg:pb-96">
-                {/* Première colonne */}
-                <div className="text-center sm:text-left ">
-                  <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Front end</strong>
-                  <div className="pt-6">
-                    <div className="skills-text flex justify-center sm:justify-between"><span>ReactJS</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>NextJS</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Angular</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Flutter</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>WordPress</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>JavaScript</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>CSS</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Tailwind CSS</span></div>
-                  </div>
-
-                  <div className="pt-6">
-                    <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Prototypage & Design</strong>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Figma</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Balsamiq</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Photoshop</span></div>
-                  </div>
+        <div className="flex justify-center px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[40px] md:top-[40px] lg:top-[50px] text-left justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-24 sm:pb-96 md:pb-48 lg:pb-48">
+              {/* First Column */}
+              <div className="text-center sm:text-left ">
+                <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Front end</strong>
+                <div className="pt-6">
+                  <div className="skills-text flex justify-center sm:justify-between"><span>ReactJS</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>NextJS</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Angular</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Flutter</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>WordPress</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>JavaScript</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>CSS</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Tailwind CSS</span></div>
                 </div>
 
-                {/* Deuxième colonne */}
-                <div className="text-center sm:text-left">
-                  <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Back end</strong>
-                  <div className="pt-6">
-                    <div className="skills-text flex justify-center sm:justify-between"><span>NodeJS</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>TypeScript</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>PostgreSQL</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>MySQL</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>SQL Server</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Sécurité Web et Web Mobile</span></div>
-                  </div>
+                <div className="pt-6">
+                  <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Prototypage & Design</strong>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Figma</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Balsamiq</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Photoshop</span></div>
+                </div>
+              </div>
 
-                  <div className="pt-6">
-                    <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Modélisation & Conception</strong>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>UML (Unified Modeling Language)</span></div>
-                  </div>
+              {/* Second Column */}
+              <div className="text-center sm:text-left">
+                <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Back end</strong>
+                <div className="pt-6">
+                  <div className="skills-text flex justify-center sm:justify-between"><span>NodeJS</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>TypeScript</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>PostgreSQL</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>MySQL</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>SQL Server</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Sécurité Web et Web Mobile</span></div>
                 </div>
 
-                {/* Troisième colonne */}
-                <div className="text-center sm:text-left">
-                  <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Web Services & APIs</strong>
-                  <div className="pt-6">
-                    <div className="skills-text flex justify-center sm:justify-between"><span>Firebase</span></div>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>APIs REST</span></div>
-                  </div>
+                <div className="pt-6">
+                  <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Modélisation & Conception</strong>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>UML (Unified Modeling Language)</span></div>
+                </div>
+              </div>
 
-                  <div className="pt-6">
-                    <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Versioning</strong>
-                    <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
-                  </div>
+              {/* Third Column */}
+              <div className="text-center sm:text-left">
+                <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Web Services & APIs</strong>
+                <div className="pt-6">
+                  <div className="skills-text flex justify-center sm:justify-between"><span>Firebase</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>APIs REST</span></div>
+                </div>
 
-                  {/* Lien vers la page Skills */}
-                  <div className="relative mt-8 mr-4 sm:mr-6 md:mr-8">
-                    <a href="/skills#skills"
-                      className="text-[#4d94ff] 
+                <div className="pt-6">
+                  <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Versioning</strong>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
+                </div>
+
+                {/* Skills Link */}
+                <div className="relative mt-8 mr-4 sm:mr-6 md:mr-8">
+                  <a href="/skills#skills"
+                    className=" text-[#4d94ff] 
                                 hover:text-navLinkHover 
                                 font-medium 
                                 flex 
@@ -215,28 +216,115 @@ export default function Home() {
                                 justify-end 
                                 gap-1 
                                 group"
-                    >
-                      Niveaux de compétences estimés (Auto-évaluation)
-                      <span className=" transition-all 
+                  >
+                    Niveaux de compétences estimés (Auto-évaluation)
+                    <span className=" transition-all 
                                       group-hover:bg-yellow-500 
                                       group-hover:text-white 
                                       group-hover:rounded 
                                       p-1
                                       -ml-1"
-                      >
-                        ➡️
-                      </span>
-                    </a>
-                  </div>
+                    >
+                      {/* Nouvelle flèche SVG */}
+                      <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </a>
                 </div>
+
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
+
+      {/* SEPARATOR */}
+      <div className="min-h-[50px] sm:min-h-[50px] md:min-h-[50px] lg:min-h-[50px] xl:min-h-[0px]"></div>
+
+      {/* My Projects Section */}
+<div className="flex flex-col 
+                justify-start 
+                items-center 
+                relative 
+                w-full 
+                mb-96"
+>
+  <h2 id="myprojects" className="section-title 
+                                leading-tight 
+                                lg:ml-80 
+                                lg:text-right">
+    Mes projets
+  </h2>
+
+  <div className="mt-4 relative w-full">
+    <ImCross 
+      className="text-colorChart 
+                text-6xl sm:text-6xl md:text-10xl 
+                absolute 
+                right-4 sm:right-8 md:right-16 lg:right-24 
+                top-[-20px] 
+                z-10"
+    />
+  </div>
+
+  <div className="mt-8 flex flex-col sm:flex-row items-center justify-between space-x-4">
+    <div className="relative w-full">
+      <Image
+        src="/img/ref_mytodolist.png"
+        alt="Image de mon projet d'application MyTodoList"
+        width={789}
+        height={360}
+        className="w-full 
+                  max-w-2xl 
+                  h-auto mx-auto 
+                  w-[80%] sm:w-[90%] md:w-[90%] lg:w-[110%] xl:w-[120%] 2xl:w-[120%] 
+                  px-5 sm:px-8 md:px-16 z-1"
+        priority
+        style={{
+          maxWidth: "789px",
+        }}
+      />
+
+      <DotsRectangle
+        className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] 
+                  max-w-[250px] 
+                  mt-36 sm:mt-6 md:mt-8 lg:mt-10 
+                  absolute left-2 sm:left-4 md:left-6 lg:left-8"
+        rows={3}
+        dotsPerRow={10}
+        dotColor="#fff000"
+      />
+    </div>
+
+    <div className="flex flex-col items-center sm:items-start sm:pr-8">
+      <h3 className="project-image-title">MyTodoList</h3>
+      <p className="project-date-paragraph">Décembre 2024</p>
+
+      <Link 
+        href="/portfolio" 
+        className="flex items-center 
+                  mt-4 
+                  text-[3vw] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.1rem] 
+                  text-[#4d94ff]                          
+                  hover:text-navLinkHover 
+                  group">
+        <span className="mr-2">+ d’infos</span>
+        <svg 
+          className="w-5 h-5 text-[#4d94ff] group-hover:text-navLinkHover" 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+        </svg>
+      </Link>
+    </div>
+  </div>
+</div>
+
+    </div>
   );
 }
-
-{/*➡️*/ }

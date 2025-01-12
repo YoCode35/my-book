@@ -5,7 +5,7 @@ import DotsRectangle from "../../components/DotsRectangle";
 
 export default function Skills() {
 
-const dotsPerRow = useDotsPerRow();
+    const dotsPerRow = useDotsPerRow();
 
     return (
         <div
@@ -26,15 +26,15 @@ const dotsPerRow = useDotsPerRow();
                 dotsPerRow={dotsPerRow}
                 dotColor="#fff000"
             />
-            <h1
+            <h2
                 id="skills"
-                className=" page-title
+                className=" title-page
                             text-2xl sm:text-3xl md:text-4xl
                             pt-16 sm:pt-20 md:pt-24 lg:pt-8
                             mb-12"
             >
                 Skills
-            </h1>
+            </h2>
             <div className="px-4 sm:px-8 md:px-16
                             max-w-screen-lg
                             mx-auto"

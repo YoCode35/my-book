@@ -25,7 +25,7 @@ export default function About() {
         dotColor="#fff000"
       />
 
-      <h1 id="about" className="page-title
+      <h2 id="about" className="title-page
                                 relative 
                                 text-2xl sm:text-3xl md:text-4xl
                                 pt-16 sm:pt-20 md:pt-24 lg:pt-8
@@ -33,7 +33,7 @@ export default function About() {
                                 z-10"
       >
         Plus d&apos;infos à propos de moi
-      </h1>
+      </h2>
 
       <div className="px-4
                       sm:px-8 md:px-16

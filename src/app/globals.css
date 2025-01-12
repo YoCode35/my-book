@@ -35,13 +35,13 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-h1 {
+h2 {
   font-family: 'Clash-display-variable', sans-serif;
   font-weight: 600;
   color: white;
 }
 
-.page-title {
+.title-page {
   color: white;
   font-family: 'Clash-display-variable', sans-serif;
   text-align: center;
@@ -59,7 +59,13 @@ a {
 }
 
 .section-title {
-  @apply text-[10vw] sm:text-[4rem] md:text-[5rem] xl:text-[6rem] 2xl:text-[5rem];
+  @apply text-[16vw] sm:text-[4rem] md:text-[5rem] xl:text-[5rem] 2xl:text-[5rem] font-clash font-medium;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  transform: scaleY(0.7);
 }
 
 .section-arrow {
@@ -68,6 +74,28 @@ a {
 
 .skills-text {
   @apply text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px];
+}
+
+.project-image-title {
+  @apply text-[4vw] sm:text-[2rem] md:text-[2rem] xl:text-[2rem] 2xl:text-[3rem] font-clash font-medium;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  text-rendering: optimizeLegibility;  
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  transform: scaleY(0.8);
+}
+
+.project-date-paragraph {
+  @apply text-[3vw] sm:text-[1.3rem] md:text-[1.3rem] xl:text-[1.3rem] 2xl:text-[1.3rem] font-clash font-medium;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  text-rendering: optimizeLegibility;
+  color: rgba(95, 125, 167, 0.55);  
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  transform: scaleY(0.8);
 }
 
 @layer utilities {

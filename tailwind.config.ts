@@ -9,10 +9,10 @@ export default {
   ],
   theme: {
     extend: {
-      screens: {
+      /*screens: {
         'xsm': '375px',
         'xxl': '1440px',
-      },
+      },*/
       colors: {
         navBackground: "#ccc", 
         boxShadow: {
