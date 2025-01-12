@@ -1,8 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import useDotsPerRow from "../../components/useResponsiveDots";
 import DotsRectangle from "../../components/DotsRectangle";
 
 export default function Contact() {
+
+  const dotsPerRow = useDotsPerRow();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -70,24 +73,7 @@ export default function Contact() {
     }
   };
 
-  const [dotsPerRow, setDotsPerRow] = useState(40); // Valeur par défaut
-
-  useEffect(() => {
-    const updateDots = () => {
-      if (window.innerWidth < 640) {
-        setDotsPerRow(20); // Mobile
-      } else if (window.innerWidth < 1024) {
-        setDotsPerRow(30); // Tablette
-      } else {
-        setDotsPerRow(50); // Desktop
-      }
-    };
-
-    updateDots(); // Initial call
-    window.addEventListener("resize", updateDots); // Écoute des redimensionnements
-
-    return () => window.removeEventListener("resize", updateDots); // Nettoyage
-  }, []);
+  
 
   return (
     <div

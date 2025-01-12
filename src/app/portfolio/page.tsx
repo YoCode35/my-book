@@ -1,29 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import useDotsPerRow from "../../components/useResponsiveDots";
 import DotsRectangle from "../../components/DotsRectangle";
 
 export default function Portfolio() {
 
-  const [dotsPerRow, setDotsPerRow] = useState(40);
+const dotsPerRow = useDotsPerRow();
 
-  useEffect(() => {
-    const updateDots = () => {
-      if (window.innerWidth < 640) {
-        setDotsPerRow(20);
-      } else if (window.innerWidth < 1024) {
-        setDotsPerRow(30);
-      } else {
-        setDotsPerRow(50);
-      }
-    };
-
-    updateDots();
-    window.addEventListener("resize", updateDots);
-
-    return () => window.removeEventListener("resize", updateDots);
-  }, []);
-
-  return (
+    return (
     <div
       className="bg-cover
                  bg-no-repeat

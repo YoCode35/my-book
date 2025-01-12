@@ -1,27 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import useDotsPerRow from "../../components/useResponsiveDots";
 import DotsRectangle from "../../components/DotsRectangle";
 
 export default function Skills() {
 
-    const [dotsPerRow, setDotsPerRow] = useState(40);
-
-    useEffect(() => {
-        const updateDots = () => {
-            if (window.innerWidth < 640) {
-                setDotsPerRow(20);
-            } else if (window.innerWidth < 1024) {
-                setDotsPerRow(30);
-            } else {
-                setDotsPerRow(50);
-            }
-        };
-
-        updateDots();
-        window.addEventListener("resize", updateDots);
-
-        return () => window.removeEventListener("resize", updateDots);
-    }, []);
+const dotsPerRow = useDotsPerRow();
 
     return (
         <div

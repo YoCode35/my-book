@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* About Section */}
       <div id="abouthome" className=" lg:flex                                      
-                                      w-full h-[600px] sm:h-[550px] md:h-[550px] lg:h-0px]
+                                      w-full h-[500px] sm:h-[550px] md:h-[550px] lg:h-0px xl:h-0px]
                                       md:pt-0"
       >
 
@@ -62,7 +62,7 @@ export default function Home() {
           <h1 className=" absolute
                           section-title
                           z-10
-                          top-[0] sm:top-[0] md:top-[0] lg:top-0]
+                          top-[0] sm:top-[0] md:top-[0] lg:top-[25]
                           left-[30%] sm:left-[35%] md:left-[40%] lg:left-[30%]                          
                           leading-tight
                           text-shadow
@@ -100,7 +100,7 @@ export default function Home() {
                         relative sm:relative md:relative lg:absolute
                         center
                         justify
-                        lg:top-[30%]
+                        lg:top-[40%]
                         left-[0%] sm:left-[0%] md:left-[0%] lg:left-[54%]                         
                         px-12 sm:px-24 md:px-12
                         mt-6 sm:mt-8 md:mt-12"
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
         <DotsRectangle
           className=" w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%]                    
-                      mt-8 sm:mt-8 md:mt-8 lg:mt-80
+                      mt-8 sm:mt-8 md:mt-8 lg:mt-[50%] xl:mt-[25%] xl:mt-[35%]
                       self-center
                       ml-auto"
           rows={3}
@@ -130,7 +130,7 @@ export default function Home() {
       </div>
 
       {/* SEPARATEUR */}
-      <div className="my-80 sm:my-64 md:my-72 lg:my-64 xl:my-32"></div>
+      <div className="min-h-[300px] sm:min-h-[0px] md:min-h-[225px] lg:min-h-[100px] xl:min-h-[50px]"></div>
 
       {/* Skills Section */}
         <div className="flex flex-col justify-start items-center">

@@ -27,7 +27,7 @@ export function useNavbarLogic() {
         const skillsSection = document.querySelector("#skills");
         if (skillsSection) {
           const skillsRect = skillsSection.getBoundingClientRect();
-          const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.3 && skillsRect.bottom >= 0;
+          const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.2 && skillsRect.bottom >= 0;
           setIsSkillsActive(isSkillsVisible);
         }
       }
