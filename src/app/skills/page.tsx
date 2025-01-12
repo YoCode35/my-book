@@ -46,7 +46,7 @@ export default function Skills() {
                 id="skills"
                 className=" page-title
                             text-2xl sm:text-3xl md:text-4xl
-                            pt-16 sm:pt-20 md:pt-24 lg:pt-32
+                            pt-16 sm:pt-20 md:pt-24 lg:pt-8
                             mb-12"
             >
                 Skills

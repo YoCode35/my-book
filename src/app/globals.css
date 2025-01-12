@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100%;
-  overflow: auto
+  /*overflow: auto*/
 }
 
 .page-bg {
