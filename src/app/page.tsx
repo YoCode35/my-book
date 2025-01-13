@@ -25,7 +25,7 @@ export default function Home() {
         &quot;Explorez ici une sélection de mes travaux les plus significatifs. <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
       </p>
 
-      <p className="text-[1rem] 
+      {/* <p className="text-[1rem] 
                     sm:text-[1.125rem] 
                     md:text-[1.1rem] 
                     leading-relaxed 
@@ -37,7 +37,7 @@ export default function Home() {
                     px-8"
       >
         [EN COURS DE DEVELOPPEMENT]
-      </p>
+      </p> */}
 
       {/* About Section */}
       <div id="abouthome" className=" lg:flex                                      
@@ -244,86 +244,131 @@ export default function Home() {
       <div className="min-h-[50px] sm:min-h-[50px] md:min-h-[50px] lg:min-h-[50px] xl:min-h-[0px]"></div>
 
       {/* My Projects Section */}
-<div className="flex flex-col 
-                justify-start 
-                items-center 
-                relative 
-                w-full 
-                mb-96"
->
-  <h2 id="myprojects" className="section-title 
-                                leading-tight 
-                                lg:ml-80 
-                                lg:text-right">
-    Mes projets
-  </h2>
+      <div className="flex flex-col 
+                      justify-start 
+                      items-center 
+                      relative 
+                      w-full 
+                      mb-96"
+      >
+        <h2 id="myprojects" className=" section-title 
+                                        leading-tight 
+                                        lg:ml-80 
+                                        lg:text-right"
+        >
+          Mes projets
+        </h2>
 
-  <div className="mt-4 relative w-full">
-    <ImCross 
-      className="text-colorChart 
-                text-6xl sm:text-6xl md:text-10xl 
-                absolute 
-                right-4 sm:right-8 md:right-16 lg:right-24 
-                top-[-20px] 
-                z-10"
-    />
-  </div>
+        <div className="mt-4 relative w-full">
+          <ImCross
+            className=" text-colorChart 
+                        text-6xl sm:text-6xl md:text-10xl 
+                        absolute 
+                        right-4 sm:right-8 md:right-16 lg:right-24 
+                        top-[-20px] 
+                        z-10"
+          />
+        </div>
 
-  <div className="mt-8 flex flex-col sm:flex-row items-center justify-between space-x-4">
-    <div className="relative w-full">
-      <Image
-        src="/img/ref_mytodolist.png"
-        alt="Image de mon projet d'application MyTodoList"
-        width={789}
-        height={360}
-        className="w-full 
-                  max-w-2xl 
-                  h-auto mx-auto 
-                  w-[80%] sm:w-[90%] md:w-[90%] lg:w-[110%] xl:w-[120%] 2xl:w-[120%] 
-                  px-5 sm:px-8 md:px-16 z-1"
-        priority
-        style={{
-          maxWidth: "789px",
-        }}
-      />
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between space-x-4">
+          <div className="relative w-full">
+            <Image
+              src="/img/ref_mytodolist.png"
+              alt="Image de mon projet d'application MyTodoList"
+              width={789}
+              height={360}
+              className=" w-full 
+                          max-w-2xl 
+                          h-auto mx-auto 
+                          w-[80%] sm:w-[90%] md:w-[90%] lg:w-[110%] xl:w-[120%] 2xl:w-[120%] 
+                          px-5 sm:px-8 md:px-16 z-1"
+              priority
+              style={{
+                maxWidth: "789px",
+              }}
+            />
 
-      <DotsRectangle
-        className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] 
-                  max-w-[250px] 
-                  mt-36 sm:mt-6 md:mt-8 lg:mt-10 
-                  absolute left-2 sm:left-4 md:left-6 lg:left-8"
-        rows={3}
-        dotsPerRow={10}
-        dotColor="#fff000"
-      />
-    </div>
+            <DotsRectangle
+              className=" w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] 
+                          max-w-[250px] 
+                          mt-36 sm:mt-6 md:mt-8 lg:mt-10 
+                          absolute left-2 sm:left-4 md:left-6 lg:left-8"
+              rows={3}
+              dotsPerRow={10}
+              dotColor="#fff000"
+            />
+          </div>
 
-    <div className="flex flex-col items-center sm:items-start sm:pr-8">
-      <h3 className="project-image-title">MyTodoList</h3>
-      <p className="project-date-paragraph">Décembre 2024</p>
+          <div className="flex flex-col items-center sm:items-start sm:pl-8 lg:pl-24 sm:max-w-[40%] lg:max-w-[50%]">
+            <h3 className="project-image-title">MyTodoList</h3>
+            <p className="project-date-paragraph">Décembre 2024</p>
 
-      <Link 
-        href="/portfolio" 
-        className="flex items-center 
-                  mt-4 
-                  text-[3vw] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.1rem] 
-                  text-[#4d94ff]                          
-                  hover:text-navLinkHover 
-                  group">
-        <span className="mr-2">+ d’infos</span>
-        <svg 
-          className="w-5 h-5 text-[#4d94ff] group-hover:text-navLinkHover" 
-          xmlns="http://www.w3.org/2000/svg" 
-          fill="none" 
-          viewBox="0 0 24 24" 
-          stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
-        </svg>
-      </Link>
-    </div>
-  </div>
-</div>
+            <Link
+              href="/portfolio#mytodolist"
+              className="flex items-center mt-4 
+              text-[3vw] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.1rem] 
+              text-[#4d94ff] hover:text-navLinkHover group"
+            >
+              <span className="mr-2">+ d’infos</span>
+              <svg
+                className="w-5 h-5 text-[#4d94ff] group-hover:text-navLinkHover"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+        </div>
+
+        {/* New section */}
+        <div className="mt-32 text-white w-full text-center">
+          <p className="text-lg mx-8 sm:mx-12 md:mx-16 lg:mx-20">
+            Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets sur lesquels j’ai travaillé et visibles sur LinkedIn :
+          </p>
+
+          {/* Conteneur pour aligner le lien et l'image à droite avec moins de marge */}
+          <div className="flex justify-end pr-16 sm:pr-64 mt-4">
+            <a
+              href="https://www.linkedin.com/in/yoann-gregoire-cda/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-[3vw] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.1rem] text-[#4d94ff] hover:text-navLinkHover group"
+            >
+              <span className="mr-2">+ d’infos</span>
+
+              {/* Icône SVG */}
+              <svg
+                className="w-5 h-5 text-[#4d94ff] inline-block mx-2 group-hover:text-navLinkHover"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+              </svg>
+
+              {/* Logo LinkedIn */}
+              <Image
+                src="/img/linkedin_logo.png"
+                alt="Logo LinkedIn"
+                width={20}
+                height={20}
+                className="inline-block ml-2"
+              />
+            </a>
+          </div>
+
+        </div>
+
+
+
+      </div>
 
     </div>
   );

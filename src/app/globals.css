@@ -48,6 +48,28 @@ h2 {
   font-weight: 600;
 }
 
+.title-project {
+  color: #4d94ff;
+  font-family: 'Clash-display-variable', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  @apply text-[5vw] sm:text-[28px] md:text-[32px] lg:text-[34px] xl:text-[36px] 2xl:text-[38px];
+  @apply mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12;
+}
+
+h3.title-page-portfolio {
+  font-family: 'Clash-display-variable', sans-serif;
+  font-weight: 600;
+  @apply text-colorChart;
+  margin-bottom: 20px;
+}
+
+h3.alternative-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  @apply text-gray-800;
+}
+
 a {
   font-family: 'Quicksand', sans-serif;
 }
@@ -56,6 +78,15 @@ a {
   font-family: 'Quicksand', sans-serif;
   color: white;
   text-align: justify;
+}
+
+.unordered-list {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  text-align: justify;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
 }
 
 .section-title {
@@ -83,7 +114,7 @@ a {
   text-rendering: optimizeLegibility;  
   letter-spacing: 0.1rem;
   font-weight: 500;
-  transform: scaleY(0.8);
+  transform: scaleY(0.6);
 }
 
 .project-date-paragraph {

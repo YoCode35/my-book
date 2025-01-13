@@ -29,7 +29,7 @@ export default function Skills() {
             <h2
                 id="skills"
                 className=" title-page
-                            text-2xl sm:text-3xl md:text-4xl
+                            text-6xl sm:text-3xl md:text-4xl
                             pt-16 sm:pt-20 md:pt-24 lg:pt-8
                             mb-12"
             >

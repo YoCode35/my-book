@@ -8,24 +8,21 @@ import Navbar from "./Navbar";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0); // État pour la largeur de la fenêtre
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    // Mettre à jour la largeur de la fenêtre après le montage du composant
     setWindowWidth(window.innerWidth);
 
-    // Ajouter un gestionnaire d'événements pour mettre à jour la largeur à chaque redimensionnement
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Nettoyer l'événement lors du démontage du composant
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Ce code s'exécute une seule fois après le montage du composant
+  }, []);
 
   return (
     <div id="header" className="relative
@@ -60,7 +57,7 @@ export default function Header() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Traits obliques à gauche */}
+      {/* Obliques Lines */}
       <div className="absolute 
                       left-0 
                       top-0 w-[50px] 
@@ -113,7 +110,6 @@ export default function Header() {
                     px-6
                     mr-4 sm:mr-6 md:mr-8 mt-16 lg:mt-20"
       >
-        {/* Left Text Block */}
         <div className="text-left 
                         flex flex-col 
                         items-start 
@@ -154,7 +150,7 @@ export default function Header() {
             </p>
           </div>
 
-          {/* Citation */}
+          {/* Quote */}
           <p
             className=" text-[#5385b7] 
                         text-sm sm:text-sm md:text-base 
