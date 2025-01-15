@@ -11,7 +11,7 @@ html {
   scroll-padding-top: 40px;
   scroll-behavior: smooth;
   height: 100%;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100%;
-  /*overflow: auto*/
+  overflow: auto
 }
 
 .page-bg {

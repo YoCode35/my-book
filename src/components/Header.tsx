@@ -39,9 +39,8 @@ export default function Header() {
                       text-[3rem] sm:text-[3.2rem] md:text-[3.5rem] 
                       leading-tight 
                       text-left 
-                      font-rubik 
-                      font-bold 
-                      text-[rgba(68,90,120,0.55)]">
+                      font-rubik font-bold 
+                      text-[rgba(68,90,120,0.3)]">
         My universe
       </h1>
 
