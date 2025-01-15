@@ -31,7 +31,6 @@ export default function Header() {
                                 justify-center
                                 w-full"
     >
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       {/* My Universe Title */}
       <h1 className=" absolute
@@ -81,6 +80,8 @@ export default function Header() {
             ></div>
           ))}
       </div>
+
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       {/* Gradient */}
       <div
@@ -236,10 +237,11 @@ export default function Header() {
       >
         <Image
           src="/img/moi.png"
-          alt="Image de moi"
-          fill
+          alt="Yoann GREGOIRE"
+          layout="responsive"
+          width={684}
+          height={684}
           style={{ objectFit: "contain" }}
-          sizes="(max-width: 684px) 100vw, 50vw"
           className="rounded-md shadow-lg"
           priority
         />

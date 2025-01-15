@@ -11,17 +11,20 @@ export default function Skills() {
         <div
             className=" bg-cover
                         bg-no-repeat
-                        bg-[url('/img/colored_spots.png')]
-                        pb-24"
+                        bg-[url('/img/colored_spots.png')]"
         >
+
+            {/* SEPARATOR */}
+            <div className="min-h-[60px]"></div>
+
             <DotsRectangle
-                className="w-full relative mt-[60] h-[55px] z-1"
+                className="w-full relative h-[55px] z-1"
                 rows={3}
                 dotsPerRow={dotsPerRow}
                 dotColor="#fff000"
             />
-
-            <h2 id="skills" className="title-page pt-24 mb-12">Skills</h2>
+            
+            <h2 id="skills" className="title-page">Skills</h2>
 
             <div className="px-4 sm:px-8 md:px-16
                             max-w-screen-lg

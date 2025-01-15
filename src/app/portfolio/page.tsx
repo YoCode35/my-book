@@ -10,21 +10,26 @@ export default function Portfolio() {
   return (
     <div className="bg-cover bg-no-repeat bg-[url('/img/colored_spots.png')] pb-24">
 
+      {/* SEPARATOR */}
+      <div className="min-h-[60px]"></div>
+
       <DotsRectangle
-        className="w-full relative mt-[60] h-[55px] z-1"
+        className="w-full relative h-[55px] z-1"
         rows={3}
         dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 
-      <h2 id="portfolio" className="title-page pt-24 mb-12">Portfolio</h2>
+      <h2 id="portfolio" className="title-page">Portfolio</h2>
 
-      <div id="mytodolist" className="px-4 sm:px-8 md:px-16 lg:pt-10 xl:pt-10 2xl:pt-10 max-w-screen-lg mx-auto">
+      <div id="mytodolist" className="px-4 sm:px-8 md:px-16 
+                                      lg:pt-10 xl:pt-10 2xl:pt-10 
+                                      max-w-screen-lg 
+                                      mx-auto"
+      >
         <h3 className="title-project">Projet MyTodoList</h3>
 
-        <h3 className="portfolio-title-page">
-          Développement d’une application PWA (Progressive Web App) Cross Platform avec Flutter pour le Front et PHP/MySQL pour le Back.
-        </h3>
+        <h4 className="portfolio-title-page">Développement d’une application PWA (Progressive Web App) Cross Platform avec Flutter pour le Front et PHP/MySQL pour le Back.</h4>
 
         <p className="unordered-list text-white mb-12">
           1. Planification et Conception

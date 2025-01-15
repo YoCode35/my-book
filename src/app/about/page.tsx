@@ -12,12 +12,16 @@ export default function About() {
                     bg-[url('/img/colored_spots.png')]
                     pb-24"
     >
-            <DotsRectangle
-                className="w-full relative mt-[60] h-[55px] z-1"
-                rows={3}
-                dotsPerRow={dotsPerRow}
-                dotColor="#fff000"
-            />
+
+      {/* SEPARATOR */}
+      <div className="min-h-[60px]"></div>
+
+      <DotsRectangle
+        className="w-full relative h-[55px] z-1"
+        rows={3}
+        dotsPerRow={dotsPerRow}
+        dotColor="#fff000"
+      />
 
       <h2 id="about" className="title-page">Plus d’infos à propos de moi</h2>
 

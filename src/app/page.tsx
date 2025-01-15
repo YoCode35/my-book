@@ -32,11 +32,11 @@ export default function Home() {
                           items-center 
                           gap-6 lg:gap-10"
           >
-            <div className="w-40 h-[4px] bg-[#1a2b3b] lg:w-80 lg:h-[6px]"></div>
-            <div className="w-32 h-[4px] bg-[#162432] lg:w-72 lg:h-[6px]"></div>
-            <div className="w-24 h-[4px] bg-[#121f2a] lg:w-64 lg:h-[6px]"></div>
-            <div className="w-12 h-[4px] bg-[#0f1922] lg:w-48 lg:h-[6px]"></div>
-            <div className="w-4 h-[4px] bg-[#0c131a] lg:w-32 lg:h-[6px]"></div>
+            <div className="w-40 h-[2px] bg-[#1a2b3b] lg:w-80 lg:h-[3px]"></div>
+            <div className="w-32 h-[2px] bg-[#162432] lg:w-72 lg:h-[3px]"></div>
+            <div className="w-24 h-[2px] bg-[#121f2a] lg:w-64 lg:h-[3px]"></div>
+            <div className="w-12 h-[2px] bg-[#0f1922] lg:w-48 lg:h-[3px]"></div>
+            <div className="w-4 h-[2px] bg-[#0c131a] lg:w-32 lg:h-[3px]"></div>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@ export default function Home() {
       </div>
 
       {/* SEPARATOR */}
-      <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[40px] 2xl:min-h-[150px]"></div>
+      <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[40px] 2xl:min-h-[160px]"></div>
 
       {/* Skills Section */}
       <div id="skills" className="flex flex-col 

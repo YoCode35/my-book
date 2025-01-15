@@ -98,7 +98,7 @@ a {
   @apply mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12;
 }
 
-h3.portfolio-title-page {
+h4.portfolio-title-page {
   font-family: 'Clash-display-variable', sans-serif;
   font-weight: 600;
   @apply text-colorChart;

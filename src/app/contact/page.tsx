@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import useDotsPerRow from "../../components/useResponsiveDots";
 import DotsRectangle from "../../components/DotsRectangle";
@@ -81,14 +82,17 @@ export default function Contact() {
                   pb-24"
     >
 
+      {/* SEPARATOR */}
+      <div className="min-h-[60px]"></div>
+
       <DotsRectangle
-        className="w-full relative mt-[60] h-[55px] z-1"
+        className="w-full relative h-[55px] z-1"
         rows={3}
         dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 
-      <h2 id="contact" className="title-page pt-24 mb-12">Me contacter</h2>
+      <h2 id="contact" className="title-page">Me contacter</h2>
 
       <p className="text-red-500 
                     text-sm 
