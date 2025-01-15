@@ -2,6 +2,7 @@ import Image from 'next/image';
 import DotsRectangle from "../components/DotsRectangle";
 import { ImCross } from "react-icons/im"
 import Link from "next/link";
+import "../app/globals.css";
 
 export default function Home() {
   return (
@@ -10,134 +11,149 @@ export default function Home() {
                     bg-center
                     bg-[url('/img/colored_spots.png')]"
     >
-      <p className="text-[1rem] 
-                    sm:text-[1.125rem] 
-                    md:text-[1.1rem] 
-                    leading-relaxed 
-                    text-shadow 
-                    text-center 
-                    mt-0 
-                    mb-12 sm:mb-4 md:mb-8 lg:mb-8
-                    italic 
-                    font-rubik font-light 
-                    px-8"
-      >
-        &quot;Explorez ici une sélection de mes travaux les plus significatifs. <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
-      </p>
 
-      {/* <p className="text-[1rem] 
-                    sm:text-[1.125rem] 
-                    md:text-[1.1rem] 
-                    leading-relaxed 
-                    text-shadow 
-                    text-center 
-                    mt-20px
-                    mb-36 sm:mb-32 md:mb-64 lg:mb-40px
-                    font-rubik font-bold 
-                    px-8"
-      >
-        [EN COURS DE DEVELOPPEMENT]
-      </p> */}
+      {/* Presentation Section */}
+      <div className="relative mb-24 sm:mb-24 md:mb-32 lg:mb-32 xl:mb-32 2xl:mb-32">
+        <div className="relative inset-0">
+          <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[18px] xl:text-[22px];
+                        leading-[2]                         
+                        text-center 
+                        mt-[20px] md:mt-[50px] lg:mt-[80px]
+                        mb-6 sm:mb-4 md:mb-8 lg:mb-8 xl:mb-8 2xl:mb-8
+                        italic 
+                        font-rubik font-light 
+                        px-8"
+          >
+            &quot;Explorez ici une sélection de mes travaux les plus significatifs. <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
+          </p>
+
+          {/* Traits gris */}
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-40 h-[2px] bg-blueNight"></div>
+            <div className="w-32 h-[2px] bg-blueNight"></div>
+            <div className="w-24 h-[2px] bg-blueNight"></div>
+            <div className="w-12 h-[2px] bg-blueNight"></div>
+            <div className="w-4 h-[2px] bg-blueNight"></div>
+          </div>
+        </div>
+      </div>
 
       {/* About Section */}
-      <div id="abouthome" className=" lg:flex                                      
-                                      w-full h-[500px] sm:h-[550px] md:h-[550px] lg:h-0px xl:h-0px]
-                                      md:pt-0"
+      <div id="abouthome" className=" w-full
+                                      flex sm:flex md:flex lg:flex xl:flex 2xl:flex 
+                                      justify-start relative
+                                      top-[0] sm:top-[0] md:top-[0] lg:top-[0] xl:top-[0] 2xl:top-[0]
+                                      min-h-[100%]"
       >
 
-        <div className="relative">
+        <div className="relative w-full
+                        flex flex-col md:flex-none
+                        sm:flex sm:flex-col md:block
+                        items-center sm:items-center md:items-start"
+        >
+          <h2 className=" absolute
+                          title-home-section
+                          z-10
+                          top-[3%] sm:top-[3%] md:top-[6%] lg:top-[6%] xl:top-[40px] 2xl:top-[0]
+                          left-[20%] sm:left-[35%] md:left-[40%] lg:left-[30%] xl:left-[35%] 2xl:left-[40%]
+                          leading-tight
+                          text-shadow"
+          >
+            <span className="block leading-none">À propos</span>
+            <span className="inline-flex items-center">de moi
+              <a href="/about#about" className="relative group">
+                <span className=" inline-block 
+                                  text-[16vw] sm:text-[16vw] md:text-[12vw] lg:text-[12vw] xl:text-[12vw] 2xl:text-[12vw]
+                                  ml-10 sm:ml-16 lg:ml-48 xl:ml-48 2xl:ml-48
+                                  text-colorChart"
+                >
+                  ➜
+                </span>
+
+                {/* Info bubble */}
+                <span className=" absolute 
+                                  top-0 
+                                  left-full 
+                                  ml-2 
+                                  px-4 py-2 
+                                  text-colorChart 
+                                  bg-black 
+                                  rounded 
+                                  opacity-0 
+                                  group-hover:opacity-100 
+                                  transition-opacity 
+                                  duration-300 
+                                  text-xl 
+                                  font-rubik font-medium 
+                                  whitespace-nowrap"
+                >
+                  + d&apos;infos
+                </span>
+              </a>
+            </span>
+          </h2>
+
           <Image
             src="/img/img_a-propos.png"
             alt="À propos"
-            width={500}
-            height={500}
-            className=" w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] 
-                        h-auto
-                        mr-[5rem] sm:mr-[10rem] md:mr-[50rem] lg:mr-[50rem] 
-                        ml-[0%] sm:ml-[10%] md:ml-[5%] lg:ml-[0%]"
+            width={550}
+            height={550}
+            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[100%]
+                        h-auto 
+                        mr-[10%] sm:mr-[10%] md:mr-[0]                      
+                        ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[7%]
+                        mt-[13%] sm:mt-[10%] md:mt-[12%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[5%]"
             style={{
-              maxWidth: "500px",
+              maxWidth: "550px",
             }}
           />
 
-          <h2 className=" absolute
-                          section-title
-                          z-10
-                          top-[0] sm:top-[0] md:top-[0] lg:top-[25]
-                          left-[30%] sm:left-[35%] md:left-[40%] lg:left-[30%]                          
-                          leading-tight
-                          text-shadow
-                          text-left"
-          >
-            À propos<br />de moi
-            <a href="/about#about" className="relative group">
-              <span className=" inline-block 
-                                mt-[-1rem] sm:mt-0 md:mt-0
-                                ml-12 sm:ml-24 md:ml-24
-                                text-colorChart">➜
-              </span>
-              {/* Info bubble */}
-              <span className=" top-0 left-full 
-                                ml-2 
-                                px-4 py-2 
-                                text-white 
-                                bg-black 
-                                rounded 
-                                opacity-0 
-                                group-hover:opacity-100 
-                                transition-opacity 
-                                duration-300 
-                                text-sm 
-                                whitespace-nowrap"
-              >
-                + d&apos;infos
-              </span>
-            </a>
-          </h2>
-
           {/* Paragraph */}
-          <p className="paragraph-custom
-                        w-full sm:w-full md:w-full lg:w-[65%]
-                        relative sm:relative md:relative lg:absolute
+          <p className="paragraph-home
                         center
-                        justify
-                        lg:top-[40%]
-                        left-[0%] sm:left-[0%] md:left-[0%] lg:left-[54%]                         
-                        px-12 sm:px-24 md:px-12
-                        mt-6 sm:mt-8 md:mt-12"
+                        w-full sm:w-[100%] md:w-[52%] lg:w-[55%] xl:w-[50%] 2xl:w-[50%]
+                        relative sm:relative md:absolute lg:absolute xl:absolute 2xl:absolute                        
+                        mt-2 sm:mt-8 md:top-[30%] lg:top-[40%] lg:top-[40%] xl:top-[40%] 2xl:top-[45%]
+                        left-[0%] sm:left-[0%] md:left-[50%] lg:left-[45%] lg:left-[45%] xl:left-[45%] 2xl:left-[45%]                       
+                        px-6 sm:px-12 md:px-12"
           >
-            <span className=" mb-2
+            <span className=" mb-0.5
                               block 
                               break-words 
                               whitespace-normal sm:whitespace-normal md:whitespace-normal 
                               max-w-full"
             >
-              Le développement logiciel : Une véritable <span className="text-[1.2rem] sm:text-[1.5rem]">vocation</span> qui m&apos;anime au quotidien !
+              Le développement logiciel : Une véritable <span className="text-[1.2rem] sm:text-[1.8rem] md:text-[1.4rem] lg:text-[2.2vw] xl:text-[1.8rem]">vocation</span> qui m&apos;anime au quotidien !
             </span>
             <br />
             Je m&apos;engage pleinement dans la conception d&apos;outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l&apos;expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d&apos;améliorer la vie quotidienne.
           </p>
-
+          <DotsRectangle
+            className=" relative
+                        w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%] xl:w-[20%] 2xl:w-[30%]                  
+                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[-4%] xl:mt-[-5%] 2xl:mt-[-4%]
+                        ml-auto"
+            rows={3}
+            dotsPerRow={10}
+            dotColor="#fff000"
+          />
         </div>
-        <DotsRectangle
-          className=" w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%]                    
-                      mt-8 sm:mt-8 md:mt-8 lg:mt-[50%] xl:mt-[25%] xl:mt-[35%]
-                      self-center
-                      ml-auto"
-          rows={3}
-          dotsPerRow={10}
-          dotColor="#fff000"
-        />
+
       </div>
 
       {/* SEPARATOR */}
-      <div className="min-h-[300px] sm:min-h-[0px] md:min-h-[225px] lg:min-h-[100px] xl:min-h-[50px]"></div>
+      <div className="min-h-[100px] sm:min-h-[100px] md:min-h-[120px] lg:min-h-[150px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* Skills Section */}
-      <div className="flex flex-col justify-start items-center">
-        {/* Conteneur flex pour aligner le titre et la flèche */}
-        <div className="flex items-center">
-          <h2 id="skills" className="section-title leading-tight">Skills</h2>
+      <div id="skills" className="flex flex-col 
+                                  justify-start 
+                                  items-center 
+                                  min-h-[100%]"
+      >
+        <div className="flex items-center mt-[4%] sm:mt-[2%]">
+          <h2 className=" title-home-section 
+                          leading-tight"
+          >Skills</h2>
 
           {/* Flèche */}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
@@ -146,9 +162,22 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="flex justify-center px-4 sm:px-8 md:px-12 lg:px-16">
-          <div className="paragraph-custom max-w-4xl w-full mx-auto relative top-[40px] md:top-[40px] lg:top-[50px] text-left justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-24 sm:pb-96 md:pb-48 lg:pb-48">
+        <div className="flex
+                        justify-center 
+                        px-4 sm:px-8 md:px-12 lg:px-16"
+        >
+          <div className="paragraph-custom 
+                          max-w-4xl 
+                          w-full 
+                          mx-auto 
+                          relative 
+                          top-[10px] sm:top-[20px] md:top-[10px] lg:top-[5px] xl:top-[5px] 2xl:top-[5px]
+                          text-left justify-center"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-3 
+                            gap-8 lg:gap-16 xl:gap-20 2xl:gap-24 
+                            pb-6 sm:pb-0"
+            >
               {/* First Column */}
               <div className="text-center sm:text-left ">
                 <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Front end</strong>
@@ -204,36 +233,24 @@ export default function Home() {
                   <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Versioning</strong>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
                 </div>
-
                 {/* Skills Link */}
                 <div className="relative mt-8 mr-4 sm:mr-6 md:mr-8">
                   <a href="/skills#skills"
-                    className=" text-[#4d94ff] 
-                                hover:text-navLinkHover 
-                                font-medium 
-                                flex 
-                                items-center 
-                                justify-end 
-                                gap-1 
-                                group"
+                    className="text-[#4d94ff] hover:text-navLinkHover font-medium flex items-end justify-end gap-1 group flex-wrap text-right"
                   >
-                    Niveaux de compétences estimés (Auto-évaluation)
-                    <span className=" transition-all 
-                                      group-hover:bg-yellow-500 
-                                      group-hover:text-white 
-                                      group-hover:rounded 
-                                      p-1
-                                      -ml-1"
-                    >
-                      {/* Nouvelle flèche SVG */}
-                      <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
-                      </svg>
+                    <span className="whitespace-nowrap w-full">Niveaux de compétences estimés</span>
+                    <span className="w-full flex justify-end items-center gap-1">
+                      (Auto-évaluation)
+                      <span className="transition-all group-hover:bg-yellow-500 group-hover:text-white group-hover:rounded p-1">
+                        {/* Flèche */}
+                        <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     </span>
                   </a>
                 </div>
-
               </div>
             </div>
           </div>
@@ -241,133 +258,168 @@ export default function Home() {
       </div>
 
       {/* SEPARATOR */}
-      <div className="min-h-[50px] sm:min-h-[50px] md:min-h-[50px] lg:min-h-[50px] xl:min-h-[0px]"></div>
+      <div className="min-h-[100px] sm:min-h-[150px] md:min-h-[150px] lg:min-h-[150px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* My Projects Section */}
-      <div className="flex flex-col 
-                      justify-start 
-                      items-center 
-                      relative 
-                      w-full 
-                      mb-96"
+      <div id="myprojects" className="  flex flex-col 
+                                        justify-start 
+                                        items-center 
+                                        relative 
+                                        w-full
+                                        min-h-[100%]"
       >
-        <h2 id="myprojects" className=" section-title 
-                                        leading-tight 
-                                        lg:ml-80 
-                                        lg:text-right"
+        <h2 className=" title-home-section 
+                        leading-tight 
+                        lg:ml-80 
+                        lg:text-right
+                        lg:pb-[1%] xl:pb-[0] 2xl:pb-[0]
+                        top-[0] sm:mt-[3%] md:mt-[3%] lg:mt-[2%] xl:mt-[2%] 2xl:mt-[1%]"
         >
           Mes projets
         </h2>
 
-        <div className="mt-4 relative w-full">
+        <div className="mt-0 relative w-full">
           <ImCross
             className=" text-colorChart 
                         text-6xl sm:text-6xl md:text-10xl 
                         absolute 
-                        right-4 sm:right-8 md:right-16 lg:right-24 
-                        top-[-20px] 
+                        right-4 sm:right-8 md:right-4 lg:right-8 
+                        top-[-20px] md:top-[-50px] md:top-[0px]
                         z-10"
           />
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between space-x-4">
-          <div className="relative w-full">
-            <Image
-              src="/img/ref_mytodolist.png"
-              alt="Image de mon projet d'application MyTodoList"
-              width={789}
-              height={360}
-              className=" w-full 
-                          max-w-2xl 
-                          h-auto mx-auto 
-                          w-[80%] sm:w-[90%] md:w-[90%] lg:w-[110%] xl:w-[120%] 2xl:w-[120%] 
-                          px-5 sm:px-8 md:px-16 z-1"
-              priority
-              style={{
-                maxWidth: "789px",
-              }}
-            />
+        <div className="flex flex-col items-center justify-center w-full mt-4 sm:mt-8 xl:mt-8 2xl:mt-4">
+          {/* Conteneur de l'image et du texte */}
+          <div className="flex flex-col xl:flex-row items-center justify-center w-full xl:gap-x-4">
+            {/* Image */}
+            <div className="relative w-full xl:w-1/2 max-w-[600px]">
+              <Image
+                src="/img/ref_mytodolist.png"
+                alt="Image de mon projet d'application MyTodoList"
+                width={789}
+                height={360}
+                className="w-full h-auto mx-auto"
+                priority
+                style={{ maxWidth: "789px" }}
+              />
+            </div>
 
+            {/* Texte */}
+            <div className="flex flex-col items-center xl:items-start xl:pl-4 2xl:pl-6 mt-4 xl:mt-0 max-w-[600px]">
+              <h3 className="project-image-title">MyTodoList</h3>
+              <p className="project-date-paragraph">Décembre 2024</p>
+
+              <Link
+                href="/portfolio#mytodolist"
+                className="flex items-center mt-4 
+                  text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]
+                  text-[#4d94ff] hover:text-navLinkHover group"
+              >
+                <span className="mr-2">+ d’infos</span>
+                <svg
+                  className="w-5 h-5 
+                    text-[#4d94ff] 
+                    group-hover:text-navLinkHover
+                    w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.5vw] xl:h-[auto]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* Bloc DotsRectangle */}
+          <div className="xl:w-full sm:w-[40%] md:w-[40%] lg:w-[100%]
+                          xl:flex 
+                          xl:justify-start 
+                          w-full  
+                          max-w-[320px] 
+                          mt-8 sm:mt-8 md:mt-8 lg:mt-8 xl:mt-10 2xl:mt-5
+                          relative
+                          mx-auto
+                          xl:ml-48"
+          >
             <DotsRectangle
-              className=" w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] 
-                          max-w-[250px] 
-                          mt-36 sm:mt-6 md:mt-8 lg:mt-10 
-                          absolute left-2 sm:left-4 md:left-6 lg:left-8"
+              className="w-full"
               rows={3}
               dotsPerRow={10}
               dotColor="#fff000"
             />
           </div>
-
-          <div className="flex flex-col items-center sm:items-start sm:pl-8 lg:pl-24 sm:max-w-[40%] lg:max-w-[50%]">
-            <h3 className="project-image-title">MyTodoList</h3>
-            <p className="project-date-paragraph">Décembre 2024</p>
-
-            <Link
-              href="/portfolio#mytodolist"
-              className="flex items-center mt-4 
-              text-[3vw] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.1rem] 
-              text-[#4d94ff] hover:text-navLinkHover group"
-            >
-              <span className="mr-2">+ d’infos</span>
-              <svg
-                className="w-5 h-5 text-[#4d94ff] group-hover:text-navLinkHover"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-
         </div>
 
-        {/* New section */}
-        <div className="mt-32 text-white w-full text-center">
-          <p className="text-lg mx-8 sm:mx-12 md:mx-16 lg:mx-20">
-            Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets sur lesquels j’ai travaillé et visibles sur LinkedIn :
-          </p>
+      </div>
 
-          {/* Conteneur pour aligner le lien et l'image à droite avec moins de marge */}
-          <div className="flex justify-end pr-16 sm:pr-64 mt-4">
-            <a
-              href="https://www.linkedin.com/in/yoann-gregoire-cda/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-[3vw] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.1rem] text-[#4d94ff] hover:text-navLinkHover group"
+      {/* SEPARATOR */}
+      <div className="min-h-[20px] sm:min-h-[0px]"></div>
+
+      {/* New section */}
+      <div className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
+                      text-white 
+                      w-full 
+                      text-center 
+                      mb-40
+                      min-h-[100%]"
+      >
+        <p className="font-rubik                         
+                      text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px]
+                      mx-8 sm:mx-12 md:mx-8 lg:mx-20"
+        >
+          [Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets]
+        </p>
+
+        <div className="flex 
+                        justify-center sm:justify-center 
+                        mt-8 sm:mt-8
+                        mx-auto sm:mx-auto md:mx-0"
+        >
+          <a
+            href="https://www.linkedin.com/in/yoann-gregoire-cda/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" flex 
+                        items-center 
+                        text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw] 
+                        text-[#4d94ff] 
+                        hover:text-navLinkHover group"
+          >
+            <span className="mr-2">Voir + de projets</span>
+
+            {/* Flèche */}
+            <svg
+              className=" w-[20px] h-[20px] 
+                            text-[#4d94ff] 
+                            inline-block 
+                            w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.8vw] xl:h-[auto]
+                            group-hover:text-navLinkHover
+                            mx-2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <span className="mr-2">+ d’infos</span>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+            </svg>
 
-              {/* Icône SVG */}
-              <svg
-                className="w-5 h-5 text-[#4d94ff] inline-block mx-2 group-hover:text-navLinkHover"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
-              </svg>
+            {/* LinkedIn Logo */}
+            <Image
+              src="/img/linkedin_logo.png"
+              alt="Logo LinkedIn"
+              width={76}
+              height={76}
+              className=" inline-block ml-2 
+                          w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45x] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]"
+            />
 
-              {/* Logo LinkedIn */}
-              <Image
-                src="/img/linkedin_logo.png"
-                alt="Logo LinkedIn"
-                width={20}
-                height={20}
-                className="inline-block ml-2"
-              />
-            </a>
-          </div>
-
+          </a>
         </div>
-
-
-
       </div>
 
     </div>

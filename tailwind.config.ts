@@ -26,6 +26,7 @@ export default {
         titleAccent: "#ff5733",
         buttonColorBkgd: "#4d94ff",
         colorChart:"#fff000",
+        blueNight: '#0f202e',
       },
       fontFamily: {
         orbitron: ['var(--font-orbitron)', 'sans-serif'],

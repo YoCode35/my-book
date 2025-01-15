@@ -8,7 +8,7 @@
 }
 
 html { 
-  scroll-padding-top: 80px;
+  scroll-padding-top: 40px;
   scroll-behavior: smooth;
   height: 100%;
   /*overflow: hidden;*/
@@ -36,32 +36,8 @@ body {
 }
 
 h2 {
-  font-family: 'Clash-display-variable', sans-serif;
   font-weight: 600;
   color: white;
-}
-
-.title-page {
-  color: white;
-  font-family: 'Clash-display-variable', sans-serif;
-  text-align: center;
-  font-weight: 600;
-}
-
-.title-project {
-  color: #4d94ff;
-  font-family: 'Clash-display-variable', sans-serif;
-  text-align: center;
-  font-weight: 600;
-  @apply text-[5vw] sm:text-[28px] md:text-[32px] lg:text-[34px] xl:text-[36px] 2xl:text-[38px];
-  @apply mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12;
-}
-
-h3.title-page-portfolio {
-  font-family: 'Clash-display-variable', sans-serif;
-  font-weight: 600;
-  @apply text-colorChart;
-  margin-bottom: 20px;
 }
 
 h3.alternative-title {
@@ -89,22 +65,54 @@ a {
   text-align: left;
 }
 
-.section-title {
-  @apply text-[16vw] sm:text-[4rem] md:text-[5rem] xl:text-[5rem] 2xl:text-[5rem] font-clash font-medium;  
+.title-home-section {
+  @apply text-[14vw] sm:text-[4rem] md:text-[8vw] lg:text-[8vw] xl:text-[6vw] 2xl:text-[6vw];  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   letter-spacing: 0.1rem;
   font-weight: 500;
   transform: scaleY(0.7);
+  font-family: 'clash', sans-serif;
 }
 
 .section-arrow {
-  @apply w-[22vw] sm:w-[20vw] md:w-[18vw] lg:w-[14vw] xl:w-[16vw] 2xl:w-[14vw];
+  @apply w-[90px] sm:w-[115px] md:w-[140px] lg:w-[165px] xl:w-[190px] 2xl:w-[215px];
+}
+
+.paragraph-home {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  text-align: justify;
+  @apply text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.2vw] 2xl:text-[1.2vw]; 
 }
 
 .skills-text {
   @apply text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px];
+}
+
+.title-page {
+  @apply text-4xl sm:text-3xl md:text-4xl pt-24 mb-12;
+  color: white;
+  font-family: 'Clash-display-variable', sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.title-project {
+  color: #4d94ff;
+  font-family: 'Clash-display-variable', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  @apply text-[6vw] sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[32px] 2xl:text-[34px];
+  @apply mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12;
+}
+
+h3.portfolio-title-page {
+  font-family: 'Clash-display-variable', sans-serif;
+  font-weight: 600;
+  @apply text-colorChart;
+  margin-bottom: 20px;
 }
 
 .project-image-title {
@@ -114,7 +122,7 @@ a {
   text-rendering: optimizeLegibility;  
   letter-spacing: 0.1rem;
   font-weight: 500;
-  transform: scaleY(0.6);
+  transform: scaleY(0.8);
 }
 
 .project-date-paragraph {

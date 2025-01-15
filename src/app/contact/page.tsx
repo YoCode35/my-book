@@ -81,26 +81,14 @@ export default function Contact() {
                   pb-24"
     >
 
-      {/* DotsRectangle Components */}
       <DotsRectangle
-        className=" w-full
-                    w-[100%]
-                    relative sm:relative md:relative lg:relative
-                    top-[0] sm:top-[0] md:top-[0] lg:top-[0]
-                    right-0 sm:right-0 md:right-0 lg:right-0
-                    h-[55px]
-                    z-1"
+        className="w-full w-[100%] relative sm:relative md:relative lg:relative top-[60] h-[55px] z-1"
         rows={3}
         dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 
-      <h2 id="contact" className="title-page
-                                  text-2xl sm:text-3xl md:text-4xl
-                                  pt-16 sm:pt-20 md:pt-24 lg:pt-16"
-      >
-        Me contacter
-      </h2>
+      <h2 id="contact" className="title-page pt-24 mb-12">Me contacter</h2>
 
       <p className="text-red-500 
                     text-sm 

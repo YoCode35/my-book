@@ -20,7 +20,7 @@ export function useNavbarLogic() {
         const aboutSection = document.querySelector("#abouthome");
         if (aboutSection) {
           const aboutRect = aboutSection.getBoundingClientRect();
-          const isAboutVisible = aboutRect.top <= window.innerHeight * 0.4 && aboutRect.bottom >= 0;
+          const isAboutVisible = aboutRect.top <= window.innerHeight * 0.2 && aboutRect.bottom >= 0;
           setIsAboutActive(isAboutVisible);
         }
 
@@ -28,7 +28,7 @@ export function useNavbarLogic() {
         const skillsSection = document.querySelector("#skills");
         if (skillsSection) {
           const skillsRect = skillsSection.getBoundingClientRect();
-          const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.2 && skillsRect.bottom >= 0;
+          const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.1 && skillsRect.bottom >= 0;
           setIsSkillsActive(isSkillsVisible);
         }
 
@@ -36,7 +36,7 @@ export function useNavbarLogic() {
         const myProjectsSection = document.querySelector("#myprojects");
         if (myProjectsSection) {
           const myProjectsRect = myProjectsSection.getBoundingClientRect();
-          const isMyProjectsVisible = myProjectsRect.top <= window.innerHeight * 0.2 && myProjectsRect.bottom >= 0;
+          const isMyProjectsVisible = myProjectsRect.top <= window.innerHeight * 0.1 && myProjectsRect.bottom >= 0;
           setIsMyProjectsActive(isMyProjectsVisible);
         }
       }

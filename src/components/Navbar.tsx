@@ -22,38 +22,31 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
     <>
       <nav
         className={`fixed
-                      top-0
-                      w-full
-                      flex
-                      justify-center items-center
-                      z-40
-                      ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-60'}`}
+                    top-0                    
+                    flex
+                    justify-center items-center
+                    z-40
+                    ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-60'}`}
       >
-        <div className="w-[70%] sm:w-[90%] md:w-[85%] lg:max-w-[900px]
-                          px-2 py-2
-                          bg-[rgba(1,22,39,0.6)]
-                          rounded-full
-                          border border-gray-800
-                          flex
-                          justify-between
-                          items-center
-                          mx-auto"
+        <div className="w-[300px] sm:w-[100%] md:w-[100%] lg:max-w-[900px]
+                        px-2 py-2
+                        bg-[rgba(1,22,39,0.6)]
+                        rounded-full
+                        border border-gray-800
+                        flex
+                        justify-between
+                        items-center
+                        mx-auto"
         >
           <div className="text-white
-                            font-orbitron
-                            text-[2vw] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17px]
-                            tracking-wider sm:tracking-widest md:tracking-[0.1em] lg:tracking-[0.15em]
-                            sm:text-[10px] md:text-[12px] lg:text-[14px]
-                            ml-2 sm:ml-4 md:ml-6 lg:ml-8"
+                          font-orbitron
+                          text-[14px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17px]
+                          tracking-wider sm:tracking-widest md:tracking-[0.1em] lg:tracking-[0.15em]
+                          text-[10px] sm:text-[10px] md:text-[12px] lg:text-[14px]
+                          ml-2 sm:ml-4 md:ml-6 lg:ml-8
+                          mr-2 sm:mr-4 md:mr-6 lg:mr-8"
           >
             Yoann GREGOIRE
-          </div>
-
-          {/* Hamburger Icon */}
-          <div className="lg:hidden flex items-center" style={{ transform: 'translateX(-10px)' }}>
-            <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
-              <FiMenu size={30} />
-            </button>
           </div>
 
           {/* Desktop Navbar */}
@@ -62,9 +55,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               <Link
                 href="/#header"
                 className={`px-6 py-2 
-                              text-navLinkInactive
-                              hover:text-navLinkHover
-                              ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                            text-navLinkInactive
+                            hover:text-navLinkHover
+                            ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
               >
                 <FiHome
                   size={24}
@@ -79,8 +72,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 <Link
                   href={pathname === "/" ? "#abouthome" : "/about#about"}
                   className={`px-6 py-2 
-                                text-navLinkInactive
-                                hover:text-navLinkHover
+                              text-navLinkInactive
+                              hover:text-navLinkHover
                                 ${pathname === "/" && isAboutActive ? "text-navLinkHover" : "text-navLinkInactive"}`}
                   style={{
                     color: pathname === "/" && isAboutActive ? "#fff000" : "",
@@ -97,8 +90,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 <Link
                   href={pathname === "/" ? "#skills" : "/skills#skills"}
                   className={`px-6 py-2 
-                                text-navLinkInactive
-                                hover:text-navLinkHover
+                              text-navLinkInactive
+                              hover:text-navLinkHover
                                 ${pathname === "/" && isSkillsActive ? "text-navLinkHover" : "text-navLinkInactive"}`}
                   style={{
                     color: pathname === "/" && isSkillsActive ? "#fff000" : "",
@@ -115,8 +108,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 <Link
                   href={pathname === "/" ? "#myprojects" : "/portfolio#portfolio"}
                   className={`px-6 py-2 
-                          text-navLinkInactive
-                          hover:text-navLinkHover
+                              text-navLinkInactive
+                              hover:text-navLinkHover
                           ${pathname === "/" && (isMyProjectsActive || isSkillsActive) ? "text-navLinkHover" : "text-navLinkInactive"}`}
                   style={{
                     color: (pathname === "/" && isMyProjectsActive) ? "#fff000" : "",
@@ -134,55 +127,64 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               <Link href="/contact#contact">
                 <button
                   className={`px-6 py-2
-                                rounded-full
-                                text-white
-                                hover:bg-navLinkHover
-                                hover:text-black
-                                hover:font-bold
-                                focus:outline-none focus:ring-2 focus:ring-purple-300
-                                ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}`}
-                  style={{
-                    minWidth: "160px",
-                  }}
+                              rounded-full
+                              text-white
+                              hover:bg-navLinkHover
+                              hover:text-black
+                              hover:font-bold
+                              focus:outline-none focus:ring-2 focus:ring-purple-300
+                              ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}`}
+                  style={{ minWidth: "160px" }}
                 >
                   Me contacter
                 </button>
               </Link>
             </div>
           )}
+
+          {/* Hamburger Icon */}
+          <div className="lg:hidden 
+                          flex 
+                          items-center
+                          ml-2 sm:ml-4 md:ml-6" style={{ transform: 'translateX(-10px)' }}>
+            <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
+              <FiMenu size={30} />
+            </button>
+          </div>          
         </div>
       </nav>
 
       {/* Mobile Navbar */}
       {menuOpen && (
-        <div
-          className="lg:hidden
-                absolute 
-                inset-x-0
-                mx-auto
-                w-[70%] max-w-[300px]
-                bg-[rgba(1,22,39,0.8)]
-                py-4 px-6
-                rounded-lg
-                shadow-lg
-                space-y-4
-                z-50
-                list-none"
+        <div className="lg:hidden
+                        absolute 
+                        inset-x-0
+                        mx-auto
+                        w-[180px] sm:w-[30%] md:w-[30%]
+                        max-w-[300px]
+                        bg-[rgba(1,22,39,0.8)]
+                        py-8 px-6
+                        rounded-b-lg
+                        shadow-lg
+                        space-y-4
+                        z-50
+                        list-none
+                        h-auto"
           style={{
-            top: `${scrollTop + 50}px`,
+            top: `${scrollTop + 48}px`,
             backdropFilter: "blur(8px)",
           }}
         >
           {[
-            { href: "/#header", label: <div className={`flex justify-center items-center w-full ${pathname === "/" ? "text-navLinkHover" : "text-white"} hover:text-navLinkHover`}><FiHome size={24} /></div> },
+            { href: "/#header", label: <div className={`flex justify-center items-center ${pathname === "/" ? "text-navLinkHover" : "text-white"} hover:text-navLinkHover`}><FiHome size={24} /></div> },
             ...(pathname === "/" ? [
               { href: "#abouthome", label: <span className={`${isAboutActive ? "text-navLinkHover" : "text-white"}`}>À propos</span> },
               { href: "#skills", label: <span className={`${isSkillsActive ? "text-navLinkHover" : "text-white"}`}>Skills</span> },
-              { href: "#myprojects", label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>Portfolio</span> },  // Lien vers l'ancre "myprojects" sur la page "Home"
+              { href: "#myprojects", label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>Portfolio</span> },
             ] : [
               pathname !== "/about" && { href: "/about#about", label: "À propos" },
               pathname !== "/skills" && { href: "/skills#skills", label: "Skills" },
-              pathname !== "/portfolio" && { href: "/portfolio#portfolio", label: "Portfolio" },  // Lien vers la page "Portfolio" si on n'est pas sur "Home"
+              pathname !== "/portfolio" && { href: "/portfolio#portfolio", label: "Portfolio" },
             ]).filter(Boolean),
           ]
             .filter((item): item is { href: string; label: string } => item !== false)
@@ -192,11 +194,10 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 href={href}
                 onClick={() => setMenuOpen(false)}
                 className={`block
-                      text-center
-                      px-4 py-2
-                      rounded-md
-                      text-navLinkInactive
-                      hover:text-navLinkHover 
+                            text-center
+                            px-4 py-2                            
+                            text-navLinkInactive
+                            hover:text-navLinkHover 
                       ${isActive(href)}`}
               >
                 {label}
@@ -206,18 +207,19 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             <Link href="/contact#contact">
               <button
                 onClick={() => setMenuOpen(false)}
-                className="block
-                      w-[150px]
-                      mx-auto
-                      px-4 py-2
-                      mt-6
-                      rounded-full
-                      bg-buttonColorBkgd
-                      hover:bg-navLinkHover
-                      hover:text-black
-                      hover:font-bold
-                      text-white
-                      focus:outline-none focus:ring-2 focus:ring-purple-300"
+                className=" block
+                            w-[130px] sm:w-[150px]
+                            w-full
+                            mx-auto
+                            px-4 py-2
+                            mt-6
+                            rounded-full
+                            bg-buttonColorBkgd
+                            hover:bg-navLinkHover
+                            hover:text-black
+                            hover:font-bold
+                            text-white
+                            focus:outline-none focus:ring-2 focus:ring-purple-300"
               >
                 Me contacter
               </button>
@@ -230,7 +232,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
       {isScrolled && (
         <div className="fixed 
                         bottom-5 
-                        center lg:right-5 
+                        center lg:right-5 xl:right-20 2xl:right-20
+                        bottom-12 sm:bottom-10 md:bottom-16 lg:bottom-5 xl:bottom-10 2xl:bottom-10
                         z-30"
         >
           <Link href="#header">

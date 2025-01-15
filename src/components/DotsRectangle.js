@@ -5,7 +5,7 @@ export default function DotsRectangle({
     dotsPerRow = 10,
   }) {
     return (
-      <div className={`w-full h-[55px] ${className}`}>
+      <div className={`w-full h-[55px] md:h-[45px] ${className}`}>
         <div className="w-full h-full flex flex-col justify-between items-center">
           {/* Génération des lignes de petits points */}
           {[...Array(rows)].map((_, index) => (
