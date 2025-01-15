@@ -36,7 +36,7 @@ export function useNavbarLogic() {
         const myProjectsSection = document.querySelector("#myprojects");
         if (myProjectsSection) {
           const myProjectsRect = myProjectsSection.getBoundingClientRect();
-          const isMyProjectsVisible = myProjectsRect.top <= window.innerHeight * 0.1 && myProjectsRect.bottom >= 0;
+          const isMyProjectsVisible = myProjectsRect.top <= window.innerHeight * 0.15 && myProjectsRect.bottom >= 0;
           setIsMyProjectsActive(isMyProjectsVisible);
         }
       }

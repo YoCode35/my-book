@@ -110,7 +110,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
-                          ${pathname === "/" && (isMyProjectsActive || isSkillsActive) ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                          ${pathname === "/" && (isMyProjectsActive) ? "text-navLinkHover" : "text-navLinkInactive"}`}
                   style={{
                     color: (pathname === "/" && isMyProjectsActive) ? "#fff000" : "",
                   }}
@@ -233,7 +233,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         <div className="fixed 
                         bottom-5 
                         center lg:right-5 xl:right-20 2xl:right-20
-                        bottom-12 sm:bottom-10 md:bottom-16 lg:bottom-5 xl:bottom-10 2xl:bottom-10
+                        bottom-16 sm:bottom-10 md:bottom-16 lg:bottom-5 xl:bottom-10 2xl:bottom-10
                         z-30"
         >
           <Link href="#header">

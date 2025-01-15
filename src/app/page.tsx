@@ -2,7 +2,6 @@ import Image from 'next/image';
 import DotsRectangle from "../components/DotsRectangle";
 import { ImCross } from "react-icons/im"
 import Link from "next/link";
-import "../app/globals.css";
 
 export default function Home() {
   return (
@@ -13,49 +12,51 @@ export default function Home() {
     >
 
       {/* Presentation Section */}
-      <div className="relative mb-24 sm:mb-24 md:mb-32 lg:mb-32 xl:mb-32 2xl:mb-32">
-        <div className="relative inset-0">
-          <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[18px] xl:text-[22px];
-                        leading-[2]                         
-                        text-center 
-                        mt-[20px] md:mt-[50px] lg:mt-[80px]
-                        mb-6 sm:mb-4 md:mb-8 lg:mb-8 xl:mb-8 2xl:mb-8
+      <div className="relative 
+                      mb-6 sm:mb-24 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-32"
+      >
+        <div className="mt-[20px] md:mt-[30px] lg:mt-[50px]">
+          <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[21px] xl:text-[22px];
+                        leading-[2] lg:leading-normal                       
+                        text-center
+                        text-gray-300                        
+                        mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-8 2xl:mb-8
                         italic 
-                        font-rubik font-light 
+                        font-quicksand font-light 
                         px-8"
           >
             &quot;Explorez ici une sélection de mes travaux les plus significatifs. <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
           </p>
-
           {/* Traits gris */}
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-40 h-[2px] bg-blueNight"></div>
-            <div className="w-32 h-[2px] bg-blueNight"></div>
-            <div className="w-24 h-[2px] bg-blueNight"></div>
-            <div className="w-12 h-[2px] bg-blueNight"></div>
-            <div className="w-4 h-[2px] bg-blueNight"></div>
+          <div className="flex flex-col 
+                          items-center 
+                          gap-6 lg:gap-10"
+          >
+            <div className="w-40 h-[4px] bg-[#1a2b3b] lg:w-80 lg:h-[6px]"></div>
+            <div className="w-32 h-[4px] bg-[#162432] lg:w-72 lg:h-[6px]"></div>
+            <div className="w-24 h-[4px] bg-[#121f2a] lg:w-64 lg:h-[6px]"></div>
+            <div className="w-12 h-[4px] bg-[#0f1922] lg:w-48 lg:h-[6px]"></div>
+            <div className="w-4 h-[4px] bg-[#0c131a] lg:w-32 lg:h-[6px]"></div>
           </div>
         </div>
       </div>
 
       {/* About Section */}
       <div id="abouthome" className=" w-full
-                                      flex sm:flex md:flex lg:flex xl:flex 2xl:flex 
+                                      flex
                                       justify-start relative
-                                      top-[0] sm:top-[0] md:top-[0] lg:top-[0] xl:top-[0] 2xl:top-[0]
                                       min-h-[100%]"
       >
-
         <div className="relative w-full
                         flex flex-col md:flex-none
                         sm:flex sm:flex-col md:block
-                        items-center sm:items-center md:items-start"
+                        items-center md:items-start"
         >
           <h2 className=" absolute
                           title-home-section
                           z-10
-                          top-[3%] sm:top-[3%] md:top-[6%] lg:top-[6%] xl:top-[40px] 2xl:top-[0]
-                          left-[20%] sm:left-[35%] md:left-[40%] lg:left-[30%] xl:left-[35%] 2xl:left-[40%]
+                          top-[3%] sm:top-[3%] md:top-[3%] lg:top-[6%] xl:top-[40px] 2xl:top-[5%] 3xl:top-[0] 4xl:top-[5%]
+                          left-[20%] sm:left-[35%] md:left-[40%] lg:left-[30%] xl:left-[35%] 3xl:left-[40%]
                           leading-tight
                           text-shadow"
           >
@@ -69,53 +70,41 @@ export default function Home() {
                 >
                   ➜
                 </span>
-
-                {/* Info bubble */}
-                <span className=" absolute 
-                                  top-0 
-                                  left-full 
-                                  ml-2 
-                                  px-4 py-2 
-                                  text-colorChart 
-                                  bg-black 
-                                  rounded 
-                                  opacity-0 
-                                  group-hover:opacity-100 
-                                  transition-opacity 
-                                  duration-300 
-                                  text-xl 
-                                  font-rubik font-medium 
-                                  whitespace-nowrap"
+                <span className=" absolute
+                                  text-[2vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
+                                  mt-[70%] md:mt-[0] lg:mt-4 
+                                  left-[52%] 
+                                  text-gray-300"
                 >
-                  + d&apos;infos
+                  + d’infos
                 </span>
               </a>
             </span>
           </h2>
-
           <Image
             src="/img/img_a-propos.png"
             alt="À propos"
-            width={550}
-            height={550}
-            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[100%]
+            width={750}
+            height={750}
+            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[75%] 4xl:w-[100%]
                         h-auto 
                         mr-[10%] sm:mr-[10%] md:mr-[0]                      
-                        ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[7%]
-                        mt-[13%] sm:mt-[10%] md:mt-[12%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[5%]"
+                        ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[4%] 3xl:ml-[7%]
+                        mt-[18%] sm:mt-[20%] md:mt-[6%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[7%] 3xl:mt-[7%]"
             style={{
-              maxWidth: "550px",
+              maxWidth: "750px",
             }}
           />
-
           {/* Paragraph */}
-          <p className="paragraph-home
-                        center
-                        w-full sm:w-[100%] md:w-[52%] lg:w-[55%] xl:w-[50%] 2xl:w-[50%]
-                        relative sm:relative md:absolute lg:absolute xl:absolute 2xl:absolute                        
-                        mt-2 sm:mt-8 md:top-[30%] lg:top-[40%] lg:top-[40%] xl:top-[40%] 2xl:top-[45%]
-                        left-[0%] sm:left-[0%] md:left-[50%] lg:left-[45%] lg:left-[45%] xl:left-[45%] 2xl:left-[45%]                       
-                        px-6 sm:px-12 md:px-12"
+          <p className="relative sm:relative md:absolute
+                        w-full sm:w-[100%] md:w-[40%] lg:w-[50%] 3xl:w-[48%]
+                        mt-2 sm:mt-[0%] md:top-[35%] lg:top-[47%] xl:top-[50%] 3xl:top-[50%] 4xl:top-[50%]                      
+                        right-[0%] md:right-[4%] lg:right-[3%] 3xl:right-[2%] 4xl:right-[5%]
+                        px-6 sm:px-12 md:px-0
+                        text-white
+                        font-quicksand
+                        text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+                        text-justify"
           >
             <span className=" mb-0.5
                               block 
@@ -123,26 +112,27 @@ export default function Home() {
                               whitespace-normal sm:whitespace-normal md:whitespace-normal 
                               max-w-full"
             >
-              Le développement logiciel : Une véritable <span className="text-[1.2rem] sm:text-[1.8rem] md:text-[1.4rem] lg:text-[2.2vw] xl:text-[1.8rem]">vocation</span> qui m&apos;anime au quotidien !
+              Le développement logiciel : Une véritable <span className="text-[1.2rem] sm:text-[1.8rem] md:text-[1.4rem] lg:text-[2.2vw] xl:text-[1.6rem] 2xl:text-[1.8rem]">vocation</span> qui m’anime au quotidien !
             </span>
             <br />
-            Je m&apos;engage pleinement dans la conception d&apos;outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l&apos;expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d&apos;améliorer la vie quotidienne.
+            Je m’engage pleinement dans la conception d’outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l’expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d’améliorer la vie quotidienne.
           </p>
+
           <DotsRectangle
             className=" relative
                         w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%] xl:w-[20%] 2xl:w-[30%]                  
-                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[-4%] xl:mt-[-5%] 2xl:mt-[-4%]
+                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-5%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%]
                         ml-auto"
             rows={3}
             dotsPerRow={10}
             dotColor="#fff000"
           />
-        </div>
 
+        </div>
       </div>
 
       {/* SEPARATOR */}
-      <div className="min-h-[100px] sm:min-h-[100px] md:min-h-[120px] lg:min-h-[150px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
+      <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[40px] 2xl:min-h-[150px]"></div>
 
       {/* Skills Section */}
       <div id="skills" className="flex flex-col 
@@ -150,7 +140,7 @@ export default function Home() {
                                   items-center 
                                   min-h-[100%]"
       >
-        <div className="flex items-center mt-[4%] sm:mt-[2%]">
+        <div className="flex items-center mt-[2%] sm:mt-[2%]">
           <h2 className=" title-home-section 
                           leading-tight"
           >Skills</h2>
@@ -161,7 +151,6 @@ export default function Home() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
           </svg>
         </div>
-
         <div className="flex
                         justify-center 
                         px-4 sm:px-8 md:px-12 lg:px-16"
@@ -233,15 +222,28 @@ export default function Home() {
                   <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Versioning</strong>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
                 </div>
+
                 {/* Skills Link */}
-                <div className="relative mt-8 mr-4 sm:mr-6 md:mr-8">
+                <div
+                  className=" relative 
+                              mt-8 
+                              mr-4 sm:mr-6 md:mr-8 lg:mr-12
+                              text-right"
+                >
                   <a href="/skills#skills"
-                    className="text-[#4d94ff] hover:text-navLinkHover font-medium flex items-end justify-end gap-1 group flex-wrap text-right"
+                    className=" hover:text-navLinkHover
+                                font-medium 
+                                inline-flex flex-col items-end // Utilisation d'inline-flex pour un alignement précis
+                                gap-2 group 
+                                text-[3.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]"
                   >
-                    <span className="whitespace-nowrap w-full">Niveaux de compétences estimés</span>
-                    <span className="w-full flex justify-end items-center gap-1">
-                      (Auto-évaluation)
-                      <span className="transition-all group-hover:bg-yellow-500 group-hover:text-white group-hover:rounded p-1">
+                    <span className="whitespace-nowrap w-full text-right">Niveaux de compétences estimés</span>
+                    <span className="w-full flex justify-end items-center gap-2">(Auto-évaluation)
+                      <span className=" transition-all 
+                                        group-hover:bg-yellow-500 
+                                        group-hover:text-white 
+                                        group-hover:rounded p-1"
+                      >
                         {/* Flèche */}
                         <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
@@ -258,7 +260,7 @@ export default function Home() {
       </div>
 
       {/* SEPARATOR */}
-      <div className="min-h-[100px] sm:min-h-[150px] md:min-h-[150px] lg:min-h-[150px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
+      <div className="min-h-[50px] sm:min-h-[150px] md:min-h-[100px] lg:min-h-[50px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* My Projects Section */}
       <div id="myprojects" className="  flex flex-col 
@@ -273,7 +275,8 @@ export default function Home() {
                         lg:ml-80 
                         lg:text-right
                         lg:pb-[1%] xl:pb-[0] 2xl:pb-[0]
-                        top-[0] sm:mt-[3%] md:mt-[3%] lg:mt-[2%] xl:mt-[2%] 2xl:mt-[1%]"
+                        top-[0] 
+                        mt-[3%] sm:mt-[3%] md:mt-[3%] lg:mt-[2%] xl:mt-[2%] 2xl:mt-[1%]"
         >
           Mes projets
         </h2>
@@ -281,15 +284,14 @@ export default function Home() {
         <div className="mt-0 relative w-full">
           <ImCross
             className=" text-colorChart 
-                        text-6xl sm:text-6xl md:text-10xl 
+                        text-4xl sm:text-6xl md:text-10xl 
                         absolute 
                         right-4 sm:right-8 md:right-4 lg:right-8 
-                        top-[-20px] md:top-[-50px] md:top-[0px]
+                        top-[0] sm:top-[10px] md:top-[-50px] md:top-[0px]
                         z-10"
           />
         </div>
-
-        <div className="flex flex-col items-center justify-center w-full mt-4 sm:mt-8 xl:mt-8 2xl:mt-4">
+        <div className="flex flex-col items-center justify-center w-full mt-12 sm:mt-8 sm:mt-8 xl:mt-8 2xl:mt-4">
           {/* Conteneur de l'image et du texte */}
           <div className="flex flex-col xl:flex-row items-center justify-center w-full xl:gap-x-4">
             {/* Image */}
@@ -304,24 +306,27 @@ export default function Home() {
                 style={{ maxWidth: "789px" }}
               />
             </div>
-
-            {/* Texte */}
-            <div className="flex flex-col items-center xl:items-start xl:pl-4 2xl:pl-6 mt-4 xl:mt-0 max-w-[600px]">
+            <div className="flex flex-col 
+                            items-center 
+                            xl:items-start 
+                            xl:pl-4 2xl:pl-6 
+                            mt-4 xl:mt-0 
+                            max-w-[600px]"
+            >
               <h3 className="project-image-title">MyTodoList</h3>
               <p className="project-date-paragraph">Décembre 2024</p>
-
               <Link
                 href="/portfolio#mytodolist"
-                className="flex items-center mt-4 
-                  text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]
-                  text-[#4d94ff] hover:text-navLinkHover group"
+                className=" flex items-center mt-4 
+                            text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]
+                            hover:text-navLinkHover group"
               >
                 <span className="mr-2">+ d’infos</span>
                 <svg
-                  className="w-5 h-5 
-                    text-[#4d94ff] 
-                    group-hover:text-navLinkHover
-                    w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.5vw] xl:h-[auto]"
+                  className=" w-5 h-5 
+                              text-[#4d94ff] 
+                              group-hover:text-navLinkHover
+                              w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.5vw] xl:h-[auto]"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -333,8 +338,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-
-          {/* Bloc DotsRectangle */}
+          {/* DotsRectangle */}
           <div className="xl:w-full sm:w-[40%] md:w-[40%] lg:w-[100%]
                           xl:flex 
                           xl:justify-start 
@@ -364,7 +368,7 @@ export default function Home() {
                       text-white 
                       w-full 
                       text-center 
-                      mb-40
+                      mb-48
                       min-h-[100%]"
       >
         <p className="font-rubik                         
@@ -373,7 +377,6 @@ export default function Home() {
         >
           [Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets]
         </p>
-
         <div className="flex 
                         justify-center sm:justify-center 
                         mt-8 sm:mt-8
@@ -385,12 +388,10 @@ export default function Home() {
             rel="noopener noreferrer"
             className=" flex 
                         items-center 
-                        text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw] 
-                        text-[#4d94ff] 
+                        text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]                        
                         hover:text-navLinkHover group"
           >
             <span className="mr-2">Voir + de projets</span>
-
             {/* Flèche */}
             <svg
               className=" w-[20px] h-[20px] 
@@ -407,7 +408,6 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
             </svg>
-
             {/* LinkedIn Logo */}
             <Image
               src="/img/linkedin_logo.png"
@@ -417,7 +417,6 @@ export default function Home() {
               className=" inline-block ml-2 
                           w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45x] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]"
             />
-
           </a>
         </div>
       </div>

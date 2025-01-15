@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import "../app/globals.css";
 import { FcDownload } from "react-icons/fc";
 import Navbar from "./Navbar";
 
@@ -32,6 +31,8 @@ export default function Header() {
                                 justify-center
                                 w-full"
     >
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
       {/* My Universe Title */}
       <h1 className=" absolute
                       z-10 
@@ -49,7 +50,7 @@ export default function Header() {
                                                         top-0 
                                                         left-0 
                                                         w-full 
-                                                        h-[595px] md:h-[300px] lg:h-full 
+                                                        h-[500px] md:h-[300px] lg:h-full 
                                                         object-cover 
                                                         z-0"
       >
@@ -61,10 +62,9 @@ export default function Header() {
       <div className="absolute 
                       left-0 
                       top-0 
-                      w-[50px] 
-                      h-[595px] md:h-[300px] lg:h-[490px] 
+                      w-[50px]                       
                       bg-transparent 
-                      z-10"
+                      z-1"
       >
         {Array(5)
           .fill(null)
@@ -76,13 +76,11 @@ export default function Header() {
                           bg-[#4d94ff] 
                           rotate-45 
                           origin-left 
-                          ${index === 0 ? "mt-20 lg:mt-32" : "mt-8 lg:mt-9"}`
+                          ${index === 0 ? "mt-20 lg:mt-24" : "mt-8 lg:mt-9"}`
               }
             ></div>
           ))}
       </div>
-
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       {/* Gradient */}
       <div
@@ -105,18 +103,17 @@ export default function Header() {
                       flex flex-col lg:flex-row                     
                       justify-between 
                       w-full
-                      px-6
-                      mr-4 sm:mr-6 md:mr-0
-                      mt-16 lg:mt-20"
+                      md:h-[300px] lg:h-[400px]"
       >
-
+        {/* Identity */}
         <div className="text-left 
                         flex flex-col 
                         items-start 
                         justify-center 
-                        ml-8 sm:ml-20 md:ml-12 lg:ml-24 
-                        mt-8 lg:mt-10 
-                        relative"
+                        ml-12 sm:ml-20 md:ml-20 lg:ml-24 
+                        mt-20 lg:mt-24
+                        sm:mr-6 md:mr-0 
+                        relative lg:absolute"
         >
           <h1 className=" text-lg sm:text-[24px] md:text-xl lg:text-2xl 
                           text-[#5385b7] 
@@ -151,15 +148,14 @@ export default function Header() {
           <p className="text-[#5385b7] 
                         text-sm sm:text-[18px] md:text-[16px] 
                         italic 
-                        mt-10 lg:mt-20                        
+                        mt-12 lg:mt-20                        
                         z-1
                         font-rubik 
                         font-light 
                         text-left
-                        pl-3 sm:pl-2 md:pl-2
+                        pl-2 sm:pl-2 md:pl-2
                         border-l-4 
-                        border-[#4d94ff] 
-                        ml-24 sm:ml-0 md:ml-0"
+                        border-[#4d94ff]"
           >
             &quot;Transformer et enrichir l&apos;expérience utilisateur...&quot;
           </p>
@@ -171,11 +167,10 @@ export default function Header() {
                         flex 
                         justify-start sm:justify-center 
                         items-center 
-                        top-[230px] sm:top-[70px] md:top-[70px] lg:top-[130px]
+                        top-[160px] sm:top-[70px] md:top-[145px] lg:top-[170px]
                         md:left-1/2 lg:left-1/2
-                        transform md:-translate-x-1/2 lg:-translate-x-1/2 
-                        ml:[5%] md:ml-[6%] lg:ml-[2%]                   
-                        sm:right-[5%] 
+                        transform md:-translate-x-1/2 lg:-translate-x-1/2                                           
+                        right-[5%] sm:right-[5%] 
                         mx-4 lg:mx-0"
         >
           <div className="w-[60px] sm:w-[70px] lg:w-[80px] 
@@ -226,30 +221,30 @@ export default function Header() {
             aria-label="Télécharger mon CV"
           />
         </div>
-
-        {/* Image Block */}
-        <div className="relative
-                        w-[280px] h-[255px] md:w-[250px] md:h-[227px] lg:w-[350px] lg:h-[318px] 
-                        mt-8 lg:mt-0 
-                        lg:ml-8 xl:ml-0
-                        mx-auto lg:mx-0
-                        md:absolute
-                        md:top-0 
-                        md:right-0 
-                        md:mt-0                        
-                        z-200"
-        >
-          <Image
-            src="/img/moi.png"
-            alt="Image de moi"
-            fill
-            style={{ objectFit: "cover" }}
-            sizes="(max-width: 684px) 100vw, 50vw"
-            className="rounded-md shadow-lg"
-            priority
-          />
-        </div>
       </div>
+      {/* Image Block */}
+      <div className="relative
+                      w-[280px] h-[255px] md:w-[250px] md:h-[227px] lg:w-[350px] lg:h-[318px] 
+                      mt-4 lg:mt-0 
+                      lg:ml-8 xl:ml-0
+                      mx-auto lg:mx-0
+                      md:absolute
+                      md:top-0 
+                      md:right-8 
+                      md:mt-20 lg:mt-20                       
+                      z-200"
+      >
+        <Image
+          src="/img/moi.png"
+          alt="Image de moi"
+          fill
+          style={{ objectFit: "contain" }}
+          sizes="(max-width: 684px) 100vw, 50vw"
+          className="rounded-md shadow-lg"
+          priority
+        />
+      </div>
+
     </div>
   );
 }

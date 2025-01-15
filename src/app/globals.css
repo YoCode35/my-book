@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100%;
-  overflow: auto
+  /*overflow: auto*/
 }
 
 .page-bg {
@@ -29,10 +29,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.font-orbitron {
-  font-family: 'Orbitron', sans-serif;
 }
 
 h2 {
@@ -48,6 +44,7 @@ h3.alternative-title {
 
 a {
   font-family: 'Quicksand', sans-serif;
+  color: #4d94ff;
 }
 
 .paragraph-custom {
@@ -80,13 +77,6 @@ a {
   @apply w-[90px] sm:w-[115px] md:w-[140px] lg:w-[165px] xl:w-[190px] 2xl:w-[215px];
 }
 
-.paragraph-home {
-  font-family: 'Quicksand', sans-serif;
-  color: white;
-  text-align: justify;
-  @apply text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.2vw] 2xl:text-[1.2vw]; 
-}
-
 .skills-text {
   @apply text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px];
 }
@@ -116,7 +106,7 @@ h3.portfolio-title-page {
 }
 
 .project-image-title {
-  @apply text-[4vw] sm:text-[2rem] md:text-[2rem] xl:text-[2rem] 2xl:text-[3rem] font-clash font-medium;
+  @apply text-[5vw] sm:text-[2rem] md:text-[2rem] xl:text-[2rem] 2xl:text-[3rem] font-clash font-medium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   text-rendering: optimizeLegibility;  
@@ -126,7 +116,7 @@ h3.portfolio-title-page {
 }
 
 .project-date-paragraph {
-  @apply text-[3vw] sm:text-[1.3rem] md:text-[1.3rem] xl:text-[1.3rem] 2xl:text-[1.3rem] font-clash font-medium;
+  @apply text-[4vw] sm:text-[1.3rem] md:text-[1.3rem] xl:text-[1.3rem] 2xl:text-[1.3rem] font-clash font-medium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   text-rendering: optimizeLegibility;

@@ -15,7 +15,7 @@ export default function Skills() {
                         pb-24"
         >
             <DotsRectangle
-                className="w-full w-[100%] relative sm:relative md:relative lg:relative top-[60] h-[55px] z-1"
+                className="w-full relative mt-[60] h-[55px] z-1"
                 rows={3}
                 dotsPerRow={dotsPerRow}
                 dotColor="#fff000"
