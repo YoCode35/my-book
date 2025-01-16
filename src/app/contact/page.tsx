@@ -92,7 +92,7 @@ export default function Contact() {
         dotColor="#fff000"
       />
 
-      <h2 id="contact" className="title-page">Me contacter</h2>
+      <h2 id="contact" className="title-contact-page">Me contacter</h2>
 
       <p className="text-red-500 
                     text-sm 

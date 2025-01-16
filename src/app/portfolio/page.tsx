@@ -2,7 +2,8 @@
 
 import useDotsPerRow from "../../components/useResponsiveDots";
 import DotsRectangle from "../../components/DotsRectangle";
-import Image from "next/image"; // Import Image component
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Portfolio() {
   const dotsPerRow = useDotsPerRow();
@@ -27,9 +28,11 @@ export default function Portfolio() {
                                       max-w-screen-lg 
                                       mx-auto"
       >
-        <h3 className="title-project">Projet MyTodoList</h3>
+        <h3 className="title-project">[Projet MyTodoList]</h3>
 
-        <h4 className="portfolio-title-page">Développement d’une application PWA (Progressive Web App) Cross Platform avec Flutter pour le Front et PHP/MySQL pour le Back.</h4>
+        <Link href="https://www.mytodolist.tech/"></Link>                
+
+        <h4 className="project-description">Développement d’une application PWA (Progressive Web App) Cross Platform avec Flutter pour le Front et PHP/MySQL pour le Back.</h4>
 
         <p className="unordered-list text-white mb-12">
           1. Planification et Conception

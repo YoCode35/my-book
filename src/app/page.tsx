@@ -15,7 +15,7 @@ export default function Home() {
       <div className="relative 
                       mb-6 sm:mb-24 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-32"
       >
-        <div className="mt-[20px] md:mt-[30px] lg:mt-[50px]">
+        <div className="mt-[20px] md:mt-[30px] lg:mt-[50px] 4xl:mt-[200px]">
           <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[21px] xl:text-[22px];
                         leading-[2] lg:leading-normal                       
                         text-center

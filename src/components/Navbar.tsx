@@ -28,7 +28,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                     z-40
                     ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-60'}`}
       >
-        <div className="w-[300px] sm:w-[100%] md:w-[100%] lg:max-w-[900px]
+        <div className="w-[300px] sm:w-[100%] 3xl:w-[1000px] 4xl:w-[1300px]
                         px-2 py-2
                         bg-[rgba(1,22,39,0.6)]
                         rounded-full
@@ -40,7 +40,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         >
           <div className="text-white
                           font-orbitron
-                          text-[14px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17px]
+                          text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-[15px] 4xl:text-[20px]
                           tracking-wider sm:tracking-widest md:tracking-[0.1em] lg:tracking-[0.15em]
                           text-[10px] sm:text-[10px] md:text-[12px] lg:text-[14px]
                           ml-2 sm:ml-4 md:ml-6 lg:ml-8
@@ -60,8 +60,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                             ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
               >
                 <FiHome
-                  size={24}
-                  className={`${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"} hover:text-navLinkHover`}
+                  className={`hover:text-navLinkHover ${
+                    pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"
+                  }  w-6 h-6 3xl:w-8 3xl:h-8 4xl:w-12 3xl:h-12`}
                 />
               </Link>
             </li>
@@ -74,7 +75,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
-                                ${pathname === "/" && isAboutActive ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                                ${pathname === "/" && isAboutActive ? "text-navLinkHover" : "text-navLinkInactive"}
+                                3xl:text-2xl 4xl:text-3xl`}
                   style={{
                     color: pathname === "/" && isAboutActive ? "#fff000" : "",
                   }}
@@ -92,7 +94,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
-                                ${pathname === "/" && isSkillsActive ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                                ${pathname === "/" && isSkillsActive ? "text-navLinkHover" : "text-navLinkInactive"}
+                                3xl:text-2xl 4xl:text-3xl`}
                   style={{
                     color: pathname === "/" && isSkillsActive ? "#fff000" : "",
                   }}
@@ -110,7 +113,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
-                          ${pathname === "/" && (isMyProjectsActive) ? "text-navLinkHover" : "text-navLinkInactive"}`}
+                          ${pathname === "/" && (isMyProjectsActive) ? "text-navLinkHover" : "text-navLinkInactive"}
+                          3xl:text-2xl 4xl:text-3xl`}
                   style={{
                     color: (pathname === "/" && isMyProjectsActive) ? "#fff000" : "",
                   }}
@@ -133,7 +137,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                               hover:text-black
                               hover:font-bold
                               focus:outline-none focus:ring-2 focus:ring-purple-300
-                              ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}`}
+                              ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}
+                              3xl:text-xl 4xl:text-3xl`}
                   style={{ minWidth: "160px" }}
                 >
                   Me contacter

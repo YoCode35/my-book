@@ -49,7 +49,7 @@ export default function Header() {
                                                         top-0 
                                                         left-0 
                                                         w-full 
-                                                        h-[500px] md:h-[300px] lg:h-full 
+                                                        h-[500px] md:h-[300px] lg:h-full 4xl:h-[500px]
                                                         object-cover 
                                                         z-0"
       >
@@ -104,7 +104,7 @@ export default function Header() {
                       flex flex-col lg:flex-row                     
                       justify-between 
                       w-full
-                      md:h-[300px] lg:h-[400px]"
+                      md:h-[300px] lg:h-[400px] 4xl:h-[500px]"
       >
         {/* Identity */}
         <div className="text-left 
@@ -116,16 +116,15 @@ export default function Header() {
                         sm:mr-6 md:mr-0 
                         relative lg:absolute"
         >
-          <h1 className=" text-lg sm:text-[24px] md:text-xl lg:text-2xl 
+          <h1 className=" text-lg sm:text-[24px] md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl 
                           text-[#5385b7] 
                           font-rubik font-normal 
                           tracking-wider 
                           z-1 
                           text-left"
           >
-            <span>Concepteur & Développeur</span>
-            <br />
-            <span>d&apos;applications Fullstack</span>
+            <span className="block leading-[1.3]">Concepteur & Développeur</span>
+            <span className="block leading-[1.3]">d&apos;applications Fullstack</span>
           </h1>
 
           <div className="flex 
@@ -134,22 +133,21 @@ export default function Header() {
           >
             <p className="text-white
                           font-orbitron 
-                          text-lg sm:text-xl md:text-2xl 
+                          text-lg sm:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl  
                           mt-2 
                           z-1 
                           text-left"
             >
-              Yoann
-              <br />
-              GREGOIRE
+              <span className="block leading-[1.5]">Yoann</span>
+              <span className="block leading-[1.5]">GREGOIRE</span>
             </p>
           </div>
 
           {/* Citation */}
           <p className="text-[#5385b7] 
-                        text-sm sm:text-[18px] md:text-[16px] 
+                        text-sm sm:text-[18px] md:text-[16px] 2xl:text-[20px] 3xl:text-[24px] 4xl:text-[30px] 
                         italic 
-                        mt-12 lg:mt-20                        
+                        mt-16 sm:mt-8 md:mt-16 lg:mt-20                        
                         z-1
                         font-rubik 
                         font-light 
@@ -168,14 +166,14 @@ export default function Header() {
                         flex 
                         justify-start sm:justify-center 
                         items-center 
-                        top-[160px] sm:top-[70px] md:top-[145px] lg:top-[170px]
+                        top-[160px] sm:top-[70px] md:top-[145px] lg:top-[170px] 4xl:top-[220px]
                         md:left-1/2 lg:left-1/2
                         transform md:-translate-x-1/2 lg:-translate-x-1/2                                           
                         right-[5%] sm:right-[5%] 
                         mx-4 lg:mx-0"
         >
-          <div className="w-[60px] sm:w-[70px] lg:w-[80px] 
-                          h-[60px] sm:h-[70px] lg:h-[80px] 
+          <div className="w-[60px] sm:w-[70px] lg:w-[80px] 4xl:w-[100px] 
+                          h-[60px] sm:h-[70px] lg:h-[80px] 4xl:h-[100px]
                           bg-blue-500 
                           rounded-full 
                           flex 
@@ -185,30 +183,30 @@ export default function Header() {
                           z-20"
           >
             <FcDownload className=" text-white 
-                                    text-[24px] sm:text-[24px] md:text-[24px] lg:text-3xl
+                                    text-[24px] sm:text-[24px] md:text-[24px] lg:text-3xl 4xl:text-4xl
                                     z-20"
             />
             <span className=" text-white 
                               font-clash-display 
                               font-semi-bold 
-                              text-[24px] sm:text-base sm:text-[24px] md:text-[24px] lg:text-[28px] 
+                              text-[24px] sm:text-base sm:text-[24px] md:text-[24px] lg:text-[28px] 4xl:text-[32px]
                               transform scale-y-[0.7] 
                               tracking-[0.06em] 
-                              mt-[-5px] sm:mt-[0]
+                              mt-[-5px] sm:mt-[0] 4xl:mt-[10px]
                               z-20"
             >
               CV
             </span>
             <div className="absolute 
-                            w-[80px] sm:w-[90px] lg:w-[100px] 
-                            h-[80px] sm:h-[90px] lg:h-[100px] 
+                            w-[80px] sm:w-[90px] lg:w-[100px] 4xl:w-[125px] 
+                            h-[80px] sm:h-[90px] lg:h-[100px] 4xl:h-[125px]
                             bg-blue-500 bg-opacity-20 
                             rounded-full 
                             z-15"
             />
             <div className="absolute
-                            w-[105px] sm:w-[115px] lg:w-[125px] 
-                            h-[105px] sm:h-[115px] lg:h-[125px] 
+                            w-[105px] sm:w-[115px] lg:w-[125px] 4xl:w-[160px]
+                            h-[105px] sm:h-[115px] lg:h-[125px] 4xl:h-[160px]
                             bg-blue-500 
                             bg-opacity-10 
                             rounded-full 
@@ -225,14 +223,14 @@ export default function Header() {
       </div>
       {/* Image Block */}
       <div className="relative
-                      w-[280px] h-[255px] md:w-[250px] md:h-[227px] lg:w-[350px] lg:h-[318px] 
-                      mt-4 lg:mt-0 
+                      w-[280px] h-[255px] md:w-[250px] md:h-[227px] lg:w-[350px] lg:h-[318px] 4xl:w-[500px] 4xl:h-[455px]
+                      mt-4 md-0 lg:mt-0 
                       lg:ml-8 xl:ml-0
                       mx-auto lg:mx-0
                       md:absolute
                       md:top-0 
-                      md:right-8 
-                      md:mt-20 lg:mt-20                       
+                      md:right-4 lg:right-8
+                      md:mt-10 lg:mt-20 xl:mt-10                      
                       z-200"
       >
         <Image
