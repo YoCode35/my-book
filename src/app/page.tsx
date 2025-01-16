@@ -13,20 +13,23 @@ export default function Home() {
 
       {/* Presentation Section */}
       <div className="relative 
-                      mb-6 sm:mb-24 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-32"
+              mb-6 sm:mb-24 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-32 3xl:mb-48 4xl:mb-64"
       >
         <div className="mt-[20px] md:mt-[30px] lg:mt-[50px] 4xl:mt-[200px]">
-          <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[21px] xl:text-[22px];
-                        leading-[2] lg:leading-normal                       
-                        text-center
-                        text-gray-300                        
-                        mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-8 2xl:mb-8
-                        italic 
-                        font-quicksand font-light 
-                        px-8"
+          <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[18px] xl:text-[20px] 3xl:text-[23px] 4xl:text-[30px]
+                leading-[2]
+                text-center
+                text-gray-300
+                mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-8 2xl:mb-8
+                italic 
+                font-quicksand font-light 
+                px-8"
           >
-            &quot;Explorez ici une sélection de mes travaux les plus significatifs (En cours de développement). <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
+            <span className="block">&quot;Explorez ici une sélection de mes travaux les plus significatifs</span>
+            <span className="block text-gray-400 text-[13px] lg:text-[16px] xl:text-[18px] 3xl:text-[20px] 4xl:text-[25px]">(Mise en ligne en cours de plusieurs projets)</span>
+            <span className="block">Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;</span>
           </p>
+
           {/* Gray Lines */}
           <div className="flex flex-col 
                           items-center 
