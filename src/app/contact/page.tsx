@@ -95,7 +95,7 @@ export default function Contact() {
       <h2 id="contact" className="title-contact-page">Me contacter</h2>
 
       <p className="text-red-500 
-                    text-sm 
+                    text-sm 2xl:text-xl
                     font-quicksand 
                     text-center"
       >
@@ -122,11 +122,12 @@ export default function Contact() {
                             rounded-md
                             w-full
                             text-gray-900
+                            text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl
                             focus:outline-none focus:ring-0
                             ${errors.name ? 'border-red-500' : 'border-gray-300'}`
                 }
               />
-              <span className="absolute right-2 top-2 text-red-500 text-lg">*</span>
+              <span className="absolute right-2 top-2 text-red-500 text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl">*</span>
               {errors.name && <p className="text-red-500 text-sm mt-1">Le nom est requis.</p>}
             </div>
 
@@ -142,11 +143,12 @@ export default function Contact() {
                             rounded-md
                             w-full
                             text-gray-900
+                            text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl
                             focus:outline-none focus:ring-0 
                             ${errors.email ? 'border-red-500' : 'border-gray-300'}`
                 }
               />
-              <span className="absolute right-2 top-2 text-red-500 text-lg">*</span>
+              <span className="absolute right-2 top-2 text-red-500 text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl">*</span>
               {errors.email && <p className="text-red-500 text-sm mt-1">Un email valide est requis.</p>}
             </div>
 
@@ -162,27 +164,28 @@ export default function Contact() {
                             rounded-md
                             w-full
                             text-gray-900
+                            text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl
                             focus:outline-none focus:ring-0
                             ${errors.message ? 'border-red-500' : 'border-gray-300'}`
                 }
               ></textarea>
-              <span className="absolute right-2 top-2 text-red-500 text-lg">*</span>
-              {errors.message && <p className="text-red-500 text-sm mt-1">Le message est requis.</p>}
+              <span className="absolute right-2 top-2 text-red-500 text-lg 2xl:text-2xl">*</span>
+              {errors.message && <p className="text-red-500 text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl">Le message est requis.</p>}
             </div>
 
             {/* Send button */}
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`p-2 rounded-md text-white ${isSubmitting ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'
+              className={`p-2 rounded-md text-white text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl ${isSubmitting ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'
                 }`}
             >
               {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
             </button>
 
             {/* Feedback messages */}
-            {successMessage && <p className="text-green-500 text-sm mt-4">{successMessage}</p>}
-            {errorMessage && <p className="text-red-500 text-sm mt-4">{errorMessage}</p>}
+            {successMessage && <p className="text-green-500 text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl mt-4">{successMessage}</p>}
+            {errorMessage && <p className="text-red-500 text-sm sm:text-md lg:text-lg 3xl:text-2xl 4xl:text-3xl mt-4">{errorMessage}</p>}
           </div>
         </form>
       </div>

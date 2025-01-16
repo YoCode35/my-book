@@ -22,22 +22,24 @@ export default function Portfolio() {
 
       <h2 id="portfolio" className="title-page">Portfolio</h2>
 
-      <div id="mytodolist" className="px-4 sm:px-8 md:px-16 2xl:px-32
-                                      lg:pt-10 xl:pt-10 2xl:pt-10                                        
-                                      mx-auto"
+      <div id="mytodolist"
+        className="px-4 sm:px-8 md:px-16 2xl:px-32
+                lg:pt-10 xl:pt-10 2xl:pt-10                                        
+                mx-auto"
       >
-        <h3 className="title-project">[Projet MyTodoList]</h3>
+        <h3 className="title-project">[Projet MyTodoList]</h3> {/* Réduction de l'espace ici */}
 
         <a
           href="https://www.mytodolist.tech"
           target="_blank"
-          rel="noopener noreferrer"  // Security
-          className=" text-navLinkHover 
-                      hover:underline
-                      text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-                      items-center
-                      flex flex-col
-                      mb-12"
+          rel="noopener noreferrer" // Security
+          className={`text-LinkInactive 
+                hover:text-LinkHover 
+                hover:underline
+                text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+                items-center
+                flex flex-col
+                mb-12`}
         >
           https://www.mytodolist.tech
         </a>

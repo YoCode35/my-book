@@ -235,7 +235,7 @@ export default function Home() {
                                 font-medium 
                                 inline-flex flex-col items-end // Utilisation d'inline-flex pour un alignement précis
                                 gap-2 group 
-                                text-[3.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]"
+                                text-[3.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.2vw]"
                   >
                     <span className="whitespace-nowrap w-full text-right">Niveaux de compétences estimés</span>
                     <span className="w-full flex justify-end items-center gap-2">(Auto-évaluation)
@@ -274,7 +274,7 @@ export default function Home() {
                         leading-tight 
                         lg:ml-80 
                         lg:text-right
-                        lg:pb-[1%] xl:pb-[0] 2xl:pb-[0]
+                        lg:pb-[1%] xl:pb-[0] 2xl:pb-[3%] 3xl:pb-[6%]
                         top-[0] 
                         mt-[3%] sm:mt-[3%] md:mt-[3%] lg:mt-[2%] xl:mt-[2%] 2xl:mt-[1%]"
         >
@@ -296,37 +296,44 @@ export default function Home() {
           <div className="flex flex-col xl:flex-row items-center justify-center w-full xl:gap-x-4">
             {/* Image */}
             <div className="relative w-full xl:w-1/2 max-w-[600px]">
-              <Image
-                src="/img/ref_mytodolist.png"
-                alt="Image de mon projet d'application MyTodoList"
-                width={789}
-                height={360}
-                className="w-full h-auto mx-auto"
-                priority
-                style={{ maxWidth: "789px" }}
-              />
+              <a
+                href="https://www.mytodolist.tech"
+                target="_blank"
+                rel="noopener noreferrer" // Sécurité pour éviter les failles
+              >
+                <Image
+                  src="/img/ref_mytodolist.png"
+                  alt="Image de mon projet d'application MyTodoList"
+                  width={789}
+                  height={360}
+                  className="w-full h-auto mx-auto"
+                  priority
+                  style={{ maxWidth: "789px" }}
+                />
+              </a>
             </div>
             <div className="flex flex-col 
-                            items-center 
-                            xl:items-start 
-                            xl:pl-4 2xl:pl-6 
-                            mt-4 xl:mt-0 
-                            max-w-[600px]"
+                items-center 
+                xl:items-start 
+                xl:pl-4 2xl:pl-6 
+                mt-4 xl:mt-0
+                max-w-[600px]"
             >
               <h3 className="project-image-title">MyTodoList</h3>
               <p className="project-date-paragraph">Décembre 2024</p>
+
               <Link
                 href="/portfolio#mytodolist"
                 className=" flex items-center mt-4 
-                            text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]
-                            hover:text-navLinkHover group"
+                            text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]
+                            hover:text-navLinkHover group mb-8"
               >
                 <span className="mr-2">+ d’infos</span>
                 <svg
                   className=" w-5 h-5 
-                              text-[#4d94ff] 
-                              group-hover:text-navLinkHover
-                              w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.5vw] xl:h-[auto]"
+                text-[#4d94ff] 
+                group-hover:text-navLinkHover
+                w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -336,7 +343,24 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
                 </svg>
               </Link>
+
+              <a
+                href="https://www.mytodolist.tech"
+                target="_blank"
+                rel="noopener noreferrer" // Sécurité
+                className={`text-LinkInactive 
+              hover:text-LinkHover 
+              hover:underline
+              text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+              items-center
+              flex flex-col
+              mb-12`}
+              >
+                https://www.mytodolist.tech
+              </a>
+
             </div>
+
           </div>
           {/* DotsRectangle */}
           <div className="xl:w-full sm:w-[40%] md:w-[40%] lg:w-[100%]
@@ -361,7 +385,7 @@ export default function Home() {
       </div>
 
       {/* SEPARATOR */}
-      <div className="min-h-[20px] sm:min-h-[0px]"></div>
+      <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
 
       {/* New section */}
       <div className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
@@ -372,7 +396,7 @@ export default function Home() {
                       min-h-[100%]"
       >
         <p className="font-rubik                         
-                      text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px]
+                      text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px] 2xl:text-[22px] 3xl:text-[24px] 4xl:text-[30px]
                       mx-8 sm:mx-12 md:mx-8 lg:mx-20"
         >
           [Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets]
@@ -388,7 +412,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className=" flex 
                         items-center 
-                        text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw]                        
+                        text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]                        
                         hover:text-navLinkHover group"
           >
             <span className="mr-2">Voir + de projets</span>
@@ -397,7 +421,7 @@ export default function Home() {
               className=" w-[20px] h-[20px] 
                             text-[#4d94ff] 
                             inline-block 
-                            w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.8vw] xl:h-[auto]
+                            w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
                             group-hover:text-navLinkHover
                             mx-2"
               xmlns="http://www.w3.org/2000/svg"
