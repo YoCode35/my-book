@@ -3,7 +3,6 @@
 import useDotsPerRow from "../../components/useResponsiveDots";
 import DotsRectangle from "../../components/DotsRectangle";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Portfolio() {
   const dotsPerRow = useDotsPerRow();
@@ -23,14 +22,25 @@ export default function Portfolio() {
 
       <h2 id="portfolio" className="title-page">Portfolio</h2>
 
-      <div id="mytodolist" className="px-4 sm:px-8 md:px-16 
-                                      lg:pt-10 xl:pt-10 2xl:pt-10 
-                                      max-w-screen-lg 
+      <div id="mytodolist" className="px-4 sm:px-8 md:px-16 2xl:px-32
+                                      lg:pt-10 xl:pt-10 2xl:pt-10                                        
                                       mx-auto"
       >
         <h3 className="title-project">[Projet MyTodoList]</h3>
 
-        <Link href="https://www.mytodolist.tech/"></Link>                
+        <a
+          href="https://www.mytodolist.tech"
+          target="_blank"
+          rel="noopener noreferrer"  // Security
+          className=" text-navLinkHover 
+                      hover:underline
+                      text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+                      items-center
+                      flex flex-col
+                      mb-12"
+        >
+          https://www.mytodolist.tech
+        </a>
 
         <h4 className="project-description">Développement d’une application PWA (Progressive Web App) Cross Platform avec Flutter pour le Front et PHP/MySQL pour le Back.</h4>
 

@@ -55,14 +55,35 @@ a {
   w-full
 }
 
+/*Portfolio*/
+.title-project {
+  color: #4d94ff;
+  font-family: 'Clash-display-variable', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  @apply  text-[6vw] sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[32px] 2xl:text-[45px] 4xl:text-[60px]
+          mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12;
+}
+
+h4.project-description {
+  font-family: 'Clash-display-variable', sans-serif;
+  font-weight: 600;
+  @apply  text-colorChart 
+          text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw];
+  margin-bottom: 20px;
+}
+
 .unordered-list {
   font-family: 'Quicksand', sans-serif;
   color: white;
+  @apply  text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+          2xl:max-w-screen-2xl 3xl:max-w-screen-2xl 4xl:max-w-screen-4xl;;
   text-align: justify;
   white-space: normal;
   word-wrap: break-word;
   text-align: left;
 }
+/* Fin */
 
 .title-home-section {
   @apply text-[14vw] sm:text-[4rem] md:text-[8vw] lg:text-[8vw] xl:text-[6vw] 2xl:text-[6vw];  
@@ -97,22 +118,6 @@ h2.title-page {
   color: white;
   text-align: center;
   font-weight: 600;
-}
-
-.title-project {
-  color: #4d94ff;
-  font-family: 'Clash-display-variable', sans-serif;
-  text-align: center;
-  font-weight: 600;
-  @apply text-[6vw] sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[32px] 2xl:text-[34px];
-  @apply mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12;
-}
-
-h4.project-description {
-  font-family: 'Clash-display-variable', sans-serif;
-  font-weight: 600;
-  @apply text-colorChart;
-  margin-bottom: 20px;
 }
 
 .skills-detail-title{
