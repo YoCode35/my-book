@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FcDownload } from "react-icons/fc";
-import Navbar from "./Navbar";
+import Navbar from "./navbar/Navbar";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

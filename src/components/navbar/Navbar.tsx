@@ -60,9 +60,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                             ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"}`}
               >
                 <FiHome
-                  className={`hover:text-navLinkHover ${
-                    pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"
-                  }  w-6 h-6 3xl:w-8 3xl:h-8 4xl:w-12 3xl:h-12`}
+                  className={`hover:text-navLinkHover ${pathname === "/" ? "text-navLinkHover" : "text-navLinkInactive"
+                    }  w-6 h-6 3xl:w-8 3xl:h-8 4xl:w-12 3xl:h-12`}
                 />
               </Link>
             </li>
@@ -155,7 +154,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
               <FiMenu size={30} />
             </button>
-          </div>          
+          </div>
         </div>
       </nav>
 

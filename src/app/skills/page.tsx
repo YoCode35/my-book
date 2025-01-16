@@ -223,15 +223,6 @@ export default function Skills() {
                                         <div className="h-2 rounded-full" style={{ backgroundColor: '#8b9097', width: '50%' }}></div>
                                     </div>
                                 </div>
-                                <div className="skills-detail mt-2">
-                                    <div className="flex justify-between">
-                                        <span>Sécurité Web et Web Mobile</span>
-                                        <span>Avancé</span>
-                                    </div>
-                                    <div className="w-full bg-gray-200 rounded-full h-2">
-                                        <div className="bg-red-600 h-2 rounded-full" style={{ width: '80%' }}></div>
-                                    </div>
-                                </div>
                             </div>
 
                             <div className="skills-detail-subtitle pt-6">
@@ -243,6 +234,28 @@ export default function Skills() {
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div className="bg-gray-500 h-2 rounded-full" style={{ width: '75%' }}></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pt-6">
+                                <strong className="skills-detail-title">Sécurité Web et Web Mobile</strong>
+                                <div className="skills-detail mt-2">
+                                    <div className="flex justify-between">
+                                        <span>Protection des données sensibles</span>
+                                        <span>Avancé</span>
+                                    </div>
+                                    <div className="w-full bg-gray-200 rounded-full h-2">
+                                    <div className="h-2 rounded-full" style={{ backgroundColor: '#ff0000', width: '80%' }}></div>
+                                    </div>
+                                </div>
+                                <div className="skills-detail mt-2">
+                                    <div className="flex justify-between">
+                                        <span>Prévention des vulnérabilités</span>
+                                        <span>Avancé</span>
+                                    </div>
+                                    <div className="w-full bg-gray-200 rounded-full h-2">
+                                    <div className="h-2 rounded-full" style={{ backgroundColor: '#ff0000', width: '75%' }}></div>
                                     </div>
                                 </div>
                             </div>
