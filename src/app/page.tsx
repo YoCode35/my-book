@@ -25,7 +25,7 @@ export default function Home() {
                         font-quicksand font-light 
                         px-8"
           >
-            &quot;Explorez ici une sélection de mes travaux les plus significatifs. <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
+            &quot;Explorez ici une sélection de mes travaux les plus significatifs (En cours de développement). <br />Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;
           </p>
           {/* Gray Lines */}
           <div className="flex flex-col 
