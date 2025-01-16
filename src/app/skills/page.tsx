@@ -46,7 +46,9 @@ export default function Skills() {
                                 <strong className="skills-detail-title">Front end</strong>
                                 <div className="skills-detail pt-6">
                                     <div className="flex justify-between">
-                                        <span>ReactJS</span>
+                                        <span>
+                                            ReactJS <span className="text-[2vw] sm:text-base 3xl:text-xl">(+ TypeScript)</span>
+                                        </span>
                                         <span>Intermédiaire</span>
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
@@ -127,7 +129,7 @@ export default function Skills() {
                                 </div>
                             </div>
 
-                            <div className="skills-detail-subtitle pt-6">
+                            <div className="skills-detail-subtitle pt-4">
                                 <strong>Prototypage et Design</strong>
                                 <div className="skills-detail mt-2">
                                     <div className="flex justify-between">
@@ -162,20 +164,13 @@ export default function Skills() {
                                 <strong className="skills-detail-title">Back end</strong>
                                 <div className="skills-detail mt-6">
                                     <div className="flex justify-between">
-                                        <span>NodejS</span>
+                                        <span>
+                                            NodeJS <span className="text-[2vw] sm:text-base 3xl:text-xl">(+ TypeScript)</span>
+                                        </span>
                                         <span>Débutant</span>
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div className="h-2 rounded-full" style={{ backgroundColor: '#66a060', width: '30%' }}></div>
-                                    </div>
-                                </div>
-                                <div className="skills-detail mt-2">
-                                    <div className="flex justify-between">
-                                        <span>TypeScript</span>
-                                        <span>Intermédiaire</span>
-                                    </div>
-                                    <div className="w-full bg-gray-200 rounded-full h-2">
-                                        <div className="h-2 rounded-full" style={{ backgroundColor: '#3178c6', width: '60%' }}></div>
                                     </div>
                                 </div>
                                 <div className="skills-detail mt-2">
@@ -225,7 +220,7 @@ export default function Skills() {
                                 </div>
                             </div>
 
-                            <div className="skills-detail-subtitle pt-6">
+                            <div className="skills-detail-subtitle pt-4">
                                 <strong>Modélisation et Conception</strong>
                                 <div className="skills-detail mt-2">
                                     <div className="flex justify-between">
@@ -246,7 +241,7 @@ export default function Skills() {
                                         <span>Avancé</span>
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
-                                    <div className="h-2 rounded-full" style={{ backgroundColor: '#ff0000', width: '80%' }}></div>
+                                        <div className="h-2 rounded-full" style={{ backgroundColor: '#ff0000', width: '80%' }}></div>
                                     </div>
                                 </div>
                                 <div className="skills-detail mt-2">
@@ -255,7 +250,7 @@ export default function Skills() {
                                         <span>Avancé</span>
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
-                                    <div className="h-2 rounded-full" style={{ backgroundColor: '#ff0000', width: '75%' }}></div>
+                                        <div className="h-2 rounded-full" style={{ backgroundColor: '#ff0000', width: '75%' }}></div>
                                     </div>
                                 </div>
                             </div>

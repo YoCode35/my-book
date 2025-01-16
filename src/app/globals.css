@@ -136,7 +136,7 @@ h4.project-description {
 }
 
 .skills-detail{
-  @apply text-[4vw] sm:text-xl 2xl:text-xl 3xl:text-3xl
+  @apply text-[4vw] sm:text-xl 3xl:text-3xl
 }
 /* Fin */
 
