@@ -59,7 +59,7 @@ export default function Home() {
           <h2 className=" absolute
                           title-home-section
                           z-10
-                          top-[3%] sm:top-[3%] md:top-[3%] lg:top-[6%] xl:top-[40px] 2xl:top-[5%] 3xl:top-[0] 4xl:top-[5%]
+                          top-[3%] sm:top-[3%] md:top-[3%] lg:top-[6%] xl:top-[0] 2xl:top-[5%] 3xl:top-[0] 4xl:top-[5%]
                           left-[20%] sm:left-[30%] md:left-[40%] lg:left-[30%] xl:left-[35%] 3xl:left-[40%]
                           leading-tight
                           text-shadow"
@@ -103,7 +103,7 @@ export default function Home() {
           {/* Paragraph */}
           <p className="relative sm:relative md:absolute
                         w-full sm:w-[100%] md:w-[40%] lg:w-[50%] 3xl:w-[48%]
-                        mt-2 sm:mt-[0%] md:top-[35%] lg:top-[47%] xl:top-[50%] 3xl:top-[50%] 4xl:top-[50%]                      
+                        mt-2 sm:mt-[0%] md:top-[35%] lg:top-[47%] xl:top-[52%] 3xl:top-[50%] 4xl:top-[50%]                      
                         right-[0%] md:right-[4%] lg:right-[3%] 3xl:right-[2%] 4xl:right-[5%]
                         px-6 sm:px-12 md:px-0
                         text-white
@@ -126,7 +126,7 @@ export default function Home() {
           <DotsRectangle
             className=" relative
                         w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%] xl:w-[20%] 2xl:w-[30%]                  
-                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-5%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%]
+                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%]
                         ml-auto"
             rows={3}
             dotsPerRow={10}
