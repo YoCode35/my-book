@@ -23,8 +23,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
       <nav
         className={`fixed
                     top-0
-                    left-20%
-                    right-20%                    
+                    left-0
+                    right-0                   
                     flex
                     justify-center
                     items-center
