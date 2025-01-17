@@ -77,7 +77,7 @@ export default function Home() {
                 <span className=" absolute
                                   text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
                                   mt-[70%] md:mt-[0] lg:mt-4 
-                                  left-[52%] 
+                                  left-[55%] 
                                   text-gray-300
                                   text-center"
                 >
