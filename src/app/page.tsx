@@ -106,7 +106,7 @@ export default function Home() {
                         px-6 sm:px-12 md:px-0
                         text-white
                         font-quicksand
-                        text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+                        text-[3.7vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
                         text-justify"
           >
             <span className=" mb-0.5
@@ -115,7 +115,7 @@ export default function Home() {
                               whitespace-normal sm:whitespace-normal md:whitespace-normal 
                               max-w-full"
             >
-              Le développement logiciel : Une véritable <span className="text-[1.2rem] sm:text-[1.8rem] md:text-[1.4rem] lg:text-[2.2vw] xl:text-[1.6rem] 2xl:text-[1.8rem]">vocation</span> qui m’anime au quotidien !
+              Le développement logiciel : Une véritable <span className="text-[5vw] sm:text-[1.8rem] md:text-[1.4rem] lg:text-[2.2vw] xl:text-[1.6rem] 2xl:text-[1.8rem]">vocation</span> qui m’anime au quotidien !
             </span>
             <br />
             Je m’engage pleinement dans la conception d’outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l’expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d’améliorer la vie quotidienne.
