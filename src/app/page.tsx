@@ -150,7 +150,7 @@ export default function Home() {
 
           {/* Flèche */}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
-            className="section-arrow ml-16 text-colorChart">
+            className="arrow-section ml-16 text-colorChart">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
           </svg>
         </div>
