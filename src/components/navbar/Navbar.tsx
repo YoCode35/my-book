@@ -22,9 +22,12 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
     <>
       <nav
         className={`fixed
-                    top-0                    
+                    top-0
+                    left-20%
+                    right-20%                    
                     flex
-                    justify-center items-center
+                    justify-center
+                    items-center
                     z-40
                     ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-60'}`}
       >

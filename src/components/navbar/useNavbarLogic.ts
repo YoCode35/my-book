@@ -44,12 +44,12 @@ export function useNavbarLogic() {
 
     window.addEventListener("scroll", checkScroll);
 
-    checkScroll(); // Appel initial pour vérifier l'état dès que le composant est monté.
+    checkScroll();
 
     return () => {
       window.removeEventListener("scroll", checkScroll);
     };
   }, []);
 
-  return { isScrolled, scrollTop, isAboutActive, isSkillsActive, isMyProjectsActive }; // Retourner isMyProjectsActive ici
+  return { isScrolled, scrollTop, isAboutActive, isSkillsActive, isMyProjectsActive };
 }
