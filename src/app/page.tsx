@@ -60,28 +60,28 @@ export default function Home() {
                           title-home-section
                           z-10
                           top-[3%] sm:top-[3%] md:top-[3%] lg:top-[6%] xl:top-[40px] 2xl:top-[5%] 3xl:top-[0] 4xl:top-[5%]
-                          left-[20%] sm:left-[35%] md:left-[40%] lg:left-[30%] xl:left-[35%] 3xl:left-[40%]
+                          left-[20%] sm:left-[30%] md:left-[40%] lg:left-[30%] xl:left-[35%] 3xl:left-[40%]
                           leading-tight
                           text-shadow"
           >
             <span className="block leading-none">À propos</span>
             <span className="inline-flex items-center">de moi
               <a href="/about#about" className="relative group">
+              <span className=" relative
+                                text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
+                                left-[52%] sm:left-[45%]
+                                text-gray-300
+                                text-center
+                                top-6 sm:top-4"
+                >
+                  + d’infos
+                </span>
                 <span className=" inline-block 
                                   text-[16vw] sm:text-[16vw] md:text-[12vw] lg:text-[12vw] xl:text-[12vw] 2xl:text-[12vw]
-                                  ml-10 sm:ml-16 lg:ml-48 xl:ml-48 2xl:ml-48
+                                  ml-0 sm:ml-16 lg:ml-48 xl:ml-48 2xl:ml-48
                                   text-colorChart"
                 >
                   ➜
-                </span>
-                <span className=" absolute
-                                  text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
-                                  mt-[70%] md:mt-[0] lg:mt-4 
-                                  left-[55%] 
-                                  text-gray-300
-                                  text-center"
-                >
-                  + d’infos
                 </span>
               </a>
             </span>
