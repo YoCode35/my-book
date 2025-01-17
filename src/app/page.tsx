@@ -18,13 +18,13 @@ export default function Home() {
       >
         <div className="mt-[20px] md:mt-[30px] lg:mt-[50px] 4xl:mt-[200px]">
           <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[18px] xl:text-[20px] 3xl:text-[23px] 4xl:text-[30px]
-                leading-[2]
-                text-center
-                text-gray-300
-                mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-8 2xl:mb-8
-                italic 
-                font-quicksand font-light 
-                px-8"
+                        leading-[2]
+                        text-center
+                        text-gray-300
+                        mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-8 2xl:mb-8
+                        italic 
+                        font-quicksand font-light 
+                        px-8"
           >
             <span className="block">&quot;Explorez ici une sélection de mes travaux les plus significatifs</span>
             <span className="block text-gray-400 text-[13px] lg:text-[16px] xl:text-[18px] 3xl:text-[20px] 4xl:text-[25px]">(Mise en ligne en cours de plusieurs projets)</span>
@@ -75,10 +75,11 @@ export default function Home() {
                   ➜
                 </span>
                 <span className=" absolute
-                                  text-[2vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
+                                  text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
                                   mt-[70%] md:mt-[0] lg:mt-4 
                                   left-[52%] 
-                                  text-gray-300"
+                                  text-gray-300
+                                  text-center"
                 >
                   + d’infos
                 </span>
