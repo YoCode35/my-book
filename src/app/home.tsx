@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import DotsRectangle from "../components/DotsRectangle";
+import DotsRectangle from "../components/dots/DotsRectangle";
 //import { ImCross } from "react-icons/im"
 //import Link from "next/link";
 import MyTodoListProject from "../components/projects/MyTodoListProject";
@@ -67,7 +67,7 @@ export default function Home() {
             <span className="block leading-none">À propos</span>
             <span className="inline-flex items-center">de moi
               <a href="/about#about" className="relative group">
-              <span className=" relative
+                <span className=" relative
                                 text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
                                 left-[52%] sm:left-[45%]
                                 text-gray-300

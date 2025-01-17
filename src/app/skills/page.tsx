@@ -1,7 +1,7 @@
 "use client";
 
-import useDotsPerRow from "../../components/useResponsiveDots";
-import DotsRectangle from "../../components/DotsRectangle";
+import useDotsPerRow from "../../components/dots/useResponsiveDots";
+import DotsRectangle from "../../components/dots/DotsRectangle";
 
 export default function Skills() {
 
