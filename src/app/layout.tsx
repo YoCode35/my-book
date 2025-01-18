@@ -1,4 +1,4 @@
-import './globals.css';
+import './styles/globals.css';
 import Navbar from '../components/Header';
 import Footer from '../components/Footer';
 import { Orbitron, Quicksand, Rubik } from 'next/font/google';
@@ -28,7 +28,7 @@ export default function Layout({
 }) {
   return (
     <html lang="fr" className={`${orbitron.variable} ${quicksand.variable} ${rubik.variable}`}>
-      <body className="bg-bkgd-black-colored-spots bg-cover bg-top min-h-screen flex flex-col">
+      <body className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">
           <main>{children}</main>

@@ -7,26 +7,58 @@ const MyTodoListProject = () => {
   return (
     <div
       id="myprojects"
-      className="flex flex-col justify-start items-center relative w-full min-h-[100%]"
+      className="flex 
+                 flex-col 
+                 justify-start 
+                 items-center 
+                 relative 
+                 w-full 
+                 min-h-[100%]"
     >
       <h2
-        className="title-home-section leading-tight lg:ml-80 lg:text-right lg:pb-[1%] xl:pb-[0] 2xl:pb-[3%] 3xl:pb-[6%]
-        top-[0] mt-[3%] sm:mt-[3%] md:mt-[3%] lg:mt-[2%] xl:mt-[2%] 2xl:mt-[1%]"
+        className="title-home-section 
+                   leading-tight 
+                   lg:ml-80 
+                   lg:text-right 
+                   lg:pb-[1%] xl:pb-[0] 2xl:pb-[3%] 3xl:pb-[6%]
+                   top-[0] 
+                   mt-[3%] lg:mt-[2%] 2xl:mt-[1%]"
       >
         Mes projets
       </h2>
 
       <div className="mt-0 relative w-full">
         <ImCross
-          className="text-colorChart text-4xl sm:text-6xl md:text-10xl absolute right-4 sm:right-8 md:right-4 lg:right-8 top-[0] sm:top-[10px] md:top-[-50px] md:top-[0px] z-10"
+          className="text-colorChart 
+                     text-4xl sm:text-6xl md:text-10xl 
+                     absolute 
+                     right-4 sm:right-8 md:right-4 lg:right-8 
+                     top-[0] sm:top-[10px] md:top-[-50px] md:top-[0px] 
+                     z-10"
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center w-full mt-12 sm:mt-8 xl:mt-8 2xl:mt-4">
-        {/* Conteneur de l'image et du texte */}
-        <div className="flex flex-col xl:flex-row items-center justify-center w-full xl:gap-x-4">
+      <div className="flex 
+                      flex-col 
+                      items-center 
+                      justify-center 
+                      w-full 
+                      mt-12 sm:mt-8 2xl:mt-4"
+      >
+        <div className="flex 
+                        flex-col 
+                        xl:flex-row 
+                        items-center 
+                        justify-center 
+                        w-full 
+                        xl:gap-x-4"
+        >
           {/* Image */}
-          <div className="relative w-full xl:w-1/2 max-w-[600px]">
+          <div className="relative
+                          w-full 
+                          xl:w-1/2
+                          max-w-[600px]"
+          >
             <a
               href="https://www.mytodolist.tech"
               target="_blank"
@@ -44,17 +76,31 @@ const MyTodoListProject = () => {
             </a>
           </div>
 
-          <div className="flex flex-col items-center xl:items-start xl:pl-4 2xl:pl-6 mt-4 xl:mt-0 max-w-[600px]">
+          <div className="flex 
+                          flex-col 
+                          items-center 
+                          xl:items-start 
+                          xl:pl-4 2xl:pl-6 mt-4 
+                          xl:mt-0 
+                          max-w-[600px]"
+          >
             <h3 className="project-image-title">MyTodoList</h3>
             <p className="project-date">Décembre 2024</p>
 
             <Link
               href="/portfolio#mytodolist"
-              className="flex items-center mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] hover:text-navLinkHover group mb-8"
+              className="flex 
+                        items-center 
+                        mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
+                        hover:text-navLinkHover group mb-8"
             >
               <span className="mr-2">+ d’infos</span>
               <svg
-                className="w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto] text-[#4d94ff] group-hover:text-navLinkHover"
+                className="w-[3.8vw] 
+                          h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
+                          mt-1 
+                          text-[#4d94ff] 
+                          group-hover:text-navLinkHover"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -75,11 +121,17 @@ const MyTodoListProject = () => {
               </svg>
             </Link>
 
-            <a
-              href="https://www.mytodolist.tech"
+            <a href="https://www.mytodolist.tech"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-LinkInactive hover:text-LinkHover hover:underline text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw] items-center flex flex-col mb-12"
+              className="text-LinkInactive 
+                         hover:text-LinkHover 
+                         hover:underline 
+                         text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 
+                         items-center 
+                         flex 
+                         flex-col 
+                         mb-12"
             >
               https://www.mytodolist.tech
             </a>
@@ -87,7 +139,16 @@ const MyTodoListProject = () => {
         </div>
 
         {/* DotsRectangle */}
-        <div className="xl:w-full sm:w-[40%] md:w-[40%] lg:w-[100%] xl:flex xl:justify-start w-full max-w-[320px] mt-8 sm:mt-8 md:mt-8 lg:mt-8 xl:mt-10 2xl:mt-5 relative mx-auto xl:ml-48">
+        <div className="xl:w-full sm:w-[40%] lg:w-[100%] 
+                        xl:flex 
+                        xl:justify-start 
+                        w-full 
+                        max-w-[320px] 
+                        mt-8 xl:mt-10 2xl:mt-5 
+                        relative 
+                        mx-auto 
+                        xl:ml-48"
+        >
           <DotsRectangle
             className="w-full"
             rows={3}

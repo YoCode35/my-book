@@ -1,8 +1,7 @@
-// pages/_app.tsx
-import { AppProps } from 'next/app'; // Importation des types nécessaires
+import { AppProps } from 'next/app';
 import '../styles/fonts.css';
 
-function MyApp({ Component, pageProps }: AppProps) { // Typage des props
+function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 

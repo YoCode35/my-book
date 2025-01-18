@@ -111,7 +111,7 @@ export default function Header() {
                         flex flex-col 
                         items-start 
                         justify-center 
-                        ml-12 sm:ml-20 md:ml-20 lg:ml-24 
+                        ml-12 sm:ml-20 lg:ml-24 
                         mt-20 lg:mt-24
                         sm:mr-6 md:mr-0 
                         relative lg:absolute"
@@ -183,7 +183,7 @@ export default function Header() {
                           z-20"
           >
             <FcDownload className=" text-white 
-                                    text-[24px] sm:text-[24px] md:text-[24px] lg:text-3xl 4xl:text-4xl
+                                    text-[24px] lg:text-3xl 4xl:text-4xl
                                     z-20"
             />
             <span className=" text-white 

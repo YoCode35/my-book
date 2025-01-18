@@ -309,7 +309,8 @@ export default function Home() {
                             inline-block 
                             w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
                             group-hover:text-navLinkHover
-                            mx-2"
+                            mx-2
+                            mt-1"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

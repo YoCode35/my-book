@@ -77,11 +77,12 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
-                                ${pathname === "/" && isAboutActive ? "text-navLinkHover" : "text-navLinkInactive"}
-                                3xl:text-2xl 4xl:text-3xl`}
-                  style={{
-                    color: pathname === "/" && isAboutActive ? "#fff000" : "",
-                  }}
+                              ${pathname === "/" && isAboutActive ? "text-navLinkHover" : "text-navLinkInactive"}
+                              3xl:text-2xl 4xl:text-3xl`
+                            }
+                              style={{
+                                  color: pathname === "/" && isAboutActive ? "#fff000" : "",
+                              }}
                 >
                   À propos
                 </Link>
@@ -167,7 +168,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                         absolute 
                         inset-x-0
                         mx-auto
-                        w-[180px] sm:w-[30%] md:w-[30%]
+                        w-[180px] sm:w-[30%]
                         max-w-[300px]
                         bg-[rgba(1,22,39,0.8)]
                         py-8 px-6
@@ -239,7 +240,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
       {isScrolled && (
         <div className="fixed 
                         bottom-5 
-                        center lg:right-5 xl:right-20 2xl:right-20
+                        center lg:right-5 xl:right-20
                         bottom-16 sm:bottom-10 md:bottom-16 lg:bottom-5 xl:bottom-10 2xl:bottom-10
                         z-30"
         >
