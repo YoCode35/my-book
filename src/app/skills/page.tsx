@@ -34,16 +34,24 @@ export default function Skills() {
             >
                 <p className="paragraph-custom mt-4">
                     J’exerce dans le secteur du numérique depuis une vingtaine d’années. J’ai commencé par maitriser le développement front-end, avec l’HTML, le CSS, le JavaScript et quelques notions en PHP.
+                    Au gré de mes développements, je me suis toujours efforcé à factoriser mon code et à l’écrire de la manière la plus propre possible.
                 </p>
                 <p className="paragraph-custom mt-4">
-                    Ma montée en compétences en back-end me permet aujourd’hui de Développer une application from scratch jusqu’à son aboutissement.
+                    Ma montée en compétences récente en back-end me permet aujourd’hui de développer une application from scratch jusqu’à son aboutissement.
                 </p>
                 <p className="paragraph-custom mt-4">
-                    Aujourd’hui, j’exerce ces compétences en me perfectionnant et en explorant des stacks modernes comme React.js, Next.js, Angular, TypeScript, Node.js, Flutter par exemple.
+                    Aujourd’hui, j’exerce ces compétences en me perfectionnant et en explorant des stacks modernes comme React.js, Next.js, Angular, TypeScript, Node.js ou encore Flutter.
                 </p>
                 <p className="paragraph-custom mt-4">
-                    Prochainement, je prévois le déploiement de mon application www.mytodolist.tech sur les Stores d’Apple et d’Androïd.
-                    J’aimerais aussi assimiler le Framework Nest (NestJS) permettant de créer des applications côté serveur.
+                    Prochainement, je prévois le déploiement de mon application           <a
+                        href="https://www.mytodolist.tech"
+                        target="_blank"
+                        rel="noopener noreferrer"  // Security
+                        className="text-navLinkHover hover:underline"
+                    >
+                        MyTodoList
+                    </a> sur les Stores d’Apple et d’Androïd.
+                    J’aimerais aussi assimiler le Framework NestJS permettant de créer des applications côté serveur.
                 </p>
                 {/* <div className="px-4 sm:px-8 md:px-16
                             max-w-screen-lg

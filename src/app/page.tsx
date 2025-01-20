@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
 //import { ImCross } from "react-icons/im"
-//import Link from "next/link";
+import Link from "next/link";
 import MyTodoListProject from "../components/projects/MyTodoListProject";
 
 export default function Home() {
@@ -229,6 +229,39 @@ export default function Home() {
                 </div>
 
                 {/* Skills Link */}
+                <Link
+                  href="/skills#skills"
+                  className=" flex 
+                              items-center 
+                              mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
+                              hover:text-navLinkHover group mb-8"
+                >
+                  <span className="mr-2">+ d’infos</span>
+                  <svg
+                    className=" w-[3.8vw] 
+                                h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
+                                mt-1 
+                                text-[#4d94ff] 
+                                group-hover:text-navLinkHover"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 12H5"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
                 {/* <div
                   className=" relative 
                               mt-8 
@@ -250,7 +283,7 @@ export default function Home() {
                                         group-hover:rounded p-1"
                       >
                         {/* Flèche */}
-                        {/* <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {/* <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
                         </svg>
