@@ -43,15 +43,27 @@ export default function Skills() {
                     Aujourd’hui, j’exerce ces compétences en me perfectionnant et en explorant des stacks modernes comme React.js, Next.js, Angular, TypeScript, Node.js ou encore Flutter.
                 </p>
                 <p className="paragraph-custom mt-4">
-                    Prochainement, je prévois le déploiement de mon application           <a
+                    Prochainement, je prévois le déploiement de mon application{" "}
+                    <a
                         href="https://www.mytodolist.tech"
                         target="_blank"
                         rel="noopener noreferrer"  // Security
                         className="text-navLinkHover hover:underline"
                     >
                         MyTodoList
-                    </a> sur les Stores d’Apple et d’Androïd.
+                    </a>{" "}
+                    sur les Stores d’Apple et d’Android.
                     J’aimerais aussi assimiler le Framework NestJS permettant de créer des applications côté serveur.
+                    </p>
+                    <p className="paragraph-custom mt-4">
+                    Enfin, je souhaite, pour tous mes développements :
+                    <ul className="mt-2">
+                        <li>- Exploiter les patterns de conception actuels</li>
+                        <li>- Intégrer des tests automatisés dans mon workflow</li>
+                        <li>- Mettre en place un système de CI/CD robuste</li>
+                        <li>- Utiliser des outils de build modernes comme Vite</li>
+                        <li>- Continuer à utiliser TypeScript (la sécurité de typage change tout)</li>
+                    </ul>
                 </p>
                 {/* <div className="px-4 sm:px-8 md:px-16
                             max-w-screen-lg
