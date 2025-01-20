@@ -43,7 +43,7 @@ export default function Skills() {
                 </p>
                 <p className="paragraph-custom mt-4">
                     Prochainement, je prévois le déploiement de mon application www.mytodolist.tech sur les Stores d’Apple et d’Androïd.
-                    J'aimerais aussi assimiler le Framework Nest (NestJS) permettant de créer des applications côté serveur.
+                    J’aimerais aussi assimiler le Framework Nest (NestJS) permettant de créer des applications côté serveur.
                 </p>
                 {/* <div className="px-4 sm:px-8 md:px-16
                             max-w-screen-lg
