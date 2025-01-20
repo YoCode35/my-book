@@ -11,7 +11,8 @@ export default function Skills() {
         <div
             className=" bg-cover
                         bg-no-repeat
-                        bg-[url('/img/colored_spots.png')]"
+                        bg-[url('/img/colored_spots.png')]
+                        pb-24"
         >
 
             {/* SEPARATOR */}
@@ -26,7 +27,25 @@ export default function Skills() {
 
             <h2 id="skills" className="title-page">Skills</h2>
 
-            <div className="px-4 sm:px-8 md:px-16
+            <div className="px-4
+                            sm:px-8 md:px-16 2xl:px-0
+                            max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl 4xl:max-w-screen-3xl
+                            mx-auto"
+            >
+                <p className="paragraph-custom mt-4">
+                    J’exerce dans le secteur du numérique depuis une vingtaine d’années. J’ai commencé par maitriser le développement front-end, avec l’HTML, le CSS, le JavaScript et quelques notions en PHP.
+                </p>
+                <p className="paragraph-custom mt-4">
+                    Ma montée en compétences en back-end me permet aujourd’hui de Développer une application from scratch jusqu’à son aboutissement.
+                </p>
+                <p className="paragraph-custom mt-4">
+                    Aujourd’hui, j’exerce ces compétences en me perfectionnant et en explorant des stacks modernes comme React.js, Next.js, Angular, TypeScript, Node.js, Flutter par exemple.
+                </p>
+                <p className="paragraph-custom mt-4">
+                    Prochainement, je prévois le déploiement de mon application www.mytodolist.tech sur les Stores d’Apple et d’Androïd.
+                    J'aimerais aussi assimiler le Framework Nest (NestJS) permettant de créer des applications côté serveur.
+                </p>
+                {/* <div className="px-4 sm:px-8 md:px-16
                             max-w-screen-lg
                             mx-auto"
             >
@@ -293,6 +312,7 @@ export default function Skills() {
                     </div>
 
                 </div>
+            </div> */}
             </div>
         </div>
     );

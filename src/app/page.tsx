@@ -229,7 +229,7 @@ export default function Home() {
                 </div>
 
                 {/* Skills Link */}
-                <div
+                {/* <div
                   className=" relative 
                               mt-8 
                               mr-4 sm:mr-6 md:mr-8 lg:mr-12
@@ -250,14 +250,14 @@ export default function Home() {
                                         group-hover:rounded p-1"
                       >
                         {/* Flèche */}
-                        <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        {/* <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
                         </svg>
                       </span>
                     </span>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
