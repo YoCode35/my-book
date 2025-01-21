@@ -1,7 +1,7 @@
 "use client";
 
-import useDotsPerRow from "../../components/dots/useResponsiveDots";
-import DotsRectangle from "../../components/dots/DotsRectangle";
+import useDotsPerRow from "../../../components/dots/useResponsiveDots";
+import DotsRectangle from "../../../components/dots/DotsRectangle";
 
 export default function Skills() {
 
@@ -57,16 +57,16 @@ export default function Skills() {
                     <p className="paragraph-custom mt-4">
                     J’aimerais aussi assimiler le Framework NestJS permettant de créer des applications côté serveur.
                     </p>
-                    <p className="paragraph-custom mt-4">
-                    Enfin, je souhaite, pour tous mes développements :
-                    <ul className="mt-2">
-                        <li>- Exploiter les patterns de conception actuels</li>
-                        <li>- Intégrer des tests automatisés dans mon workflow</li>
-                        <li>- Mettre en place un système de CI/CD robuste</li>
-                        <li>- Utiliser des outils de build modernes comme Vite</li>
-                        <li>- Continuer à utiliser TypeScript (la sécurité de typage change tout)</li>
-                    </ul>
-                </p>
+                    <div className="paragraph-custom mt-4">
+  <p>Enfin, je souhaite, pour tous mes développements :</p>
+  <ul className="mt-2">
+    <li>- Exploiter les patterns de conception actuels</li>
+    <li>- Intégrer des tests automatisés dans mon workflow</li>
+    <li>- Mettre en place un système de CI/CD robuste</li>
+    <li>- Utiliser des outils de build modernes comme Vite</li>
+    <li>- Continuer à utiliser TypeScript (la sécurité de typage change tout)</li>
+  </ul>
+</div>
                 {/* <div className="px-4 sm:px-8 md:px-16
                             max-w-screen-lg
                             mx-auto"

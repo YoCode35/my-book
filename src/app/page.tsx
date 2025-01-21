@@ -14,7 +14,7 @@ export default function Home() {
 
       {/* Presentation Section */}
       <div className="relative 
-              mb-6 sm:mb-24 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-32 3xl:mb-48 4xl:mb-64"
+                      mb-6 sm:mb-24 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-32 3xl:mb-48 4xl:mb-64"
       >
         <div className="mt-[20px] md:mt-[30px] lg:mt-[50px] 4xl:mt-[200px]">
           <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[18px] xl:text-[20px] 3xl:text-[23px] 4xl:text-[30px]
@@ -66,7 +66,7 @@ export default function Home() {
           >
             <span className="block leading-none">À propos</span>
             <span className="inline-flex items-center">de moi
-              <a href="/about#about" className="relative group">
+              <a href="/pages/about#about" className="relative group">
                 <span className=" relative
                                 text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
                                 left-[52%] sm:left-[45%]
@@ -230,11 +230,12 @@ export default function Home() {
 
                 {/* Skills Link */}
                 <Link
-                  href="/skills#skills"
+                  href="/pages/skills#skills"
                   className=" flex 
                               items-center 
                               mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
-                              hover:text-navLinkHover group mb-8"
+                              hover:text-navLinkHover group mb-8 
+                              justify-end sm:justify-start" 
                 >
                   <span className="mr-2">+ d’infos</span>
                   <svg

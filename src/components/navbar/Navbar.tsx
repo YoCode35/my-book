@@ -70,10 +70,10 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             </li>
 
             {/* Lien À propos */}
-            {pathname !== "/about" && (
+            {pathname !== "/pages/about" && (
               <li key="about" className="flex items-center">
                 <Link
-                  href={pathname === "/" ? "#abouthome" : "/about#about"}
+                  href={pathname === "/" ? "#abouthome" : "/pages/about#about"}
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
@@ -90,10 +90,10 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             )}
 
             {/* Lien Skills */}
-            {pathname !== "/skills" && (
+            {pathname !== "/pages/skills" && (
               <li key="skills" className="flex items-center">
                 <Link
-                  href={pathname === "/" ? "#skills" : "/skills#skills"}
+                  href={pathname === "/" ? "#skills" : "/pages/skills#skills"}
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
@@ -109,10 +109,10 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             )}
 
             {/* Lien Portfolio */}
-            {pathname !== "/portfolio" && (
+            {pathname !== "/pages/portfolio" && (
               <li key="portfolio" className="flex items-center">
                 <Link
-                  href={pathname === "/" ? "#myprojects" : "/portfolio#portfolio"}
+                  href={pathname === "/" ? "#myprojects" : "/pages/portfolio#portfolio"}
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
@@ -129,9 +129,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           </ul>
 
           {/* Bouton Me Contacter */}
-          {pathname !== "/contact" && (
+          {pathname !== "/pages/contact" && (
             <div className="ml-4 hidden lg:block">
-              <Link href="/contact#contact">
+              <Link href="/pages/contact#contact">
                 <button
                   className={`px-6 py-2
                               rounded-full
@@ -140,7 +140,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                               hover:text-black
                               hover:font-bold
                               focus:outline-none focus:ring-2 focus:ring-purple-300
-                              ${pathname === "/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}
+                              ${pathname === "/pages/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}
                               3xl:text-xl 4xl:text-3xl`}
                   style={{ minWidth: "160px" }}
                 >
@@ -190,9 +190,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               { href: "#skills", label: <span className={`${isSkillsActive ? "text-navLinkHover" : "text-white"}`}>Skills</span> },
               { href: "#myprojects", label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>Portfolio</span> },
             ] : [
-              pathname !== "/about" && { href: "/about#about", label: "À propos" },
-              pathname !== "/skills" && { href: "/skills#skills", label: "Skills" },
-              pathname !== "/portfolio" && { href: "/portfolio#portfolio", label: "Portfolio" },
+              pathname !== "/pages/about" && { href: "/pages/about#about", label: "À propos" },
+              pathname !== "/pages/skills" && { href: "/pages/skills#skills", label: "Skills" },
+              pathname !== "/pages/portfolio" && { href: "/pages/portfolio#portfolio", label: "Portfolio" },
             ]).filter(Boolean),
           ]
             .filter((item): item is { href: string; label: string } => item !== false)
@@ -211,8 +211,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 {label}
               </Link>
             ))}
-          {pathname !== "/contact" && (
-            <Link href="/contact#contact">
+          {pathname !== "/pages/contact" && (
+            <Link href="/pages/contact#contact">
               <button
                 onClick={() => setMenuOpen(false)}
                 className=" block

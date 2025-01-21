@@ -1,7 +1,7 @@
 "use client";
 
-import useDotsPerRow from "../../components/dots/useResponsiveDots";
-import DotsRectangle from "../../components/dots/DotsRectangle";
+import useDotsPerRow from "../../../components/dots/useResponsiveDots";
+import DotsRectangle from "../../../components/dots/DotsRectangle";
 import Image from "next/image";
 
 export default function Portfolio() {

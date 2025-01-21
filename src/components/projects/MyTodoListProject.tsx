@@ -88,7 +88,7 @@ const MyTodoListProject = () => {
             <p className="project-date">Décembre 2024</p>
 
             <Link
-              href="/portfolio#mytodolist"
+              href="/pages/portfolio#mytodolist"
               className="flex 
                         items-center 
                         mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
