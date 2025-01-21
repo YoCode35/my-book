@@ -1,5 +1,5 @@
 import Image from "next/image";
-import DotsRectangle from "../dots/DotsRectangle";
+import DotsRectangle from "../../../../components/dots/DotsRectangle";
 import { ImCross } from "react-icons/im";
 import Link from "next/link";
 

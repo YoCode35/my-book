@@ -2,7 +2,7 @@ import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
 //import { ImCross } from "react-icons/im"
 import Link from "next/link";
-import MyTodoListProject from "../components/projects/MyTodoListProject";
+import MyTodoListProject from "./pages/portfolio/projects/MyTodoListProject";
 
 export default function Home() {
   return (
@@ -235,7 +235,7 @@ export default function Home() {
                               items-center 
                               mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
                               hover:text-navLinkHover group mb-8 
-                              justify-end sm:justify-start" 
+                              justify-end sm:justify-start"
                 >
                   <span className="mr-2">+ d’infos</span>
                   <svg
