@@ -124,7 +124,7 @@ export default function Header() {
                           text-left"
           >
             <span className="block leading-[1.3]">Concepteur & Développeur</span>
-            <span className="block leading-[1.3]">d&apos;applications Fullstack</span>
+            <span className="block leading-[1.3]">d’applications Fullstack</span>
           </h1>
 
           <div className="flex 
@@ -214,8 +214,8 @@ export default function Header() {
             />
           </div>
           <a
-            href="/docs/CV-YoannGREGOIRE_(CDA).pdf"
-            download="CV-YoannGREGOIRE_(CDA).pdf"
+            href="/docs/CV-YoannGREGOIRE_(DevFullStack).pdf"
+            download="CV-YoannGREGOIRE_(DevFullStack).pdf"
             className="absolute inset-0 z-30"
             aria-label="Télécharger mon CV"
           />

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
-//import { ImCross } from "react-icons/im"
 import Link from "next/link";
 import MyTodoListProject from "./pages/portfolio/projects/MyTodoListProject";
 
@@ -263,35 +262,6 @@ export default function Home() {
                     />
                   </svg>
                 </Link>
-                {/* <div
-                  className=" relative 
-                              mt-8 
-                              mr-4 sm:mr-6 md:mr-8 lg:mr-12
-                              text-right"
-                >
-                  <a href="/skills#skills"
-                    className=" hover:text-navLinkHover
-                                font-medium 
-                                inline-flex flex-col items-end // Utilisation d'inline-flex pour un alignement précis
-                                gap-2 group 
-                                text-[3.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.2vw]"
-                  >
-                    <span className="whitespace-nowrap w-full text-right">Niveaux de compétences estimés</span>
-                    <span className="w-full flex justify-end items-center gap-2">(Auto-évaluation)
-                      <span className=" transition-all 
-                                        group-hover:bg-yellow-500 
-                                        group-hover:text-white 
-                                        group-hover:rounded p-1"
-                      >
-                        {/* Flèche */}
-                {/* <svg className="w-5 h-5 colorChart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
-                        </svg>
-                      </span>
-                    </span>
-                  </a>
-                </div> */}
               </div>
             </div>
           </div>

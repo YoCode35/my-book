@@ -18,8 +18,6 @@ export default {
         boxShadow: {
           'custom-shadow': '0 4px 6px rgba(0, 0, 0, 0.5)',
         },
-        /*navText: "#fff000",
-        navTitle: "#2c3e50",*/
         navLinkInactive: "#ccc",
         navLinkHover: "#fff000",
         LinkInactive: "#4d94ff",
@@ -37,10 +35,7 @@ export default {
         clash: ['var(--font-clash-display)', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
       },
-      fontSize: {
-        /*'title-lg': ['4rem', '1.2'],
-        'title-sm': ['2rem', '1.5'],*/
-      },
+      fontSize: {},
       textShadow: {
         default: "2px 2px 4px rgba(0, 0, 0, 0.5)",
         strong: "4px 4px 6px rgba(0, 0, 0, 0.7)",

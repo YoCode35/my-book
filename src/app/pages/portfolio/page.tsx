@@ -27,7 +27,7 @@ export default function Portfolio() {
                 lg:pt-10 xl:pt-10 2xl:pt-10                                        
                 mx-auto"
       >
-        <h3 className="title-project">[Projet MyTodoList]</h3> {/* Réduction de l'espace ici */}
+        <h3 className="title-project">[Projet MyTodoList]</h3>
 
         <a
           href="https://www.mytodolist.tech"

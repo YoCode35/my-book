@@ -1,4 +1,5 @@
 import './styles/globals.css';
+import './styles/clashDisplay_font.css';
 import Navbar from '../components/Header';
 import Footer from '../components/Footer';
 import { Orbitron, Quicksand, Rubik } from 'next/font/google';
