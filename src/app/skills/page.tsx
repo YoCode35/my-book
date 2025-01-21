@@ -53,6 +53,8 @@ export default function Skills() {
                         MyTodoList
                     </a>{" "}
                     sur les Stores d’Apple et d’Android.
+                    </p>
+                    <p className="paragraph-custom mt-4">
                     J’aimerais aussi assimiler le Framework NestJS permettant de créer des applications côté serveur.
                     </p>
                     <p className="paragraph-custom mt-4">

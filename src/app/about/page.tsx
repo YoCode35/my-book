@@ -33,9 +33,10 @@ export default function About() {
         <p className="paragraph-custom mt-4">
           Passionné par l’informatique et la programmation, j’ai débuté en tant
           qu’autodidacte avant de me professionnaliser et d’exercer dans le secteur
-          du numérique depuis une vingtaine d’années. Mon parcours atypique a
-          commencé avec l’infographie (2D/3D) et le développement front-end, en
-          maîtrisant l’HTML, le CSS, le JavaScript, le PHP et MySQL.
+          du numérique depuis une vingtaine d’années. Mon parcours a commencé avec
+          l’infographie (2D/3D) et en parallèle le développement front-end m’a
+          toujours accompagné avec la maitrise tout d’abord de l’HTML puis du CSS, le
+          JavaScript ensuite et enfin quelques notions de PHP.
         </p>
 
         <p className="paragraph-custom mt-4">
@@ -60,9 +61,8 @@ export default function About() {
 
         <p className="paragraph-custom mt-4">
           Aujourd’hui, je poursuis ma montée en compétences en explorant des stacks
-          modernes comme Node.js, Next.js, TypeScript, Angular, React.js, Flutter tout en
-          travaillant activement sur des projets personnels en full-stack. Mon
-          engagement va bien au-delà du code : j’aime concevoir des solutions
+          modernes comme Node.js, Next.js, TypeScript, Angular, React.js ou encore Flutter.
+          Mon engagement va bien au-delà du code : j’aime concevoir des solutions
           innovantes, performantes et utiles, pensées pour enrichir l’expérience
           utilisateur et optimiser les interactions numériques.
         </p>
