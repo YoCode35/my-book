@@ -124,7 +124,7 @@ export default function Header() {
                           text-left"
           >
             <span className="block leading-[1.3]">Concepteur & Développeur</span>
-            <span className="block leading-[1.3]">d’applications Fullstack</span>
+            <span className="block leading-[1.3]">d’applications FullStack</span>
           </h1>
 
           <div className="flex 
