@@ -10,7 +10,11 @@ export default function Portfolio() {
   const dotsPerRow = useDotsPerRow();
 
   return (
-    <div className="bg-cover bg-no-repeat bg-[url('/img/colored_spots.png')] pb-24">
+    <div className="bg-cover
+                    bg-no-repeat 
+                    bg-[url('/img/bkgd_black-and-colored-spots.png')]
+                    pb-24"
+    >
 
       {/* SEPARATOR */}
       <div className="min-h-[60px]"></div>

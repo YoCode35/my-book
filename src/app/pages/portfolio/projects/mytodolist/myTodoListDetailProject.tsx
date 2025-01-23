@@ -9,10 +9,9 @@ export default function MyTodoListDetailsProject() {
     <div>
 
       {/* MyTodoList Section */}
-      <section id="mytodolist"
-        className="px-4 sm:px-8 md:px-16 2xl:px-32
-                lg:pt-10 xl:pt-10 2xl:pt-10                                        
-                mx-auto"
+      <section id="mytodolist" className="px-4 sm:px-8 md:px-16 2xl:px-32
+                                          lg:pt-10 xl:pt-10 2xl:pt-10                                        
+                                          mx-auto"
       >
         <h3 className="title-project">[Projet MyTodoList]</h3>
 
@@ -21,12 +20,12 @@ export default function MyTodoListDetailsProject() {
           target="_blank"
           rel="noopener noreferrer" // Security
           className={`text-LinkInactive 
-                hover:text-LinkHover 
-                hover:underline
-                text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-                items-center
-                flex flex-col
-                mb-12`}
+                      hover:text-LinkHover 
+                      hover:underline
+                      text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+                      items-center
+                      flex flex-col
+                      mb-12`}
         >
           https://www.mytodolist.tech
         </a>
