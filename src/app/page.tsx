@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
 import Link from "next/link";
-import MyTodoListProject from "./pages/portfolio/projects/MyTodoListProject";
+import { ImCross } from "react-icons/im";
+import MyTodoListProject from "./pages/portfolio/projects/mytodolist/myTodoListProject";
+import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
+import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
 
 export default function Home() {
   return (
@@ -45,7 +48,7 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <div id="abouthome" className=" w-full
+      <section id="abouthome" className=" w-full
                                       flex
                                       justify-start relative
                                       min-h-[100%]"
@@ -133,13 +136,13 @@ export default function Home() {
           />
 
         </div>
-      </div>
+      </section>
 
       {/* SEPARATOR */}
       <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[60px] 2xl:min-h-[160px]"></div>
 
       {/* Skills Section */}
-      <div id="skills" className="flex flex-col 
+      <section id="skills" className="flex flex-col 
                                   justify-start 
                                   items-center 
                                   min-h-[100%]"
@@ -266,75 +269,109 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* SEPARATOR */}
       <div className="min-h-[50px] sm:min-h-[150px] md:min-h-[100px] lg:min-h-[50px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* My Projects Section */}
-      <MyTodoListProject />
-
-      {/* SEPARATOR */}
-      <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
-
-      {/* New section */}
-      <div className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
-                      text-white 
-                      w-full 
-                      text-center 
-                      mb-48
-                      min-h-[100%]"
+      <section id="myprojects" className="flex 
+                                      flex-col 
+                                      justify-start 
+                                      items-center 
+                                      relative 
+                                      w-full 
+                                      min-h-[100%]"
       >
-        <p className="font-rubik                         
-                      text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px] 2xl:text-[22px] 3xl:text-[24px] 4xl:text-[30px]
-                      mx-8 sm:mx-12 md:mx-8 lg:mx-20"
+        <h2
+          className=" title-home-section 
+                      leading-tight 
+                      lg:ml-80 
+                      lg:text-right 
+                      lg:pb-[1%] xl:pb-[0] 2xl:pb-[3%] 3xl:pb-[6%]
+                      top-[0] 
+                      mt-[3%] lg:mt-[2%] 2xl:mt-[1%]"
         >
-          [Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets]
-        </p>
-        <div className="flex 
-                        justify-center sm:justify-center 
-                        mt-8 sm:mt-8
-                        mx-auto sm:mx-auto md:mx-0"
+          Mes projets
+        </h2>
+
+        <div className="mt-0 relative w-full">
+          <ImCross
+            className=" text-colorChart 
+                        text-4xl sm:text-6xl md:text-10xl 
+                        absolute 
+                        right-4 sm:right-8 md:right-4 lg:right-8 
+                        top-[0] sm:top-[10px] md:top-[-50px] md:top-[0px] 
+                        z-10"
+          />
+        </div>
+
+        <MyTodoListProject />
+        <SeriesProject />
+        <AuctionProject />
+
+        {/* SEPARATOR */}
+        <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
+
+        {/* New section */}
+        <div className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
+                        text-white 
+                        w-full 
+                        text-center 
+                        mb-48
+                        min-h-[100%]"
         >
-          <a
-            href="https://www.linkedin.com/in/yoann-gregoire-cda/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" flex 
-                        items-center 
-                        text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]                        
-                        hover:text-navLinkHover group"
+          <p className="font-rubik                         
+                        text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px] 2xl:text-[22px] 3xl:text-[24px] 4xl:text-[30px]
+                        mx-8 sm:mx-12 md:mx-8 lg:mx-20"
           >
-            <span className="mr-2">Voir + de projets</span>
-            {/* Flèche */}
-            <svg
-              className=" w-[20px] h-[20px] 
+            [Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets]
+          </p>
+          <div className="flex 
+                          justify-center sm:justify-center 
+                          mt-8 sm:mt-8
+                          mx-auto sm:mx-auto md:mx-0"
+          >
+            <a
+              href="https://www.linkedin.com/in/yoann-gregoire-cda/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" flex 
+                          items-center 
+                          text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]                        
+                          hover:text-navLinkHover group"
+            >
+              <span className="mr-2">Voir + de projets</span>
+              {/* Flèche */}
+              <svg
+                className=" w-[20px] h-[20px] 
                             text-[#4d94ff] 
                             inline-block 
                             w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
                             group-hover:text-navLinkHover
                             mx-2
                             mt-1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
-            </svg>
-            {/* LinkedIn Logo */}
-            <Image
-              src="/img/linkedin_logo.png"
-              alt="Logo LinkedIn"
-              width={76}
-              height={76}
-              className=" inline-block ml-2 
-                          w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45x] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]"
-            />
-          </a>
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+              </svg>
+              {/* LinkedIn Logo */}
+              <Image
+                src="/img/linkedin_logo.png"
+                alt="Logo LinkedIn"
+                width={76}
+                height={76}
+                className=" inline-block ml-2 
+                            w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45x] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]"
+              />
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
 
     </div>
   );
