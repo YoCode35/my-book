@@ -182,8 +182,7 @@ export default function Home() {
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>NextJS</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Angular</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Flutter</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>WordPress</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>WordPress</span></div>                  
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>JavaScript</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>CSS</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Tailwind CSS</span></div>
@@ -203,6 +202,7 @@ export default function Home() {
                 <div className="pt-6">
                   <div className="skills-text flex justify-center sm:justify-between"><span>NodeJS</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>TypeScript</span></div>
+                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>PostgreSQL</span></div>
