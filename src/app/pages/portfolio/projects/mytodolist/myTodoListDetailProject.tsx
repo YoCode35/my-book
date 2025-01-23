@@ -4,14 +4,12 @@ import Image from "next/image";
 
 export default function MyTodoListDetailsProject() {
 
-
   return (
-    <div>
 
-      {/* MyTodoList Section */}
-      <section id="mytodolist" className="px-4 sm:px-8 md:px-16 2xl:px-32
-                                          lg:pt-10 xl:pt-10 2xl:pt-10                                        
-                                          mx-auto"
+    // MyTodoList Section
+    <section id="mytodolist" className="px-4 sm:px-8 md:px-16 2xl:px-32
+                                        lg:pt-10 xl:pt-10 2xl:pt-10                                        
+                                        mx-auto"
       >
         <h3 className="title-project">[Projet MyTodoList]</h3>
 
@@ -138,7 +136,5 @@ export default function MyTodoListDetailsProject() {
           style={{ maxWidth: "800px" }}
         />
       </section>
-
-    </div>
   );
 }

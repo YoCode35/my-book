@@ -4,14 +4,12 @@ import Image from "next/image";
 
 export default function SeriesDetailsProject() {
 
-
   return (
-    <div>
 
-      {/* Series Section */}
-      <section id="series" className="px-4 sm:px-8 md:px-16 2xl:px-32
-                                      lg:pt-10 xl:pt-10 2xl:pt-10                                        
-                                      mx-auto"
+    // Series Section
+    <section id="series" className="px-4 sm:px-8 md:px-16 2xl:px-32
+                                    lg:pt-10 xl:pt-10 2xl:pt-10                                        
+                                    mx-auto"
       >
         <h3 className="title-project mt-6">[Projet Series]</h3>
 
@@ -31,11 +29,11 @@ export default function SeriesDetailsProject() {
           https://github.com/YoCode35/Series
         </a>
 
-        <h4 className="project-description">Développement d’une Plateforme « de service de streaming en ligne de séries » (Symfony & MySQL).</h4>
+        <h4 className="project-description">Développement d’une Plateforme « de service de streaming en ligne de séries TV » (Symfony & MySQL).</h4>
 
         <p className="unordered-list text-white mb-6">
           <span className="text-colorChart underline block mb-2">Résumé du projet</span>
-          Ce projet vise à développer une plateforme web permettant aux utilisateurs de découvrir, gérer et interagir avec un catalogue de séries télévisées. Réalisé avec <strong>Symfony et MySQL</strong>,
+          Ce projet visait à développer une plateforme web permettant aux utilisateurs de découvrir, gérer et interagir avec un catalogue de séries télévisées. Réalisé avec <strong>Symfony et MySQL</strong>,
           il offre une architecture solide et extensible pour répondre aux besoins d’une application web moderne.
         </p>
 
@@ -110,7 +108,5 @@ export default function SeriesDetailsProject() {
           style={{ maxWidth: "790px" }}
         />
       </section>
-
-    </div>
   );
 }

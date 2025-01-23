@@ -10,7 +10,7 @@ export default function Portfolio() {
   const dotsPerRow = useDotsPerRow();
 
   return (
-    <div className="bg-cover
+    <main className="bg-cover
                     bg-no-repeat 
                     bg-[url('/img/bkgd_black-and-colored-spots.png')]
                     pb-24"
@@ -54,6 +54,6 @@ export default function Portfolio() {
 
       <AuctionsDetailsProject />
       
-    </div>
+    </main>
   );
 }

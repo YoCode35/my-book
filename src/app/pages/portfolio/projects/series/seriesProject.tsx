@@ -3,8 +3,10 @@ import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 import Link from "next/link";
 
 const SeriesProject = () => {
+
   return (
-    <div className="flex 
+
+    <section className="flex 
                       flex-col 
                       items-center 
                       justify-center 
@@ -35,7 +37,7 @@ const SeriesProject = () => {
               alt="Image de mon projet d'application MyTodoList"
               width={790}
               height={363}
-              className="w-full h-auto mx-auto"
+              className="w-full h-auto mx-auto rounded-3xl"
               priority
               style={{ maxWidth: "790px" }}
             />
@@ -116,7 +118,8 @@ const SeriesProject = () => {
                         mt-8 xl:mt-10 2xl:mt-5 
                         relative 
                         mx-auto 
-                        xl:ml-48"
+                        xl:ml-48
+                        mb-24"
       >
         <DotsRectangle
           className="w-full"
@@ -125,7 +128,8 @@ const SeriesProject = () => {
           dotColor="#fff000"
         />
       </div>
-    </div>
+
+    </section >
   );
 };
 

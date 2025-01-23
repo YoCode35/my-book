@@ -4,27 +4,29 @@ import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 import Link from "next/link";
 
 const AuctionsProject = () => {
+
   return (
-    <div className="flex 
+
+    <section  className=" flex 
+                          flex-col 
+                          items-center 
+                          justify-center 
+                          w-full 
+                          mt-12 sm:mt-8 2xl:mt-4"
+    >
+      <div className="flex 
                       flex-col 
+                      xl:flex-row 
                       items-center 
                       justify-center 
                       w-full 
-                      mt-12 sm:mt-8 2xl:mt-4"
-    >
-      <div className="flex 
-                        flex-col 
-                        xl:flex-row 
-                        items-center 
-                        justify-center 
-                        w-full 
-                        xl:gap-x-4"
+                      xl:gap-x-4"
       >
         {/* Image */}
         <div className="relative
-                          w-full 
-                          xl:w-1/2
-                          max-w-[600px]"
+                        w-full 
+                        xl:w-1/2
+                        max-w-[600px]"
         >
           <a
             href="https://github.com/YoCode35/Projet_Encheres"
@@ -36,7 +38,7 @@ const AuctionsProject = () => {
               alt="Image du projet de plateforme d'enchères"
               width={792}
               height={800}
-              className="w-full h-auto mx-auto rounded-lg"
+              className="w-full h-auto mx-auto rounded-3xl"
               priority
               style={{ maxWidth: "792px" }}
             />
@@ -44,12 +46,12 @@ const AuctionsProject = () => {
         </div>
 
         <div className="flex 
-                          flex-col 
-                          items-center 
-                          xl:items-start 
-                          xl:pl-4 2xl:pl-6 mt-4 
-                          xl:mt-0 
-                          max-w-[600px]"
+                        flex-col 
+                        items-center 
+                        xl:items-start 
+                        xl:pl-4 2xl:pl-6 mt-4 
+                        xl:mt-0 
+                        max-w-[600px]"
         >
           <h3 className="project-image-title">Plateformes d’enchères</h3>
           <p className="project-date">Décembre 2023</p>
@@ -66,14 +68,14 @@ const AuctionsProject = () => {
 
           <Link
             href="/pages/portfolio#auctions"
-            className="flex 
+            className=" flex 
                         items-center 
                         mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
                         hover:text-navLinkHover group mb-8"
           >
             <span className="mr-2">+ d’infos</span>
             <svg
-              className="w-[3.8vw] 
+              className=" w-[3.8vw] 
                           h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
                           mt-1 
                           text-[#4d94ff] 
@@ -110,14 +112,14 @@ const AuctionsProject = () => {
 
       {/* DotsRectangle */}
       <div className="xl:w-full sm:w-[40%] lg:w-[100%] 
-                        xl:flex 
-                        xl:justify-start 
-                        w-full 
-                        max-w-[320px] 
-                        mt-8 xl:mt-10 2xl:mt-5 
-                        relative 
-                        mx-auto 
-                        xl:ml-48"
+                      xl:flex 
+                      xl:justify-start 
+                      w-full 
+                      max-w-[320px] 
+                      mt-8 xl:mt-10 2xl:mt-5 
+                      relative 
+                      mx-auto 
+                      xl:ml-48"
       >
         <DotsRectangle
           className="w-full"
@@ -126,7 +128,8 @@ const AuctionsProject = () => {
           dotColor="#fff000"
         />
       </div>
-    </div>
+
+    </section >
   );
 };
 

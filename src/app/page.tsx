@@ -8,7 +8,7 @@ import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject"
 
 export default function Home() {
   return (
-    <div className="bg-cover
+    <main className="bg-cover
                     bg-no-repeat
                     bg-center
                     bg-[url('/img/colored_spots.png')]"
@@ -313,8 +313,8 @@ export default function Home() {
         {/* SEPARATOR */}
         <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
 
-        {/* New section */}
-        <div className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
+        {/* Upcoming sections */}
+        <section className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
                         text-white 
                         w-full 
                         text-center 
@@ -370,9 +370,10 @@ export default function Home() {
               />
             </a>
           </div>
-        </div>
+        </section>
+
       </section>
 
-    </div>
+    </main>
   );
 }

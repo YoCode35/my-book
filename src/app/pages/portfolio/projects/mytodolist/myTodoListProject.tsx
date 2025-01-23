@@ -3,27 +3,29 @@ import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 import Link from "next/link";
 
 const MyTodoListProject = () => {
+
   return (
-    <div className="flex 
-                      flex-col 
-                      items-center 
-                      justify-center 
-                      w-full 
-                      mt-12 sm:mt-8 2xl:mt-4"
-    >
-      <div className="flex 
+
+    <section className="flex 
                         flex-col 
-                        xl:flex-row 
                         items-center 
                         justify-center 
                         w-full 
-                        xl:gap-x-4"
+                        mt-12 sm:mt-8 2xl:mt-4"
+    >
+      <div className="flex 
+                      flex-col 
+                      xl:flex-row 
+                      items-center 
+                      justify-center 
+                      w-full 
+                      xl:gap-x-4"
       >
         {/* Image */}
         <div className="relative
-                          w-full 
-                          xl:w-1/2
-                          max-w-[600px]"
+                        w-full 
+                        xl:w-1/2
+                        max-w-[600px]"
         >
           <a
             href="https://www.mytodolist.tech"
@@ -65,14 +67,14 @@ const MyTodoListProject = () => {
 
           <Link
             href="/pages/portfolio#mytodolist"
-            className="flex 
+            className=" flex 
                         items-center 
                         mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
                         hover:text-navLinkHover group mb-8"
           >
             <span className="mr-2">+ d’infos</span>
             <svg
-              className="w-[3.8vw] 
+              className=" w-[3.8vw] 
                           h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
                           mt-1 
                           text-[#4d94ff] 
@@ -109,14 +111,15 @@ const MyTodoListProject = () => {
 
       {/* DotsRectangle */}
       <div className="xl:w-full sm:w-[40%] lg:w-[100%] 
-                        xl:flex 
-                        xl:justify-start 
-                        w-full 
-                        max-w-[320px] 
-                        mt-8 xl:mt-10 2xl:mt-5 
-                        relative 
-                        mx-auto 
-                        xl:ml-48"
+                      xl:flex 
+                      xl:justify-start 
+                      w-full 
+                      max-w-[320px] 
+                      mt-8 xl:mt-10 2xl:mt-5 
+                      relative 
+                      mx-auto 
+                      xl:ml-48
+                      mb-24"
       >
         <DotsRectangle
           className="w-full"
@@ -125,7 +128,8 @@ const MyTodoListProject = () => {
           dotColor="#fff000"
         />
       </div>
-    </div>
+
+    </section>
   );
 };
 
