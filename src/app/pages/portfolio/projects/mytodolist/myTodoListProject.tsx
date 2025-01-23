@@ -43,15 +43,25 @@ const MyTodoListProject = () => {
         </div>
 
         <div className="flex 
-                          flex-col 
-                          items-center 
-                          xl:items-start 
-                          xl:pl-4 2xl:pl-6 mt-4 
-                          xl:mt-0 
-                          max-w-[600px]"
+                        flex-col 
+                        items-center 
+                        xl:items-start 
+                        xl:pl-4 2xl:pl-6 mt-4 
+                        xl:mt-0 
+                        max-w-[600px]"
         >
           <h3 className="project-image-title">MyTodoList</h3>
           <p className="project-date">Octobre 2024</p>
+
+          {/* Technologies utilisées */}
+          <div className="mt-2">
+            <p className="project-techno-title">
+              <strong><span className="underline">Technologies utilisées</span> :</strong>
+            </p>
+            <p className="project-usetechno-info">
+              Flutter & MySQL
+            </p>
+          </div>
 
           <Link
             href="/pages/portfolio#mytodolist"
@@ -90,14 +100,7 @@ const MyTodoListProject = () => {
           <a href="https://www.mytodolist.tech"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-LinkInactive 
-                         hover:text-LinkHover 
-                         hover:underline 
-                         text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 
-                         items-center 
-                         flex 
-                         flex-col 
-                         mb-12"
+            className="projet-link"
           >
             https://www.mytodolist.tech
           </a>

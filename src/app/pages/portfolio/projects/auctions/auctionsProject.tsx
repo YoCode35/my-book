@@ -54,6 +54,16 @@ const AuctionsProject = () => {
           <h3 className="project-image-title">Plateformes d’enchères</h3>
           <p className="project-date">Décembre 2023</p>
 
+          {/* Technologies utilisées */}
+          <div className="mt-2">
+            <p className="project-techno-title">
+              <strong><span className="underline">Technologies utilisées</span> :</strong>
+            </p>
+            <p className="project-usetechno-info">
+              Java EE & SQL Server
+            </p>
+          </div>
+
           <Link
             href="/pages/portfolio#auctions"
             className="flex 
@@ -91,14 +101,7 @@ const AuctionsProject = () => {
           <a href="https://github.com/YoCode35/Projet_Encheres"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-LinkInactive 
-                         hover:text-LinkHover 
-                         hover:underline 
-                         text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 
-                         items-center 
-                         flex 
-                         flex-col 
-                         mb-12"
+            className="projet-link"
           >
             https://github.com/YoCode35/Projet_Encheres
           </a>

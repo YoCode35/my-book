@@ -14,7 +14,7 @@ export default function AuctionsDetailsProject() {
                 lg:pt-10 xl:pt-10 2xl:pt-10                                        
                 mx-auto"
       >
-        <h3 className="title-project">[Projet Enchères]</h3>
+        <h3 className="title-project mt-6">[Projet Enchères]</h3>
 
         <a
           href="https://github.com/YoCode35/Projet_Encheres"

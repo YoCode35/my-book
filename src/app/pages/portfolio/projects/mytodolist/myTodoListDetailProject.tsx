@@ -31,7 +31,7 @@ export default function MyTodoListDetailsProject() {
           https://www.mytodolist.tech
         </a>
 
-        <h4 className="project-description">Développement d’une application PWA (Progressive Web App) Cross Platform avec Flutter pour le Front et PHP/MySQL pour le Back.</h4>
+        <h4 className="project-description">Développement d’une application PWA (Progressive Web App) Cross Platform avec (Flutter & PHP/MySQL).</h4>
 
         <p className="unordered-list text-white mb-12">
           1. Planification et Conception

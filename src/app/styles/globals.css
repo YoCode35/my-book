@@ -72,7 +72,7 @@ a {
 
 /* Home #Projects */
 .project-image-title {
-  @apply text-[5vw] sm:text-[2rem] md:text-[2rem] xl:text-[2rem] 2xl:text-[3rem] font-clash font-medium;
+  @apply text-[5vw] sm:text-[2rem] 2xl:text-[3rem] font-clash font-medium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   text-rendering: optimizeLegibility;  
@@ -81,8 +81,30 @@ a {
   transform: scaleY(0.8);
 }
 
+.project-techno-title {
+  @apply text-[2.5vw] sm:text-[0.9rem] 2xl:text-[1.2rem] 4xl:text-[1.6rem] font-clash font-normal text-colorChart;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  text-rendering: optimizeLegibility;  
+  font-weight: 300;
+  margin-left: 5px;
+  transform: scaleY(1);
+}
+
+.project-usetechno-info {
+  @apply text-[2.5vw] sm:text-[0.9rem] 2xl:text-[1.1rem] 4xl:text-[1.8rem] font-clash font-medium text-colorChart;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  text-rendering: optimizeLegibility;  
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  margin-left: 5px;
+  margin-top: 5px;
+  transform: scaleY(0.8);
+}
+
 .project-date {
-  @apply text-[4vw] sm:text-[1.3rem] md:text-[1.3rem] xl:text-[1.3rem] 2xl:text-[1.3rem] font-clash font-medium;
+  @apply text-[4vw] sm:text-[1.3rem] 4xl:text-[1.8rem] font-clash font-medium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   text-rendering: optimizeLegibility;
@@ -91,6 +113,17 @@ a {
   font-weight: 500;
   letter-spacing: -0.05em;
   transform: scaleY(0.8);
+}
+
+.projet-link{
+  @apply  text-[3.5vw] sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.1vw] 4xl:text-[1vw]
+          text-LinkInactive 
+          hover:text-LinkHover 
+          hover:underline
+          items-center 
+          flex 
+          flex-col 
+          mb-12;
 }
 /* Fin */
 
@@ -108,15 +141,15 @@ h4.project-description {
   font-family: 'Clash-display-variable', sans-serif;
   font-weight: 600;
   @apply  text-colorChart 
-          text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw];
+          text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] 2xl:text-[1.3vw];
   margin-bottom: 20px;
 }
 
 .unordered-list {
   font-family: 'Quicksand', sans-serif;
   color: white;
-  @apply  text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-          2xl:max-w-screen-2xl 3xl:max-w-screen-2xl 4xl:max-w-screen-4xl;;
+  @apply  text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] 2xl:text-[1.3vw]
+          2xl:max-w-screen-2xl 3xl:max-w-screen-2xl 4xl:max-w-screen-4xl;
   text-align: justify;
   white-space: normal;
   word-wrap: break-word;
@@ -126,15 +159,15 @@ h4.project-description {
 
 /* Skills */
 .skills-text {
-  @apply text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px];
+  @apply text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px];
 }
 
 .skills-detail-title{
-  @apply text-3xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl
+  @apply text-3xl 2xl:text-4xl 3xl:text-5xl
 }
 
 .skills-detail-subtitle{
-  @apply text-2xl sm:text-2xl 2xl:text-3xl 3xl:text-4xl
+  @apply text-2xl 2xl:text-3xl 3xl:text-4xl
 }
 
 .skills-detail{
@@ -144,7 +177,7 @@ h4.project-description {
 
 /* Appendix Page */
 h2.title-page {
-  @apply text-4xl sm:text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl pt-24 mb-12;
+  @apply text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl pt-24 mb-12;
   font-family: 'Orbitron', sans-serif;
   color: white;  
   text-align: center;
