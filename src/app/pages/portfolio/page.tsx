@@ -2,18 +2,19 @@
 
 import useDotsPerRow from "../../../components/dots/useResponsiveDots";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
-import MyTodoListDetailProject from "../../pages/portfolio/projects/mytodolist/myTodoListDetailProject";
-import SeriesDetailsProject from "../../pages/portfolio/projects/series/seriesDetailProject";
-import AuctionsDetailsProject from "../../pages/portfolio/projects/auctions/auctionsDetailProject";
+import MyTodoListDetailsProject from "./projects/mytodolist/myTodoListDetailsProject";
+import StudentsDetailsProject from "../../pages/portfolio/projects/students/studentsDetailsProject";
+import SeriesDetailsProject from "./projects/series/seriesDetailsProject";
+import AuctionsDetailsProject from "./projects/auctions/auctionsDetailsProject";
 
 export default function Portfolio() {
   const dotsPerRow = useDotsPerRow();
 
   return (
-    <main className="bg-cover
-                    bg-no-repeat 
-                    bg-[url('/img/bkgd_black-and-colored-spots.png')]
-                    pb-24"
+    <main className=" bg-cover
+                      bg-no-repeat 
+                      bg-[url('/img/bkgd_black-and-colored-spots.png')]
+                      pb-24"
     >
 
       {/* SEPARATOR */}
@@ -28,7 +29,19 @@ export default function Portfolio() {
 
       <h2 id="portfolio" className="title-page">Portfolio</h2>
 
-      <MyTodoListDetailProject />
+      <MyTodoListDetailsProject />
+
+      {/* SEPARATOR */}
+      <div className="min-h-[60px]"></div>
+
+      <DotsRectangle
+        className="w-full relative h-[55px] z-1"
+        rows={3}
+        dotsPerRow={dotsPerRow}
+        dotColor="#fff000"
+      />
+
+      <StudentsDetailsProject />
 
       {/* SEPARATOR */}
       <div className="min-h-[60px]"></div>

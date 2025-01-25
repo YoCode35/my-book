@@ -16,7 +16,7 @@ export default function AuctionsDetailsProject() {
         <a
           href="https://github.com/YoCode35/Projet_Encheres"
           target="_blank"
-          rel="noopener noreferrer" // Security
+          rel="noopener noreferrer"
           className={`text-LinkInactive 
                       hover:text-LinkHover 
                       hover:underline
@@ -26,7 +26,7 @@ export default function AuctionsDetailsProject() {
                       mb-12`
           }
         >
-          https://github.com/YoCode35/Projet_Encheres
+          GitHub
         </a>
 
         <h4 className="project-description">Développement d’une Plateforme de « vente aux enchères d’objets de seconde main » (Java EE & SQL Server).</h4>

@@ -16,7 +16,7 @@ export default function MyTodoListDetailsProject() {
         <a
           href="https://www.mytodolist.tech"
           target="_blank"
-          rel="noopener noreferrer" // Security
+          rel="noopener noreferrer"
           className={`text-LinkInactive 
                       hover:text-LinkHover 
                       hover:underline
@@ -25,7 +25,7 @@ export default function MyTodoListDetailsProject() {
                       flex flex-col
                       mb-12`}
         >
-          https://www.mytodolist.tech
+          Web
         </a>
 
         <h4 className="project-description">Développement d’une application PWA (Progressive Web App) Cross Platform avec (Flutter & PHP/MySQL).</h4>

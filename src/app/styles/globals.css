@@ -71,6 +71,18 @@ a {
 /* Fin */
 
 /* Home #Projects */
+@layer components {
+  .project-description-block {
+    @apply  flex 
+            flex-col 
+            items-center 
+            xl:items-start 
+            xl:pl-4 2xl:pl-6 
+            mt-4 xl:mt-12 
+            max-w-[800px];
+  }
+}
+
 .project-image-title {
   @apply text-[5vw] sm:text-[2rem] 2xl:text-[3rem] font-clash font-medium;
   -webkit-font-smoothing: antialiased;
@@ -82,7 +94,7 @@ a {
 }
 
 .project-techno-title {
-  @apply text-[2.5vw] sm:text-[0.9rem] 2xl:text-[1.2rem] 4xl:text-[1.6rem] font-clash font-normal text-colorChart;
+  @apply text-[3vw] sm:text-[0.9rem] 2xl:text-[1.2rem] 4xl:text-[1.6rem] font-clash font-normal text-colorChart;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   text-rendering: optimizeLegibility;  
@@ -91,15 +103,14 @@ a {
   transform: scaleY(1);
 }
 
+.project-usetechno-info-block {@apply mt-2 flex items-center gap-2;}
 .project-usetechno-info {
-  @apply text-[2.5vw] sm:text-[0.9rem] 2xl:text-[1.1rem] 4xl:text-[1.8rem] font-clash font-medium text-colorChart;
+  @apply text-[3.4vw] sm:text-[0.9rem] 2xl:text-[1.1rem] 3xl:text-[1.4rem] 4xl:text-[1.8rem] font-clash font-medium text-colorChart;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   text-rendering: optimizeLegibility;  
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   font-weight: 500;
-  margin-left: 5px;
-  margin-top: 5px;
   transform: scaleY(0.8);
 }
 
@@ -115,7 +126,7 @@ a {
   transform: scaleY(0.8);
 }
 
-.projet-link{
+.link-project{
   @apply  text-[3.5vw] sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.1vw] 4xl:text-[1vw]
           text-LinkInactive 
           hover:text-LinkHover 

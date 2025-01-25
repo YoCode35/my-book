@@ -16,7 +16,7 @@ export default function SeriesDetailsProject() {
         <a
           href="https://github.com/YoCode35/Series"
           target="_blank"
-          rel="noopener noreferrer" // Security
+          rel="noopener noreferrer"
           className={`text-LinkInactive 
                       hover:text-LinkHover 
                       hover:underline
@@ -26,7 +26,7 @@ export default function SeriesDetailsProject() {
                       mb-12`
           }
         >
-          https://github.com/YoCode35/Series
+          GitHub
         </a>
 
         <h4 className="project-description">Développement d’une Plateforme « de service de streaming en ligne de séries TV » (Symfony & MySQL).</h4>
@@ -66,7 +66,7 @@ export default function SeriesDetailsProject() {
 
             <li className="mt-6"><strong>2. Gestion des séries</strong>
               <ul className="ml-2 list-none">
-                <li>- CRUD (Création, Lecture, Mise à jour et Suppression) pour les séries.</li>
+                <li>- CRUD (Création, Affichage, Mise à jour et Suppression) pour les séries.</li>
                 <li>- Visualisation des détails d’une série : synopsis, casting, durée des épisodes.</li>
               </ul>
             </li>

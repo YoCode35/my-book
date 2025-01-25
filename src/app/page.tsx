@@ -3,15 +3,16 @@ import DotsRectangle from "../components/dots/DotsRectangle";
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
 import MyTodoListProject from "./pages/portfolio/projects/mytodolist/myTodoListProject";
+import StudentsProject from "./pages/portfolio/projects/students/studentsProject";
 import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
 import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
 
 export default function Home() {
   return (
-    <main className="bg-cover
-                    bg-no-repeat
-                    bg-center
-                    bg-[url('/img/colored_spots.png')]"
+    <main className=" bg-cover
+                      bg-no-repeat
+                      bg-center
+                      bg-[url('/img/colored_spots.png')]"
     >
 
       {/* Presentation Section */}
@@ -38,12 +39,13 @@ export default function Home() {
                           items-center 
                           gap-6 lg:gap-10"
           >
-            <div className="w-40 h-[2px] bg-[#1a2b3b] lg:w-80 lg:h-[3px] rounded-full"></div>
-            <div className="w-32 h-[2px] bg-[#162432] lg:w-72 lg:h-[3px] rounded-full"></div>
-            <div className="w-24 h-[2px] bg-[#121f2a] lg:w-64 lg:h-[3px] rounded-full"></div>
-            <div className="w-12 h-[2px] bg-[#0f1922] lg:w-48 lg:h-[3px] rounded-full"></div>
-            <div className="w-4 h-[2px] bg-[#0c131a] lg:w-32 lg:h-[3px] rounded-full"></div>
+            <div className="w-40 h-[2px] bg-[#1a2b3b] lg:w-80 lg:h-[3px] rounded-full opacity-60"></div>
+            <div className="w-32 h-[2px] bg-[#162432] lg:w-72 lg:h-[3px] rounded-full opacity-50"></div>
+            <div className="w-24 h-[2px] bg-[#121f2a] lg:w-64 lg:h-[3px] rounded-full opacity-40"></div>
+            <div className="w-12 h-[2px] bg-[#0f1922] lg:w-48 lg:h-[3px] rounded-full opacity-30"></div>
+            <div className="w-4 h-[2px] bg-[#0c131a] lg:w-32 lg:h-[3px] rounded-full opacity-20"></div>
           </div>
+
         </div>
       </div>
 
@@ -70,11 +72,11 @@ export default function Home() {
             <span className="inline-flex items-center">de moi
               <a href="/pages/about#about" className="relative group">
                 <span className=" relative
-                                text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
-                                left-[52%] sm:left-[45%]
-                                text-gray-300
-                                text-center
-                                top-6 sm:top-4"
+                                  text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
+                                  left-[52%] sm:left-[45%]
+                                  text-gray-300
+                                  text-center
+                                  top-6 sm:top-4"
                 >
                   + d’infos
                 </span>
@@ -133,6 +135,8 @@ export default function Home() {
             rows={3}
             dotsPerRow={10}
             dotColor="#fff000"
+            width="20%"
+            height="45px"
           />
 
         </div>
@@ -307,6 +311,7 @@ export default function Home() {
         </div>
 
         <MyTodoListProject />
+        <StudentsProject />
         <SeriesProject />
         <AuctionProject />
 
