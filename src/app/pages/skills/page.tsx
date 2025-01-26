@@ -64,7 +64,7 @@ export default function Skills() {
                         <li>- Intégrer des tests automatisés dans mon workflow</li>
                         <li>- Mettre en place un système de CI/CD robuste</li>
                         <li>- Utiliser des outils de build modernes comme Vite</li>
-                        <li>- Continuer à utiliser TypeScript (la sécurité de typage change tout)</li>
+                        <li>- Continuer à utiliser TypeScript</li>
                     </ul>
                 </div>
             </div>

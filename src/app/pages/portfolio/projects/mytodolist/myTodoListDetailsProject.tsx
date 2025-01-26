@@ -59,12 +59,11 @@ export default function MyTodoListDetailsProject() {
             alt="Architecture de l'application WebApp"
             width={700}
             height={809}
-            className="w-full mx-auto rounded-xl"
+            className="img_portfolio"
             priority
             style={{ maxWidth: "700px" }}
           />
 
-          <br />
           <span className="block mb-6">- Base de données : MySQL avec une gestion relationnelle des utilisateurs et des tâches</span>
 
           <Image
@@ -72,7 +71,7 @@ export default function MyTodoListDetailsProject() {
             alt="Modèle conceptuel de données"
             width={700}
             height={875}
-            className="w-full mx-auto rounded-xl mb-6"
+            className="img_portfolio"
             priority
             style={{ maxWidth: "700px" }}
           />
@@ -82,7 +81,7 @@ export default function MyTodoListDetailsProject() {
             alt="Modèle logique de données"
             width={700}
             height={489}
-            className="w-full mx-auto rounded-xl mb-6"
+            className="img_portfolio"
             priority
             style={{ maxWidth: "700px" }}
           />
@@ -92,7 +91,7 @@ export default function MyTodoListDetailsProject() {
             alt="Modèle physique de données"
             width={700}
             height={563}
-            className="w-full mx-auto rounded-xl mb-6"
+            className="img_portfolio"
             priority
             style={{ maxWidth: "700px" }}
           />

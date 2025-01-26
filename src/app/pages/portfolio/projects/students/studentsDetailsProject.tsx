@@ -60,7 +60,7 @@ export default function StudentsDetailsProject() {
               alt="Diagramme de cas d'utilisation présentant une vision globale des fonctions attendues"
               width={790}
               height={363}
-              className="w-full mx-auto rounded-xl border border-white mb-6"
+              className="img_portfolio border border-white mb-6"
               priority
               style={{ maxWidth: "790px" }}
         />
@@ -70,7 +70,7 @@ export default function StudentsDetailsProject() {
               alt="Diagramme de classes présentant les entités et les relations entre les classes"
               width={790}
               height={363}
-              className="w-full mx-auto rounded-xl border border-white mb-6"
+              className="img_portfolio border border-white mb-6"
               priority
               style={{ maxWidth: "790px" }}
         />
@@ -110,7 +110,7 @@ export default function StudentsDetailsProject() {
           alt="Diagramme du processus de gestion des sorties"
           width={790}
           height={363}
-          className="w-full mx-auto rounded-xl border border-white mb-6"
+          className="img_portfolio border border-white mb-6"
           priority
           style={{ maxWidth: "790px" }}
         />
@@ -120,7 +120,7 @@ export default function StudentsDetailsProject() {
           alt="Diagramme du processus de gestion des sorties"
           width={790}
           height={363}
-          className="w-full mx-auto rounded-xl border border-white mb-6"
+          className="img_portfolio border border-white mb-6"
           priority
           style={{ maxWidth: "790px" }}
         />
@@ -133,7 +133,57 @@ export default function StudentsDetailsProject() {
             <li>- <strong>Performances :</strong> optimisation des requêtes grâce aux relations et jointures avec Doctrine.</li>
           </ul>
         </div>
-        
+
+        <Image
+          src="/img/students/ref_screen_manage-cities.png"
+          alt="Formulaire de gestion des villes"
+          width={700}
+          height={300}
+          className="img_portfolio border border-white mb-6"
+          priority
+          style={{ maxWidth: "700px" }}
+        />
+
+        <Image
+          src="/img/students/ref_screen_manage-campus.png"
+          alt="Formulaire de gestion des campus"
+          width={700}
+          height={300}
+          className="img_portfolio border border-white mb-6"
+          priority
+          style={{ maxWidth: "700px" }}
+        />
+
+        <Image
+          src="/img/students/ref_screen_manage-places.png"
+          alt="Formulaire de gestion des lieux de sorties"
+          width={700}
+          height={300}
+          className="img_portfolio border border-white mb-6"
+          priority
+          style={{ maxWidth: "700px" }}
+        />
+
+        <Image
+          src="/img/students/ref_screen_search-and-student-outings-list-answer.png"
+          alt="Affichage de la liste des sorties"
+          width={700}
+          height={472}
+          className="img_portfolio border border-white mb-6"
+          priority
+          style={{ maxWidth: "700px" }}
+        />
+
+        <Image
+          src="/img/students/ref_screen_profil-account.png"
+          alt="Page de gestion du compte des données personnelles"
+          width={700}
+          height={472}
+          className="img_portfolio border border-white mb-6"
+          priority
+          style={{ maxWidth: "700px" }}
+        />
+
       </section>
   );
 }

@@ -30,7 +30,6 @@ export default function Home() {
                         px-8"
           >
             <span className="block">&quot;Explorez ici une sélection de mes travaux les plus significatifs</span>
-            <span className="block text-gray-400 text-[13px] lg:text-[16px] xl:text-[18px] 3xl:text-[20px] 4xl:text-[25px]">(Mise en ligne en cours de plusieurs projets)</span>
             <span className="block">Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;</span>
           </p>
 

@@ -89,21 +89,21 @@ export default function SeriesDetailsProject() {
         </div>
 
         <Image
-          src="/img/ref_series-list.png"
+          src="/img/series/ref_series-list.png"
           alt="Visuel de la page référençant une liste de séries"
           width={790}
           height={363}
-          className="w-full mx-auto rounded-xl border border-white mb-6"
+          className="img_portfolio border border-white mb-6"
           priority
           style={{ maxWidth: "790px" }}
         />
 
         <Image
-          src="/img/ref_series_details.png"
+          src="/img/series/ref_series_details.png"
           alt="Visuel de la page présentant une série"
           width={790}
           height={363}
-          className="w-full mx-auto rounded-xl border border-white"
+          className="img_portfolio border border-white"
           priority
           style={{ maxWidth: "790px" }}
         />

@@ -8,7 +8,7 @@ const StudentsProject = () => {
         title="Plateforme d’organisation d’évènements d’étudiants"
         date="Février 2024"
         technologies="Symfony & MySQL"
-        imageUrl="/img/ref_screen_home.png"
+        imageUrl="/img/students/ref_screen_home.png"
         imageAlt="Image du projet de plateforme d'enchères"
         projectLink="https://github.com/YoCode35/sortir.com"
         moreInfoLink="/pages/portfolio#students"
