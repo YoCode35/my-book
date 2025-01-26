@@ -139,7 +139,7 @@ a {
   transform: scaleY(0.8);
 }
 
-.link-project{
+.link-project-home { 
   @apply  text-[3.5vw] sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.1vw] 4xl:text-[1vw]
           text-LinkInactive 
           hover:text-LinkHover 
@@ -152,6 +152,12 @@ a {
 /* Fin */
 
 /* Portfolio */
+.project-section {
+  @apply  px-4 sm:px-8 md:px-16 2xl:px-32
+          lg:pt-10 xl:pt-10 2xl:pt-10                                        
+          mx-auto;
+}
+
 .title-project {
   color: #4d94ff;
   font-family: 'Clash-display-variable', sans-serif;
@@ -159,6 +165,25 @@ a {
   font-weight: 600;
   @apply  text-[6vw] sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[32px] 2xl:text-[45px] 4xl:text-[60px]
           mb-2;
+}
+
+.link-project-portfolio {
+  @apply  text-LinkInactive 
+          hover:text-LinkHover 
+          hover:underline
+          text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+          items-center
+          flex flex-col
+          mb-12
+}
+
+.paragraph-sub-title {
+  @apply  text-colorChart
+          text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+          underline
+          block 
+          mb-2
+          mt-4
 }
 
 h4.project-description {

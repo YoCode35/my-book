@@ -7,9 +7,7 @@ export default function MyTodoListDetailsProject() {
   return (
 
     // MyTodoList Section
-    <section id="mytodolist" className="px-4 sm:px-8 md:px-16 2xl:px-32
-                                        lg:pt-10 xl:pt-10 2xl:pt-10                                        
-                                        mx-auto"
+    <section id="mytodolist" className="project-section"
       >
         <h3 className="title-project">[Projet MyTodoList]</h3>
 
@@ -17,20 +15,14 @@ export default function MyTodoListDetailsProject() {
           href="https://www.mytodolist.tech"
           target="_blank"
           rel="noopener noreferrer"
-          className={`text-LinkInactive 
-                      hover:text-LinkHover 
-                      hover:underline
-                      text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-                      items-center
-                      flex flex-col
-                      mb-12`}
+          className={`link-project-portfolio`}
         >
           Web
         </a>
 
         <h4 className="project-description">Développement d’une application PWA (Progressive Web App) Cross Platform avec (Flutter & PHP/MySQL).</h4>
 
-        <p className="unordered-list text-white mb-12">
+        <p className="unordered-list mb-12">
           1. Planification et Conception
           <br /><br />
           - Objectifs du projet : Application multiplateforme (Mobile & Web)
@@ -44,7 +36,7 @@ export default function MyTodoListDetailsProject() {
           - Contraintes et risques : Optimisations spécifiques au développement multiplateforme, sécurité des données (RGPD), scalabilité
         </p>
 
-        <p className="unordered-list text-white mb-12">
+        <p className="unordered-list mb-12">
           2. Spécifications techniques et architecture de l’application
           <br /><br />
           - Front-end : Flutter (Progressive Web Application)
@@ -100,7 +92,7 @@ export default function MyTodoListDetailsProject() {
           - Déploiement : Hébergement mutualisé, serveur web (Apache/Nginx), certificats SSL/TLS
         </p>
 
-        <p className="unordered-list text-white mb-12">
+        <p className="unordered-list mb-12">
           3. Développement Back-End
           <br /><br />
           - Utilisateur : Inscription/connexion (+ Firebase Authentication)
@@ -114,7 +106,7 @@ export default function MyTodoListDetailsProject() {
           - Sécurité
         </p>
 
-        <p className="unordered-list text-white mb-12">
+        <p className="unordered-list mb-12">
           4. Développement Front-End
           <br /><br />
           - UI/UX (Prototypage) : Balsamiq et Figma
@@ -134,7 +126,7 @@ export default function MyTodoListDetailsProject() {
           - Sécurité
         </p>
 
-        <p className="unordered-list text-white mb-12">
+        <p className="unordered-list mb-12">
           5. Sécurité
           <br /><br />
           - Gestion des rôles
@@ -148,7 +140,7 @@ export default function MyTodoListDetailsProject() {
           - Cryptage des mots de passes
         </p>
 
-        <p className="unordered-list text-white mb-12">
+        <p className="unordered-list mb-12">
           6. Tests
           <br /><br />
           - Tests unitaires

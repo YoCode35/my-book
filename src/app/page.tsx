@@ -6,6 +6,7 @@ import MyTodoListProject from "./pages/portfolio/projects/mytodolist/myTodoListP
 import StudentsProject from "./pages/portfolio/projects/students/studentsProject";
 import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
 import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
+import LicProject from './pages/portfolio/projects/lic/licProject';
 
 export default function Home() {
   return (
@@ -146,11 +147,14 @@ export default function Home() {
 
       {/* Skills Section */}
       <section id="skills" className="flex flex-col 
-                                  justify-start 
-                                  items-center 
-                                  min-h-[100%]"
+                                      justify-start 
+                                      items-center 
+                                      min-h-[100%]"
       >
-        <div className="flex items-center mt-[2%] sm:mt-[2%]">
+        <div className="flex 
+                        items-center 
+                        mt-[2%] sm:mt-[2%]"
+        >
           <h2 className=" title-home-section 
                           leading-tight"
           >Skills</h2>
@@ -312,17 +316,18 @@ export default function Home() {
         <StudentsProject />
         <SeriesProject />
         <AuctionProject />
+        <LicProject />
 
         {/* SEPARATOR */}
         <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
 
         {/* Upcoming sections */}
         <section className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
-                        text-white 
-                        w-full 
-                        text-center 
-                        mb-48
-                        min-h-[100%]"
+                            text-white 
+                            w-full 
+                            text-center 
+                            mb-48
+                            min-h-[100%]"
         >
           <p className="font-rubik                         
                         text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px] 2xl:text-[22px] 3xl:text-[24px] 4xl:text-[30px]
@@ -362,7 +367,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
               </svg>
-              {/* LinkedIn Logo */}
+              {/* LinkedIn Logo*/}
               <Image
                 src="/img/linkedin_logo.png"
                 alt="Logo LinkedIn"

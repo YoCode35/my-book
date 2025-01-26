@@ -7,9 +7,7 @@ export default function StudentsDetailsProject() {
   return (
 
     // Students Section
-    <section id="students" className="px-4 sm:px-8 md:px-16 2xl:px-32
-                                    lg:pt-10 xl:pt-10 2xl:pt-10                                        
-                                    mx-auto"
+    <section id="students" className="project-section"
       >
         <h3 className="title-project mt-6">[Projet Sortir.com]</h3>
 
@@ -17,13 +15,7 @@ export default function StudentsDetailsProject() {
           href="https://github.com/YoCode35/sortir.com"
           target="_blank"
           rel="noopener noreferrer"
-          className={`text-LinkInactive 
-                      hover:text-LinkHover 
-                      hover:underline
-                      text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-                      items-center
-                      flex flex-col
-                      mb-12`
+          className={`link-project-portfolio`
           }
         >
           GitHub
@@ -31,7 +23,7 @@ export default function StudentsDetailsProject() {
 
         <h4 className="project-description">Développement d’une plateforme d’organisation d’évènements d’étudiants</h4>
 
-        <p className="unordered-list text-white mb-6">
+        <p className="unordered-list mb-6">
           <span className="text-colorChart underline block mb-2">Problématique</span>
           Aujourd’hui, le Bureau des élèves (BDE) qui propose des activités hors du temps de formation ne communique que par affichage papier
           • Temps important pour la création et la pose des affiches
@@ -39,12 +31,12 @@ export default function StudentsDetailsProject() {
           • L’inscription et l’organisation des activités sont compliquées et incombent aux membres du BDE
         </p>
 
-        <p className="unordered-list text-white mb-6">
+        <p className="unordered-list mb-6">
           <span className="text-colorChart underline block mb-2">Résumé du projet</span>
           Développer une plateforme web destinée aux stagiaires en formation ainsi qu’aux anciens stagiaires et permettant l’organisation de sorties sur le temps hors formation
         </p>
 
-        <div className="unordered-list text-white mb-6">
+        <div className="unordered-list mb-6">
           <span className="text-colorChart underline block mb-2">Technologies utilisées</span>
           <ul className="ml-0 list-none">
             <li>- <strong>Back-end :</strong> Symfony pour la création de l’architecture MVC et des fonctionnalités métier.</li>

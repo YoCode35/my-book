@@ -44,7 +44,7 @@ const ProjectCard = ({
       >
         {/* Image */}
         <div className="relative
-                        w-full xl:w-1/2 max-w-[700px]"
+                        w-full xl:w-1/2"
         >
           <a href={projectLink} target="_blank" rel="noopener noreferrer">
             <Image
@@ -52,7 +52,7 @@ const ProjectCard = ({
               alt={imageAlt}
               width={imageWidth}
               height={imageHeight}
-              className="w-full h-auto mx-auto rounded-3xl"
+              className="h-auto mx-auto rounded-3xl"
               priority
               //style={{ maxWidth: "800px" }}
             />
@@ -111,7 +111,7 @@ const ProjectCard = ({
             href={projectLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="link-project"
+            className="link-project-home"
           >
             {linkLabel}
           </a>

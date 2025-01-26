@@ -7,9 +7,7 @@ export default function SeriesDetailsProject() {
   return (
 
     // Series Section
-    <section id="series" className="px-4 sm:px-8 md:px-16 2xl:px-32
-                                    lg:pt-10 xl:pt-10 2xl:pt-10                                        
-                                    mx-auto"
+    <section id="series" className="project-section"
       >
         <h3 className="title-project mt-6">[Projet Series]</h3>
 
@@ -17,13 +15,7 @@ export default function SeriesDetailsProject() {
           href="https://github.com/YoCode35/Series"
           target="_blank"
           rel="noopener noreferrer"
-          className={`text-LinkInactive 
-                      hover:text-LinkHover 
-                      hover:underline
-                      text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-                      items-center
-                      flex flex-col
-                      mb-12`
+          className={`link-project-portfolio`
           }
         >
           GitHub

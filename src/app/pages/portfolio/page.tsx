@@ -6,6 +6,7 @@ import MyTodoListDetailsProject from "./projects/mytodolist/myTodoListDetailsPro
 import StudentsDetailsProject from "../../pages/portfolio/projects/students/studentsDetailsProject";
 import SeriesDetailsProject from "./projects/series/seriesDetailsProject";
 import AuctionsDetailsProject from "./projects/auctions/auctionsDetailsProject";
+import LicDetailsProject from "./projects/lic/licDetailsProject";
 
 export default function Portfolio() {
   const dotsPerRow = useDotsPerRow();
@@ -66,6 +67,18 @@ export default function Portfolio() {
       />
 
       <AuctionsDetailsProject />
+
+      {/* SEPARATOR */}
+      <div className="min-h-[60px]"></div>
+
+      <DotsRectangle
+        className="w-full relative h-[55px] z-1"
+        rows={3}
+        dotsPerRow={dotsPerRow}
+        dotColor="#fff000"
+      />
+
+      <LicDetailsProject />
       
     </main>
   );
