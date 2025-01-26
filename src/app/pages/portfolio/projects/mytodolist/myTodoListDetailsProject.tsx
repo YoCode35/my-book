@@ -39,9 +39,7 @@ export default function MyTodoListDetailsProject() {
           <br />
           - Technique : Architecture de l’application, flux de données, infrastructure et déploiement
           <br />
-          - Priorités : Utilisateurs, fonctionnalités et interface
-          <br />
-          - UI/UX : Interface utilisateur fluide et intuitive
+          - UI/UX : Interface utilisateur intuitive et ergonomique
           <br />
           - Contraintes et risques : Optimisations spécifiques au développement multiplateforme, sécurité des données (RGPD), scalabilité
         </p>
@@ -49,13 +47,56 @@ export default function MyTodoListDetailsProject() {
         <p className="unordered-list text-white mb-12">
           2. Spécifications techniques et architecture de l’application
           <br /><br />
-          - Front-end : Flutter
+          - Front-end : Flutter (Progressive Web Application)
           <br />
-          - Back-end : PHP (API RESTful)
+          - Back-end : PHP/MySQL (APIs sécurisées via HTTPS)
           <br />
-          - Développement en couches (IHM, Métier, Accès Data, Persistance Data)
+          <span className="block mb-6">- Développement en couches (IHM, Métier, Accès aux données, Persistance des données)</span>
           <br />
-          - Base de données : MySQL pour une gestion relationnelle des utilisateurs et des tâches
+
+          <Image
+            src="/img/mytodolist/Architecture_Webapp.png"
+            alt="Architecture de l'application WebApp"
+            width={700}
+            height={809}
+            className="w-full mx-auto rounded-xl"
+            priority
+            style={{ maxWidth: "700px" }}
+          />
+
+          <br />
+          <span className="block mb-6">- Base de données : MySQL avec une gestion relationnelle des utilisateurs et des tâches</span>
+
+          <Image
+            src="/img/mytodolist/mcd.png"
+            alt="Modèle conceptuel de données"
+            width={700}
+            height={875}
+            className="w-full mx-auto rounded-xl mb-6"
+            priority
+            style={{ maxWidth: "700px" }}
+          />
+
+          <Image
+            src="/img/mytodolist/mld.png"
+            alt="Modèle logique de données"
+            width={700}
+            height={489}
+            className="w-full mx-auto rounded-xl mb-6"
+            priority
+            style={{ maxWidth: "700px" }}
+          />
+
+          <Image
+            src="/img/mytodolist/mpd.png"
+            alt="Modèle physique de données"
+            width={700}
+            height={563}
+            className="w-full mx-auto rounded-xl mb-6"
+            priority
+            style={{ maxWidth: "700px" }}
+          />
+
           <br />
           - Déploiement : Hébergement mutualisé, serveur web (Apache/Nginx), certificats SSL/TLS
         </p>
@@ -65,13 +106,13 @@ export default function MyTodoListDetailsProject() {
           <br /><br />
           - Utilisateur : Inscription/connexion (+ Firebase Authentication)
           <br />
-          - Compte : Réinitialisation sécurisée e.mail/mot de passe
+          - Compte : Gestion de compte, réinitialisation sécurisée e.mail/mot de passe
           <br />
-          - Tâches/Listes : Endpoints API pour CRUD (Create, Read, Update, Delete)
+          - Tâches/Listes : API CRUD (Create, Read, Update, Delete)
           <br />
           - Notifications : Inscription, mise à jour e.mail, réinitialisation mot de passe
           <br />
-          - Sécurité : Hachage des mots de passe, validation des entrées utilisateurs
+          - Sécurité
         </p>
 
         <p className="unordered-list text-white mb-12">
@@ -89,9 +130,9 @@ export default function MyTodoListDetailsProject() {
           <br />
           - Écrans d’inscription/connexion
           <br />
-          - Gestion des tâches et des listes
+          - Tâches et listes
           <br />
-          - Validation des entrées utilisateur
+          - Sécurité
         </p>
 
         <p className="unordered-list text-white mb-12">
@@ -122,19 +163,6 @@ export default function MyTodoListDetailsProject() {
           - Tests utilisateurs
         </p>
 
-        <p className="unordered-list text-white mb-12">
-          7. Architecture du projet
-        </p>
-
-        <Image
-          src="/img/Architecture_Webapp.png"
-          alt="Architecture de l'application WebApp"
-          width={1200}
-          height={800}
-          className="w-full mx-auto rounded-xl"
-          priority
-          style={{ maxWidth: "800px" }}
-        />
       </section>
   );
 }

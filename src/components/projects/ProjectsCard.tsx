@@ -10,6 +10,9 @@ interface ProjectProps {
   projectLink: string;
   moreInfoLink: string;
   linkLabel: string;
+  imageWidth?: number;
+  imageHeight?: number;
+
 }
 
 const ProjectCard = ({
@@ -21,6 +24,8 @@ const ProjectCard = ({
   projectLink,
   moreInfoLink,
   linkLabel,
+  imageWidth = 0,
+  imageHeight = 0,
 }: ProjectProps) => {
   return (
     <section className="flex 
@@ -39,17 +44,17 @@ const ProjectCard = ({
       >
         {/* Image */}
         <div className="relative
-                        w-full xl:w-1/2 max-w-[600px]"
+                        w-full xl:w-1/2 max-w-[700px]"
         >
           <a href={projectLink} target="_blank" rel="noopener noreferrer">
             <Image
               src={imageUrl}
               alt={imageAlt}
-              width={789}
-              height={360}
+              width={imageWidth}
+              height={imageHeight}
               className="w-full h-auto mx-auto rounded-3xl"
               priority
-              style={{ maxWidth: "789px" }}
+              //style={{ maxWidth: "800px" }}
             />
           </a>
         </div>

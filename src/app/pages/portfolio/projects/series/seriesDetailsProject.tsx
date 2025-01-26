@@ -59,7 +59,7 @@ export default function SeriesDetailsProject() {
                 <li>- Fonctionnalités utilisateur :</li>
                 <ul className="ml-12 list-disc">
                   <li>Mise à jour du profil.</li>
-                  <li>Réinitialisation de mot de passe via lien sécurisé.</li>
+                  <li>Réinitialisation de mot de passe via un lien sécurisé.</li>
                 </ul>
               </ul>
             </li>

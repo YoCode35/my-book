@@ -3,7 +3,7 @@ import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 
 const StudentsProject = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full">
+    <section className="section-container">
       <ProjectCard
         title="Plateforme d’organisation d’évènements d’étudiants"
         date="Février 2024"
@@ -13,29 +13,31 @@ const StudentsProject = () => {
         projectLink="https://github.com/YoCode35/sortir.com"
         moreInfoLink="/pages/portfolio#students"
         linkLabel="GitHub"
+        imageWidth={1024}
+        imageHeight={529}
       />
 
-{/* DotsRectangle spécifique à cette page */}
-<div
-  className="w-[40%] lg:w-[100%] xl:w-[20%]
-            xl:flex 
-            xl:justify-start 
-            w-full 
-            max-w-[320px] 
-            mt-8 xl:mt-28 2xl:mt-5 
-            relative 
-            mx-auto 
-            xl:ml-0"
->
-  <DotsRectangle
-    className="rotate-90"
-    rows={3}
-    dotsPerRow={10}
-    dotColor="#fff000"
-    width="80%"
-    height="45px"
-  />
-</div>
+      {/* DotsRectangle spécifique à cette page */}
+      <div
+        className="w-[100%] sm:w-[40%] xl:w-[20%]
+                  xl:flex 
+                  xl:justify-start 
+                  w-full 
+                  xl:max-w-[320px] 
+                  mt-8 xl:mt-40 2xl:mt-32 
+                  relative 
+                  mx-auto 
+                  xl:ml-[-40px]"
+      >
+        <DotsRectangle
+          className="rotate-0 xl:rotate-90"
+          rows={3}
+          dotsPerRow={10}
+          dotColor="#fff000"
+          width="100%"
+          height="45px"
+        />
+      </div>
 
     </section>
   );

@@ -3,7 +3,7 @@ import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 
 const AuctionsProject = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full">
+    <section className="section-container">
       <ProjectCard
         title="Plateforme d’enchères"
         date="Décembre 2023"
@@ -13,6 +13,8 @@ const AuctionsProject = () => {
         projectLink="https://github.com/YoCode35/Projet_Encheres"
         moreInfoLink="/pages/portfolio#auctions"
         linkLabel="GitHub"
+        imageWidth={792}
+        imageHeight={800}
       />
 
       {/* DotsRectangle spécifique */}

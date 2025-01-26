@@ -3,16 +3,18 @@ import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 
 const MyTodoListProject = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full mt-12 sm:mt-8 2xl:mt-4">
+    <section className="section-container">
       <ProjectCard
         title="MyTodoList"
         date="Octobre 2024"
         technologies="Flutter & MySQL"
-        imageUrl="/img/ref_mytodolist.png"
+        imageUrl="/img/mytodolist/ref_mytodolist.png"
         imageAlt="Image de mon projet d'application MyTodoList"
         projectLink="https://www.mytodolist.tech"
         moreInfoLink="/pages/portfolio#mytodolist"
         linkLabel="Web"
+        imageWidth={789}
+        imageHeight={360}
       />
 
       {/* DotsRectangle spécifique */}
@@ -25,7 +27,8 @@ const MyTodoListProject = () => {
                   mt-8 xl:mt-10 2xl:mt-5 
                   relative 
                   mx-auto 
-                  xl:ml-48"
+                  xl:ml-48
+                  mb-24"
       >
         <DotsRectangle
           className="w-full"

@@ -3,7 +3,7 @@ import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 
 const SeriesProject = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full mt-12 sm:mt-8 2xl:mt-4">
+    <section className="section-container">
       <ProjectCard
         title="Series"
         date="Janvier 2024"
@@ -13,22 +13,24 @@ const SeriesProject = () => {
         projectLink="https://github.com/YoCode35/Series"
         moreInfoLink="/pages/portfolio#series"
         linkLabel="GitHub"
+        imageWidth={1024}
+        imageHeight={471}
       />
 
-      {/* DotsRectangle spécifique */}
+      {/* DotsRectangle spécifique à cette page */}
       <div
-        className="xl:w-full sm:w-[40%] lg:w-[100%] 
+        className="w-[100%] sm:w-[40%] xl:w-[20%]
                   xl:flex 
                   xl:justify-start 
                   w-full 
-                  max-w-[320px] 
-                  mt-8 xl:mt-10 2xl:mt-5 
+                  xl:max-w-[320px] 
+                  mt-8 xl:mt-28 2xl:mt-32                   
                   relative 
                   mx-auto 
-                  xl:ml-48"
+                  xl:ml-[850px]"
       >
         <DotsRectangle
-          className="w-full"
+          className="rotate-0 xl:rotate-90"
           rows={3}
           dotsPerRow={10}
           dotColor="#fff000"

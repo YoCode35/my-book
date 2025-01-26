@@ -209,7 +209,6 @@ export default function Home() {
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>PostgreSQL</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>MySQL</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>SQL Server</span></div>
                   <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Sécurité Web et Web Mobile</span></div>

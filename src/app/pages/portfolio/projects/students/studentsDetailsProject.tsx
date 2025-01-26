@@ -133,7 +133,7 @@ export default function StudentsDetailsProject() {
             <li>- <strong>Performances :</strong> optimisation des requêtes grâce aux relations et jointures avec Doctrine.</li>
           </ul>
         </div>
-
+        
       </section>
   );
 }
