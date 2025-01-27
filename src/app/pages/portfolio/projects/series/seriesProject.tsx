@@ -27,7 +27,7 @@ const SeriesProject = () => {
                     mt-8 xl:mt-28 2xl:mt-40                   
                     relative 
                     mx-auto 
-                    xl:ml-[700px] 2xl:ml-[800px] 3xl:ml-[1100px] 4xl:ml-[1550px]"
+                    xl:ml-[800px] 2xl:ml-[800px] 3xl:ml-[1100px] 4xl:ml-[1550px]"
       >
         <DotsRectangle
           className="rotate-0 xl:rotate-90"
