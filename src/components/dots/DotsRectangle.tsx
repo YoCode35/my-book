@@ -1,5 +1,5 @@
 type DotsRectangleProps = {
-  className?: string; // facultatif
+  className?: string;
   dotColor?: string;
   rows?: number;
   dotsPerRow?: number;

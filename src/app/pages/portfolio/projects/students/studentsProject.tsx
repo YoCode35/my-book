@@ -18,7 +18,7 @@ const StudentsProject = () => {
         imageClassName="3xl:mt-24 4xl:mt-48"
       />
 
-      {/* DotsRectangle spécifique à cette page */}
+      {/* DotsRectangle */}
       <div
         className="w-[100%] sm:w-[40%] xl:w-[20%]
                   xl:flex 

@@ -17,7 +17,7 @@ const SeriesProject = () => {
         imageHeight={471}
       />
 
-      {/* DotsRectangle spécifique à cette page */}
+      {/* DotsRectangle */}
       <div
         className=" w-[100%] sm:w-[40%] xl:w-[20%]
                     xl:flex 

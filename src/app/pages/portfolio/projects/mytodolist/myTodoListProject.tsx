@@ -17,7 +17,7 @@ const MyTodoListProject = () => {
         imageHeight={360}
       />
 
-      {/* DotsRectangle spécifique */}
+      {/* DotsRectangle */}
       <div
         className=" xl:w-full sm:w-[40%] lg:w-[100%] 
                     xl:flex 

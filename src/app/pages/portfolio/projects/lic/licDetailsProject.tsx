@@ -19,7 +19,7 @@ export default function LicDetailsProject() {
         rel="noopener noreferrer"
         className={`link-project-portfolio`}
       >
-        {/*Git*/}
+        {/*Github à venir*/}
       </a>
 
       <h4 className="project-description">

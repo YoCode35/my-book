@@ -18,16 +18,14 @@ export default function Home() {
   useEffect(() => {
     const updateWidth = () => {
       if (window.innerWidth < 640) {
-        setRectWidth("60%"); // Largeur pour mobile (< 640px)
+        setRectWidth("60%");
       } else {
-        setRectWidth("20%"); // Largeur par défaut
+        setRectWidth("20%");
       }
     };
-
-    updateWidth(); // Initialisation
+    updateWidth();
     window.addEventListener("resize", updateWidth);
-
-    return () => window.removeEventListener("resize", updateWidth); // Nettoyage
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   return (
@@ -141,7 +139,7 @@ export default function Home() {
             Je m’engage pleinement dans la conception d’outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l’expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d’améliorer la vie quotidienne.
           </p>
 
-          {/* Ajoutez ici DotsRectangle avec la variable rectWidth */}
+          {/* DotsRectangle */}
           <DotsRectangle
             className=" relative 
                         mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%] 

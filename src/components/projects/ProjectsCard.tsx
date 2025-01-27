@@ -59,7 +59,6 @@ const ProjectCard = ({
                           w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[90%]
                           mt-12 xl:mt-16 2xl:mt-24"
               priority
-              //style={{ maxWidth: "800px" }}
             />
           </a>
         </div>

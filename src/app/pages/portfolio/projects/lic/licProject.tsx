@@ -3,23 +3,18 @@ import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 
 const LicProject = () => {
-  const [dotsPerRow, setDotsPerRow] = useState(10); // Par défaut, 10 points
-
-  // Détecte si la résolution est supérieure à 1280px et ajuste dotsPerRow
+    
+  const [dotsPerRow, setDotsPerRow] = useState(10);
   useEffect(() => {
     const updateDotsPerRow = () => {
       if (window.innerWidth >= 1280) {
-        setDotsPerRow(50); // Résolution > 1280px : 15 points
+        setDotsPerRow(50);
       } else {
-        setDotsPerRow(10); // Résolution ≤ 1280px : 10 points
+        setDotsPerRow(10);
       }
     };
-
-    // Appelle la fonction au montage et lors du redimensionnement
     updateDotsPerRow();
     window.addEventListener("resize", updateDotsPerRow);
-
-    // Nettoie l'écouteur d'événements lors du démontage
     return () => window.removeEventListener("resize", updateDotsPerRow);
   }, []);
 
@@ -36,14 +31,14 @@ const LicProject = () => {
         linkLabel=""
         imageWidth={187}
         imageHeight={400}
-        imageClassName="w-[80%] sm:w-[50%] md:w-[70%] lg:w-[60%] xl:w-[20%] 
+        imageClassName="w-[60%] sm:w-[50%] md:w-[70%] lg:w-[60%] xl:w-[20%] 
                         mx-auto
                         mb-16 3xl:mb-24 4xl:mb-48"
         descriptionClassName="  xl:mr-[250px] xl:ml-[-450px] 3xl:ml-[-650px] 3xl:mr-[350px] 4xl:ml-[-700px] 4xl:mr-[700px]
                                 mt-[-50px] sm:mt-[0]"
       />
 
-      {/* DotsRectangle spécifique */}
+      {/* DotsRectangle */}
       <div
         className="xl:w-full sm:w-[40%] lg:w-[100%] 
                    xl:flex 
@@ -56,7 +51,7 @@ const LicProject = () => {
         <DotsRectangle
           className="w-full"
           rows={3}
-          dotsPerRow={dotsPerRow} // Utilise dotsPerRow dynamique
+          dotsPerRow={dotsPerRow}
           dotColor="#fff000"
           width="100%"
           height="45px"
