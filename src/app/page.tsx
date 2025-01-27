@@ -189,10 +189,11 @@ export default function Home() {
               {/* First Column */}
               <div className="text-center sm:text-left">
               <div className="skills-title">Front end</div>
+                  <div className="skills-text"><span>Flutter</span></div>
                   <div className="skills-text"><span>ReactJS</span></div>
                   <div className="skills-text"><span>NextJS</span></div>
-                  <div className="skills-text"><span>Angular</span></div>
-                  <div className="skills-text"><span>Flutter</span></div>
+                  <div className="skills-text"><span>TypeScript</span></div>
+                  <div className="skills-text"><span>Angular</span></div>                  
                   <div className="skills-text"><span>WordPress</span></div>                  
                   <div className="skills-text"><span>JavaScript</span></div>
                   <div className="skills-text"><span>CSS</span></div>
@@ -216,7 +217,12 @@ export default function Home() {
                   <div className="skills-text"><span>Java EE</span></div>
                   <div className="skills-text"><span>MySQL</span></div>
                   <div className="skills-text"><span>SQL Server</span></div>
-                  <div className="skills-text"><span>Sécurité Web et Web Mobile</span></div>
+
+                  <div className="pt-6">
+                  <div className="skills-subtitle">Sécurité Web</div>
+                  <div className="skills-text"><span>Protection des données sensibles</span></div>
+                  <div className="skills-text"><span>Prévention des vulnérabilités</span></div>
+                </div>
 
                 <div className="pt-6">
                   <div className="skills-subtitle">Modélisation & Conception</div>

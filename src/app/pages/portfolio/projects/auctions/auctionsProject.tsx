@@ -1,3 +1,5 @@
+"use client";
+
 import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 
@@ -15,6 +17,7 @@ const AuctionsProject = () => {
         linkLabel="GitHub"
         imageWidth={792}
         imageHeight={800}
+        imageClassName="xl:w-[40%]" 
       />
 
       {/* DotsRectangle spécifique à cette page */}
