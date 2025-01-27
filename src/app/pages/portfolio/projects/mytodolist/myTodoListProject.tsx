@@ -19,16 +19,15 @@ const MyTodoListProject = () => {
 
       {/* DotsRectangle spécifique */}
       <div
-        className="xl:w-full sm:w-[40%] lg:w-[100%] 
-                  xl:flex 
-                  xl:justify-start 
-                  w-full 
-                  max-w-[320px] 
-                  mt-8 xl:mt-10 2xl:mt-5 
-                  relative 
-                  mx-auto 
-                  xl:ml-48
-                  mb-24"
+        className=" xl:w-full sm:w-[40%] lg:w-[100%] 
+                    xl:flex 
+                    xl:justify-start 
+                    w-full 
+                    max-w-[320px] 
+                    mt-8 xl:mt-10 2xl:mt-20 
+                    relative 
+                    mx-auto 
+                    xl:ml-48 4xl:ml-[800px]"
       >
         <DotsRectangle
           className="w-full"

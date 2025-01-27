@@ -236,7 +236,6 @@ export default function Header() {
         <Image
           src="/img/moi.png"
           alt="Yoann GREGOIRE"
-          layout="responsive"
           width={684}
           height={684}
           style={{ objectFit: "contain" }}

@@ -1,11 +1,20 @@
+type DotsRectangleProps = {
+  className?: string; // facultatif
+  dotColor?: string;
+  rows?: number;
+  dotsPerRow?: number;
+  width?: string;
+  height?: string;
+};
+
 export default function DotsRectangle({
   className = "",
   dotColor = "#fff000",
   rows = 3,
   dotsPerRow = 10,
   width = "100%",
-  height = "w-full h-[55px] md:h-[45px]",
-}) {
+  height = "55px",
+}: DotsRectangleProps) {
   return (
     <div
       className={`w-full ${className}`}
@@ -28,4 +37,3 @@ export default function DotsRectangle({
   );
 }
 
-  

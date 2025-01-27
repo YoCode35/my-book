@@ -17,20 +17,20 @@ const AuctionsProject = () => {
         imageHeight={800}
       />
 
-      {/* DotsRectangle spécifique */}
+      {/* DotsRectangle spécifique à cette page */}
       <div
-        className="xl:w-full sm:w-[40%] lg:w-[100%] 
+        className="w-[100%] sm:w-[40%] xl:w-[20%]
                   xl:flex 
                   xl:justify-start 
                   w-full 
-                  max-w-[320px] 
-                  mt-8 xl:mt-10 2xl:mt-5 
+                  xl:max-w-[320px] 
+                  mt-8 xl:mt-40 2xl:mt-40 3xl:mt-48 
                   relative 
                   mx-auto 
-                  xl:ml-48"
+                  xl:ml-[200px] 3xl:ml-[400px]"
       >
         <DotsRectangle
-          className="w-full"
+          className="rotate-0 xl:rotate-90"
           rows={3}
           dotsPerRow={10}
           dotColor="#fff000"

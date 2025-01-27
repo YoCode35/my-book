@@ -19,15 +19,15 @@ const SeriesProject = () => {
 
       {/* DotsRectangle spécifique à cette page */}
       <div
-        className="w-[100%] sm:w-[40%] xl:w-[20%]
-                  xl:flex 
-                  xl:justify-start 
-                  w-full 
-                  xl:max-w-[320px] 
-                  mt-8 xl:mt-28 2xl:mt-32                   
-                  relative 
-                  mx-auto 
-                  xl:ml-[850px]"
+        className=" w-[100%] sm:w-[40%] xl:w-[20%]
+                    xl:flex 
+                    xl:justify-start 
+                    w-full 
+                    xl:max-w-[320px] 
+                    mt-8 xl:mt-28 2xl:mt-40                   
+                    relative 
+                    mx-auto 
+                    xl:ml-[700px] 2xl:ml-[800px] 3xl:ml-[1100px] 4xl:ml-[1550px]"
       >
         <DotsRectangle
           className="rotate-0 xl:rotate-90"

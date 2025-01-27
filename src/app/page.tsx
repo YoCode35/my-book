@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
 import Link from "next/link";
@@ -8,34 +11,46 @@ import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
 import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
 import LicProject from './pages/portfolio/projects/lic/licProject';
 
-export default function Home() {
-  return (
-    <main className=" bg-cover
-                      bg-no-repeat
-                      bg-center
-                      bg-[url('/img/colored_spots.png')]"
-    >
 
+export default function Home() {
+  const [rectWidth, setRectWidth] = useState("20%");
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (window.innerWidth < 640) {
+        setRectWidth("60%"); // Largeur pour mobile (< 640px)
+      } else {
+        setRectWidth("20%"); // Largeur par défaut
+      }
+    };
+
+    updateWidth(); // Initialisation
+    window.addEventListener("resize", updateWidth);
+
+    return () => window.removeEventListener("resize", updateWidth); // Nettoyage
+  }, []);
+
+  return (
+    <main className=" bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')]">
       {/* Presentation Section */}
-      <div className="relative 
-                      mb-6 sm:mb-24 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-32 3xl:mb-48 4xl:mb-64"
-      >
+      <div className="relative mb-6 sm:mb-6 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-0 3xl:mb-0 4xl:mb-64">
         <div className="mt-[20px] md:mt-[30px] lg:mt-[50px] 4xl:mt-[200px]">
           <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[18px] xl:text-[20px] 3xl:text-[23px] 4xl:text-[30px]
-                        leading-[2]
-                        text-center
-                        text-gray-300
+                        leading-[2] 
+                        text-center 
+                        text-gray-300 
                         mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-8 2xl:mb-8
                         italic 
-                        font-quicksand font-light 
+                        font-quicksand 
+                        font-light 
                         px-8"
           >
             <span className="block">&quot;Explorez ici une sélection de mes travaux les plus significatifs</span>
             <span className="block">Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;</span>
           </p>
-
           {/* Gray Lines */}
-          <div className="flex flex-col 
+          <div className="flex 
+                          flex-col 
                           items-center 
                           gap-6 lg:gap-10"
           >
@@ -45,44 +60,48 @@ export default function Home() {
             <div className="w-12 h-[2px] bg-[#0f1922] lg:w-48 lg:h-[3px] rounded-full opacity-30"></div>
             <div className="w-4 h-[2px] bg-[#0c131a] lg:w-32 lg:h-[3px] rounded-full opacity-20"></div>
           </div>
-
         </div>
       </div>
 
       {/* About Section */}
-      <section id="abouthome" className=" w-full
-                                      flex
-                                      justify-start relative
-                                      min-h-[100%]"
+      <section id="abouthome" className=" w-full 
+                                          flex justify-start 
+                                          relative 
+                                          min-h-[100%]"
       >
-        <div className="relative w-full
-                        flex flex-col md:flex-none
-                        sm:flex sm:flex-col md:block
-                        items-center md:items-start"
+        <div className="relative 
+                        w-full 
+                        flex 
+                        flex-col 
+                        md:flex-none sm:flex 
+                        sm:flex-col 
+                        md:block 
+                        items-center 
+                        md:items-start"
         >
-          <h2 className=" absolute
-                          title-home-section
-                          z-10
-                          top-[3%] sm:top-[3%] md:top-[3%] lg:top-[6%] xl:top-[0] 2xl:top-[5%] 3xl:top-[0] 4xl:top-[5%]
-                          left-[20%] sm:left-[30%] md:left-[40%] lg:left-[30%] xl:left-[35%] 3xl:left-[40%]
-                          leading-tight
+          <h2 className=" absolute 
+                          title-home-section 
+                          z-10 
+                          top-[3%] sm:top-[0] md:top-[3%] lg:top-[6%] xl:top-[0] 2xl:top-[5%] 3xl:top-[5%] 4xl:top-[5%]
+                          left-[15%] sm:left-[30%] md:left-[40%] lg:left-[30%] xl:left-[35%] 3xl:left-[40%] 
+                          leading-tight 
                           text-shadow"
           >
             <span className="block leading-none">À propos</span>
             <span className="inline-flex items-center">de moi
               <a href="/pages/about#about" className="relative group">
-                <span className=" relative
-                                  text-[3vw] sm:text-[2vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2rem] 
-                                  left-[52%] sm:left-[45%]
-                                  text-gray-300
-                                  text-center
-                                  top-6 sm:top-4"
+                <span className=" relative 
+                                  text-[3vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.8vw] xl:text-[1.2rem] 2xl:text-[1.6rem] 3xl:text-[2rem] 4xl:text-[2.5rem]
+                                  left-[50%] sm:left-[45%] lg:left-[75%] 2xl:left-[70%]
+                                  text-gray-300 
+                                  text-center 
+                                  top-6 sm:top-12 md:top-6 2xl:top-12 3xl:top-12"
                 >
                   + d’infos
                 </span>
                 <span className=" inline-block 
                                   text-[16vw] sm:text-[16vw] md:text-[12vw] lg:text-[12vw] xl:text-[12vw] 2xl:text-[12vw]
-                                  ml-0 sm:ml-16 lg:ml-48 xl:ml-48 2xl:ml-48
+                                  ml-0 sm:ml-0 lg:ml-48 xl:ml-48 2xl:ml-48 
                                   text-colorChart"
                 >
                   ➜
@@ -90,32 +109,27 @@ export default function Home() {
               </a>
             </span>
           </h2>
+
           <Image
             src="/img/img_a-propos.png"
             alt="À propos"
             width={750}
             height={750}
             className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[75%] 4xl:w-[100%]
-                        h-auto 
-                        mr-[10%] sm:mr-[10%] md:mr-[0]                      
-                        ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[4%] 3xl:ml-[7%]
-                        mt-[18%] sm:mt-[20%] md:mt-[6%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[7%] 3xl:mt-[7%]"
+                        h-auto mr-[10%] sm:mr-[10%] md:mr-[0] ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[4%] 3xl:ml-[7%]
+                        mt-[18%] sm:mt-[15%] md:mt-[6%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[7%] 3xl:mt-[7%]"
             style={{
               maxWidth: "750px",
             }}
           />
-          {/* Paragraph */}
+
           <p className="relative sm:relative md:absolute
                         w-full sm:w-[100%] md:w-[40%] lg:w-[50%] 3xl:w-[48%]
-                        mt-2 sm:mt-[0%] md:top-[35%] lg:top-[47%] xl:top-[52%] 3xl:top-[50%] 4xl:top-[50%]                      
+                        mt-2 sm:mt-[0%] md:top-[35%] lg:top-[47%] xl:top-[52%] 2xl:top-[56%] 3xl:top-[50%] 4xl:top-[50%] 
                         right-[0%] md:right-[4%] lg:right-[3%] 3xl:right-[2%] 4xl:right-[5%]
-                        px-6 sm:px-12 md:px-0
-                        text-white
-                        font-quicksand
-                        text-[3.7vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-                        text-justify"
-          >
-            <span className=" mb-0.5
+                        px-6 sm:px-12 md:px-0 text-white font-quicksand text-[3.7vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+                        text-justify">
+            <span className=" mb-0.5 
                               block 
                               break-words 
                               whitespace-normal sm:whitespace-normal md:whitespace-normal 
@@ -127,29 +141,29 @@ export default function Home() {
             Je m’engage pleinement dans la conception d’outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l’expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d’améliorer la vie quotidienne.
           </p>
 
+          {/* Ajoutez ici DotsRectangle avec la variable rectWidth */}
           <DotsRectangle
-            className=" relative
-                        w-[40%] sm:w-[40%] md:w-[40%] lg:w-[20%] xl:w-[20%] 2xl:w-[30%]                  
-                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%]
+            className=" relative 
+                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%] 
                         ml-auto"
             rows={3}
             dotsPerRow={10}
             dotColor="#fff000"
-            width="20%"
+            width={rectWidth}
             height="45px"
           />
-
         </div>
       </section>
 
       {/* SEPARATOR */}
-      <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[60px] 2xl:min-h-[160px]"></div>
+      <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[60px] 2xl:min-h-[160px] 3xl:min-h-[50px]"></div>
 
       {/* Skills Section */}
-      <section id="skills" className="flex flex-col 
-                                      justify-start 
+      <section id="skills" className="flex 
+                                      flex-col 
                                       items-center 
-                                      min-h-[100%]"
+                                      min-h-[100%] 
+                                      px-4 sm:px-8 lg:px-16 xl:px-32"
       >
         <div className="flex 
                         items-center 
@@ -165,75 +179,62 @@ export default function Home() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
           </svg>
         </div>
-        <div className="flex
-                        justify-center 
-                        px-4 sm:px-8 md:px-12 lg:px-16"
-        >
-          <div className="paragraph-custom 
-                          max-w-4xl 
-                          w-full 
-                          mx-auto 
+
+          <div className="mx-auto 
                           relative 
-                          top-[10px] sm:top-[20px] md:top-[10px] lg:top-[5px] xl:top-[5px] 2xl:top-[5px]
-                          text-left justify-center"
+                          top-[10px] sm:top-[20px] md:top-[10px] lg:top-[5px] xl:top-[5px] 2xl:top-[5px] 3xl:top-[10px] 4xl:top-[50px]"
           >
             <div className="grid grid-cols-1 sm:grid-cols-3 
-                            gap-8 lg:gap-16 xl:gap-20 2xl:gap-24 
+                            gap-8
                             pb-6 sm:pb-0"
             >
               {/* First Column */}
-              <div className="text-center sm:text-left ">
-                <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Front end</strong>
-                <div className="pt-6">
-                  <div className="skills-text flex justify-center sm:justify-between"><span>ReactJS</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>NextJS</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Angular</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Flutter</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>WordPress</span></div>                  
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>JavaScript</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>CSS</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Tailwind CSS</span></div>
-                </div>
+              <div className="text-center sm:text-left">
+              <div className="skills-title">Front end</div>
+                  <div className="skills-text"><span>ReactJS</span></div>
+                  <div className="skills-text"><span>NextJS</span></div>
+                  <div className="skills-text"><span>Angular</span></div>
+                  <div className="skills-text"><span>Flutter</span></div>
+                  <div className="skills-text"><span>WordPress</span></div>                  
+                  <div className="skills-text"><span>JavaScript</span></div>
+                  <div className="skills-text"><span>CSS</span></div>
+                  <div className="skills-text"><span>Tailwind CSS</span></div>
 
                 <div className="pt-6">
-                  <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Prototypage & Design</strong>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Figma</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Balsamiq</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Photoshop</span></div>
+                  <div className="skills-subtitle">Prototypage & Design</div>
+                  <div className="skills-text"><span>Figma</span></div>
+                  <div className="skills-text"><span>Balsamiq</span></div>
+                  <div className="skills-text"><span>Photoshop</span></div>
                 </div>
               </div>
 
               {/* Second Column */}
               <div className="text-center sm:text-left">
-                <strong className="text-[7vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Back end</strong>
-                <div className="pt-6">
-                  <div className="skills-text flex justify-center sm:justify-between"><span>NodeJS</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>TypeScript</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Symfony</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Php</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Java EE</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>MySQL</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>SQL Server</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>Sécurité Web et Web Mobile</span></div>
-                </div>
+                  <div className="skills-title">Back end</div>
+                  <div className="skills-text"><span>NodeJS</span></div>
+                  <div className="skills-text"><span>TypeScript</span></div>
+                  <div className="skills-text"><span>Symfony</span></div>
+                  <div className="skills-text"><span>Php</span></div>
+                  <div className="skills-text"><span>Java EE</span></div>
+                  <div className="skills-text"><span>MySQL</span></div>
+                  <div className="skills-text"><span>SQL Server</span></div>
+                  <div className="skills-text"><span>Sécurité Web et Web Mobile</span></div>
 
                 <div className="pt-6">
-                  <strong className="text-[6vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Modélisation & Conception</strong>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>UML (Unified Modeling Language)</span></div>
+                  <div className="skills-subtitle">Modélisation & Conception</div>
+                  <div className="skills-text"><span>UML (Unified Modeling Language)</span></div>
                 </div>
               </div>
 
               {/* Third Column */}
               <div className="text-center sm:text-left">
-                <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Web Services & APIs</strong>
-                <div className="pt-6">
-                  <div className="skills-text flex justify-center sm:justify-between"><span>Firebase</span></div>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>APIs REST</span></div>
-                </div>
+              <div className="skills-title">Web Services & APIs</div>
+                  <div className="skills-text"><span>Firebase</span></div>
+                  <div className="skills-text"><span>APIs REST</span></div>
 
                 <div className="pt-6">
-                  <strong className="text-[6.5vw] sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl">Versioning</strong>
-                  <div className="skills-text mt-2 flex justify-center sm:justify-between"><span>GitHub</span></div>
+                <div className="skills-title">Versioning</div>
+                  <div className="skills-text"><span>GitHub</span></div>
                 </div>
 
                 {/* Skills Link */}
@@ -274,7 +275,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+
       </section>
 
       {/* SEPARATOR */}
@@ -289,14 +290,13 @@ export default function Home() {
                                       w-full 
                                       min-h-[100%]"
       >
-        <h2
-          className=" title-home-section 
-                      leading-tight 
-                      lg:ml-80 
-                      lg:text-right 
-                      lg:pb-[1%] xl:pb-[0] 2xl:pb-[3%] 3xl:pb-[6%]
-                      top-[0] 
-                      mt-[3%] lg:mt-[2%] 2xl:mt-[1%]"
+        <h2 className=" title-home-section 
+                        leading-tight 
+                        lg:ml-80 
+                        lg:text-right 
+                        lg:pb-[1%] xl:pb-[0] 2xl:pb-[3%] 3xl:pb-[6%]
+                        top-[0] 
+                        mt-[3%] lg:mt-[2%] 2xl:mt-[1%]"
         >
           Mes projets
         </h2>

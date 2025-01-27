@@ -12,7 +12,8 @@ interface ProjectProps {
   linkLabel: string;
   imageWidth?: number;
   imageHeight?: number;
-
+  imageClassName?: string;
+  descriptionClassName?: string;
 }
 
 const ProjectCard = ({
@@ -26,6 +27,8 @@ const ProjectCard = ({
   linkLabel,
   imageWidth = 0,
   imageHeight = 0,
+  imageClassName = "",
+  descriptionClassName = "",
 }: ProjectProps) => {
   return (
     <section className="flex 
@@ -43,16 +46,18 @@ const ProjectCard = ({
                       xl:gap-x-4"
       >
         {/* Image */}
-        <div className="relative
-                        w-full xl:w-1/2"
-        >
+        <div className={`relative w-full xl:w-1/2 ${imageClassName}`}>
           <a href={projectLink} target="_blank" rel="noopener noreferrer">
             <Image
               src={imageUrl}
               alt={imageAlt}
               width={imageWidth}
               height={imageHeight}
-              className="h-auto mx-auto rounded-3xl"
+              className=" h-auto 
+                          mx-auto 
+                          rounded-3xl 
+                          w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[90%]
+                          mt-12 xl:mt-16 2xl:mt-24"
               priority
               //style={{ maxWidth: "800px" }}
             />
@@ -60,7 +65,7 @@ const ProjectCard = ({
         </div>
 
         {/* Project Description */}
-        <div className="project-description-block">
+        <div className={`project-description-block ${descriptionClassName}`}>
           <h3 className="project-image-title">{title}</h3>
           <p className="project-date">{date}</p>
 

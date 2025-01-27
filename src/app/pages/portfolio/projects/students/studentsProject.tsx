@@ -15,6 +15,7 @@ const StudentsProject = () => {
         linkLabel="GitHub"
         imageWidth={1024}
         imageHeight={529}
+        imageClassName="3xl:mt-24 4xl:mt-48"
       />
 
       {/* DotsRectangle spécifique à cette page */}
@@ -24,10 +25,10 @@ const StudentsProject = () => {
                   xl:justify-start 
                   w-full 
                   xl:max-w-[320px] 
-                  mt-8 xl:mt-40 2xl:mt-32 
+                  mt-8 xl:mt-40 2xl:mt-48 
                   relative 
                   mx-auto 
-                  xl:ml-[-40px]"
+                  xl:ml-[0px] 3xl:ml-12 4xl:ml-48"
       >
         <DotsRectangle
           className="rotate-0 xl:rotate-90"
