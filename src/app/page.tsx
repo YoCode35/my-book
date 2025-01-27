@@ -339,7 +339,7 @@ export default function Home() {
                           mx-auto sm:mx-auto md:mx-0"
           >
             <a
-              href="https://www.linkedin.com/in/yoann-gregoire-cda/"
+              href="www.linkedin.com/in/yoann-grégoire-1816b8242"
               target="_blank"
               rel="noopener noreferrer"
               className=" flex 

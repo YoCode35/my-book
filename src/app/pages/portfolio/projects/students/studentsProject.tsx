@@ -15,7 +15,8 @@ const StudentsProject = () => {
         linkLabel="GitHub"
         imageWidth={1024}
         imageHeight={529}
-        imageClassName="3xl:mt-24 4xl:mt-48"
+        imageClassName="xl:mt-24 4xl:mt-48"
+        descriptionClassName="xl:mt-[150px] 2xl:mt-[180px] "
       />
 
       {/* DotsRectangle */}

@@ -3,7 +3,7 @@ import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
 
 const LicProject = () => {
-    
+
   const [dotsPerRow, setDotsPerRow] = useState(10);
   useEffect(() => {
     const updateDotsPerRow = () => {
@@ -31,11 +31,12 @@ const LicProject = () => {
         linkLabel=""
         imageWidth={187}
         imageHeight={400}
-        imageClassName="w-[60%] sm:w-[50%] md:w-[70%] lg:w-[60%] xl:w-[20%] 
+        imageClassName="w-[60%] sm:w-[50%] md:w-[70%] lg:w-[50%] xl:w-[20%] 
                         mx-auto
                         mb-16 3xl:mb-24 4xl:mb-48"
-        descriptionClassName="  xl:mr-[250px] xl:ml-[-450px] 3xl:ml-[-650px] 3xl:mr-[350px] 4xl:ml-[-700px] 4xl:mr-[700px]
-                                mt-[-50px] sm:mt-[0]"
+        descriptionClassName="  xl:mr-[250px] 3xl:mr-[350px] 4xl:mr-[700px]
+                                xl:ml-[-450px] 3xl:ml-[-650px] 4xl:ml-[-700px]
+                                mt-[-50px] sm:mt-[0] lg:mt-[-50px]"
       />
 
       {/* DotsRectangle */}
