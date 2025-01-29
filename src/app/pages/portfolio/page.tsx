@@ -1,6 +1,6 @@
 "use client";
 
-import useDotsPerRow from "../../../components/dots/useResponsiveDots";
+//import useDotsPerRow from "../../../components/dots/useResponsiveDots";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
 import MyTodoListDetailsProject from "./projects/mytodolist/myTodoListDetailsProject";
 import StudentsDetailsProject from "../../pages/portfolio/projects/students/studentsDetailsProject";
@@ -9,7 +9,7 @@ import AuctionsDetailsProject from "./projects/auctions/auctionsDetailsProject";
 import LicDetailsProject from "./projects/lic/licDetailsProject";
 
 export default function Portfolio() {
-  const dotsPerRow = useDotsPerRow();
+  //const dotsPerRow = useDotsPerRow();
 
   return (
     <main className=" bg-cover
@@ -24,7 +24,6 @@ export default function Portfolio() {
       <DotsRectangle
         className="w-full relative h-[55px] z-1"
         rows={3}
-        dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 
@@ -38,7 +37,6 @@ export default function Portfolio() {
       <DotsRectangle
         className="w-full relative h-[55px] z-1"
         rows={3}
-        dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 
@@ -50,7 +48,6 @@ export default function Portfolio() {
       <DotsRectangle
         className="w-full relative h-[55px] z-1"
         rows={3}
-        dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 
@@ -62,7 +59,6 @@ export default function Portfolio() {
       <DotsRectangle
         className="w-full relative h-[55px] z-1"
         rows={3}
-        dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 
@@ -74,7 +70,6 @@ export default function Portfolio() {
       <DotsRectangle
         className="w-full relative h-[55px] z-1"
         rows={3}
-        dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 

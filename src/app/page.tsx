@@ -139,17 +139,17 @@ export default function Home() {
             Je m’engage pleinement dans la conception d’outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l’expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d’améliorer la vie quotidienne.
           </p>
 
-          {/* DotsRectangle */}
           <DotsRectangle
-            className=" relative 
-                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%] 
-                        ml-auto"
+            className="relative 
+                      mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%] 
+                      ml-auto"
             rows={3}
             dotsPerRow={10}
             dotColor="#fff000"
             width={rectWidth}
             height="45px"
           />
+          
         </div>
       </section>
 

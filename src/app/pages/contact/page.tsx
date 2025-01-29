@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import useDotsPerRow from "../../../components/dots/useResponsiveDots";
+//import useDotsPerRow from "../../../components/dots/useResponsiveDots";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
 
 export default function Contact() {
 
-  const dotsPerRow = useDotsPerRow();
+  //const dotsPerRow = useDotsPerRow();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -88,7 +88,6 @@ export default function Contact() {
       <DotsRectangle
         className="w-full relative h-[55px] z-1"
         rows={3}
-        dotsPerRow={dotsPerRow}
         dotColor="#fff000"
       />
 

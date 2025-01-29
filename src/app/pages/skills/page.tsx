@@ -1,11 +1,11 @@
 "use client";
 
-import useDotsPerRow from "../../../components/dots/useResponsiveDots";
+//import useDotsPerRow from "../../../components/dots/useResponsiveDots";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
 
 export default function Skills() {
 
-    const dotsPerRow = useDotsPerRow();
+    //const dotsPerRow = useDotsPerRow();
 
     return (
         <div
@@ -21,7 +21,6 @@ export default function Skills() {
             <DotsRectangle
                 className="w-full relative h-[55px] z-1"
                 rows={3}
-                dotsPerRow={dotsPerRow}
                 dotColor="#fff000"
             />
 
