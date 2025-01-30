@@ -10,6 +10,7 @@ import StudentsProject from "./pages/portfolio/projects/students/studentsProject
 import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
 import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
 import LicProject from './pages/portfolio/projects/lic/licProject';
+import CognitifProject from './pages/portfolio/projects/cognitif/cognitifProject';
 
 
 export default function Home() {
@@ -26,6 +27,20 @@ export default function Home() {
     updateWidth();
     window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
+  const [dotsPerRow, setDotsPerRow] = useState(10);
+  useEffect(() => {
+    const updateDotsPerRow = () => {
+      if (window.innerWidth >= 1280) {
+        setDotsPerRow(50);
+      } else {
+        setDotsPerRow(10);
+      }
+    };
+    updateDotsPerRow();
+    window.addEventListener("resize", updateDotsPerRow);
+    return () => window.removeEventListener("resize", updateDotsPerRow);
   }, []);
 
   return (
@@ -149,7 +164,7 @@ export default function Home() {
             width={rectWidth}
             height="45px"
           />
-          
+
         </div>
       </section>
 
@@ -190,8 +205,8 @@ export default function Home() {
               <div className="text-center sm:text-left">
               <div className="skills-title">Front end</div>
                   <div className="skills-text"><span>Flutter</span></div>
-                  <div className="skills-text"><span>ReactJS</span></div>
-                  <div className="skills-text"><span>NextJS</span></div>
+                  <div className="skills-text"><span>React.js</span></div>
+                  <div className="skills-text"><span>Next.js</span></div>
                   <div className="skills-text"><span>TypeScript</span></div>
                   <div className="skills-text"><span>Angular</span></div>                  
                   <div className="skills-text"><span>WordPress</span></div>                  
@@ -210,7 +225,7 @@ export default function Home() {
               {/* Second Column */}
               <div className="text-center sm:text-left">
                   <div className="skills-title">Back end</div>
-                  <div className="skills-text"><span>NodeJS</span></div>
+                  <div className="skills-text"><span>Node.js</span></div>
                   <div className="skills-text"><span>TypeScript</span></div>
                   <div className="skills-text"><span>Symfony</span></div>
                   <div className="skills-text"><span>Php</span></div>
@@ -321,6 +336,7 @@ export default function Home() {
         <SeriesProject />
         <AuctionProject />
         <LicProject />
+        <CognitifProject />
 
         {/* SEPARATOR */}
         <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
@@ -333,6 +349,28 @@ export default function Home() {
                             mb-48
                             min-h-[100%]"
         >
+
+          {/* DotsRectangle */}
+          <div
+            className=" xl:w-full sm:w-[40%] lg:w-[100%] 
+                        xl:flex 
+                        xl:justify-start 
+                        w-full 
+                        max-w-[320px] xl:max-w-[100%]
+                        relative 
+                        mx-auto
+                        mb-[50px]"
+          >
+            <DotsRectangle
+              className="w-full"
+              rows={3}
+              dotsPerRow={dotsPerRow}
+              dotColor="#fff000"
+              width="100%"
+              height="45px"
+            />
+          </div>
+
           <p className="font-rubik                         
                         text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px] 2xl:text-[22px] 3xl:text-[24px] 4xl:text-[30px]
                         mx-8 sm:mx-12 md:mx-8 lg:mx-20"
