@@ -34,8 +34,8 @@ export default function LicDetailsProject() {
               <li>
               <span className="paragraph-sub-title">Étude des besoins fonctionnels</span>
                 <ul className="list-none ml-6">
-                  <li>-Enregistrement et consultation des heures de conduite et des périodes de repos</li>
-                  <li>-Saisie des trajets effectués et des tâches associées (chargement, déchargement)</li>
+                  <li>-Saisie et comptabilsation des totaux des heures de conduite, de travail, de mise à disposition et de repos</li>
+                  <li>-Saisie des trajets : immatriculation du véhicule, date, lieux de départ et d’arrivée, kilomètres effectués, poids maximum autorisé</li>
                 </ul>
               </li>
               <li>
@@ -85,15 +85,27 @@ export default function LicDetailsProject() {
         </ul>
       </div>
 
-      <Image
-        src="/img/lic/worktime_app.png"
-        alt="Visuel de l'application WorkTime sur Mobile"
-        width={234}
-        height={500}
-        className="img_portfolio mb-6"
-        priority
-        style={{ maxWidth: "234px" }}
-      />
+      {/* Ajout des deux images */}
+      <div className="flex flex-col sm:flex-row justify-center items-center mb-6">
+        <Image
+          src="/img/lic/lic_papier.png"
+          alt="Image LIC Papier"
+          width={1024}
+          height={656}
+          className="mb-6 sm:mr-6"
+          priority
+          style={{ maxWidth: "750px" }}
+        />
+        <Image
+          src="/img/lic/worktime_app.png"
+          alt="Visuel de l'application WorkTime sur Mobile"
+          width={234}
+          height={500}
+          className="img_portfolio"
+          priority
+          style={{ maxWidth: "234px" }}
+        />
+      </div>
     </section>
   );
 }
