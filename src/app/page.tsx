@@ -127,9 +127,9 @@ export default function Home() {
             alt="À propos"
             width={750}
             height={750}
-            className="w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[75%] 4xl:w-[100%]
-                      h-auto mr-[10%] sm:mr-[10%] md:mr-[0] ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[4%] 3xl:ml-[7%]
-                      mt-[18%] sm:mt-[15%] md:mt-[6%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[7%] 3xl:mt-[7%]"
+            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[75%] 4xl:w-[100%]
+                        h-auto mr-[10%] sm:mr-[10%] md:mr-[0] ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[4%] 3xl:ml-[7%]
+                        mt-[18%] sm:mt-[15%] md:mt-[6%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[7%] 3xl:mt-[7%]"
             style={{
               maxWidth: "750px",
               height: "auto",
@@ -216,7 +216,6 @@ export default function Home() {
 
                 <div className="pt-6">
                   <div className="skills-subtitle">Prototypage & Design</div>
-                  <div className="skills-text"><span>Figma</span></div>
                   <div className="skills-text"><span>Balsamiq</span></div>
                   <div className="skills-text"><span>Photoshop</span></div>
                 </div>
