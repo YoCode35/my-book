@@ -9,7 +9,7 @@ export default function SeriesDetailsProject() {
     // Series Section
     <section id="series" className="project-section"
       >
-        <h3 className="title-project mt-6">[Projet Series]</h3>
+        <h3 className="title-project">[Projet Series]</h3>
 
         <a
           href="https://github.com/YoCode35/Series"

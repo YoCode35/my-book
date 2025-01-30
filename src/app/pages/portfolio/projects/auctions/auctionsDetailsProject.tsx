@@ -9,7 +9,7 @@ export default function AuctionsDetailsProject() {
       id="auctions"
       className="project-section"
     >
-      <h3 className="title-project mt-6">[Projet Enchères]</h3>
+      <h3 className="title-project">[Projet Enchères]</h3>
 
       <a
         href="https://github.com/YoCode35/Projet_Encheres"

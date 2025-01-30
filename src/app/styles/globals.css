@@ -209,7 +209,8 @@ h2.title-page {
   text-align: center;
   font-weight: 600;
   @apply  text-[6vw] sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[32px] 2xl:text-[45px] 4xl:text-[60px]
-          mb-2;
+          mb-2
+          mt-6;
 }
 
 .link-project-portfolio {

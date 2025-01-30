@@ -9,7 +9,7 @@ export default function StudentsDetailsProject() {
     // Students Section
     <section id="students" className="project-section"
       >
-        <h3 className="title-project mt-6">[Projet Sortir.com]</h3>
+        <h3 className="title-project">[Projet Sortir.com]</h3>
 
         <a
           href="https://github.com/YoCode35/sortir.com"
