@@ -207,8 +207,7 @@ export default function Home() {
                   <div className="skills-text"><span>Flutter</span></div>
                   <div className="skills-text"><span>React.js</span></div>
                   <div className="skills-text"><span>Next.js</span></div>
-                  <div className="skills-text"><span>TypeScript</span></div>
-                  <div className="skills-text"><span>Angular</span></div>                  
+                  <div className="skills-text"><span>TypeScript</span></div>            
                   <div className="skills-text"><span>WordPress</span></div>                  
                   <div className="skills-text"><span>JavaScript</span></div>
                   <div className="skills-text"><span>CSS</span></div>
