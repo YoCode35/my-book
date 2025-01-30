@@ -164,6 +164,24 @@ a {
 }
 /* Fin */
 
+/* Attached Pages */
+h2.title-page {
+  @apply text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl pt-24 mb-12;
+  font-family: 'Orbitron', sans-serif;
+  color: white;  
+  text-align: center;
+  font-weight: 600;
+}
+
+.paragraph-custom {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  text-align: justify;
+  @apply  text-[3.5vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.2vw] 2xl:text-[1vw]
+          w-full
+}
+/* Fin */
+
 /* Skills */
 .skills-detail-title{
   @apply text-3xl 2xl:text-4xl 3xl:text-5xl
@@ -175,14 +193,6 @@ a {
 
 .skills-detail{
   @apply text-[4vw] sm:text-xl 3xl:text-3xl
-}
-
-.paragraph-custom {
-  font-family: 'Quicksand', sans-serif;
-  color: white;
-  text-align: justify;
-  @apply  text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
-          w-full
 }
 /* Fin */
 
@@ -242,16 +252,6 @@ h4.project-description {
 
 .img_portfolio {
   @apply w-full mx-auto rounded-xl mb-6
-}
-/* Fin */
-
-/* Appendix Page */
-h2.title-page {
-  @apply text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl pt-24 mb-12;
-  font-family: 'Orbitron', sans-serif;
-  color: white;  
-  text-align: center;
-  font-weight: 600;
 }
 /* Fin */
 

@@ -45,7 +45,7 @@ const ProjectCard = ({
                       w-full 
                       xl:gap-x-4"
       >
-        
+
         {/* Image avec lien optionnel */}
         <div className={`relative w-full xl:w-1/2 ${imageClassName}`}>
           {projectLink ? (
