@@ -8,7 +8,7 @@ const SeriesProject = () => {
         title="Series"
         date="Janvier 2024"
         technologies="Symfony & MySQL"
-        imageUrl="/img/series/ref_series-list.png"
+        imageUrl="/img/series/ref_series-list.webp"
         imageAlt="Image de mon projet d'application Series"
         projectLink="https://github.com/YoCode35/Series"
         moreInfoLink="/pages/portfolio#series"

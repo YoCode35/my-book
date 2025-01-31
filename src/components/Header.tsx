@@ -54,6 +54,14 @@ export default function Header() {
                                                         z-0"
       >
         <source src="/img/universe.mov" type="video/mp4" />
+        {/* Sous-titres */}
+        <track 
+          kind="captions" 
+          src="/img/universe-captions.vtt" 
+          srcLang="fr" 
+          label="Français" 
+          default 
+        />
         Votre navigateur ne supporte pas ce format vidéo.
       </video>
 

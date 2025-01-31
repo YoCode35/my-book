@@ -81,7 +81,7 @@ export default function SeriesDetailsProject() {
         </div>
 
         <Image
-          src="/img/series/ref_series-list.png"
+          src="/img/series/ref_series-list.webp"
           alt="Visuel de la page référençant une liste de séries"
           width={790}
           height={363}
@@ -90,7 +90,7 @@ export default function SeriesDetailsProject() {
         />
 
         <Image
-          src="/img/series/ref_series_details.png"
+          src="/img/series/ref_series_details.webp"
           alt="Visuel de la page présentant une série"
           width={790}
           height={363}
