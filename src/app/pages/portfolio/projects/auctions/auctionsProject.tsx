@@ -10,7 +10,7 @@ const AuctionsProject = () => {
         title="Plateforme d’enchères"
         date="Décembre 2023"
         technologies="Java & SQL Server"
-        imageUrl="/img/auctions/ref_auctions.jpg"
+        imageUrl="/img/auctions/ref_auctions.webp"
         imageAlt="Image du projet de plateforme d'enchères"
         projectLink="https://github.com/YoCode35/Projet_Encheres"
         moreInfoLink="/pages/portfolio#auctions"
