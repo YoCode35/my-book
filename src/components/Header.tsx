@@ -54,7 +54,7 @@ export default function Header() {
                                                         z-0"
       >
         <source src="/img/universe.mov" type="video/mp4" />
-        Your browser does not support the video tag.
+        Votre navigateur ne supporte pas ce format vidéo.
       </video>
 
       {/* Traits obliques à gauche */}
@@ -234,7 +234,7 @@ export default function Header() {
                       z-200"
       >
         <Image
-          src="/img/moi.png"
+          src="/img/moi.webp"
           alt="Yoann GREGOIRE"
           width={684}
           height={684}

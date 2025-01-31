@@ -45,7 +45,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className=" bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')]">
+    <main className=" bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.webp')]">
       {/* Presentation Section */}
       <div className="relative mb-6 sm:mb-6 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-0 3xl:mb-0 4xl:mb-64">
         <div className="mt-[20px] sm:mt-[80px] md:mt-[100px] lg:mt-[50px] 3xl:mt-[150px] 4xl:mt-[200px]">
@@ -124,7 +124,7 @@ export default function Home() {
             </span>
           </h2>
           <Image
-            src="/img/img_a-propos.png"
+            src="/img/img_a-propos.webp"
             alt="À propos"
             width={750}
             height={750}

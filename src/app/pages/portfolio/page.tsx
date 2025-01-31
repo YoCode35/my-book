@@ -15,7 +15,7 @@ export default function Portfolio() {
   return (
     <main className=" bg-cover
                       bg-no-repeat 
-                      bg-[url('/img/bkgd_black-and-colored-spots.png')]
+                      bg-[url('/img/bkgd_black-and-colored-spots.webp')]
                       pb-24"
     >
 

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="bg-cover
                     bg-no-repeat
-                    bg-[url('/img/colored_spots.png')]
+                    bg-[url('/img/colored_spots.webp')]
                     pb-24"
     >
 

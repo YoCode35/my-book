@@ -75,7 +75,7 @@ export default function AuctionsDetailsProject() {
       </div>
 
       <Image
-        src="/img/auctions/ref_auctions.jpg"
+        src="/img/auctions/ref_auctions.webp"
         alt="Page d'accueil du site de ventes aux enchères"
         width={594}
         height={600}

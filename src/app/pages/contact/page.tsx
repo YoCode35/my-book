@@ -78,7 +78,7 @@ export default function Contact() {
     <div
       className=" bg-cover
                   bg-no-repeat
-                  bg-[url('/img/colored_spots.png')]
+                  bg-[url('/img/colored_spots.webp')]
                   pb-24"
     >
 
