@@ -94,6 +94,7 @@ const ProjectCard = ({
                           mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
                           hover:text-navLinkHover 
                           group mb-8"
+                          aria-label={`Plus d’informations sur le projet ${title}`}
             >
               <span className="mr-2">+ d’infos</span>
               <svg
@@ -128,6 +129,7 @@ const ProjectCard = ({
             target="_blank"
             rel="noopener noreferrer"
             className="link-project-home"
+            aria-label={`Voir le projet ${title} en ligne`}
           >
             {linkLabel}
           </a>

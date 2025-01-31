@@ -2,6 +2,7 @@ import './styles/globals.css';
 import './styles/clashDisplay_font.css';
 import Navbar from '../components/Header';
 import Footer from '../components/Footer';
+import Head from 'next/head';
 import { Orbitron, Quicksand, Rubik } from 'next/font/google';
 
 const orbitron = Orbitron({
@@ -29,6 +30,11 @@ export default function Layout({
 }) {
   return (
     <html lang="fr" className={`${orbitron.variable} ${quicksand.variable} ${rubik.variable}`}>
+      <Head>
+        <title>Yoann Grégoire - Développeur Web & Mobile</title>
+        <meta name="description" content="Découvrez mon Book avec mes projets en développement web et mobile." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <body className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">
