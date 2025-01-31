@@ -103,7 +103,7 @@ export default function LicDetailsProject() {
           width={234}
           height={500}
           className=" mx-auto rounded-xl
-                      w-[70%] sm:w-[50%] md:w-[30%] lg:w-[30%] xl:w-[20%] 2xl:w-[25%] h-auto"
+                      w-[70%] sm:w-[50%] md:w-[30%] lg:w-[30%] xl:w-[20%] 2xl:w-[20%] h-auto"
           priority
         />
       </div>

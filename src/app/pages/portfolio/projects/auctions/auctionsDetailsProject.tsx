@@ -81,7 +81,6 @@ export default function AuctionsDetailsProject() {
         height={600}
         className="img_portfolio"
         priority
-        style={{ maxWidth: "594px" }}
       />
     </section>
   );

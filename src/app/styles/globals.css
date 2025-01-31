@@ -243,7 +243,7 @@ h4.project-description {
 .unordered-list {
   font-family: 'Quicksand', sans-serif;
   color: white;
-  @apply  text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] 2xl:text-[1.3vw]
+  @apply  text-[3.5vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] 2xl:text-[1.3vw] 3xl:text-[1vw]
           2xl:max-w-screen-2xl 3xl:max-w-screen-2xl 4xl:max-w-screen-4xl;
   text-align: justify;
   white-space: normal;
@@ -252,7 +252,9 @@ h4.project-description {
 }
 
 .img_portfolio {
-  @apply w-full mx-auto rounded-xl mb-6
+  @apply  w-full md:w-[70%] lg:w-[60%] xl:w-[40%] 2xl:w-[40%] 3xl:w-[45%] 
+          h-auto
+          mx-auto rounded-xl mb-6
 }
 /* Fin */
 

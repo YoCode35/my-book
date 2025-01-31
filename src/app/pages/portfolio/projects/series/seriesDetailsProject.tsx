@@ -87,7 +87,6 @@ export default function SeriesDetailsProject() {
           height={363}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "790px" }}
         />
 
         <Image
@@ -97,7 +96,6 @@ export default function SeriesDetailsProject() {
           height={363}
           className="img_portfolio border border-white"
           priority
-          style={{ maxWidth: "790px" }}
         />
       </section>
   );

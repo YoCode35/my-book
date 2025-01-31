@@ -53,7 +53,6 @@ export default function MyTodoListDetailsProject() {
             height={809}
             className="img_portfolio"
             priority
-            style={{ maxWidth: "700px" }}
           />
 
           <span className="block mb-6">- Base de données : MySQL avec une gestion relationnelle des utilisateurs et des tâches</span>
@@ -65,7 +64,6 @@ export default function MyTodoListDetailsProject() {
             height={875}
             className="img_portfolio"
             priority
-            style={{ maxWidth: "700px" }}
           />
 
           <Image
@@ -75,7 +73,6 @@ export default function MyTodoListDetailsProject() {
             height={489}
             className="img_portfolio"
             priority
-            style={{ maxWidth: "700px" }}
           />
 
           <Image
@@ -85,7 +82,6 @@ export default function MyTodoListDetailsProject() {
             height={563}
             className="img_portfolio"
             priority
-            style={{ maxWidth: "700px" }}
           />
 
           <br />

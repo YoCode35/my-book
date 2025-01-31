@@ -54,7 +54,6 @@ export default function StudentsDetailsProject() {
               height={363}
               className="img_portfolio border border-white mb-6"
               priority
-              style={{ maxWidth: "790px" }}
         />
 
         <Image
@@ -64,7 +63,6 @@ export default function StudentsDetailsProject() {
               height={363}
               className="img_portfolio border border-white mb-6"
               priority
-              style={{ maxWidth: "790px" }}
         />
 
         <div className="unordered-list text-white mb-6">
@@ -104,7 +102,6 @@ export default function StudentsDetailsProject() {
           height={363}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "790px" }}
         />
 
         <Image
@@ -114,7 +111,6 @@ export default function StudentsDetailsProject() {
           height={363}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "790px" }}
         />
 
         <div className="unordered-list text-white mb-8">
@@ -133,7 +129,6 @@ export default function StudentsDetailsProject() {
           height={300}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "700px" }}
         />
 
         <Image
@@ -143,7 +138,6 @@ export default function StudentsDetailsProject() {
           height={300}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "700px" }}
         />
 
         <Image
@@ -153,7 +147,6 @@ export default function StudentsDetailsProject() {
           height={300}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "700px" }}
         />
 
         <Image
@@ -163,7 +156,6 @@ export default function StudentsDetailsProject() {
           height={472}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "700px" }}
         />
 
         <Image
@@ -173,7 +165,6 @@ export default function StudentsDetailsProject() {
           height={472}
           className="img_portfolio border border-white mb-6"
           priority
-          style={{ maxWidth: "700px" }}
         />
 
       </section>
