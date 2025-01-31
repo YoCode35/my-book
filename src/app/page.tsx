@@ -48,7 +48,7 @@ export default function Home() {
     <main className=" bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.png')]">
       {/* Presentation Section */}
       <div className="relative mb-6 sm:mb-6 md:mb-8 lg:mb-8 xl:mb-16 2xl:mb-0 3xl:mb-0 4xl:mb-64">
-        <div className="mt-[20px] md:mt-[30px] lg:mt-[50px] 4xl:mt-[200px]">
+        <div className="mt-[20px] sm:mt-[80px] md:mt-[100px] lg:mt-[50px] 3xl:mt-[150px] 4xl:mt-[200px]">
           <p className="text-[14px] sm:text-[17px] md:text-[17px] lg:text-[18px] xl:text-[20px] 3xl:text-[23px] 4xl:text-[30px]
                         leading-[2] 
                         text-center 
