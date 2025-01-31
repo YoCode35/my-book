@@ -30,6 +30,23 @@ const ProjectCard = ({
   imageClassName = "",
   descriptionClassName = "",
 }: ProjectProps) => {
+  
+  // Composant interne pour éviter la répétition
+  const ImageComponent = () => (
+    <Image
+      src={imageUrl}
+      alt={imageAlt}
+      width={imageWidth}
+      height={imageHeight}
+      className=" h-auto 
+                  mx-auto 
+                  rounded-3xl 
+                  w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[90%]
+                  mt-12 xl:mt-16 2xl:mt-24"
+      priority
+    />
+  );
+
   return (
     <section className="flex 
                         flex-col 
@@ -45,37 +62,14 @@ const ProjectCard = ({
                       w-full 
                       xl:gap-x-4"
       >
-
         {/* Image avec lien optionnel */}
         <div className={`relative w-full xl:w-1/2 ${imageClassName}`}>
           {projectLink ? (
             <a href={projectLink} target="_blank" rel="noopener noreferrer">
-              <Image
-                src={imageUrl}
-                alt={imageAlt}
-                width={imageWidth}
-                height={imageHeight}
-                className="h-auto 
-                            mx-auto 
-                            rounded-3xl 
-                            w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[90%]
-                            mt-12 xl:mt-16 2xl:mt-24"
-                priority
-              />
+              <ImageComponent />
             </a>
           ) : (
-            <Image
-              src={imageUrl}
-              alt={imageAlt}
-              width={imageWidth}
-              height={imageHeight}
-              className="h-auto 
-                          mx-auto 
-                          rounded-3xl 
-                          w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[90%]
-                          mt-12 xl:mt-16 2xl:mt-24"
-              priority
-            />
+            <ImageComponent />
           )}
         </div>
 
@@ -103,10 +97,10 @@ const ProjectCard = ({
             >
               <span className="mr-2">+ d’infos</span>
               <svg
-                className="w-[3.8vw] h-auto sm:w-[3vw] md:w-[2.5vw] lg:w-[2vw] xl:w-[1.4vw] 
-                          mt-1 
-                          text-[#4d94ff] 
-                          group-hover:text-navLinkHover"
+                className=" w-[3.8vw] h-auto sm:w-[3vw] md:w-[2.5vw] lg:w-[2vw] xl:w-[1.4vw] 
+                            mt-1 
+                            text-[#4d94ff] 
+                            group-hover:text-navLinkHover"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -127,6 +121,7 @@ const ProjectCard = ({
               </svg>
             </Link>
           )}
+
           {/* Lien GitHub ou site Web */}
           <a
             href={projectLink}
