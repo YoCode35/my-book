@@ -1,15 +1,12 @@
 "use client";
 
-//import useDotsPerRow from "../../../components/dots/useResponsiveDots";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
+import { LABELS } from "../../../components/navbar/route";
 
 export default function Skills() {
 
-    //const dotsPerRow = useDotsPerRow();
-
     return (
-        <div
-            className=" bg-cover
+        <div className="bg-cover
                         bg-no-repeat
                         bg-[url('/img/colored_spots.png')]
                         pb-24"
@@ -24,7 +21,7 @@ export default function Skills() {
                 dotColor="#fff000"
             />
 
-            <h2 id="skills" className="title-page">Skills</h2>
+            <h2 id="skills" className="title-page">{LABELS.SKILLS}</h2>
 
             <div className="px-4
                             sm:px-8 md:px-16 2xl:px-0

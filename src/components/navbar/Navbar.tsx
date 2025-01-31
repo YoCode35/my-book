@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { FiMenu, FiHome } from "react-icons/fi";
 import { FiArrowUp } from "react-icons/fi";
 import { useNavbarLogic } from "./useNavbarLogic";
+import { LABELS, ROUTES } from "./route";
 
 interface NavbarProps {
   menuOpen: boolean;
@@ -56,7 +57,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           <ul className="hidden lg:flex space-x-4 list-none">
             <li className="flex items-center">
               <Link
-                href="/#header"
+                href={ROUTES.HOME}
                 className={`px-6 py-2 
                             text-navLinkInactive
                             hover:text-navLinkHover
@@ -70,10 +71,10 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             </li>
 
             {/* Lien À propos */}
-            {pathname !== "/pages/about" && (
+            {pathname !== ROUTES.ABOUT_PATH && (
               <li key="about" className="flex items-center">
                 <Link
-                  href={pathname === "/" ? "#abouthome" : "/pages/about#about"}
+                  href={pathname === "/" ? ROUTES.ABOUT_HOME : ROUTES.ABOUT_ANCHOR}
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
@@ -84,16 +85,16 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                                   color: pathname === "/" && isAboutActive ? "#fff000" : "",
                               }}
                 >
-                  À propos
+                  {LABELS.ABOUT}
                 </Link>
               </li>
             )}
 
             {/* Lien Skills */}
-            {pathname !== "/pages/skills" && (
+            {pathname !== ROUTES.SKILLS_PATH && (
               <li key="skills" className="flex items-center">
                 <Link
-                  href={pathname === "/" ? "#skills" : "/pages/skills#skills"}
+                  href={pathname === "/" ? ROUTES.SKILLS_HOME : ROUTES.SKILLS_ANCHOR}
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
@@ -103,16 +104,16 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                     color: pathname === "/" && isSkillsActive ? "#fff000" : "",
                   }}
                 >
-                  Skills
+                  {LABELS.SKILLS}
                 </Link>
               </li>
             )}
 
             {/* Lien Portfolio */}
-            {pathname !== "/pages/portfolio" && (
+            {pathname !== ROUTES.PORTFOLIO_PATH && (
               <li key="portfolio" className="flex items-center">
                 <Link
-                  href={pathname === "/" ? "#myprojects" : "/pages/portfolio#portfolio"}
+                  href={pathname === "/" ? ROUTES.PORTFOLIO_HOME : ROUTES.PORTFOLIO_ANCHOR}
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
@@ -122,16 +123,16 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                     color: (pathname === "/" && isMyProjectsActive) ? "#fff000" : "",
                   }}
                 >
-                  Portfolio
+                  {LABELS.PORTFOLIO}
                 </Link>
               </li>
             )}
           </ul>
 
           {/* Bouton Me Contacter */}
-          {pathname !== "/pages/contact" && (
+          {pathname !== ROUTES.CONTACT_PATH && (
             <div className="ml-4 hidden lg:block">
-              <Link href="/pages/contact#contact">
+              <Link href= {ROUTES.CONTACT_ANCHOR}>
                 <button
                   className={`px-6 py-2
                               rounded-full
@@ -140,11 +141,11 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                               hover:text-black
                               hover:font-bold
                               focus:outline-none focus:ring-2 focus:ring-purple-300
-                              ${pathname === "/pages/contact" ? "bg-navLinkHover" : "bg-buttonColorBkgd"}
+                              ${pathname === ROUTES.CONTACT_PATH ? "bg-navLinkHover" : "bg-buttonColorBkgd"}
                               3xl:text-xl 4xl:text-3xl`}
                   style={{ minWidth: "160px" }}
                 >
-                  Me contacter
+                  {LABELS.CONTACT}
                 </button>
               </Link>
             </div>
@@ -186,13 +187,13 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           {[
             { href: "/#header", label: <div className={`flex justify-center items-center ${pathname === "/" ? "text-navLinkHover" : "text-white"} hover:text-navLinkHover`}><FiHome size={24} /></div> },
             ...(pathname === "/" ? [
-              { href: "#abouthome", label: <span className={`${isAboutActive ? "text-navLinkHover" : "text-white"}`}>À propos</span> },
-              { href: "#skills", label: <span className={`${isSkillsActive ? "text-navLinkHover" : "text-white"}`}>Skills</span> },
-              { href: "#myprojects", label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>Portfolio</span> },
+              { href: ROUTES.ABOUT_HOME, label: <span className={`${isAboutActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.ABOUT}</span> },
+              { href: ROUTES.SKILLS_HOME, label: <span className={`${isSkillsActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.SKILLS}</span> },
+              { href: ROUTES.PORTFOLIO_HOME, label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.PORTFOLIO}</span> },
             ] : [
-              pathname !== "/pages/about" && { href: "/pages/about#about", label: "À propos" },
-              pathname !== "/pages/skills" && { href: "/pages/skills#skills", label: "Skills" },
-              pathname !== "/pages/portfolio" && { href: "/pages/portfolio#portfolio", label: "Portfolio" },
+              pathname !== ROUTES.ABOUT_PATH && { href: ROUTES.ABOUT_ANCHOR, label: "À propos" },
+              pathname !== ROUTES.SKILLS_PATH && { href: ROUTES.SKILLS_ANCHOR, label: "Skills" },
+              pathname !== ROUTES.PORTFOLIO_PATH && { href: ROUTES.PORTFOLIO_ANCHOR, label: "Portfolio" },
             ]).filter(Boolean),
           ]
             .filter((item): item is { href: string; label: string } => item !== false)
@@ -211,8 +212,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                 {label}
               </Link>
             ))}
-          {pathname !== "/pages/contact" && (
-            <Link href="/pages/contact#contact">
+          {pathname !== ROUTES.CONTACT_PATH && (
+            <Link href={ROUTES.CONTACT_ANCHOR}>
               <button
                 onClick={() => setMenuOpen(false)}
                 className=" block
@@ -229,7 +230,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                             text-white
                             focus:outline-none focus:ring-2 focus:ring-purple-300"
               >
-                Me contacter
+                {LABELS.CONTACT}
               </button>
             </Link>
           )}

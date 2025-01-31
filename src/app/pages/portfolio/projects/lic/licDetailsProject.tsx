@@ -90,7 +90,7 @@ export default function LicDetailsProject() {
           src="/img/lic/lic_papier.png"
           alt="Image LIC Papier"
           width={1024}
-          height={656}
+          height={660}
           className="img_portfolio
                     w-[100%] md:w-[60%] lg:w-[60%] xl:w-[60%] 2xl:w-[50%] 2xl:w-[120%] h-auto
                     mb-6 md:mb-0

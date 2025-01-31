@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-//import useDotsPerRow from "../../../components/dots/useResponsiveDots";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
+import { LABELS } from "../../../components/navbar/route";
 
 export default function Contact() {
 
@@ -91,7 +91,7 @@ export default function Contact() {
         dotColor="#fff000"
       />
 
-      <h2 id="contact" className="title-contact-page">Me contacter</h2>
+      <h2 id="contact" className="title-contact-page">{LABELS.CONTACT}</h2>
 
       <p className="text-red-500 
                     text-sm 2xl:text-xl

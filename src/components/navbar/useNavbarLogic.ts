@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ROUTES } from "./route";
 
 export function useNavbarLogic() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +18,7 @@ export function useNavbarLogic() {
         setIsScrolled(hasScrollableContent && window.scrollY > 50);
 
         // Vérification de la visibilité de la section "À propos"
-        const aboutSection = document.querySelector("#abouthome");
+        const aboutSection = document.querySelector(ROUTES.ABOUT_HOME);
         if (aboutSection) {
           const aboutRect = aboutSection.getBoundingClientRect();
           const isAboutVisible = aboutRect.top <= window.innerHeight * 0.2 && aboutRect.bottom >= 0;
@@ -25,7 +26,7 @@ export function useNavbarLogic() {
         }
 
         // Vérification de la visibilité de la section "Skills"
-        const skillsSection = document.querySelector("#skills");
+        const skillsSection = document.querySelector(ROUTES.SKILLS_HOME);
         if (skillsSection) {
           const skillsRect = skillsSection.getBoundingClientRect();
           const isSkillsVisible = skillsRect.top <= window.innerHeight * 0.1 && skillsRect.bottom >= 0;
@@ -33,7 +34,7 @@ export function useNavbarLogic() {
         }
 
         // Vérification de la visibilité de la section "My Projects"
-        const myProjectsSection = document.querySelector("#myprojects");
+        const myProjectsSection = document.querySelector(ROUTES.PORTFOLIO_HOME);
         if (myProjectsSection) {
           const myProjectsRect = myProjectsSection.getBoundingClientRect();
           const isMyProjectsVisible = myProjectsRect.top <= window.innerHeight * 0.15 && myProjectsRect.bottom >= 0;

@@ -11,6 +11,7 @@ import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
 import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
 import LicProject from './pages/portfolio/projects/lic/licProject';
 import CognitifProject from './pages/portfolio/projects/cognitif/cognitifProject';
+import { LABELS } from "../components/navbar/route";
 
 
 export default function Home() {
@@ -100,7 +101,7 @@ export default function Home() {
                           leading-tight 
                           text-shadow"
           >
-            <span className="block leading-none">À propos</span>
+            <span className="block leading-none">{LABELS.ABOUT}</span>
             <span className="inline-flex items-center">de moi
               <a href="/pages/about#about" className="relative group">
                 <span className=" relative 
@@ -127,11 +128,11 @@ export default function Home() {
             alt="À propos"
             width={750}
             height={750}
-            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[75%] 4xl:w-[100%]
+            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[40%] 4xl:w-[37%]
                         h-auto mr-[10%] sm:mr-[10%] md:mr-[0] ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[4%] 3xl:ml-[7%]
                         mt-[18%] sm:mt-[15%] md:mt-[6%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[7%] 3xl:mt-[7%]"
             style={{
-              maxWidth: "750px",
+              maxWidth: "auto",
               height: "auto",
             }}
           />
@@ -172,7 +173,7 @@ export default function Home() {
       <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[60px] 2xl:min-h-[160px] 3xl:min-h-[50px]"></div>
 
       {/* Skills Section */}
-      <section id="skills" className="flex 
+      <section id="skillshome" className="flex 
                                       flex-col 
                                       items-center 
                                       min-h-[100%] 
@@ -184,7 +185,7 @@ export default function Home() {
         >
           <h2 className=" title-home-section 
                           leading-tight"
-          >Skills</h2>
+          >{LABELS.SKILLS}</h2>
 
           {/* Flèche */}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
@@ -299,7 +300,7 @@ export default function Home() {
       <div className="min-h-[50px] sm:min-h-[150px] md:min-h-[100px] lg:min-h-[50px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* My Projects Section */}
-      <section id="myprojects" className="flex 
+      <section id="portfoliohome" className="flex 
                                       flex-col 
                                       justify-start 
                                       items-center 

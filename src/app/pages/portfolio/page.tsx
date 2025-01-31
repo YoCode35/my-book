@@ -7,6 +7,7 @@ import StudentsDetailsProject from "../../pages/portfolio/projects/students/stud
 import SeriesDetailsProject from "./projects/series/seriesDetailsProject";
 import AuctionsDetailsProject from "./projects/auctions/auctionsDetailsProject";
 import LicDetailsProject from "./projects/lic/licDetailsProject";
+import { LABELS } from "../../../components/navbar/route";
 
 export default function Portfolio() {
   //const dotsPerRow = useDotsPerRow();
@@ -27,7 +28,7 @@ export default function Portfolio() {
         dotColor="#fff000"
       />
 
-      <h2 id="portfolio" className="title-page">Portfolio</h2>
+      <h2 id="portfolio" className="title-page">{LABELS.PORTFOLIO}</h2>
 
       <MyTodoListDetailsProject />
 
