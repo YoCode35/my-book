@@ -98,7 +98,7 @@ a {
 }
 
 @layer components {
-  .project-description-block {
+  .project-identity-block {
     @apply  flex 
             flex-col 
             items-center 
@@ -110,7 +110,8 @@ a {
 }
 
 .project-image-title {
-  @apply text-[5vw] sm:text-[2rem] 2xl:text-[3rem] font-medium;
+  @apply  text-[5vw] sm:text-[2rem] 2xl:text-[3rem]
+          font-medium;
   font-family: 'ClashDisplay-Extralight';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
@@ -118,6 +119,18 @@ a {
   letter-spacing: 0.1rem;
   font-weight: 500;
   transform: scaleY(0.8);
+}
+
+.project-description {
+  @apply  text-[3vw] sm:text-[0.9rem] 2xl:text-[1.2rem] 4xl:text-[1.6rem] 
+          font-medium 
+          max-w-[30ch] sm:max-w-[60ch] lg:max-w-[50ch];
+  font-family: 'ClashDisplay-Extralight';
+  letter-spacing: 0.1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  text-rendering: optimizeLegibility;  
+  transform: scaleY(1);
 }
 
 .project-techno-title {
@@ -162,6 +175,23 @@ a {
           flex 
           flex-col;
 }
+
+/* Style des points inactifs */
+.swiper-pagination-bullet {
+  background-color: gray !important; /* Couleur par défaut */
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style du point actif */
+.swiper-pagination-bullet-active {
+  background-color: #fff000 !important; /* Jaune */
+  opacity: 1;
+  transform: scale(1.3);
+}
+
 /* Fin */
 
 /* Attached Pages */

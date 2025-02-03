@@ -6,6 +6,7 @@ const StudentsProject = () => {
     <section className="section-container">
       <ProjectCard
         title="Plateforme d’organisation d’évènements d’étudiants"
+        description=""
         date="Février 2024"
         technologies="Symfony & MySQL"
         imageUrl="/img/students/ref_screen_home.png"
@@ -16,7 +17,7 @@ const StudentsProject = () => {
         imageWidth={1024}
         imageHeight={529}
         imageClassName="xl:mt-24 4xl:mt-48"
-        descriptionClassName="xl:mt-[150px] 2xl:mt-[180px] "
+        projectIdentityClassName="xl:mt-[150px] 2xl:mt-[180px] "
       />
 
       {/* DotsRectangle */}

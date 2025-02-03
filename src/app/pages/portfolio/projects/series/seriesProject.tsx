@@ -6,6 +6,7 @@ const SeriesProject = () => {
     <section className="section-container">
       <ProjectCard
         title="Series"
+        description=""
         date="Janvier 2024"
         technologies="Symfony & MySQL"
         imageUrl="/img/series/ref_series-list.webp"

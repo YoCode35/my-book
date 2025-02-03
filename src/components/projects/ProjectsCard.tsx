@@ -3,6 +3,8 @@ import Link from "next/link";
 
 interface ProjectProps {
   title: string;
+  description: string;
+  projectIdentityClassName?: string;
   date: string;
   technologies: string;
   imageUrl: string;
@@ -12,12 +14,13 @@ interface ProjectProps {
   linkLabel: string;
   imageWidth?: number;
   imageHeight?: number;
-  imageClassName?: string;
-  descriptionClassName?: string;
+  imageClassName?: string;  
 }
 
 const ProjectCard = ({
   title,
+  description,
+  projectIdentityClassName = "",
   date,
   technologies,
   imageUrl,
@@ -27,8 +30,7 @@ const ProjectCard = ({
   linkLabel,
   imageWidth = 0,
   imageHeight = 0,
-  imageClassName = "",
-  descriptionClassName = "",
+  imageClassName = "",  
 }: ProjectProps) => {
   
   // Composant interne pour éviter la répétition
@@ -72,9 +74,10 @@ const ProjectCard = ({
           )}
         </div>
 
-        {/* Project Description */}
-        <div className={`project-description-block ${descriptionClassName}`}>
+        {/* Project Identity */}
+        <div className={`project-identity-block ${projectIdentityClassName}`}>
           <h3 className="project-image-title">{title}</h3>
+          <p className="project-description">{description}</p>
           <p className="project-date">{date}</p>
 
           {/* Technologies utilisées */}

@@ -6,6 +6,7 @@ const MyTodoListProject = () => {
     <section className="section-container">
       <ProjectCard
         title="MyTodoList"
+        description=""
         date="Octobre 2024"
         technologies="Flutter & MySQL"
         imageUrl="/img/mytodolist/ref_mytodolist.png"

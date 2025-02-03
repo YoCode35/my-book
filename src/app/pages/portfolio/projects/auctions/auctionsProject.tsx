@@ -8,6 +8,7 @@ const AuctionsProject = () => {
     <section className="section-container">
       <ProjectCard
         title="Plateforme d’enchères"
+        description=""
         date="Décembre 2023"
         technologies="Java & SQL Server"
         imageUrl="/img/auctions/ref_auctions.webp"
@@ -26,11 +27,11 @@ const AuctionsProject = () => {
                   xl:flex 
                   xl:justify-start 
                   w-full 
-                  xl:max-w-[320px] 
-                  mt-8 xl:mt-40 2xl:mt-40 3xl:mt-48 
+                  xl:max-w-[320px]
+                  mt-8 xl:mt-40 2xl:mt-40 3xl:mt-48
                   relative 
                   mx-auto 
-                  xl:ml-[200px] 3xl:ml-[400px]"
+                  xl:ml-[200px] 3xl:ml-[300px] 4xl:ml-[450px]"
       >
         <DotsRectangle
           className="rotate-0 xl:rotate-90"
