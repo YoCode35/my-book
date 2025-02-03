@@ -32,7 +32,7 @@ export default function Layout({
     <html lang="fr" className={`${orbitron.variable} ${quicksand.variable} ${rubik.variable}`}>
       <Head>
         <title>Yoann Grégoire - Développeur Web & Mobile</title>
-        <meta name="description" content="Découvrez mon Book avec mes projets en développement web et mobile." />
+        <meta name="description" content="Bienvenue sur mon portfolio ! Découvrez mes projets en développement web et mobile, mes compétences et mes réalisations." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body className="flex flex-col min-h-screen">

@@ -205,14 +205,15 @@ export default function Home() {
               {/* First Column */}
               <div className="text-center sm:text-left">
               <div className="skills-title">Front end</div>
+                  <div className="skills-text"><span>JavaScript</span></div>
                   <div className="skills-text"><span>Flutter</span></div>
                   <div className="skills-text"><span>React.js</span></div>
                   <div className="skills-text"><span>Next.js</span></div>
-                  <div className="skills-text"><span>TypeScript</span></div>            
-                  <div className="skills-text"><span>WordPress</span></div>                  
-                  <div className="skills-text"><span>JavaScript</span></div>
+                  <div className="skills-text"><span>TypeScript</span></div>                   
                   <div className="skills-text"><span>CSS</span></div>
+                  <div className="skills-text"><span>Bootstrap</span></div>
                   <div className="skills-text"><span>Tailwind CSS</span></div>
+                  <div className="skills-text"><span>WordPress</span></div>
 
                 <div className="pt-6">
                   <div className="skills-subtitle">Prototypage & Design</div>
@@ -228,7 +229,7 @@ export default function Home() {
                   <div className="skills-text"><span>TypeScript</span></div>
                   <div className="skills-text"><span>Symfony</span></div>
                   <div className="skills-text"><span>Php</span></div>
-                  <div className="skills-text"><span>Java EE</span></div>
+                  <div className="skills-text"><span>Java</span></div>
                   <div className="skills-text"><span>MySQL</span></div>
                   <div className="skills-text"><span>SQL Server</span></div>
 
@@ -370,15 +371,17 @@ export default function Home() {
             />
           </div>
 
+          {/* 
           <p className="font-rubik                         
                         text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px] 2xl:text-[22px] 3xl:text-[24px] 4xl:text-[30px]
                         mx-8 sm:mx-12 md:mx-8 lg:mx-20"
           >
             [Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets]
           </p>
+          */}
           <div className="flex 
                           justify-center sm:justify-center 
-                          mt-8 sm:mt-8
+                          mt-20
                           mx-auto sm:mx-auto md:mx-0"
           >
             <a
