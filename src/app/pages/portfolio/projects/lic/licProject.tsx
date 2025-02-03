@@ -17,10 +17,10 @@ const LicProject = () => {
         linkLabel=""
         imageWidth={187}
         imageHeight={400}
-        imageClassName="w-[50%] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[20%] 
+        imageClassName="w-[170px] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[20%] 
                         mx-auto
-                        mb-16 sm:mb-4 lg:mb-16 3xl:mb-24 4xl:mb-48"
-        projectIdentityClassName="xl:mr-[50px] 3xl:mr-[200px] 4xl:mr-[550px]
+                        mb-16 sm:mb-4 lg:mb-16 3xl:mb-0 4xl:mb-20"
+        contentProjectClassName=" xl:mr-[50px] 3xl:mr-[200px] 4xl:mr-[550px]
                                   xl:ml-[-400px] 3xl:ml-[-550px] 4xl:ml-[-700px]
                                   mt-[-50px] sm:mt-[0] lg:mt-[-50px]"
       />
@@ -31,7 +31,8 @@ const LicProject = () => {
                       xl:justify-start 
                       w-full 
                       max-w-[320px] 
-                      mt-8 xl:mt-10 2xl:mt-20 
+                      mt-8 xl:mt-10 2xl:mt-20 4xl:mt-0
+                      4xl:mb-40  
                       relative 
                       mx-auto 
                       xl:ml-48 4xl:ml-[800px]"

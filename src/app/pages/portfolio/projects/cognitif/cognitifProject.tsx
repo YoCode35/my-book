@@ -40,38 +40,43 @@ const CognitifProject = () => {
 
   return (
     <section className="section-container">
-      <div className="w-full max-w-7xl mx-auto">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 8000, disableOnInteraction: false }}
-          className="rounded-3xl !pr-20 !pl-8"
-        >
-          {images.map((img, index) => (
-            <SwiperSlide key={index}>
-              <ProjectCard
-                title="Cognitif"
-                description={img.description}
-                date="Octobre 2012"
-                technologies="Javascript & Php"
-                imageUrl={img.url}
-                imageAlt={img.alt}
-                projectLink=""
-                moreInfoLink=""
-                linkLabel=""
-                imageWidth={1000}
-                imageHeight={1000}
-                imageClassName="w-[50%] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[80%] 
-                                mx-auto
-                                pl-8
-                                mb-16 sm:mb-4 lg:mb-16 3xl:mb-24 4xl:mb-48"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="w-full w-7xl 3xl:max-w-8xl mx-auto pb-12 xl:pb-0">
+        {/* Container pour le carrousel */}
+        <div className="swiper-container w-full">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 8000, disableOnInteraction: false }}
+            className="rounded-3xl pr-0 2xl:!pr-20 2xl:!pl-8"
+          >
+            {images.map((img, index) => (
+              <SwiperSlide key={index}>
+                <ProjectCard
+                  title="Cognitif"
+                  description={img.description}
+                  date="Octobre 2012"
+                  technologies="Javascript & Php"
+                  imageUrl={img.url}
+                  imageAlt={img.alt}
+                  projectLink=""
+                  moreInfoLink=""
+                  linkLabel=""
+                  imageWidth={1000}
+                  imageHeight={1000}
+                  imageClassName="w-[230px]
+                                  mx-auto
+                                  pl-0 2xl:pl-8
+                                  mb-0 sm:mb-4 lg:mb-16 3xl:mb-24 4xl:mb-48"
+                  contentProjectClassName=" xl:mr-[60px] 3xl:mr-[80px] 4xl:mr-[100px]
+                                            xl:ml-[-100px] 3xl:ml-[-250px] 4xl:ml-[-200px]"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

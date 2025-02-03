@@ -4,7 +4,7 @@ import Link from "next/link";
 interface ProjectProps {
   title: string;
   description: string;
-  projectIdentityClassName?: string;
+  contentProjectClassName?: string;
   date: string;
   technologies: string;
   imageUrl: string;
@@ -20,7 +20,7 @@ interface ProjectProps {
 const ProjectCard = ({
   title,
   description,
-  projectIdentityClassName = "",
+  contentProjectClassName = "",
   date,
   technologies,
   imageUrl,
@@ -75,7 +75,7 @@ const ProjectCard = ({
         </div>
 
         {/* Project Identity */}
-        <div className={`project-identity-block ${projectIdentityClassName}`}>
+        <div className={`project-content-block ${contentProjectClassName}`}>
           <h3 className="project-image-title">{title}</h3>
           <p className="project-description">{description}</p>
           <p className="project-date">{date}</p>

@@ -17,7 +17,7 @@ const StudentsProject = () => {
         imageWidth={1024}
         imageHeight={529}
         imageClassName="xl:mt-24 4xl:mt-48"
-        projectIdentityClassName="xl:mt-[150px] 2xl:mt-[180px] "
+        contentProjectClassName="xl:mt-[150px] 2xl:mt-[180px] "
       />
 
       {/* DotsRectangle */}

@@ -98,7 +98,7 @@ a {
 }
 
 @layer components {
-  .project-identity-block {
+  .project-content-block {
     @apply  flex 
             flex-col 
             items-center 
@@ -123,7 +123,7 @@ a {
 
 .project-description {
   @apply  text-[3vw] sm:text-[0.9rem] 2xl:text-[1.2rem] 4xl:text-[1.6rem]           
-          max-w-[30ch] sm:max-w-[60ch] lg:max-w-[50ch];
+          max-w-[30ch] sm:max-w-[50ch] lg:max-w-[50ch] 2xl:max-w-[40ch];
   font-family: 'ClashDisplay-Extralight';
   letter-spacing: 0.1rem;
   -webkit-font-smoothing: antialiased;
@@ -181,6 +181,25 @@ a {
           flex-col;
 }
 
+/* Carousel */
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-pagination {
+  bottom: -50px !important; /* Descend les bullets */
+}
+
+/* Responsive: ajuster l'overflow et la position des bullets sur les grands écrans */
+@media (min-width: 1280px) { 
+  .swiper {
+    overflow: hidden !important;
+  }
+  .swiper-pagination {
+    bottom: 0px !important;
+  }
+}
+
 /* Style des points inactifs */
 .swiper-pagination-bullet {
   background-color: gray !important; /* Couleur par défaut */
@@ -196,8 +215,9 @@ a {
   opacity: 1;
   transform: scale(1.3);
 }
+/* Fin Carousel */
 
-/* Fin */
+/* Fin Home #Projects */
 
 /* Attached Pages */
 h2.title-page {

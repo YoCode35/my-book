@@ -30,18 +30,35 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  const [dotsPerRow, setDotsPerRow] = useState(10);
+  const [dotsPerRow, setDotsPerRow] = useState(5); // Valeur par défaut
+
   useEffect(() => {
     const updateDotsPerRow = () => {
-      if (window.innerWidth >= 1280) {
-        setDotsPerRow(50);
-      } else {
-        setDotsPerRow(10);
+      if (window.innerWidth >= 2560) {
+        setDotsPerRow(80); // Nombre de points pour les écrans larges
+      } else if (window.innerWidth >= 1920) {
+        setDotsPerRow(50); // Nombre de points pour les écrans medium
+      } else if (window.innerWidth >= 1280) {
+        setDotsPerRow(50); // Nombre de points pour les écrans medium
+      } else if (window.innerWidth >= 1024) {
+        setDotsPerRow(20); // Nombre de points pour les écrans medium
+      } else if (window.innerWidth >= 768) {
+        setDotsPerRow(15); // Nombre de points pour les écrans petits
+      } else if (window.innerWidth >= 640) {
+        setDotsPerRow(10); // Nombre de points pour les écrans petits
+      } else if (window.innerWidth >= 320) {
+        setDotsPerRow(5); // Nombre de points pour les écrans petits
       }
     };
+
+    // Exécute la fonction initiale pour définir la valeur à l'instant de l'affichage
     updateDotsPerRow();
-    window.addEventListener("resize", updateDotsPerRow);
-    return () => window.removeEventListener("resize", updateDotsPerRow);
+
+    // Ajouter un event listener pour mettre à jour les dots à chaque redimensionnement
+    window.addEventListener('resize', updateDotsPerRow);
+
+    // Nettoyage de l'event listener
+    return () => window.removeEventListener('resize', updateDotsPerRow);
   }, []);
 
   return (
@@ -351,15 +368,12 @@ export default function Home() {
         >
 
           {/* DotsRectangle */}
-          <div
-            className=" xl:w-full sm:w-[40%] lg:w-[100%] 
-                        xl:flex 
-                        xl:justify-start 
-                        w-full 
-                        max-w-[320px] xl:max-w-[100%]
-                        relative 
-                        mx-auto
-                        mb-[50px]"
+          <div className="w-full lg:w-[100%] xl:w-full 
+                          xl:flex 
+                          xl:justify-start
+                          relative 
+                          mx-auto
+                          mb-[50px]"
           >
             <DotsRectangle
               className="w-full"
