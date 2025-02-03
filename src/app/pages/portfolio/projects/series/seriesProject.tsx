@@ -6,7 +6,7 @@ const SeriesProject = () => {
     <section className="section-container">
       <ProjectCard
         title="Series"
-        description=""
+        description="Service de streaming en ligne de séries TV"
         date="Janvier 2024"
         technologies="Symfony & MySQL"
         imageUrl="/img/series/ref_series-list.webp"
