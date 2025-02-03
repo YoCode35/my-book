@@ -12,7 +12,7 @@ const CognitifProject = () => {
   // Liste du carrousel
   const images = [
     { 
-      url: "/img/cognitif/accueil-admin.png", 
+      url: "/img/cognitif/accueil-admin.webp", 
       alt: "Accueil Admin", 
       description: "Un projet de conception d'une application de prises de rendez-vous pour les coiffeurs, permettant une gestion efficace des créneaux horaires et des clients." 
     },
