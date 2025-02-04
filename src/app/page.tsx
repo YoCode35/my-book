@@ -10,9 +10,9 @@ import StudentsProject from "./pages/portfolio/projects/students/studentsProject
 import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
 import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
 import LicProject from './pages/portfolio/projects/lic/licProject';
+import MultiProjects1118 from './pages/portfolio/projects/multi-projects/multiProjects_2011-18';
 import CognitifProject from './pages/portfolio/projects/cognitif/cognitifProject';
 import { LABELS } from "../components/navbar/route";
-
 
 export default function Home() {
   const [rectWidth, setRectWidth] = useState("20%");
@@ -353,6 +353,7 @@ export default function Home() {
         <SeriesProject />
         <AuctionProject />
         <LicProject />
+        <MultiProjects1118 />
         <CognitifProject />
 
         {/* SEPARATOR */}

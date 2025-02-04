@@ -145,7 +145,7 @@ a {
 
 .project-usetechno-info-block {@apply mt-2 flex items-center gap-2;}
 .project-usetechno-info {
-  @apply  text-[3.4vw] sm:text-[0.9rem] 2xl:text-[1.1rem] 3xl:text-[1.4rem] 4xl:text-[1.8rem] 
+  @apply  text-[3.4vw] sm:text-[0.9rem] 2xl:text-[1.3rem] 3xl:text-[1.4rem] 4xl:text-[1.8rem] 
           font-rubik 
           text-colorChart;
   -webkit-font-smoothing: antialiased;

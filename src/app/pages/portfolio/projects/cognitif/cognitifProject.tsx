@@ -24,12 +24,12 @@ const CognitifProject = () => {
     { 
       url: "/img/cognitif/prise-de-rdv-planning.webp", 
       alt: "Dashboard Administrateur", 
-      description: "Un popup pour la prise de rendez-vous et un aperçu du planning des réservations avec une vue détaillée des créneaux disponibles." 
+      description: "Un formulaire sous forme de popup pour la prise de rendez-vous et un aperçu du planning des réservations avec une vue détaillée des créneaux disponibles." 
     },
     { 
       url: "/img/cognitif/propositions-rdv-planning.webp", 
       alt: "Page Rendez-vous", 
-      description: "Suggestions automatiques de rendez-vous en fonction des disponibilités du salon." 
+      description: "Suggestions de disponibilités en fonction du planning." 
     },
     { 
       url: "/img/cognitif/stats-ca-dashboard.webp", 
@@ -50,7 +50,11 @@ const CognitifProject = () => {
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 8000, disableOnInteraction: false }}
-            className="rounded-3xl pr-0 2xl:!pr-20 2xl:!pl-8 h-[700px] xxs:h-[800px] xs:h-[950px] sm:h-[950px] md:h-[800px] lg:h-[850px] xl:h-[850px] 2xl:h-[900px] 3xl:h-[1150px] 4xl:h-[1150px]"
+            className=" rounded-3xl 
+                        pr-0 
+                        2xl:!pr-20 
+                        2xl:!pl-8 
+                        h-[700px] xxs:h-[800px] xs:h-[1000px] sm:h-[950px] md:h-[800px] lg:h-[800px] xl:h-[850px] 2xl:h-[900px] 3xl:h-[1150px] 4xl:h-[1150px]"
           >
             {images.map((img, index) => (
               <SwiperSlide key={index}>
@@ -69,7 +73,7 @@ const CognitifProject = () => {
                   imageClassName="w-[230px] md:w-[65%] lg:w-[60%] 2xl:w-[45%]
                                   mx-auto
                                   pl-0 2xl:pl-8
-                                  mb-0 sm:mb-4 lg:mb-16 3xl:mb-24 4xl:mb-48"
+                                  mb-0 sm:mb-4 lg:mb-0 3xl:mb-24 4xl:mb-48"
                   contentProjectClassName=" xl:mr-[60px] 3xl:mr-[80px] 4xl:mr-[100px]
                                             xl:ml-[-100px] 3xl:ml-[-250px] 4xl:ml-[-200px]"
                 />
