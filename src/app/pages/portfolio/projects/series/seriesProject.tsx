@@ -14,6 +14,7 @@ const SeriesProject = () => {
         projectLink="https://github.com/YoCode35/Series"
         moreInfoLink="/pages/portfolio#series"
         linkLabel="GitHub"
+        linkClassName={"link-project-home"}
         imageWidth={1024}
         imageHeight={471}
       />

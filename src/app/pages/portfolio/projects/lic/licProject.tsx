@@ -15,6 +15,7 @@ const LicProject = () => {
         projectLink=""
         moreInfoLink="/pages/portfolio#lic"
         linkLabel=""
+        linkClassName={"link-project-home"}
         imageWidth={187}
         imageHeight={400}
         imageClassName="w-[160px] xxs:w-[220px] xs:w-[300px] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[20%] 2xl:w-[20%] 3xl:w-[20%] 4xl:w-[25%]

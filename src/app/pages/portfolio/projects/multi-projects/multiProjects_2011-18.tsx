@@ -15,7 +15,9 @@ const MultiProjects1118 = () => {
       title: "Cabinet d'avocats ABLITIS",
       description: "Site Web du cabinet d'avocats ABLITIS implanté à Rennes", 
       date: "Janvier 2018", 
-      technologies: "Javascript & Php"
+      technologies: "Javascript & Php",
+      projectLink: "http://www.ablitis-avocats-rennes.bzh/",
+      linkLabel:"Web",
     },
     { 
       url: "/img/multiprojects_1118/procedure-appel_page.webp", 
@@ -23,7 +25,9 @@ const MultiProjects1118 = () => {
       title: "Cabinet d'avocats ABLITIS", 
       description: "Page présentant des prestations du Cabinet d'avocats ABLITIS concernant la procédure d'appel et la postulation",
       date: "Janvier 2018",
-      technologies: "Javascript & Php"
+      technologies: "Javascript & Php",
+      projectLink: "http://www.ablitis-avocats-rennes.bzh/",
+      linkLabel:"Web",
     },
     { 
       url: "/img/multiprojects_1118/slide_plus-de-projets-sur-linkedin.png", 
@@ -32,7 +36,8 @@ const MultiProjects1118 = () => {
       description: "Plus de projets sur mon profil LinkedIn de 2011 à 2018",
       date: "De 2011 à 2018",
       technologies: "Javascript & Php",
-      projectLink: "https://www.linkedin.com/in/ygregoire/"
+      projectLink: "https://www.linkedin.com/in/ygregoire/",
+      linkLabel:"LinkedIn",
     },
   ];
 
@@ -64,7 +69,8 @@ const MultiProjects1118 = () => {
                   imageAlt={img.alt}
                   projectLink={img.projectLink}
                   moreInfoLink=""
-                  linkLabel=""
+                  linkLabel={img.linkLabel || ''}
+                  linkClassName={"link-project-home mt-12"}
                   imageWidth={1000}
                   imageHeight={700}
                   imageClassName="w-[230px] md:w-[65%] lg:w-[60%] 2xl:w-[45%]

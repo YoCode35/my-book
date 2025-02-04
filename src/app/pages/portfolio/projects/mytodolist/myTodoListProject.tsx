@@ -14,6 +14,7 @@ const MyTodoListProject = () => {
         projectLink="https://www.mytodolist.tech"
         moreInfoLink="/pages/portfolio#mytodolist"
         linkLabel="Web"
+        linkClassName={"link-project-home"}
         imageWidth={789}
         imageHeight={360}
       />

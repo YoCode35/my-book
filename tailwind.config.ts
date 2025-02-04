@@ -9,15 +9,15 @@ export default {
   ],
   theme: {
     screens: {
-      'xxs': '320px',  // Très petits écrans (smartphones anciens)
-      'xs': '480px',   // Mobiles standards
-      'sm': '640px',   // Breakpoint par défaut de Tailwind
+      'xxs': '320px',
+      'xs': '480px',
+      'sm': '640px',
       'md': '768px',   
       'lg': '1024px',  
       'xl': '1280px',  
       '2xl': '1536px', 
-      '3xl': '1920px', // Écrans larges
-      '4xl': '2560px', // Très grands écrans
+      '3xl': '1920px',
+      '4xl': '2560px',
     },
     extend: {
       colors: {

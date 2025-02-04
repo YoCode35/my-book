@@ -14,6 +14,7 @@ const StudentsProject = () => {
         projectLink="https://github.com/YoCode35/sortir.com"
         moreInfoLink="/pages/portfolio#students"
         linkLabel="GitHub"
+        linkClassName={"link-project-home"}
         imageWidth={1024}
         imageHeight={529}
         imageClassName="xl:mt-24 4xl:mt-48"

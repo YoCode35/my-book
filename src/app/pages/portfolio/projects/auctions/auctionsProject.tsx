@@ -16,6 +16,7 @@ const AuctionsProject = () => {
         projectLink="https://github.com/YoCode35/Projet_Encheres"
         moreInfoLink="/pages/portfolio#auctions"
         linkLabel="GitHub"
+        linkClassName={"link-project-home"}
         imageWidth={792}
         imageHeight={800}
         imageClassName="xl:w-[40%]" 

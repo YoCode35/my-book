@@ -9,9 +9,10 @@ interface ProjectProps {
   technologies: string;
   imageUrl: string;
   imageAlt: string;
-  projectLink?: string;
+  projectLink?: string;  
   moreInfoLink: string;
-  linkLabel: string;
+  linkLabel: string;  
+  linkClassName?: string;
   imageWidth?: number;
   imageHeight?: number;
   imageClassName?: string;  
@@ -25,9 +26,10 @@ const ProjectCard = ({
   technologies,
   imageUrl,
   imageAlt,
-  projectLink,
+  projectLink,  
   moreInfoLink,
   linkLabel,
+  linkClassName = "",
   imageWidth = 0,
   imageHeight = 0,
   imageClassName = "",  
@@ -125,12 +127,12 @@ const ProjectCard = ({
             </Link>
           )}
 
-          {/* Lien GitHub ou site Web */}
+          {/* Lien GitHub, Site Web ou LinkedIn */}
           <a
             href={projectLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="link-project-home"
+            className={`${linkClassName}`}
             aria-label={`Voir le projet ${title} en ligne`}
           >
             {linkLabel}
