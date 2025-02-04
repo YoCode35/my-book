@@ -17,11 +17,12 @@ const LicProject = () => {
         linkLabel=""
         imageWidth={187}
         imageHeight={400}
-        imageClassName="w-[160px] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[20%] 
+        imageClassName="w-[160px] xxs:w-[220px] xs:w-[300px] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[20%] 2xl:w-[20%] 3xl:w-[20%] 4xl:w-[25%]
                         mx-auto
+                        4xl:ml-[800px]
                         mb-16 sm:mb-4 lg:mb-16 3xl:mb-0 4xl:mb-20"
-        contentProjectClassName=" xl:mr-[50px] 3xl:mr-[200px] 4xl:mr-[550px]
-                                  xl:ml-[-400px] 3xl:ml-[-550px] 4xl:ml-[-700px]
+        contentProjectClassName=" xl:mr-[50px] 2xl:mr-[100px] 3xl:mr-[300px] 4xl:mr-[550px]
+                                  xl:ml-[-400px] 2xl:ml-[-500px] 3xl:ml-[-550px] 4xl:ml-[50px]
                                   mt-[-50px] sm:mt-[0] lg:mt-[-50px]"
       />
 
