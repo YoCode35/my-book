@@ -8,16 +8,20 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'xxs': '320px',  // Très petits écrans (smartphones anciens)
+      'xs': '480px',   // Mobiles standards
+      'sm': '640px',   // Breakpoint par défaut de Tailwind
+      'md': '768px',   
+      'lg': '1024px',  
+      'xl': '1280px',  
+      '2xl': '1536px', 
+      '3xl': '1920px', // Écrans larges
+      '4xl': '2560px', // Très grands écrans
+    },
     extend: {
-      screens: {        
-        '3xl': '1920px',
-        '4xl': '2560px',
-      },
       colors: {
-        navBackground: "#ccc", 
-        boxShadow: {
-          'custom-shadow': '0 4px 6px rgba(0, 0, 0, 0.5)',
-        },
+        navBackground: "#ccc",
         navLinkInactive: "#ccc",
         navLinkHover: "#fff000",
         LinkInactive: "#4d94ff",
@@ -25,8 +29,11 @@ export default {
         titlePrimary: "#ffffff",
         titleAccent: "#ff5733",
         buttonColorBkgd: "#4d94ff",
-        colorChart:"#fff000",
-        blueNight: '#0f202e',
+        colorChart: "#fff000",
+        blueNight: "#0f202e",
+      },
+      boxShadow: {
+        'custom-shadow': '0 4px 6px rgba(0, 0, 0, 0.5)',
       },
       fontFamily: {
         orbitron: ['var(--font-orbitron)', 'sans-serif'],
@@ -35,7 +42,6 @@ export default {
         clash: ['var(--font-ClashDisplay-Regular)', 'sans-serif'],
         roboto: ['var(--font-roboto)', 'sans-serif'],
       },
-      fontSize: {},
       textShadow: {
         default: "2px 2px 4px rgba(0, 0, 0, 0.5)",
         strong: "4px 4px 6px rgba(0, 0, 0, 0.7)",

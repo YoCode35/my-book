@@ -22,7 +22,7 @@ const CognitifProject = () => {
       description: "Gestion avancée des horaires pour optimiser les prises de rendez-vous des salons de coiffure." 
     },
     { 
-      url: "/img/cognitif/prise-de-rdv-planning.png", 
+      url: "/img/cognitif/prise-de-rdv-planning.webp", 
       alt: "Dashboard Administrateur", 
       description: "Un popup pour la prise de rendez-vous et un aperçu du planning des réservations avec une vue détaillée des créneaux disponibles." 
     },
@@ -32,7 +32,7 @@ const CognitifProject = () => {
       description: "Suggestions automatiques de rendez-vous en fonction des disponibilités du salon." 
     },
     { 
-      url: "/img/cognitif/stats-ca-dashboard.png", 
+      url: "/img/cognitif/stats-ca-dashboard.webp", 
       alt: "Dashboard Administrateur", 
       description: "Tableau de bord affichant les statistiques de chiffre d'affaires et l'analyse des performances." 
     },
@@ -50,7 +50,7 @@ const CognitifProject = () => {
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 8000, disableOnInteraction: false }}
-            className="rounded-3xl pr-0 2xl:!pr-20 2xl:!pl-8"
+            className="rounded-3xl pr-0 2xl:!pr-20 2xl:!pl-8 h-[700px] xxs:h-[800px] xs:h-[950px] sm:h-[950px] md:h-[800px] lg:h-[850px] xl:h-[850px] 2xl:h-[900px] 3xl:h-[1150px] 4xl:h-[1150px]"
           >
             {images.map((img, index) => (
               <SwiperSlide key={index}>
@@ -66,7 +66,7 @@ const CognitifProject = () => {
                   linkLabel=""
                   imageWidth={1000}
                   imageHeight={1000}
-                  imageClassName="w-[230px]
+                  imageClassName="w-[230px] md:w-[65%] lg:w-[60%] 2xl:w-[45%]
                                   mx-auto
                                   pl-0 2xl:pl-8
                                   mb-0 sm:mb-4 lg:mb-16 3xl:mb-24 4xl:mb-48"

@@ -182,23 +182,40 @@ a {
 }
 
 /* Carousel */
-.swiper {
+/*.swiper {
   overflow: visible !important;
 }
 
 .swiper-pagination {
-  bottom: -50px !important; /* Descend les bullets */
+  bottom: -50px !important; 
 }
 
-/* Responsive: ajuster l'overflow et la position des bullets sur les grands écrans */
+@media (min-width: 640px) { 
+  .swiper {
+    overflow: visible !important;
+  }
+  .swiper-pagination {
+    bottom: -40px !important;
+  }
+}
+
+@media (min-width: 768px) { 
+  .swiper {
+    overflow: visible !important;
+  }
+  .swiper-pagination {
+    bottom: -40px !important;
+  }
+}
+
 @media (min-width: 1280px) { 
   .swiper {
     overflow: hidden !important;
   }
   .swiper-pagination {
-    bottom: 0px !important;
+    bottom: 60px !important;
   }
-}
+}*/
 
 /* Style des points inactifs */
 .swiper-pagination-bullet {

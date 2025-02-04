@@ -17,7 +17,7 @@ const LicProject = () => {
         linkLabel=""
         imageWidth={187}
         imageHeight={400}
-        imageClassName="w-[170px] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[20%] 
+        imageClassName="w-[160px] sm:w-[60%] md:w-[70%] lg:w-[50%] xl:w-[20%] 
                         mx-auto
                         mb-16 sm:mb-4 lg:mb-16 3xl:mb-0 4xl:mb-20"
         contentProjectClassName=" xl:mr-[50px] 3xl:mr-[200px] 4xl:mr-[550px]
