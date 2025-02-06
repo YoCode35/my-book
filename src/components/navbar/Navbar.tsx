@@ -241,8 +241,8 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
       {isScrolled && (
         <div className="fixed 
                         bottom-5 
-                        center lg:right-5 xl:right-20
-                        bottom-16 sm:bottom-10 md:bottom-16 lg:bottom-5 xl:bottom-10 2xl:bottom-10
+                        center lg:right-5 xl:right-5
+                        bottom-20 sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-20 2xl:bottom-20 3xl:bottom-20
                         z-30"
         >
           <Link href="#header">

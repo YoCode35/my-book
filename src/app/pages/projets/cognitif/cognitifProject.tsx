@@ -52,8 +52,8 @@ const CognitifProject = () => {
             autoplay={{ delay: 8000, disableOnInteraction: false }}
             className=" rounded-3xl 
                         pr-0 
-                        2xl:!pr-20 
-                        2xl:!pl-8 
+                        2xl:!pr-10 
+                        2xl:!pl-0 
                         h-[700px] xxs:h-[800px] xs:h-[1000px] sm:h-[950px] md:h-[800px] lg:h-[930px] xl:h-[850px] 2xl:h-[900px] 3xl:h-[1150px] 4xl:h-[1150px]"
           >
             {images.map((img, index) => (
