@@ -1,5 +1,6 @@
 import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
+import { ROUTES } from "../../../../../components/navbar/route";
 
 const SeriesProject = () => {
   return (
@@ -12,7 +13,7 @@ const SeriesProject = () => {
         imageUrl="/img/series/ref_series-list.webp"
         imageAlt="Image de mon projet d'application Series"
         projectLink="https://github.com/YoCode35/Series"
-        moreInfoLink="/pages/portfolio#series"
+        moreInfoLink={ROUTES.PROJECTS.SERIES}
         linkLabel="GitHub"
         linkClassName={"link-project-home"}
         imageWidth={1024}

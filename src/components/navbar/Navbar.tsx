@@ -111,7 +111,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
 
             {/* Projects Links */}
             {pathname !== ROUTES.PROJECTS_PATH && (
-              <li key="portfolio" className="flex items-center">
+              <li key="projets" className="flex items-center">
                 <Link
                   href={pathname === "/" ? ROUTES.PROJECTS_HOME : ROUTES.PROJECTS_ANCHOR}
                   className={`px-6 py-2 
@@ -193,7 +193,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             ] : [
               pathname !== ROUTES.ABOUT_PATH && { href: ROUTES.ABOUT_ANCHOR, label: "À propos" },
               pathname !== ROUTES.SKILLS_PATH && { href: ROUTES.SKILLS_ANCHOR, label: "Skills" },
-              pathname !== ROUTES.PROJECTS_PATH && { href: ROUTES.PROJECTS_ANCHOR, label: "Portfolio" },
+              pathname !== ROUTES.PROJECTS_PATH && { href: ROUTES.PROJECTS_ANCHOR, label: "Projets" },
             ]).filter(Boolean),
           ]
             .filter((item): item is { href: string; label: string } => item !== false)

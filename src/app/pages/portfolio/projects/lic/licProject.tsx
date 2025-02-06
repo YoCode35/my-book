@@ -1,5 +1,6 @@
 import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
+import { ROUTES } from "../../../../../components/navbar/route";
 
 const LicProject = () => {
 
@@ -13,7 +14,7 @@ const LicProject = () => {
         imageUrl="/img/lic/worktime_app.png"
         imageAlt="Image de mon projet d'application MyTodoList"
         projectLink=""
-        moreInfoLink="/pages/portfolio#lic"
+        moreInfoLink={ROUTES.PROJECTS.LIC}
         linkLabel=""
         linkClassName={"link-project-home"}
         imageWidth={187}

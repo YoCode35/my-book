@@ -1,5 +1,6 @@
 import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
+import { ROUTES } from "../../../../../components/navbar/route";
 
 const StudentsProject = () => {
   return (
@@ -12,7 +13,7 @@ const StudentsProject = () => {
         imageUrl="/img/students/ref_screen_home.png"
         imageAlt="Image du projet de plateforme d'enchères"
         projectLink="https://github.com/YoCode35/sortir.com"
-        moreInfoLink="/pages/portfolio#students"
+        moreInfoLink={ROUTES.PROJECTS.STUDENTS}
         linkLabel="GitHub"
         linkClassName={"link-project-home"}
         imageWidth={1024}

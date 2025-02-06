@@ -318,7 +318,7 @@ export default function Home() {
       <div className="min-h-[50px] sm:min-h-[150px] md:min-h-[100px] lg:min-h-[50px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* My Projects Section */}
-      <section id="portfoliohome" className="flex 
+      <section id="projectshome" className="flex 
                                       flex-col 
                                       justify-start 
                                       items-center 

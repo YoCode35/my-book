@@ -1,31 +1,55 @@
-const BASE_ABOUT_PATH = "/pages/about";
-const BASE_SKILLS_PATH = "/pages/skills";
-const BASE_PROJECTS_PATH = "/pages/portfolio";
-const BASE_CONTACT_PATH = "/pages/contact";
+const PAGE_NAMES = {
+  ABOUT: "about",
+  SKILLS: "skills",
+  PROJECTS: "portfolio",
+  CONTACT: "contact",
+};
+
+const BASE_PATH = "/pages";
+
+const BASE_ABOUT_PATH = `${BASE_PATH}/${PAGE_NAMES.ABOUT}`;
+const BASE_SKILLS_PATH = `${BASE_PATH}/${PAGE_NAMES.SKILLS}`;
+const BASE_PROJECTS_PATH = `${BASE_PATH}/${PAGE_NAMES.PROJECTS}`;
+const BASE_CONTACT_PATH = `${BASE_PATH}/${PAGE_NAMES.CONTACT}`;
 
 export const LABELS = {
-    ABOUT: "À propos",
-    SKILLS: "Skills",
-    PROJECTS: "Projets",
-    CONTACT: "Me Contacter",
-  };
+  ABOUT: "À propos",
+  SKILLS: "Skills",
+  PROJECTS: "Projets",
+  CONTACT: "Me Contacter",
+};
+
+export const PROJECT_NAMES = {
+  MYTODOLIST: "mytodolist",
+  STUDENTS: "students",
+  SERIES: "series",
+  AUCTIONS: "auctions",
+  LIC: "lic",
+};
 
 export const ROUTES = {
-    HOME: "/#header",
+  HOME: "/#header",
 
-    ABOUT_HOME: "#abouthome",
-    ABOUT_PATH: BASE_ABOUT_PATH,    
-    ABOUT_ANCHOR: `${BASE_ABOUT_PATH}#about`, 
+  ABOUT_HOME: "#abouthome",
+  ABOUT_PATH: BASE_ABOUT_PATH,
+  ABOUT_ANCHOR: `${BASE_ABOUT_PATH}#about`,
 
-    SKILLS_HOME: "#skillshome",
-    SKILLS_PATH: BASE_SKILLS_PATH, 
-    SKILLS_ANCHOR: `${BASE_SKILLS_PATH}#skills`,
+  SKILLS_HOME: "#skillshome",
+  SKILLS_PATH: BASE_SKILLS_PATH,
+  SKILLS_ANCHOR: `${BASE_SKILLS_PATH}#skills`,
 
-    PROJECTS_HOME: "#portfoliohome",
-    PROJECTS_PATH: BASE_PROJECTS_PATH,
-    PROJECTS_ANCHOR: `${BASE_PROJECTS_PATH}#portfolio`,
+  PROJECTS_HOME: "#projectshome",
+  PROJECTS_PATH: BASE_PROJECTS_PATH,
+  PROJECTS_ANCHOR: `${BASE_PROJECTS_PATH}#projets`,
 
-    CONTACT_PATH: BASE_CONTACT_PATH,
-    CONTACT_ANCHOR: `${BASE_CONTACT_PATH}#contact`,
-  };
-  
+  CONTACT_PATH: BASE_CONTACT_PATH,
+  CONTACT_ANCHOR: `${BASE_CONTACT_PATH}#contact`,
+
+  PROJECTS: {
+    MYTODOLIST: `${BASE_PROJECTS_PATH}#${PROJECT_NAMES.MYTODOLIST}`,
+    STUDENTS: `${BASE_PROJECTS_PATH}#${PROJECT_NAMES.STUDENTS}`,
+    SERIES: `${BASE_PROJECTS_PATH}#${PROJECT_NAMES.SERIES}`,
+    AUCTIONS: `${BASE_PROJECTS_PATH}#${PROJECT_NAMES.AUCTIONS}`,
+    LIC: `${BASE_PROJECTS_PATH}#${PROJECT_NAMES.LIC}`,
+  },
+};

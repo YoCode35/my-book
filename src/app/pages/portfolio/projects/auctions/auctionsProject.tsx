@@ -2,6 +2,7 @@
 
 import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
+import { ROUTES } from "../../../../../components/navbar/route";
 
 const AuctionsProject = () => {
   return (
@@ -14,7 +15,7 @@ const AuctionsProject = () => {
         imageUrl="/img/auctions/ref_auctions.webp"
         imageAlt="Image du projet de plateforme d'enchères"
         projectLink="https://github.com/YoCode35/Projet_Encheres"
-        moreInfoLink="/pages/portfolio#auctions"
+        moreInfoLink={ROUTES.PROJECTS.AUCTIONS}
         linkLabel="GitHub"
         linkClassName={"link-project-home"}
         imageWidth={792}

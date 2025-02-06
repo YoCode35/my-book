@@ -1,5 +1,6 @@
 import ProjectCard from "../../../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../../../components/dots/DotsRectangle";
+import { ROUTES } from "../../../../../components/navbar/route";
 
 const MyTodoListProject = () => {
   return (
@@ -12,7 +13,7 @@ const MyTodoListProject = () => {
         imageUrl="/img/mytodolist/ref_mytodolist.png"
         imageAlt="Image de mon projet d'application MyTodoList"
         projectLink="https://www.mytodolist.tech"
-        moreInfoLink="/pages/portfolio#mytodolist"
+        moreInfoLink={ROUTES.PROJECTS.MYTODOLIST}
         linkLabel="Web"
         linkClassName={"link-project-home"}
         imageWidth={789}
