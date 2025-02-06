@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { LABELS } from "../components/navbar/route";
 import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
 import Link from "next/link";
@@ -12,7 +13,7 @@ import AuctionProject from "./pages/projets/auctions/auctionsProject";
 import LicProject from './pages/projets/lic/licProject';
 import MultiProjects1118 from './pages/projets/multi-projects/multiProjects_2011-18';
 import CognitifProject from './pages/projets/cognitif/cognitifProject';
-import { LABELS } from "../components/navbar/route";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   const [rectWidth, setRectWidth] = useState("20%");
@@ -395,7 +396,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/ygregoire/"
               target="_blank"
               rel="noopener noreferrer"
-              className=" flex 
+              className="flex 
                           items-center 
                           text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]                        
                           hover:text-navLinkHover group"
@@ -403,13 +404,13 @@ export default function Home() {
               <span className="mr-2">Voir + de projets</span>
               {/* Arrow */}
               <svg
-                className=" w-[20px] h-[20px] 
-                            text-[#4d94ff] 
-                            inline-block 
-                            w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
-                            group-hover:text-navLinkHover
-                            mx-2
-                            mt-1"
+                className="w-[20px] h-[20px] 
+                          text-[#4d94ff] 
+                          inline-block 
+                          w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
+                          group-hover:text-navLinkHover
+                          mx-2
+                          mt-1"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -418,14 +419,11 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
               </svg>
-              {/* LinkedIn Logo*/}
-              <Image
-                src="/img/linkedin_logo.png"
-                alt="Logo LinkedIn"
-                width={76}
-                height={76}
+              {/* Icône LinkedIn */}
+              <FaLinkedin
                 className=" inline-block ml-2 
-                            w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45x] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]"
+                            w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45px] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]
+                            group-hover:text-navLinkHover"
               />
             </a>
           </div>
