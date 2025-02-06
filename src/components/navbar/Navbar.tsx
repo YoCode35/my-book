@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { FiMenu, FiHome } from "react-icons/fi";
 import { FiArrowUp } from "react-icons/fi";
 import { useNavbarLogic } from "./useNavbarLogic";
-import { LABELS, ROUTES } from "./route";
+import { LABELS, ROUTES, PAGE_NAMES } from "./route";
 
 interface NavbarProps {
   menuOpen: boolean;
@@ -70,9 +70,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               </Link>
             </li>
 
-            {/* Lien À propos */}
+            {/* About Link */}
             {pathname !== ROUTES.ABOUT_PATH && (
-              <li key="about" className="flex items-center">
+              <li key={PAGE_NAMES.ABOUT} className="flex items-center">
                 <Link
                   href={pathname === "/" ? ROUTES.ABOUT_HOME : ROUTES.ABOUT_ANCHOR}
                   className={`px-6 py-2 
@@ -90,9 +90,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               </li>
             )}
 
-            {/* Lien Skills */}
+            {/* Skills Link */}
             {pathname !== ROUTES.SKILLS_PATH && (
-              <li key="skills" className="flex items-center">
+              <li key={PAGE_NAMES.SKILLS} className="flex items-center">
                 <Link
                   href={pathname === "/" ? ROUTES.SKILLS_HOME : ROUTES.SKILLS_ANCHOR}
                   className={`px-6 py-2 
@@ -111,7 +111,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
 
             {/* Projects Links */}
             {pathname !== ROUTES.PROJECTS_PATH && (
-              <li key="projets" className="flex items-center">
+              <li key={PAGE_NAMES.PROJECTS} className="flex items-center">
                 <Link
                   href={pathname === "/" ? ROUTES.PROJECTS_HOME : ROUTES.PROJECTS_ANCHOR}
                   className={`px-6 py-2 
@@ -129,7 +129,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             )}
           </ul>
 
-          {/* Bouton Me Contacter */}
+          {/* Contact Button */}
           {pathname !== ROUTES.CONTACT_PATH && (
             <div className="ml-4 hidden lg:block">
               <Link href= {ROUTES.CONTACT_ANCHOR}>
@@ -191,9 +191,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               { href: ROUTES.SKILLS_HOME, label: <span className={`${isSkillsActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.SKILLS}</span> },
               { href: ROUTES.PROJECTS_HOME, label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.PROJECTS}</span> },
             ] : [
-              pathname !== ROUTES.ABOUT_PATH && { href: ROUTES.ABOUT_ANCHOR, label: "À propos" },
-              pathname !== ROUTES.SKILLS_PATH && { href: ROUTES.SKILLS_ANCHOR, label: "Skills" },
-              pathname !== ROUTES.PROJECTS_PATH && { href: ROUTES.PROJECTS_ANCHOR, label: "Projets" },
+              pathname !== ROUTES.ABOUT_PATH && { href: ROUTES.ABOUT_ANCHOR, label: LABELS.ABOUT },
+              pathname !== ROUTES.SKILLS_PATH && { href: ROUTES.SKILLS_ANCHOR, label: LABELS.SKILLS },
+              pathname !== ROUTES.PROJECTS_PATH && { href: ROUTES.PROJECTS_ANCHOR, label: LABELS.PROJECTS },
             ]).filter(Boolean),
           ]
             .filter((item): item is { href: string; label: string } => item !== false)

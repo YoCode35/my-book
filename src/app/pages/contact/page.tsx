@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
-import { LABELS } from "../../../components/navbar/route";
+import { LABELS, PAGE_NAMES } from "../../../components/navbar/route";
 
 export default function Contact() {
 
@@ -91,7 +91,7 @@ export default function Contact() {
         dotColor="#fff000"
       />
 
-      <h2 id="contact" className="title-contact-page">{LABELS.CONTACT}</h2>
+      <h2 id={PAGE_NAMES.CONTACT} className="title-contact-page">{LABELS.CONTACT}</h2>
 
       <p className="text-red-500 
                     text-sm 2xl:text-xl

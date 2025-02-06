@@ -1,6 +1,7 @@
 "use client";
 
 import DotsRectangle from "../../../components/dots/DotsRectangle";
+import { PAGE_NAMES } from "../../../components/navbar/route";
 
 export default function About() {
 
@@ -20,7 +21,7 @@ export default function About() {
         dotColor="#fff000"
       />
 
-      <h2 id="about" className="title-page">Plus d’infos à propos de moi</h2>
+      <h2 id={PAGE_NAMES.ABOUT} className="title-page">Plus d’infos à propos de moi</h2>
 
       <div className="px-4
                       sm:px-8 md:px-16 2xl:px-0

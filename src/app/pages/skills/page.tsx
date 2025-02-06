@@ -1,7 +1,7 @@
 "use client";
 
 import DotsRectangle from "../../../components/dots/DotsRectangle";
-import { LABELS } from "../../../components/navbar/route";
+import { LABELS, PAGE_NAMES } from "../../../components/navbar/route";
 
 export default function Skills() {
 
@@ -21,7 +21,7 @@ export default function Skills() {
                 dotColor="#fff000"
             />
 
-            <h2 id="skills" className="title-page">{LABELS.SKILLS}</h2>
+            <h2 id={PAGE_NAMES.SKILLS} className="title-page">{LABELS.SKILLS}</h2>
 
             <div className="px-4
                             sm:px-8 md:px-16 2xl:px-0
