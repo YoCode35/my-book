@@ -131,8 +131,8 @@ export default function Header() {
                           z-1 
                           text-left"
           >
-            <span className="block leading-[1.3]">Concepteur & Développeur</span>
-            <span className="block leading-[1.3]">d’applications FullStack</span>
+            <span className="block leading-[1.3]">Concepteur et Développeur</span>
+            <span className="block leading-[1.3]">d’applications <span className="text-xs lg:text-sm 2xl:text-base 4xl:text-2xl">AI Augmented</span></span>
           </h1>
 
           <div className="flex 
