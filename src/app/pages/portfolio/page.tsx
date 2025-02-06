@@ -28,7 +28,7 @@ export default function Portfolio() {
         dotColor="#fff000"
       />
 
-      <h2 id="portfolio" className="title-page">{LABELS.PORTFOLIO}</h2>
+      <h2 id="portfolio" className="title-page">{LABELS.PROJECTS}</h2>
 
       <MyTodoListDetailsProject />
 

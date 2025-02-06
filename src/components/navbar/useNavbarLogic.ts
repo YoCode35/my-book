@@ -34,7 +34,7 @@ export function useNavbarLogic() {
         }
 
         // Vérification de la visibilité de la section "My Projects"
-        const myProjectsSection = document.querySelector(ROUTES.PORTFOLIO_HOME);
+        const myProjectsSection = document.querySelector(ROUTES.PROJECTS_HOME);
         if (myProjectsSection) {
           const myProjectsRect = myProjectsSection.getBoundingClientRect();
           const isMyProjectsVisible = myProjectsRect.top <= window.innerHeight * 0.15 && myProjectsRect.bottom >= 0;

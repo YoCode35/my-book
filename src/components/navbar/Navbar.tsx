@@ -109,11 +109,11 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               </li>
             )}
 
-            {/* Lien Portfolio */}
-            {pathname !== ROUTES.PORTFOLIO_PATH && (
+            {/* Projects Links */}
+            {pathname !== ROUTES.PROJECTS_PATH && (
               <li key="portfolio" className="flex items-center">
                 <Link
-                  href={pathname === "/" ? ROUTES.PORTFOLIO_HOME : ROUTES.PORTFOLIO_ANCHOR}
+                  href={pathname === "/" ? ROUTES.PROJECTS_HOME : ROUTES.PROJECTS_ANCHOR}
                   className={`px-6 py-2 
                               text-navLinkInactive
                               hover:text-navLinkHover
@@ -123,7 +123,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                     color: (pathname === "/" && isMyProjectsActive) ? "#fff000" : "",
                   }}
                 >
-                  {LABELS.PORTFOLIO}
+                  {LABELS.PROJECTS}
                 </Link>
               </li>
             )}
@@ -189,11 +189,11 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             ...(pathname === "/" ? [
               { href: ROUTES.ABOUT_HOME, label: <span className={`${isAboutActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.ABOUT}</span> },
               { href: ROUTES.SKILLS_HOME, label: <span className={`${isSkillsActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.SKILLS}</span> },
-              { href: ROUTES.PORTFOLIO_HOME, label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.PORTFOLIO}</span> },
+              { href: ROUTES.PROJECTS_HOME, label: <span className={`${isMyProjectsActive ? "text-navLinkHover" : "text-white"}`}>{LABELS.PROJECTS}</span> },
             ] : [
               pathname !== ROUTES.ABOUT_PATH && { href: ROUTES.ABOUT_ANCHOR, label: "À propos" },
               pathname !== ROUTES.SKILLS_PATH && { href: ROUTES.SKILLS_ANCHOR, label: "Skills" },
-              pathname !== ROUTES.PORTFOLIO_PATH && { href: ROUTES.PORTFOLIO_ANCHOR, label: "Portfolio" },
+              pathname !== ROUTES.PROJECTS_PATH && { href: ROUTES.PROJECTS_ANCHOR, label: "Portfolio" },
             ]).filter(Boolean),
           ]
             .filter((item): item is { href: string; label: string } => item !== false)
