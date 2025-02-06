@@ -182,41 +182,6 @@ a {
 }
 
 /* Carousel */
-/*.swiper {
-  overflow: visible !important;
-}
-
-.swiper-pagination {
-  bottom: -50px !important; 
-}
-
-@media (min-width: 640px) { 
-  .swiper {
-    overflow: visible !important;
-  }
-  .swiper-pagination {
-    bottom: -40px !important;
-  }
-}
-
-@media (min-width: 768px) { 
-  .swiper {
-    overflow: visible !important;
-  }
-  .swiper-pagination {
-    bottom: -40px !important;
-  }
-}
-
-@media (min-width: 1280px) { 
-  .swiper {
-    overflow: hidden !important;
-  }
-  .swiper-pagination {
-    bottom: 60px !important;
-  }
-}*/
-
 /* Style des points inactifs */
 .swiper-pagination-bullet {
   background-color: gray !important; /* Couleur par défaut */

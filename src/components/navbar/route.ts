@@ -6,7 +6,7 @@ const BASE_CONTACT_PATH = "/pages/contact";
 export const LABELS = {
     ABOUT: "À propos",
     SKILLS: "Skills",
-    PROJECTS: "Portfolio",
+    PROJECTS: "Projets",
     CONTACT: "Me Contacter",
   };
 
