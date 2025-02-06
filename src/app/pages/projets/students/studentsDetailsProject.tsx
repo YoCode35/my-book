@@ -21,7 +21,7 @@ export default function StudentsDetailsProject() {
           GitHub
         </a>
 
-        <h4 className="project-description">Développement d’une plateforme d’organisation d’évènements d’étudiants</h4>
+        <h4 className="project-description">Développement d’une plateforme d’organisation d’évènements d’étudiants avec symfony.</h4>
 
         <p className="unordered-list mb-6">
           <span className="text-colorChart underline block mb-2">Problématique</span>

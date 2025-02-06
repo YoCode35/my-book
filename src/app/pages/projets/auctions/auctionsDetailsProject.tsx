@@ -27,7 +27,7 @@ export default function AuctionsDetailsProject() {
       <p className="unordered-list mb-8">
         <span className="block mb-6">Travail collaboratif de 4 développeurs.</span>
 
-        <span className="block mb-6">Application Web organisée en couches, développée en Java et SQL Server.</span>
+        <span className="block mb-6">Application Web organisée en couches, développée avec Java et SQL Server.</span>
       </p>
 
       <div className="unordered-list space-y-6 mb-12">

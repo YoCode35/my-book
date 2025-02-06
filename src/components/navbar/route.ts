@@ -1,7 +1,7 @@
 export const PAGE_NAMES = {
   ABOUT: "about",
   SKILLS: "skills",
-  PROJECTS: "portfolio",
+  PROJECTS: "projets",
   CONTACT: "contact",
 };
 

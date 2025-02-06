@@ -79,7 +79,7 @@ const ProjectCard = ({
         {/* Project Identity */}
         <div className={`project-content-block ${contentProjectClassName}`}>
           <h3 className="project-image-title">{title}</h3>
-          <p className="project-description">{description}</p>
+          <p className="project-description-home">{description}</p>
           <p className="project-date">{date}</p>
 
           {/* Technologies utilisées */}

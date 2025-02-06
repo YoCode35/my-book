@@ -1,6 +1,6 @@
-import ProjectCard from "../../../../../components/projects/ProjectsCard";
-import DotsRectangle from "../../../../../components/dots/DotsRectangle";
-import { ROUTES } from "../../../../../components/navbar/route";
+import ProjectCard from "../../../../components/projects/ProjectsCard";
+import DotsRectangle from "../../../../components/dots/DotsRectangle";
+import { ROUTES } from "../../../../components/navbar/route";
 
 const StudentsProject = () => {
   return (

@@ -21,7 +21,7 @@ export default function SeriesDetailsProject() {
           GitHub
         </a>
 
-        <h4 className="project-description">Développement d’une Plateforme « de service de streaming en ligne de séries TV » (Symfony & MySQL).</h4>
+        <h4 className="project-description">Développement d’une Plateforme « de service de streaming en ligne de séries TV » avec Symfony & MySQL.</h4>
 
         <p className="unordered-list text-white mb-6">
           <span className="text-colorChart underline block mb-2">Résumé du projet</span>

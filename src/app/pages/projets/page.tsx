@@ -1,16 +1,14 @@
 "use client";
 
-//import useDotsPerRow from "../../../components/dots/useResponsiveDots";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
-import MyTodoListDetailsProject from "./projects/mytodolist/myTodoListDetailsProject";
-import StudentsDetailsProject from "../../pages/portfolio/projects/students/studentsDetailsProject";
-import SeriesDetailsProject from "./projects/series/seriesDetailsProject";
-import AuctionsDetailsProject from "./projects/auctions/auctionsDetailsProject";
-import LicDetailsProject from "./projects/lic/licDetailsProject";
+import MyTodoListDetailsProject from "./mytodolist/myTodoListDetailsProject";
+import StudentsDetailsProject from "./students/studentsDetailsProject";
+import SeriesDetailsProject from "./series/seriesDetailsProject";
+import AuctionsDetailsProject from "./auctions/auctionsDetailsProject";
+import LicDetailsProject from "./lic/licDetailsProject";
 import { LABELS, PAGE_NAMES } from "../../../components/navbar/route";
 
-export default function Portfolio() {
-  //const dotsPerRow = useDotsPerRow();
+export default function Projects() {
 
   return (
     <main className=" bg-cover
@@ -75,7 +73,7 @@ export default function Portfolio() {
       />
 
       <LicDetailsProject />
-      
+
     </main>
   );
 }

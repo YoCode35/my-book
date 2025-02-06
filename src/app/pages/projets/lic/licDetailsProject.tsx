@@ -23,8 +23,7 @@ export default function LicDetailsProject() {
       </a>
 
       <h4 className="project-description">
-        Développement d’une application de relevés d’heures pour la répartition
-        du temps de travail (Langages : Php & Javascript)
+        Développement d’une application de relevés d’heures pour la répartition du temps de travail en Php et Javascript
       </h4>
 
       <div className="unordered-list space-y-6 mb-12">

@@ -5,13 +5,13 @@ import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
-import MyTodoListProject from "./pages/portfolio/projects/mytodolist/myTodoListProject";
-import StudentsProject from "./pages/portfolio/projects/students/studentsProject";
-import SeriesProject from "./pages/portfolio/projects/series/seriesProject";
-import AuctionProject from "./pages/portfolio/projects/auctions/auctionsProject";
-import LicProject from './pages/portfolio/projects/lic/licProject';
-import MultiProjects1118 from './pages/portfolio/projects/multi-projects/multiProjects_2011-18';
-import CognitifProject from './pages/portfolio/projects/cognitif/cognitifProject';
+import MyTodoListProject from "./pages/projets/mytodolist/myTodoListProject";
+import StudentsProject from "./pages/projets/students/studentsProject";
+import SeriesProject from "./pages/projets/series/seriesProject";
+import AuctionProject from "./pages/projets/auctions/auctionsProject";
+import LicProject from './pages/projets/lic/licProject';
+import MultiProjects1118 from './pages/projets/multi-projects/multiProjects_2011-18';
+import CognitifProject from './pages/projets/cognitif/cognitifProject';
 import { LABELS } from "../components/navbar/route";
 
 export default function Home() {
@@ -30,34 +30,34 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  const [dotsPerRow, setDotsPerRow] = useState(5); // Valeur par défaut
+  const [dotsPerRow, setDotsPerRow] = useState(5); // Default value
 
   useEffect(() => {
     const updateDotsPerRow = () => {
       if (window.innerWidth >= 2560) {
-        setDotsPerRow(80); // Nombre de points pour les écrans larges
+        setDotsPerRow(80);
       } else if (window.innerWidth >= 1920) {
-        setDotsPerRow(50); // Nombre de points pour les écrans medium
+        setDotsPerRow(50);
       } else if (window.innerWidth >= 1280) {
-        setDotsPerRow(50); // Nombre de points pour les écrans medium
+        setDotsPerRow(50);
       } else if (window.innerWidth >= 1024) {
-        setDotsPerRow(20); // Nombre de points pour les écrans medium
+        setDotsPerRow(20);
       } else if (window.innerWidth >= 768) {
-        setDotsPerRow(15); // Nombre de points pour les écrans petits
+        setDotsPerRow(15);
       } else if (window.innerWidth >= 640) {
-        setDotsPerRow(10); // Nombre de points pour les écrans petits
+        setDotsPerRow(10);
       } else if (window.innerWidth >= 320) {
-        setDotsPerRow(5); // Nombre de points pour les écrans petits
+        setDotsPerRow(5);
       }
     };
 
-    // Exécute la fonction initiale pour définir la valeur à l'instant de l'affichage
+    // Execute initial function to define value at the time of posting
     updateDotsPerRow();
 
-    // Ajouter un event listener pour mettre à jour les dots à chaque redimensionnement
+    // Update dots at each resize
     window.addEventListener('resize', updateDotsPerRow);
 
-    // Nettoyage de l'event listener
+    // Clean up
     return () => window.removeEventListener('resize', updateDotsPerRow);
   }, []);
 
@@ -211,106 +211,106 @@ export default function Home() {
           </svg>
         </div>
 
-          <div className="mx-auto 
+        <div className="mx-auto 
                           relative 
                           top-[10px] sm:top-[20px] md:top-[10px] lg:top-[5px] xl:top-[5px] 2xl:top-[5px] 3xl:top-[10px] 4xl:top-[50px]"
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-3 
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-3 
                             gap-8
                             pb-6 sm:pb-0"
-            >
-              {/* First Column */}
-              <div className="text-center sm:text-left">
+          >
+            {/* First Column */}
+            <div className="text-center sm:text-left">
               <div className="skills-title">Front end</div>
-                  <div className="skills-text"><span>JavaScript</span></div>
-                  <div className="skills-text"><span>Flutter</span></div>
-                  <div className="skills-text"><span>React.js</span></div>
-                  <div className="skills-text"><span>Next.js</span></div>
-                  <div className="skills-text"><span>TypeScript</span></div>                   
-                  <div className="skills-text"><span>CSS</span></div>
-                  <div className="skills-text"><span>Bootstrap</span></div>
-                  <div className="skills-text"><span>Tailwind CSS</span></div>
-                  <div className="skills-text"><span>WordPress</span></div>
+              <div className="skills-text"><span>JavaScript</span></div>
+              <div className="skills-text"><span>Flutter</span></div>
+              <div className="skills-text"><span>React.js</span></div>
+              <div className="skills-text"><span>Next.js</span></div>
+              <div className="skills-text"><span>TypeScript</span></div>
+              <div className="skills-text"><span>CSS</span></div>
+              <div className="skills-text"><span>Bootstrap</span></div>
+              <div className="skills-text"><span>Tailwind CSS</span></div>
+              <div className="skills-text"><span>WordPress</span></div>
 
-                <div className="pt-6">
-                  <div className="skills-subtitle">Prototypage & Design</div>
-                  <div className="skills-text"><span>Balsamiq</span></div>
-                  <div className="skills-text"><span>Photoshop</span></div>
-                </div>
+              <div className="pt-6">
+                <div className="skills-subtitle">Prototypage & Design</div>
+                <div className="skills-text"><span>Balsamiq</span></div>
+                <div className="skills-text"><span>Photoshop</span></div>
+              </div>
+            </div>
+
+            {/* Second Column */}
+            <div className="text-center sm:text-left">
+              <div className="skills-title">Back end</div>
+              <div className="skills-text"><span>Node.js</span></div>
+              <div className="skills-text"><span>TypeScript</span></div>
+              <div className="skills-text"><span>Symfony</span></div>
+              <div className="skills-text"><span>Php</span></div>
+              <div className="skills-text"><span>Java</span></div>
+              <div className="skills-text"><span>MySQL</span></div>
+              <div className="skills-text"><span>SQL Server</span></div>
+
+              <div className="pt-6">
+                <div className="skills-subtitle">Sécurité Web</div>
+                <div className="skills-text"><span>Protection des données sensibles</span></div>
+                <div className="skills-text"><span>Prévention des vulnérabilités</span></div>
               </div>
 
-              {/* Second Column */}
-              <div className="text-center sm:text-left">
-                  <div className="skills-title">Back end</div>
-                  <div className="skills-text"><span>Node.js</span></div>
-                  <div className="skills-text"><span>TypeScript</span></div>
-                  <div className="skills-text"><span>Symfony</span></div>
-                  <div className="skills-text"><span>Php</span></div>
-                  <div className="skills-text"><span>Java</span></div>
-                  <div className="skills-text"><span>MySQL</span></div>
-                  <div className="skills-text"><span>SQL Server</span></div>
-
-                  <div className="pt-6">
-                  <div className="skills-subtitle">Sécurité Web</div>
-                  <div className="skills-text"><span>Protection des données sensibles</span></div>
-                  <div className="skills-text"><span>Prévention des vulnérabilités</span></div>
-                </div>
-
-                <div className="pt-6">
-                  <div className="skills-subtitle">Modélisation & Conception</div>
-                  <div className="skills-text"><span>UML (Unified Modeling Language)</span></div>
-                </div>
+              <div className="pt-6">
+                <div className="skills-subtitle">Modélisation & Conception</div>
+                <div className="skills-text"><span>UML (Unified Modeling Language)</span></div>
               </div>
+            </div>
 
-              {/* Third Column */}
-              <div className="text-center sm:text-left">
+            {/* Third Column */}
+            <div className="text-center sm:text-left">
               <div className="skills-title">Web Services & APIs</div>
-                  <div className="skills-text"><span>Firebase</span></div>
-                  <div className="skills-text"><span>APIs REST</span></div>
+              <div className="skills-text"><span>Firebase</span></div>
+              <div className="skills-text"><span>APIs REST</span></div>
 
-                <div className="pt-6">
+              <div className="pt-6">
                 <div className="skills-title">Versioning</div>
-                  <div className="skills-text"><span>GitHub</span></div>
-                </div>
+                <div className="skills-text"><span>GitHub</span></div>
+              </div>
 
-                {/* Skills Link */}
-                <Link
-                  href="/pages/skills#skills"
-                  className=" flex 
+              {/* Skills Link */}
+              <Link
+                href="/pages/skills#skills"
+                className=" flex 
                               items-center 
                               mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
                               hover:text-navLinkHover group mb-8 
                               justify-end sm:justify-start"
-                >
-                  <span className="mr-2">+ d’infos</span>
-                  <svg
-                    className=" w-[3.8vw] 
+              >
+                <span className="mr-2">+ d’infos</span>
+                <svg
+                  className=" w-[3.8vw] 
                                 h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
                                 mt-1 
                                 text-[#4d94ff] 
                                 group-hover:text-navLinkHover"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 12H5"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
-              </div>
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 12H5"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
             </div>
           </div>
+        </div>
 
       </section>
 
@@ -386,14 +386,6 @@ export default function Home() {
             />
           </div>
 
-          {/* 
-          <p className="font-rubik                         
-                        text-lg text-[1rem] sm:text-[1.125rem] md:text-[2.1vw] lg:text-[18px] 2xl:text-[22px] 3xl:text-[24px] 4xl:text-[30px]
-                        mx-8 sm:mx-12 md:mx-8 lg:mx-20"
-          >
-            [Mise à jour prévue d’ici quelques jours pour une présentation d’autres projets]
-          </p>
-          */}
           <div className="flex 
                           justify-center sm:justify-center 
                           mt-20
@@ -409,7 +401,7 @@ export default function Home() {
                           hover:text-navLinkHover group"
             >
               <span className="mr-2">Voir + de projets</span>
-              {/* Flèche */}
+              {/* Arrow */}
               <svg
                 className=" w-[20px] h-[20px] 
                             text-[#4d94ff] 

@@ -1,8 +1,8 @@
 "use client";
 
-import ProjectCard from "../../../../../components/projects/ProjectsCard";
-import DotsRectangle from "../../../../../components/dots/DotsRectangle";
-import { ROUTES } from "../../../../../components/navbar/route";
+import ProjectCard from "../../../../components/projects/ProjectsCard";
+import DotsRectangle from "../../../../components/dots/DotsRectangle";
+import { ROUTES } from "../../../../components/navbar/route";
 
 const AuctionsProject = () => {
   return (
@@ -20,7 +20,7 @@ const AuctionsProject = () => {
         linkClassName={"link-project-home"}
         imageWidth={792}
         imageHeight={800}
-        imageClassName="xl:w-[40%]" 
+        imageClassName="xl:w-[40%]"
       />
 
       {/* DotsRectangle spécifique à cette page */}

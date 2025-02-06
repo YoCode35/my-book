@@ -3,41 +3,41 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import ProjectCard from "../../../../../components/projects/ProjectsCard";
-import DotsRectangle from "../../../../../components/dots/DotsRectangle";
+import ProjectCard from "../../../../components/projects/ProjectsCard";
+import DotsRectangle from "../../../../components/dots/DotsRectangle";
 
 const MultiProjects1118 = () => {
   // Liste du carrousel
   const images = [
-    { 
-      url: "/img/multiprojects_1118/homepage.webp", 
-      alt: "Page d'Accueil du site Web du Cabinet d'Avocats ABLITIS", 
+    {
+      url: "/img/multiprojects_1118/homepage.webp",
+      alt: "Page d'Accueil du site Web du Cabinet d'Avocats ABLITIS",
       title: "Cabinet d'avocats ABLITIS",
-      description: "Site Web du cabinet d'avocats ABLITIS implanté à Rennes", 
-      date: "Janvier 2018", 
+      description: "Page d'accueil du site Web du cabinet d'avocats ABLITIS implanté à Rennes",
+      date: "Janvier 2018",
       technologies: "Javascript & Php",
       projectLink: "http://www.ablitis-avocats-rennes.bzh/",
-      linkLabel:"Web",
+      linkLabel: "Web",
     },
-    { 
-      url: "/img/multiprojects_1118/procedure-appel_page.webp", 
-      alt: "Page de prestations du Cabinet d'Avocats ABLITIS", 
-      title: "Cabinet d'avocats ABLITIS", 
+    {
+      url: "/img/multiprojects_1118/procedure-appel_page.webp",
+      alt: "Page de prestations du Cabinet d'Avocats ABLITIS",
+      title: "Cabinet d'avocats ABLITIS",
       description: "Page présentant des prestations du Cabinet d'avocats ABLITIS concernant la procédure d'appel et la postulation",
       date: "Janvier 2018",
       technologies: "Javascript & Php",
       projectLink: "http://www.ablitis-avocats-rennes.bzh/",
-      linkLabel:"Web",
+      linkLabel: "Web",
     },
-    { 
-      url: "/img/multiprojects_1118/slide_plus-de-projets-sur-linkedin.png", 
-      alt: "Message d'informations concernant plus de projets présents sur mon profil LinkedIn", 
-      title: "+ de projets sur LinkedIn", 
+    {
+      url: "/img/multiprojects_1118/slide_plus-de-projets-sur-linkedin.png",
+      alt: "Message d'informations concernant plus de projets présents sur mon profil LinkedIn",
+      title: "+ de projets sur LinkedIn",
       description: "Plus de projets de 2011 à 2018 sur mon profil LinkedIn",
       date: "De 2011 à 2018",
       technologies: "Javascript & Php",
       projectLink: "https://www.linkedin.com/in/ygregoire/",
-      linkLabel:"LinkedIn",
+      linkLabel: "LinkedIn",
     },
   ];
 
@@ -56,7 +56,7 @@ const MultiProjects1118 = () => {
             className=" rounded-3xl 
                         pr-0 2xl:!pr-20 
                         2xl:!pl-8 
-                        h-[700px] xxs:h-[650px] xs:h-[800px] sm:h-[750px] md:h-[650px] lg:h-[650px] xl:h-[650px] 2xl:h-[680px] 3xl:h-[850px] 4xl:h-[900px]"
+                        h-[700px] xxs:h-[650px] xs:h-[800px] sm:h-[750px] md:h-[650px] lg:h-[860px] xl:h-[650px] 2xl:h-[680px] 3xl:h-[850px] 4xl:h-[900px]"
           >
             {images.map((img, index) => (
               <SwiperSlide key={index}>
@@ -73,12 +73,12 @@ const MultiProjects1118 = () => {
                   linkClassName={"link-project-home mt-12"}
                   imageWidth={1000}
                   imageHeight={700}
-                  imageClassName="w-[230px] md:w-[65%] lg:w-[60%] 2xl:w-[45%]
+                  imageClassName="w-[230px] md:w-[65%] lg:w-[90%] 2xl:w-[45%]
                                   mx-auto
                                   pl-0 2xl:pl-8
                                   mb-0 sm:mb-0 lg:mb-0 3xl:mb-24 4xl:mb-48"
-                  contentProjectClassName=" xl:mr-[60px] 2xl:mr-[70px] 3xl:mr-[200px] 4xl:mr-[100px]
-                                            xl:ml-[-100px] 2xl:ml-[-70px] 3xl:ml-[-200px] 4xl:ml-[-200px]"
+                  contentProjectClassName=" xl:mr-[60px] 2xl:mr-[70px] 3xl:mr-[150px] 4xl:mr-[100px]
+                                            xl:ml-[-100px] 2xl:ml-[-70px] 3xl:ml-[-100px] 4xl:ml-[-200px]"
                 />
               </SwiperSlide>
             ))}
