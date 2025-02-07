@@ -249,7 +249,8 @@ export default function Home() {
               <div className="skills-text"><span>Php</span></div>
               <div className="skills-text"><span>Java</span></div>
               <div className="skills-text"><span>MySQL</span></div>
-              <div className="skills-text"><span>SQL Server</span></div>
+              <div className="skills-text"><span>PostgreSQL</span></div>
+              <div className="skills-text"><span>SQL Server</span></div>              
 
               <div className="pt-6">
                 <div className="skills-subtitle">Sécurité Web</div>
@@ -319,13 +320,13 @@ export default function Home() {
       <div className="min-h-[50px] sm:min-h-[150px] md:min-h-[100px] lg:min-h-[50px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* My Projects Section */}
-      <section id="projetshome" className="flex 
-                                      flex-col 
-                                      justify-start 
-                                      items-center 
-                                      relative 
-                                      w-full 
-                                      min-h-[100%]"
+      <section id="projetshome" className=" flex 
+                                            flex-col 
+                                            justify-start 
+                                            items-center 
+                                            relative 
+                                            w-full 
+                                            min-h-[100%]"
       >
         <h2 className=" title-home-section 
                         leading-tight 
@@ -396,7 +397,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/ygregoire/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex 
+              className=" flex 
                           items-center 
                           text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]                        
                           hover:text-navLinkHover group"
