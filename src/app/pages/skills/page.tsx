@@ -50,9 +50,6 @@ export default function Skills() {
                     </a>{" "}
                     sur les Stores d’Apple et d’Android.
                 </p>
-                <p className="paragraph-custom mt-4">
-                    J’aimerais aussi assimiler le Framework NestJS permettant de créer des applications côté serveur.
-                </p>
                 <div className="paragraph-custom mt-4">
                     <p>Enfin, je souhaite, pour tous mes développements :</p>
                     <ul className="mt-2">
