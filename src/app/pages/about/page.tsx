@@ -59,7 +59,7 @@ export default function About() {
 
         <p className="paragraph-custom mt-4">
           Aujourd’hui, je poursuis ma montée en compétences en explorant des stacks
-          modernes comme Node.js, Next.js, TypeScript, Angular, React.js ou encore Flutter.
+          modernes comme React.js, Next.js, TypeScript, Node.js ou encore Flutter.
           Mon engagement va bien au-delà du code : j’aime concevoir des solutions
           innovantes, performantes et utiles, pensées pour enrichir l’expérience
           utilisateur et optimiser les interactions numériques.

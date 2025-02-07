@@ -1,5 +1,6 @@
 import './styles/globals.css';
 import './styles/clashDisplay_font.css';
+import "../app/styles/loginform.css";
 import Navbar from '../components/Header';
 import Footer from '../components/Footer';
 import Head from 'next/head';

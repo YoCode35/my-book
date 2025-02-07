@@ -135,6 +135,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
               <Link href= {ROUTES.CONTACT_ANCHOR}>
                 <button
                   className={`px-6 py-2
+                              w-[180px] 4xl:w-[250px]
                               rounded-full
                               text-white
                               hover:bg-navLinkHover

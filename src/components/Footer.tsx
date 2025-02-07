@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+//import { FaSignInAlt } from "react-icons/fa"; // Ajoute l'icône de connexion
 
 export default function Footer() {
   return (
@@ -44,6 +45,13 @@ export default function Footer() {
         >
           <FaGithub />
         </a>
+
+        {/* Lien Connexion 
+        <a href="pages/login" 
+           className="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer"
+        >
+          <FaSignInAlt />
+        </a>*/}
       </div>
     </footer>
   );
