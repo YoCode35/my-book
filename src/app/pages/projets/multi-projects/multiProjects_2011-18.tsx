@@ -14,7 +14,7 @@ const MultiProjects1118 = () => {
       alt: "Page d'Accueil du site Web du Cabinet d'Avocats ABLITIS",
       title: "Cabinet d'avocats ABLITIS",
       description: "Page d'accueil du site Web du cabinet d'avocats ABLITIS implanté à Rennes",
-      date: "Janvier 2018",
+      date: "2018",
       technologies: "Javascript & Php",
       projectLink: "http://www.ablitis-avocats-rennes.bzh/",
       linkLabel: "Web",
@@ -23,12 +23,33 @@ const MultiProjects1118 = () => {
       url: "/img/multiprojects_1118/procedure-appel_page.webp",
       alt: "Page de prestations du Cabinet d'Avocats ABLITIS",
       title: "Cabinet d'avocats ABLITIS",
-      description: "Page présentant des prestations du Cabinet d'avocats ABLITIS concernant la procédure d'appel et la postulation",
-      date: "Janvier 2018",
+      description: "Page de prestations",
+      date: "2018",
       technologies: "Javascript & Php",
       projectLink: "http://www.ablitis-avocats-rennes.bzh/",
       linkLabel: "Web",
     },
+    {
+      url: "/img/multiprojects_1118/homepage_(qualiciel).webp",
+      alt: "Page d'Accueil du site Web Qualiciel",
+      title: "Qualiciel",
+      description: "Page d'accueil d'un Site Web d'un fournisseur et poseur de solutions solaires photovoltaïques",
+      date: "2013",
+      technologies: "Javascript & Php",
+      projectLink: "",
+      linkLabel: "",
+    },
+    {
+      url: "/img/multiprojects_1118/pvsystem_(qualiciel).webp",
+      alt: "Page produit",
+      title: "Qualiciel",
+      description: "Page produit",
+      date: "2013",
+      technologies: "Javascript & Php",
+      projectLink: "",
+      linkLabel: "",
+    },
+    /*
     {
       url: "/img/multiprojects_1118/slide_plus-de-projets-sur-linkedin.png",
       alt: "Message d'informations concernant plus de projets présents sur mon profil LinkedIn",
@@ -39,6 +60,7 @@ const MultiProjects1118 = () => {
       projectLink: "https://www.linkedin.com/in/ygregoire/",
       linkLabel: "LinkedIn",
     },
+    */
   ];
 
   return (
@@ -99,6 +121,7 @@ const MultiProjects1118 = () => {
         <DotsRectangle
           className="w-full"
           rows={3}
+          
           dotsPerRow={10}
           dotColor="#fff000"
           width="100%"
