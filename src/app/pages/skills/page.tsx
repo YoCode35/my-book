@@ -36,22 +36,10 @@ export default function Skills() {
                     Ma montée en compétences récente en back-end me permet aujourd’hui de développer une application from scratch jusqu’à son aboutissement.
                 </p>
                 <p className="paragraph-custom mt-4">
-                    J’exerce actuellement ces compétences en me perfectionnant et en explorant des stacks modernes comme React.js, Next.js,TypeScript, Node.js ou encore Flutter.
-                </p>
-                <p className="paragraph-custom mt-4">
-                    Prochainement, je prévois le déploiement de mon application{" "}
-                    <a
-                        href="https://www.mytodolist.tech"
-                        target="_blank"
-                        rel="noopener noreferrer"  // Security
-                        className="text-navLinkHover hover:underline"
-                    >
-                        MyTodoList
-                    </a>{" "}
-                    sur les Stores d’Apple et d’Android.
+                    J’exerce actuellement ces compétences en me perfectionnant et en explorant des stacks modernes comme React.js, Next.js, TypeScript, Node.js ou encore Flutter.
                 </p>
                 <div className="paragraph-custom mt-4">
-                    <p>Enfin, je souhaite, pour tous mes développements :</p>
+                    <p>Pour tous mes développements, je souhaite :</p>
                     <ul className="mt-2">
                         <li>- Exploiter les patterns de conception actuels</li>
                         <li>- Intégrer des tests automatisés dans mon workflow</li>
