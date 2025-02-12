@@ -35,6 +35,9 @@ const DashboardPage: React.FC = () => {
       return;
     }
 
+        // Log pour vérifier l'URL de l'API
+        console.log('API_URL:', process.env.NEXT_PUBLIC_API_URL);
+
     const fetchData = async () => {
       try {
         const API_URL = process.env.NEXT_PUBLIC_API_URL;

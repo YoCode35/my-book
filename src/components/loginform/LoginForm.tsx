@@ -70,6 +70,8 @@ const LoginForm: React.FC = () => {
 
       try {
         const API_URL = process.env.NEXT_PUBLIC_API_URL;
+        // Log pour vérifier l'URL de l'API
+        console.log('API_URL:', process.env.NEXT_PUBLIC_API_URL);
         if (!API_URL) {
           setError("API URL non définie.");
           setLoading(false);
