@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-//import { FaSignInAlt } from "react-icons/fa"; // Ajoute l'icône de connexion
+import { FaSignInAlt } from "react-icons/fa"; // Ajoute l'icône de connexion
 
 export default function Footer() {
   return (
@@ -30,28 +31,25 @@ export default function Footer() {
       <div className="absolute right-4 top-1/2 -translate-y-1/2 flex space-x-4 z-20">
         {/* Lien LinkedIn */}
         <a href="https://www.linkedin.com/in/yoann-gregoire/"
-           target="_blank"
-           rel="noopener noreferrer"
-           className="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer"
         >
           <FaLinkedin />
         </a>
 
         {/* Lien GitHub */}
         <a href="https://github.com/YoCode35"
-           target="_blank"
-           rel="noopener noreferrer"
-           className="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer"
         >
           <FaGithub />
         </a>
+        <Link href="/login" className="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer">
+    <FaSignInAlt />
+</Link>
 
-        {/* Lien Connexion 
-        <a href="pages/login" 
-           className="text-white text-2xl hover:text-gray-400 transition-colors cursor-pointer"
-        >
-          <FaSignInAlt />
-        </a>*/}
       </div>
     </footer>
   );

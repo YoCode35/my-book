@@ -54,15 +54,7 @@ export default function Header() {
                                                         z-0"
       >
         <source src="/img/universe.mov" type="video/mp4" />
-        {/* Sous-titres */}
-        <track 
-          kind="captions" 
-          src="/img/universe-captions.vtt" 
-          srcLang="fr" 
-          label="Français" 
-          default 
-        />
-        Votre navigateur ne supporte pas ce format vidéo.
+        {/*Votre navigateur ne supporte pas ce format vidéo.*/}
       </video>
 
       {/* Traits obliques à gauche */}
@@ -92,20 +84,19 @@ export default function Header() {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       {/* Gradient */}
-      <div
-        className="absolute inset-0 z-5"
-        style={{
-          backgroundImage: `linear-gradient(
-              to bottom,
-              rgba(255, 255, 255, 0) 0%,
-              rgba(0, 0, 0, 0.3) 20%,
-              rgba(0, 0, 0, 1) 100%
-            ),
-            radial-gradient(rgba(255, 255, 255, 0.1) ${windowWidth <= 640 ? 'calc(40vw / 300)' : 'calc(20vw / 300)'}, transparent ${windowWidth <= 640 ? 'calc(40vw / 100)' : 'calc(20vw / 200)'})`,
-          backgroundSize: windowWidth <= 640
-            ? '100% 100%, calc(35vw / 25) calc(35vw / 25)'
-            : '100% 100%, calc(35vw / 80) calc(35vw / 80)',
-        }}
+      <div className="absolute inset-0 z-5"
+            style={{
+              backgroundImage: `linear-gradient(
+                                to bottom,
+                                rgba(255, 255, 255, 0) 0%,
+                                rgba(0, 0, 0, 0.3) 20%,
+                                rgba(0, 0, 0, 1) 100%
+                              ),
+                              radial-gradient(rgba(255, 255, 255, 0.1) ${windowWidth <= 640 ? 'calc(40vw / 300)' : 'calc(20vw / 300)'}, transparent ${windowWidth <= 640 ? 'calc(40vw / 100)' : 'calc(20vw / 200)'})`,
+              backgroundSize: windowWidth <= 640
+                ? '100% 100%, calc(35vw / 25) calc(35vw / 25)'
+                : '100% 100%, calc(35vw / 80) calc(35vw / 80)',
+            }}
       ></div>
 
       <div className="relative 

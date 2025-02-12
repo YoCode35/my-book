@@ -22,14 +22,14 @@
 .login-form div {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Assurer que chaque bloc input prend toute la largeur */
-  margin-bottom: 10px; /* Espacement uniforme entre les champs */
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .login-form label {
   font-weight: bold;
   color: #000;
-  margin-bottom: 4px; /* Ajoute un petit espace sous le label */
+  margin-bottom: 4px;
 }
 
 .login-form input {
@@ -40,8 +40,8 @@
   color: #000;
   background-color: #fff;
   outline: none;
-  width: 100%; /* Assurer que l'input prend toute la largeur */
-  box-sizing: border-box; /* Empêche les bordures de casser l'alignement */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .login-form input:focus {

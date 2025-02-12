@@ -1,18 +1,18 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { LABELS } from "../components/navbar/route";
+import { LABELS, ROUTES, PAGE_NAMES } from "../components/navbar/route";
 import Image from 'next/image';
 import DotsRectangle from "../components/dots/DotsRectangle";
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
-import MyTodoListProject from "./pages/projets/mytodolist/myTodoListProject";
-import StudentsProject from "./pages/projets/students/studentsProject";
-import SeriesProject from "./pages/projets/series/seriesProject";
-import AuctionProject from "./pages/projets/auctions/auctionsProject";
-import LicProject from './pages/projets/lic/licProject';
-import MultiProjects1118 from './pages/projets/multi-projects/multiProjects_2011-18';
-import CognitifProject from './pages/projets/cognitif/cognitifProject';
+import MyTodoListProject from "./projets/mytodolist/myTodoListProject";
+import StudentsProject from "./projets/students/studentsProject";
+import SeriesProject from "./projets/series/seriesProject";
+import AuctionProject from "./projets/auctions/auctionsProject";
+import LicProject from './projets/lic/licProject';
+import MultiProjects1118 from './projets/multi-projects/multiProjects_2011-18';
+import CognitifProject from './projets/cognitif/cognitifProject';
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
@@ -96,10 +96,10 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <section id="abouthome" className=" w-full 
-                                          flex justify-start 
-                                          relative 
-                                          min-h-[100%]"
+      <section id={`${PAGE_NAMES.ABOUT}home`} className="w-full 
+                                                          flex justify-start 
+                                                          relative 
+                                                          min-h-[100%]"
       >
         <div className="relative 
                         w-full 
@@ -121,7 +121,7 @@ export default function Home() {
           >
             <span className="block leading-none">{LABELS.ABOUT}</span>
             <span className="inline-flex items-center">de moi
-              <a href="/pages/about#about" className="relative group">
+              <a href={ROUTES.ABOUT_ANCHOR} className="relative group">
                 <span className=" relative 
                                   text-[3vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.8vw] xl:text-[1.2rem] 2xl:text-[1.6rem] 3xl:text-[2rem] 4xl:text-[2.5rem]
                                   left-[50%] sm:left-[45%] lg:left-[75%] 2xl:left-[70%]
@@ -174,9 +174,9 @@ export default function Home() {
           </p>
 
           <DotsRectangle
-            className="relative 
-                      mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%] 
-                      ml-auto"
+            className=" relative 
+                        mt-8 sm:mt-[8%] md:mt-[20%] lg:mt-[0%] xl:mt-[-7%] 2xl:mt-[-5%] 3xl:mt-[0%] 4xl:mt-[10%] 
+                        ml-auto"
             rows={3}
             dotsPerRow={10}
             dotColor="#fff000"
@@ -191,11 +191,11 @@ export default function Home() {
       <div className="min-h-[70px] sm:min-h-[100px] md:min-h-[60px] lg:min-h-[50px] xl:min-h-[60px] 2xl:min-h-[160px] 3xl:min-h-[50px]"></div>
 
       {/* Skills Section */}
-      <section id="skillshome" className="flex 
-                                      flex-col 
-                                      items-center 
-                                      min-h-[100%] 
-                                      px-4 sm:px-8 lg:px-16 xl:px-32"
+      <section id={`${PAGE_NAMES.SKILLS}home`} className="flex 
+                                                          flex-col 
+                                                          items-center 
+                                                          min-h-[100%] 
+                                                          px-4 sm:px-8 lg:px-16 xl:px-32"
       >
         <div className="flex 
                         items-center 
@@ -213,12 +213,12 @@ export default function Home() {
         </div>
 
         <div className="mx-auto 
-                          relative 
-                          top-[10px] sm:top-[20px] md:top-[10px] lg:top-[5px] xl:top-[5px] 2xl:top-[5px] 3xl:top-[10px] 4xl:top-[50px]"
+                        relative 
+                        top-[10px] sm:top-[20px] md:top-[10px] lg:top-[5px] xl:top-[5px] 2xl:top-[5px] 3xl:top-[10px] 4xl:top-[50px]"
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 
-                            gap-8
-                            pb-6 sm:pb-0"
+                          gap-8
+                          pb-6 sm:pb-0"
           >
             {/* First Column */}
             <div className="text-center sm:text-left">
@@ -250,7 +250,7 @@ export default function Home() {
               <div className="skills-text"><span>Java</span></div>
               <div className="skills-text"><span>MySQL</span></div>
               <div className="skills-text"><span>PostgreSQL</span></div>
-              <div className="skills-text"><span>SQL Server</span></div>              
+              <div className="skills-text"><span>SQL Server</span></div>
 
               <div className="pt-6">
                 <div className="skills-subtitle">Sécurité Web</div>
@@ -277,7 +277,7 @@ export default function Home() {
 
               {/* Skills Link */}
               <Link
-                href="/pages/skills#skills"
+                href={ROUTES.SKILLS_ANCHOR}
                 className=" flex 
                               items-center 
                               mt-4 text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw] 
@@ -320,7 +320,7 @@ export default function Home() {
       <div className="min-h-[50px] sm:min-h-[150px] md:min-h-[100px] lg:min-h-[50px] xl:min-h-[70px] 2xl:min-h-[150px]"></div>
 
       {/* My Projects Section */}
-      <section id="projetshome" className=" flex 
+      <section id={`${PAGE_NAMES.PROJECTS}home`} className=" flex 
                                             flex-col 
                                             justify-start 
                                             items-center 

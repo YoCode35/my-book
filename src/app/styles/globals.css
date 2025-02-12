@@ -304,6 +304,24 @@ h4.project-description {
 }
 /* Fin */
 
+/* Private Space */
+.title-privatespace-section {
+  @apply  text-[7vw] sm:text-[2rem] md:text-[4vw] xl:text-[3vw]
+          mt-12;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  transform: scaleY(0.7);
+  font-family: 'ClashDisplay-Medium';
+}
+
+.privatespace-text {
+  @apply  text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 3xl:text-[24px] 4xl:text-[34px];
+}
+/* Fin */
+
 @layer utilities {
   .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
