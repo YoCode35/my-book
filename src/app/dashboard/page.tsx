@@ -37,15 +37,17 @@ const DashboardPage: React.FC = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get<UserData>(`${process.env.NEXT_PUBLIC_API_URL}/dashboard`, {
+        const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+        const response = await axios.get<UserData>(`${API_URL}/dashboard`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        });
+        });        
         setUserData(response.data);
 
         if (response.data.role === "admin") {
-          const usersResponse = await axios.get<User[]>(`${process.env.NEXT_PUBLIC_API_URL}/users`, {
+          const usersResponse = await axios.get<User[]>(`${API_URL}/users`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

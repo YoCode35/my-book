@@ -69,8 +69,9 @@ const LoginForm: React.FC = () => {
     }*/
 
       try {
+        const API_URL = process.env.NEXT_PUBLIC_API_URL;
         const response = await axios.post<LoginResponse>(
-          `${process.env.NEXT_PUBLIC_API_URL}/login`, // Utilisation de l'URL de l'API
+          `${API_URL}/login`,
           {
             username,
             password,
