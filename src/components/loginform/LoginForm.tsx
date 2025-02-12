@@ -70,8 +70,12 @@ const LoginForm: React.FC = () => {
 
       try {
         const API_URL = process.env.NEXT_PUBLIC_API_URL;
-        const response = await axios.post<LoginResponse>(
-          `${API_URL}/login`,
+        if (!API_URL) {
+          setError("API URL non définie.");
+          setLoading(false);
+          return;
+        }
+        const response = await axios.post<LoginResponse>(`${API_URL.replace(/\/$/, '')}/login`,
           {
             username,
             password,
