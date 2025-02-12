@@ -38,35 +38,61 @@ const DashboardPage: React.FC = () => {
         // Log pour vérifier l'URL de l'API
         console.log('API_URL:', process.env.NEXT_PUBLIC_API_URL);
 
-    const fetchData = async () => {
-      try {
-        const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
-        const response = await axios.get<UserData>(`${API_URL}/dashboard`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });        
-        setUserData(response.data);
-
-        if (response.data.role === "admin") {
-          const usersResponse = await axios.get<User[]>(`${API_URL}/users`, {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
-          setUsers(usersResponse.data);
-        }
-      } catch (err: unknown) {
-        if (err instanceof Error) {
-          setError(err.message);
-        } else {
-          setError("Erreur inconnue");
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
+        const fetchData = async () => {
+          try {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL;
+        
+            // Log pour vérifier l'URL de l'API
+            console.log('API_URL:', API_URL);
+            
+            // Log pour vérifier le token avant de faire l'appel API
+            console.log('Token utilisé :', token);
+        
+            const response = await axios.get<UserData>(`${API_URL}/dashboard`, {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            });
+            
+            // Log pour voir la réponse de l'API pour /dashboard
+            console.log('Réponse de /dashboard :', response.data);
+        
+            setUserData(response.data);
+        
+            if (response.data.role === "admin") {
+              // Log pour indiquer que l'utilisateur est un admin et qu'on va récupérer les utilisateurs
+              console.log('Utilisateur est un admin, récupération des utilisateurs...');
+        
+              const usersResponse = await axios.get<User[]>(`${API_URL}/users`, {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              });
+              
+              // Log pour voir la réponse de l'API pour /users
+              console.log('Réponse de /users :', usersResponse.data);
+        
+              setUsers(usersResponse.data);
+            }
+          } catch (err: unknown) {
+            if (err instanceof Error) {
+              setError(err.message);
+              
+              // Log pour afficher l'erreur capturée
+              console.error('Erreur capturée :', err.message);
+            } else {
+              setError("Erreur inconnue");
+        
+              // Log pour afficher une erreur inconnue
+              console.error('Erreur inconnue', err);
+            }
+          } finally {
+            setLoading(false);
+        
+            // Log pour indiquer que le chargement est terminé
+            console.log('Chargement terminé');
+          }
+        };     
 
     fetchData();
   }, [router]);

@@ -70,34 +70,53 @@ const LoginForm: React.FC = () => {
 
       try {
         const API_URL = process.env.NEXT_PUBLIC_API_URL;
+        
         // Log pour vérifier l'URL de l'API
-        console.log('API_URL:', process.env.NEXT_PUBLIC_API_URL);
+        console.log('API_URL:', API_URL);
+        
         if (!API_URL) {
           setError("API URL non définie.");
           setLoading(false);
           return;
         }
-        const response = await axios.post<LoginResponse>(`${API_URL.replace(/\/$/, '')}/login`,
-          {
-            username,
-            password,
-        //captchaToken,
-      });
-
-      if (response.status === 200 && response.data.token) {
-        localStorage.setItem("token", response.data.token);
-        console.log("Token enregistré !");
-
-        router.replace("/dashboard#privatespace");
-      } else {
-        setError("Erreur : aucun token reçu.");
+      
+        // Log pour vérifier que l'URL de l'API est bien formée
+        const loginUrl = `${API_URL.replace(/\/$/, '')}/login`;
+        console.log('URL de connexion construite :', loginUrl);
+      
+        const response = await axios.post<LoginResponse>(loginUrl, {
+          username,
+          password,
+          //captchaToken,
+        });
+      
+        // Log pour vérifier la réponse de l'API
+        console.log('Réponse de l\'API :', response);
+      
+        if (response.status === 200 && response.data.token) {
+          localStorage.setItem("token", response.data.token);
+          
+          // Log lorsque le token est enregistré
+          console.log("Token enregistré !");
+      
+          router.replace("/dashboard#privatespace");
+        } else {
+          setError("Erreur : aucun token reçu.");
+          console.log("Aucun token reçu dans la réponse.");
+        }
+      } catch (err: unknown) {
+        const errorResponse = err as ErrorResponse;
+        setError(errorResponse.response?.data || "Erreur de connexion");
+      
+        // Log en cas d'erreur
+        console.error('Erreur capturée :', err);
+      } finally {
+        setLoading(false);
+      
+        // Log pour indiquer que le chargement est terminé
+        console.log('Chargement terminé');
       }
-    } catch (err: unknown) {
-      const errorResponse = err as ErrorResponse;
-      setError(errorResponse.response?.data || "Erreur de connexion");
-    } finally {
-      setLoading(false);
-    }
+      
   };
 
   return (
