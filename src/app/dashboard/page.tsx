@@ -41,13 +41,11 @@ const DashboardPage: React.FC = () => {
         const fetchData = async () => {
           try {
             const API_URL = process.env.NEXT_PUBLIC_API_URL;
-        
-            // Log pour vérifier l'URL de l'API
-            console.log('API_URL:', API_URL);
             
-            // Log pour vérifier le token avant de faire l'appel API
-            console.log('Token utilisé :', token);
-        
+            // Log pour vérifier l'URL de l'API et le token avant la requête
+            console.log('URL de la requête /dashboard :', `${API_URL}/dashboard`);
+            console.log('Token utilisé pour /dashboard :', token);
+            
             const response = await axios.get<UserData>(`${API_URL}/dashboard`, {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -63,6 +61,10 @@ const DashboardPage: React.FC = () => {
               // Log pour indiquer que l'utilisateur est un admin et qu'on va récupérer les utilisateurs
               console.log('Utilisateur est un admin, récupération des utilisateurs...');
         
+              // Log pour vérifier l'URL de la requête /users et le token avant la requête
+              console.log('URL de la requête /users :', `${API_URL}/users`);
+              console.log('Token utilisé pour /users :', token);
+        
               const usersResponse = await axios.get<User[]>(`${API_URL}/users`, {
                 headers: {
                   Authorization: `Bearer ${token}`,
@@ -77,7 +79,7 @@ const DashboardPage: React.FC = () => {
           } catch (err: unknown) {
             if (err instanceof Error) {
               setError(err.message);
-              
+        
               // Log pour afficher l'erreur capturée
               console.error('Erreur capturée :', err.message);
             } else {
@@ -92,7 +94,7 @@ const DashboardPage: React.FC = () => {
             // Log pour indiquer que le chargement est terminé
             console.log('Chargement terminé');
           }
-        };     
+        };             
 
     fetchData();
   }, [router]);
