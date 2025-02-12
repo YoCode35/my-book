@@ -63,7 +63,7 @@ const DashboardPage: React.FC = () => {
               console.log('URL de la requête /users :', `${API_URL}/users`);
               console.log('Token utilisé pour /users :', token);
         
-              const usersResponse = await axios.get<User[]>(`${API_URL}/users`, {
+              const usersResponse = await axios.get<User[]>(new URL('/users', API_URL).toString(), {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
