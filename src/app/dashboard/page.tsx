@@ -37,7 +37,7 @@ const DashboardPage: React.FC = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get<UserData>(`${process.env.NEXT_PUBLIC_API_URL}/dashboard`, { // Utilisation de l'URL de l'API
+        const response = await axios.get<UserData>(`${process.env.NEXT_PUBLIC_API_URL}/dashboard`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

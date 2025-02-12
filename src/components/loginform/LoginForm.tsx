@@ -5,7 +5,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 /*import ReCAPTCHA from "react-google-recaptcha";
 
-const SECRET_KEY = "6LfxQdEqAAAAAGI7LhcEqY-sXv7IuFUiTuKcnZVO";
+const SECRET_KEY = process.env.REACT_APP_RECAPTCHA_SECRET_KEY;
 
 interface ReCaptchaResponse {
   success: boolean;
@@ -40,7 +40,7 @@ interface ErrorResponse {
   };
 }
 
-//const SITE_KEY = "6LfxQdEqAAAAAK8hgINHnPQz0XT3gBowG1HtAbSK";
+//const SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
