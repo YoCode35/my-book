@@ -38,6 +38,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: 📂 Cloner à nouveau le dépôt (si nécessaire)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Garantit que l'historique complet de Git est téléchargé
 
       - name: 🚀 Déploiement sur Vercel
         uses: amondnet/vercel-action@v25
