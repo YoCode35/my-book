@@ -24,10 +24,19 @@ jobs:
           cache: 'npm'
 
       - name: 📦 Installer les dépendances
-        run: npm install
+        run: npm install --include=dev
+
+      - name: Vérifier Jest
+        run: npm list jest || echo "Jest n'est pas installé"
+
+      - name: Installer Jest manuellement si nécessaire
+        run: npm install --save-dev jest
+
+      - name: Lister les fichiers de test
+        run: find . -name "*.test.tsx" -o -name "*.spec.tsx"
 
       - name: 🧪 Lancer les tests
-        run: CI=true npm run test -- --passWithNoTests
+        run: npm test -- --passWithNoTests
 
   build:
     needs: test
