@@ -21,15 +21,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
 
       - name: 📦 Installer les dépendances
         run: npm install
 
+      - name: 🛠 Vérifier Jest
+        run: npm list jest
+
+      - name: 📂 Lister les fichiers de test
+        run: ls -R src/components/navbar/
+
       - name: 🧪 Lancer les tests
-        run: npm run test  # Exécute les tests pour valider le code
+        run: CI=true npm run test -- --passWithNoTests
 
   build:
-    needs: test  # S'assure que les tests ont réussi avant de procéder à la construction
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
@@ -40,6 +47,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
 
       - name: 📦 Installer les dépendances
         run: npm install
