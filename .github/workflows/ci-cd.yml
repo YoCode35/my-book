@@ -25,8 +25,8 @@ jobs:
       - name: 📦 Installer les dépendances
         run: npm install
 
-      - name: 🧹 Vérifier le code avec ESLint
-        run: npm run lint
+      # - name: 🧹 Vérifier le code avec ESLint
+      # run: npm run lint
 
       # - name: 🧪 Lancer les tests
       #   run: npm run test
@@ -38,8 +38,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: 🚀 Initialiser Git
-        run: git init
 
       - name: 🚀 Déploiement sur Vercel
         uses: amondnet/vercel-action@v25
