@@ -27,55 +27,52 @@ const LoginForm: React.FC = () => {
     setLoading(true);
     setError(null);
 
-      try {
-        const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL;
         
-        if (!API_URL) {
-          setError("API URL non définie.");
-          setLoading(false);
-          return;
-        }
-      
-        const loginUrl = `${API_URL.replace(/\/$/, '')}/login`;
-      
-        const response = await axios.post<LoginResponse>(loginUrl, {
-          username,
-          password,
-        });
-      
-        if (response.status === 200 && response.data.token) {
-          localStorage.setItem("token", response.data.token);
-      
-          router.replace("/dashboard#privatespace");
-        } else {
-          setError("Erreur : aucun token reçu.");
-        }
-      } catch (err: unknown) {
-        const errorResponse = err as ErrorResponse;
-        setError(errorResponse.response?.data || "Erreur de connexion");
-
-      } finally {
+      if (!API_URL) {
+        setError("API URL non définie.");
         setLoading(false);
+        return;
       }
-      
+
+      const loginUrl = `${API_URL.replace(/\/$/, '')}/login`;
+
+      const response = await axios.post<LoginResponse>(loginUrl, {
+        username,
+        password,
+      });
+
+      if (response.status === 200 && response.data.token) {
+        localStorage.setItem("token", response.data.token);
+        router.replace("/dashboard#privatespace");
+      } else {
+        setError("Erreur : aucun token reçu.");
+      }
+    } catch (err: unknown) {
+      const errorResponse = err as ErrorResponse;
+      setError(errorResponse.response?.data || "Erreur de connexion");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="login-form">
+    <form id="form" onSubmit={handleSubmit} className="login-form">
       <div>
-        <label>Username :</label>
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          placeholder="Identifiant"
         />
       </div>
       <div>
-        <label>Password :</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder="Mot de passe"
         />
       </div>
 

@@ -238,26 +238,26 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         </div>
       )}
 
-      {/* "back-to-top arrow" */}
-      {isScrolled && (
-        <div className="fixed 
-                        bottom-5 
-                        center lg:right-5 xl:right-5
-                        bottom-20 sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-20 2xl:bottom-20 3xl:bottom-20
-                        z-30"
-        >
-          <Link href="#header">
-            <div className="bg-blue-500
-                            p-4 rounded-full 
-                            text-white 
-                            shadow-lg 
-                            hover:bg-blue-600"
-            >
-              <FiArrowUp size={24} />
-            </div>
-          </Link>
-        </div>
-      )}
+{/* "back-to-top arrow" */}
+{isScrolled && pathname !== "/login" && (
+  <div className="fixed 
+                  bottom-5 
+                  center lg:right-5 xl:right-5
+                  bottom-[70px] sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-20 2xl:bottom-20 3xl:bottom-20
+                  z-30"
+  >
+    <Link href="#header">
+      <div className="bg-blue-500
+                      p-4 rounded-full 
+                      text-white 
+                      shadow-lg 
+                      hover:bg-blue-600"
+      >
+        <FiArrowUp size={24} />
+      </div>
+    </Link>
+  </div>
+)}
 
     </>
   );
