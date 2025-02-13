@@ -26,12 +26,6 @@ jobs:
       - name: 📦 Installer les dépendances
         run: npm install
 
-      - name: 🛠 Vérifier Jest
-        run: npm list jest
-
-      - name: 📂 Lister les fichiers de test
-        run: ls -R src/components/navbar/
-
       - name: 🧪 Lancer les tests
         run: CI=true npm run test -- --passWithNoTests
 
