@@ -60,9 +60,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: success()  # Ne se déclenche que si le build est réussi
+    if: success()
 
     steps:
+      - name: 📂 Cloner le repo
+        uses: actions/checkout@v4  # Ajout du clonage pour que Vercel ait accès au contexte Git
+
       - name: 🚀 Déploiement sur Vercel
         uses: amondnet/vercel-action@v25
         with:
