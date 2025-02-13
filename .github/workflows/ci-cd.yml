@@ -21,12 +21,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
+          cache: 'false'  # Cache temporairement désactivé
 
       - name: 📦 Installer les dépendances
         run: npm install --include=dev
 
-      - name: Vérifier Jest
+      - name: ✅ Vérifier Jest
         run: npm list jest || echo "Jest n'est pas installé"
 
       - name: Installer Jest manuellement si nécessaire
@@ -36,7 +36,7 @@ jobs:
         run: find . -name "*.test.tsx" -o -name "*.spec.tsx"
 
       - name: 🧪 Lancer les tests
-        run: npm test -- --passWithNoTests
+        run: npm test  # Remplacement de CI=true et --passWithNoTests
 
   build:
     needs: test
@@ -50,7 +50,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
+          cache: 'false'  # Cache temporairement désactivé
 
       - name: 📦 Installer les dépendances
         run: npm install
