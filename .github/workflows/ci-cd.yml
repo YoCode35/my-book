@@ -3,7 +3,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Déclenchement sur la branche principale
+      - main
+      - YoCode35
   pull_request:
     branches:
       - main
