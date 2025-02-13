@@ -40,6 +40,7 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
+    if: success()  # Ne s'exécute que si les tests réussissent
 
     steps:
       - name: 📂 Cloner le repo
@@ -59,12 +60,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Cloner à nouveau le dépôt (si nécessaire)
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    if: success()  # Ne se déclenche que si le build est réussi
 
+    steps:
       - name: 🚀 Déploiement sur Vercel
         uses: amondnet/vercel-action@v25
         with:
