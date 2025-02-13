@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,11 +25,24 @@ jobs:
       - name: 📦 Installer les dépendances
         run: npm install
 
-      # - name: 🧹 Vérifier le code avec ESLint
-      # run: npm run lint
+      - name: 🧪 Lancer les tests
+        run: npm run test  # Exécute les tests pour valider le code
 
-      # - name: 🧪 Lancer les tests
-      #   run: npm run test
+  build:
+    needs: test  # S'assure que les tests ont réussi avant de procéder à la construction
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📂 Cloner le repo
+        uses: actions/checkout@v4
+
+      - name: 🏗️ Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 📦 Installer les dépendances
+        run: npm install
 
       - name: 🏗️ Construire l'application
         run: npm run build
@@ -41,7 +54,7 @@ jobs:
       - name: 📂 Cloner à nouveau le dépôt (si nécessaire)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Garantit que l'historique complet de Git est téléchargé
+          fetch-depth: 0
 
       - name: 🚀 Déploiement sur Vercel
         uses: amondnet/vercel-action@v25
