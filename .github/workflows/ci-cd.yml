@@ -1,0 +1,45 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Déclenchement sur la branche principale
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📂 Cloner le repo
+        uses: actions/checkout@v4
+
+      - name: 🏗️ Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 📦 Installer les dépendances
+        run: npm install
+
+      - name: 🧹 Vérifier le code avec ESLint
+        run: npm run lint
+
+      - name: 🧪 Lancer les tests
+        run: npm run test
+
+      - name: 🏗️ Construire l'application
+        run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚀 Déploiement sur Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}

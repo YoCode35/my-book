@@ -35,62 +35,32 @@ const DashboardPage: React.FC = () => {
       return;
     }
 
-        // Log pour vérifier l'URL de l'API
-        console.log('API_URL:', process.env.NEXT_PUBLIC_API_URL);
-
         const fetchData = async () => {
           try {
             const API_URL = process.env.NEXT_PUBLIC_API_URL;
             
-            // Log pour vérifier l'URL de l'API et le token avant la requête
-            //console.log('URL de la requête /dashboard :', `${API_URL}/dashboard`);
-            //console.log('Token utilisé pour /dashboard :', token);
-            
             const response = await axios.get<UserData>(new URL('/dashboard', API_URL).toString(), {
               headers: { Authorization: `Bearer ${token}` },
             });
-            
-            // Log pour voir la réponse de l'API pour /dashboard
-            //console.log('Réponse de /dashboard :', response.data);
         
             setUserData(response.data);
         
-            if (response.data.role === "admin") {
-              // Log pour indiquer que l'utilisateur est un admin et qu'on va récupérer les utilisateurs
-              //console.log('Utilisateur est un admin, récupération des utilisateurs...');
-        
-              // Log pour vérifier l'URL de la requête /users et le token avant la requête
-              //console.log('URL de la requête /users :', `${API_URL}/users`);
-              //console.log('Token utilisé pour /users :', token);
-        
+            if (response.data.role === "admin") {        
               const usersResponse = await axios.get<User[]>(new URL('/users', API_URL).toString(), {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
-              });
-              
-              // Log pour voir la réponse de l'API pour /users
-              //console.log('Réponse de /users :', usersResponse.data);
-        
+              });        
               setUsers(usersResponse.data);
             }
           } catch (err: unknown) {
             if (err instanceof Error) {
               setError(err.message);
-        
-              // Log pour afficher l'erreur capturée
-              //console.error('Erreur capturée :', err.message);
             } else {
               setError("Erreur inconnue");
-        
-              // Log pour afficher une erreur inconnue
-              //console.error('Erreur inconnue', err);
             }
           } finally {
             setLoading(false);
-        
-            // Log pour indiquer que le chargement est terminé
-            //console.log('Chargement terminé');
           }
         };             
 
