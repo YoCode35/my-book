@@ -10,7 +10,7 @@ const PortfolioProject = () => {
         description=""
         date="Janvier 2025"
         technologies="React.js, Next.js, Node.js, Express, TypeScript, PostGreSQL, Tailwind"
-        imageUrl="/img/mytodolist/ref_mytodolist.png"
+        imageUrl="/img/portfolio/ref_homepage_my-portfolio.webp"
         imageAlt="Image du site web de mon Portfolio"
         projectLink="https://my-book-black.vercel.app/"
         moreInfoLink={ROUTES.PROJECTS.PORTFOLIO}
