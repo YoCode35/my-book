@@ -16,8 +16,8 @@ const PortfolioProject = () => {
         moreInfoLink={ROUTES.PROJECTS.PORTFOLIO}
         linkLabel="Web"
         linkClassName={"link-project-home"}
-        imageWidth={789}
-        imageHeight={360}
+        imageWidth={1024}
+        imageHeight={489}
       />
 
       {/* DotsRectangle */}

@@ -14,6 +14,7 @@ import LicProject from './projets/lic/licProject';
 import MultiProjects1118 from './projets/multi-projects/multiProjects_2011-18';
 import CognitifProject from './projets/cognitif/cognitifProject';
 import { FaLinkedin } from "react-icons/fa";
+import PortfolioProject from './projets/portfolio/portfolioProject';
 
 export default function Home() {
   const [rectWidth, setRectWidth] = useState("20%");
@@ -350,6 +351,7 @@ export default function Home() {
           />
         </div>
 
+        <PortfolioProject />
         <MyTodoListProject />
         <StudentsProject />
         <SeriesProject />

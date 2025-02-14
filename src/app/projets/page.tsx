@@ -7,6 +7,7 @@ import SeriesDetailsProject from "./series/seriesDetailsProject";
 import AuctionsDetailsProject from "../projets/auctions/auctionsDetailsProject";
 import LicDetailsProject from "./lic/licDetailsProject";
 import { LABELS, PAGE_NAMES } from "../../components/navbar/route";
+import PortfolioDetailsProject from "./portfolio/portfolioDetailsProject";
 
 export default function Projects() {
 
@@ -27,6 +28,17 @@ export default function Projects() {
       />
 
       <h2 id={PAGE_NAMES.PROJECTS} className="title-page">{LABELS.PROJECTS}</h2>
+
+      <PortfolioDetailsProject />
+
+      {/* SEPARATOR */}
+      <div className="min-h-[60px]"></div>
+
+      <DotsRectangle
+        className="w-full relative h-[55px] z-1"
+        rows={3}
+        dotColor="#fff000"
+      />
 
       <MyTodoListDetailsProject />
 
