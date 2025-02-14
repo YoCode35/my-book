@@ -32,9 +32,9 @@ export default function PortfolioDetailsProject() {
       <div className="unordered-list text-white mb-6">
         <span className="text-colorChart underline block mb-2">Technologies utilisées</span>
         <ul className="ml-0 list-none">
-          <li>- <strong>Front-end :</strong> React.js, Next.js, TypeScript, déployé sur Railway</li>
-          <li>- <strong>Back-end :</strong> Node.js, Express, TypeScript, PostgreSQL hébergé sur Supabase</li>
-          <li>- <strong>Base de données :</strong> PostgreSQL</li>
+          <li>- <strong>Front-end :</strong> React.js, Next.js, TypeScript</li>
+          <li>- <strong>Back-end :</strong> Node.js, Express, TypeScript, déployé sur Railway</li>
+          <li>- <strong>Base de données :</strong> PostgreSQL hébergé sur Supabase</li>
           <li>- <strong>Administration des données :</strong> Mise en place de rôles utilisateurs (admin, utilisateur), gestion des projets via API REST sécurisée</li>
           <li>- <strong>Langages principaux :</strong> JavaScript, TypeScript, SQL</li>
           <li>- <strong>Mise en ligne et tests :</strong> Déploiement du front-end sur Vercel, CI/CD avec GitHub Actions, tests automatisés pour la sécurité et la stabilité</li>
