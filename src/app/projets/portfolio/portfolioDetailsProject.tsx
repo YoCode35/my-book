@@ -2,6 +2,7 @@
 
 // import Image from "next/image";
 import { PROJECT_NAMES } from "../../../components/navbar/route";
+import Image from "next/image";
 
 export default function PortfolioDetailsProject() {
   return (
@@ -40,6 +41,24 @@ export default function PortfolioDetailsProject() {
           <li>- <strong>Mise en ligne et tests :</strong> Déploiement du front-end sur Vercel, CI/CD avec GitHub Actions, tests automatisés pour la sécurité et la stabilité</li>
         </ul>
       </div>
+
+      <Image
+        src="/img/portfolio/schema_bdd.webp"
+        alt="Schéma Base de données"
+        width={731}
+        height={297}
+        className="img_portfolio"
+        priority
+      />
+
+      <Image
+        src="/img/portfolio/screen_privatespace__admin-and-user_.webp"
+        alt="Page écran espace privé de l'admin"
+        width={968}
+        height={525}
+        className="img_portfolio"
+        priority
+      />
 
       <div className="unordered-list text-white mb-6">
         <span className="text-colorChart underline block mb-2">Fonctionnalités principales</span>

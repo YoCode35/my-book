@@ -9,45 +9,45 @@ jest.mock('next/navigation', () => ({
 
 describe('Navbar', () => {
   it('renders the contact button if the pathname is not the contact path', () => {
-    // Simule le chemin de navigation
+    // Simulate the navigation path
     (usePathname as jest.Mock).mockReturnValue('/');
 
     render(<Navbar menuOpen={false} setMenuOpen={() => {}} />);
 
-    // Vérifier que le bouton "Contact" est affiché
+    // Check that the "Contact" button is displayed
     const contactButton = screen.getByRole('button', { name: /contact/i });
     expect(contactButton).toBeInTheDocument();
   });
 
   it('does not render the contact button if the pathname is the contact path', () => {
-    // Simule le chemin de navigation
+    // Simulate the navigation path
     (usePathname as jest.Mock).mockReturnValue('/contact');
 
     render(<Navbar menuOpen={false} setMenuOpen={() => {}} />);
 
-    // Vérifie que le bouton "Contact" n'est pas affiché
+    // Check that the "Contact" button is not displayed
     const contactButton = screen.queryByRole('button', { name: /contact/i });
     expect(contactButton).not.toBeInTheDocument();
   });
 
   it('navigates to the contact anchor when clicked', () => {
-    // Simule le chemin de navigation
+    // Simulate the navigation path
     (usePathname as jest.Mock).mockReturnValue('/');
   
     render(<Navbar menuOpen={false} setMenuOpen={() => {}} />);
   
     const contactButton = screen.getByRole('button', { name: /contact/i });
   
-    // Simule le clic sur le bouton
+    // Simulate clicking the button
     fireEvent.click(contactButton);
   
-    // Simule le changement de hash
+    // Simulate changing the hash
     Object.defineProperty(window, 'location', {
       value: { hash: '#contact' },
       writable: true,
     });
   
-    // Vérifie si la navigation vers l'ancre contact a bien eu lieu
+    // Check if the navigation to the contact anchor occurred
     expect(window.location.hash).toBe('#contact');
   });  
 });
