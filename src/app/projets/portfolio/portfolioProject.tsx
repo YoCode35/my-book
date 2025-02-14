@@ -6,14 +6,14 @@ const PortfolioProject = () => {
   return (
     <section className="section-container">
       <ProjectCard
-        title="MyTodoList"
+        title="Portfolio"
         description=""
-        date="Octobre 2024"
-        technologies="Flutter & MySQL"
+        date="Janvier 2025"
+        technologies="React.js, Next.js, Node.js, Express, TypeScript, PostGreSQL, Tailwind"
         imageUrl="/img/mytodolist/ref_mytodolist.png"
-        imageAlt="Image de mon projet d'application MyTodoList"
-        projectLink="https://www.mytodolist.tech"
-        moreInfoLink={ROUTES.PROJECTS.MYTODOLIST}
+        imageAlt="Image du site web de mon Portfolio"
+        projectLink="https://my-book-black.vercel.app/"
+        moreInfoLink={ROUTES.PROJECTS.PORTFOLIO}
         linkLabel="Web"
         linkClassName={"link-project-home"}
         imageWidth={789}
