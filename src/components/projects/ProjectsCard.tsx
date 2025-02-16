@@ -15,7 +15,8 @@ interface ProjectProps {
   linkClassName?: string;
   imageWidth?: number;
   imageHeight?: number;
-  imageClassName?: string;  
+  imageClassName?: string;
+  isHomeLink?: boolean;  
 }
 
 const ProjectCard = ({
@@ -32,7 +33,8 @@ const ProjectCard = ({
   linkClassName = "",
   imageWidth = 0,
   imageHeight = 0,
-  imageClassName = "",  
+  imageClassName = "", 
+  isHomeLink = false, // Vérifie si c'est un lien spécifique 
 }: ProjectProps) => {
   
   // Composant interne pour éviter la répétition
@@ -68,7 +70,8 @@ const ProjectCard = ({
         {/* Image avec lien optionnel */}
         <div className={`relative w-full xl:w-1/2 ${imageClassName}`}>
           {projectLink ? (
-            <a href={projectLink} target="_blank" rel="noopener noreferrer">
+            // Si c'est un lien spécifique, il ne s'ouvrira pas dans un nouvel onglet
+            <a href={projectLink} target={isHomeLink ? "_self" : "_blank"} rel="noopener noreferrer">
               <ImageComponent />
             </a>
           ) : (
@@ -130,7 +133,7 @@ const ProjectCard = ({
           {/* Lien GitHub, Site Web ou LinkedIn */}
           <a
             href={projectLink}
-            target="_blank"
+            target={isHomeLink ? "_self" : "_blank"} // Ce lien ne s'ouvrira pas dans un nouvel onglet si isHomeLink est vrai
             rel="noopener noreferrer"
             className={`${linkClassName}`}
             aria-label={`Voir le projet ${title} en ligne`}

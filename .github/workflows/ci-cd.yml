@@ -20,26 +20,28 @@ jobs:
       - name: 🏗️ Installer Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22  # Utilisation de Node.js 22
 
       - name: 📦 Installer les dépendances
         run: npm install --include=dev
 
-      - name: ✅ Vérifier Jest
-        run: npm list jest || echo "Jest n'est pas installé"
-
-      - name: Installer Jest manuellement si nécessaire
-        run: npm install --save-dev jest
+      - name: Vérifier si Vitest est installé
+        run: |
+          if ! npm list vitest; then
+            echo "Vitest n'est pas installé, installation en cours..."
+            npm install --save-dev vitest
+          fi
 
       - name: Lister les fichiers de test
         run: find . -name "*.test.tsx" -o -name "*.spec.tsx"
 
       - name: 🧪 Lancer les tests
-        run: npm test  # Remplacement de CI=true et --passWithNoTests
+        run: npm run test  # Vérifier la commande dans package.json
 
   build:
     needs: test
     runs-on: ubuntu-latest
+    if: success()
 
     steps:
       - name: 📂 Cloner le repo
@@ -56,18 +58,22 @@ jobs:
       - name: 🏗️ Construire l'application
         run: npm run build
 
+      - name: Vérifier si le build a échoué
+        run: |
+          if [ ! -f ".next" ]; then
+            echo "Le build a échoué"
+            exit 1
+          fi
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Cloner à nouveau le dépôt (si nécessaire)
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    if: success()
 
-      - name: 🚀 Déploiement sur Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: 🚀 Déploiement sur Vercel via Deploy Hook
+        run: |
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
+          -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d '{}'

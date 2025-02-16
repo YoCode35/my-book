@@ -14,6 +14,7 @@ import LicProject from './projets/lic/licProject';
 import MultiProjects1118 from './projets/multi-projects/multiProjects_2011-18';
 import CognitifProject from './projets/cognitif/cognitifProject';
 import { FaLinkedin } from "react-icons/fa";
+import PortfolioProject from './projets/portfolio/portfolioProject';
 
 export default function Home() {
   const [rectWidth, setRectWidth] = useState("20%");
@@ -141,12 +142,13 @@ export default function Home() {
               </a>
             </span>
           </h2>
+          
           <Image
-            src="/img/img_a-propos.webp"
+            src="/img/about.webp"
             alt="À propos"
             width={750}
             height={750}
-            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[40%] 4xl:w-[37%]
+            className=" w-[70%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[37%] 3xl:w-[37%] 4xl:w-[37%]
                         h-auto mr-[10%] sm:mr-[10%] md:mr-[0] ml-[0%] sm:ml-[0] md:ml-[1%] lg:ml-[4%] xl:ml-[4%] 2xl:ml-[4%] 3xl:ml-[7%]
                         mt-[18%] sm:mt-[15%] md:mt-[6%] lg:mt-[10%] xl:mt-[5%] 2xl:mt-[7%] 3xl:mt-[7%]"
             style={{
@@ -350,6 +352,7 @@ export default function Home() {
           />
         </div>
 
+        <PortfolioProject />
         <MyTodoListProject />
         <StudentsProject />
         <SeriesProject />

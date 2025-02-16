@@ -1,8 +1,12 @@
 module.exports = {
-    testEnvironment: "jsdom",
-    transform: {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    },
-    moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
-  };
-  
+  preset: 'ts-jest',
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest', // Assure-toi que cela est présent
+  },
+  testEnvironment: 'jsdom',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  transformIgnorePatterns: [
+    '/node_modules/(?!ton-package-esm|autre-package).+\\.js$', // Si tu as des packages spécifiques à inclure
+  ],
+};
