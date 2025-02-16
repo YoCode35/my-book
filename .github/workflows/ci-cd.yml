@@ -65,7 +65,7 @@ jobs:
     steps:
       - name: 🚀 Déploiement sur Vercel via Deploy Hook
         run: |
-          curl -X POST "https://api.vercel.com/v1/integrations/deploy/${{ secrets.VERCEL_PROJECT_ID }}" \
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5Igyo" \
           -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
           -H "Content-Type: application/json" \
           -d '{}'
