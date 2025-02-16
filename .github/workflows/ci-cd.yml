@@ -67,4 +67,5 @@ jobs:
         run: |
           curl -X POST "https://api.vercel.com/v1/integrations/deploy/${{ secrets.VERCEL_PROJECT_ID }}" \
           -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
-          -d '{"url":"https://my-book-black.vercel.app/"}'
+          -H "Content-Type: application/json" \
+          -d '{}'
