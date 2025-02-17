@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import ProjectCard from "../../../components/projects/ProjectsCard";
 
 const CognitifProject = () => {
-  // Liste du carrousel
+  // Carrousel List
   const images = [
     {
       url: "/img/cognitif/accueil-admin.webp",
@@ -41,7 +41,7 @@ const CognitifProject = () => {
   return (
     <section className="section-container">
       <div className="w-full w-7xl 3xl:max-w-8xl mx-auto pb-12 xl:pb-0">
-        {/* Container pour le carrousel */}
+        {/* Carrousel Container */}
         <div className="swiper-container w-full">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}

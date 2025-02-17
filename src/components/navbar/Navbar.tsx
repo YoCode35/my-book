@@ -80,10 +80,10 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
                               hover:text-navLinkHover
                               ${pathname === "/" && isAboutActive ? "text-navLinkHover" : "text-navLinkInactive"}
                               3xl:text-2xl 4xl:text-3xl`
-                            }
-                              style={{
-                                  color: pathname === "/" && isAboutActive ? "#fff000" : "",
-                              }}
+                  }
+                  style={{
+                    color: pathname === "/" && isAboutActive ? "#fff000" : "",
+                  }}
                 >
                   {LABELS.ABOUT}
                 </Link>
@@ -132,7 +132,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
           {/* Contact Button */}
           {pathname !== ROUTES.CONTACT_PATH && (
             <div className="ml-4 hidden lg:block">
-              <Link href= {ROUTES.CONTACT_ANCHOR}>
+              <Link href={ROUTES.CONTACT_ANCHOR}>
                 <button
                   data-testid="contact-button"
                   className={`px-6 py-2
@@ -239,26 +239,26 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
         </div>
       )}
 
-{/* "back-to-top arrow" */}
-{isScrolled && pathname !== "/login" && (
-  <div className="fixed 
-                  bottom-5 
-                  center lg:right-5 xl:right-5
-                  bottom-[70px] sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-20 2xl:bottom-20 3xl:bottom-20
-                  z-30"
-  >
-    <Link href="#header">
-      <div className="bg-blue-500
-                      p-4 rounded-full 
-                      text-white 
-                      shadow-lg 
-                      hover:bg-blue-600"
-      >
-        <FiArrowUp size={24} />
-      </div>
-    </Link>
-  </div>
-)}
+      {/* "back-to-top arrow" */}
+      {isScrolled && pathname !== "/login" && (
+        <div className="fixed 
+                        bottom-5 
+                        center lg:right-5 xl:right-5
+                        bottom-[70px] sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-20 2xl:bottom-20 3xl:bottom-20
+                        z-30"
+        >
+          <Link href="#header">
+            <div className="bg-blue-500
+                            p-4 rounded-full 
+                            text-white 
+                            shadow-lg 
+                            hover:bg-blue-600"
+            >
+              <FiArrowUp size={24} />
+            </div>
+          </Link>
+        </div>
+      )}
 
     </>
   );

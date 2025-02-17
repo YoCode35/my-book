@@ -7,7 +7,7 @@ import ProjectCard from "../../../components/projects/ProjectsCard";
 import DotsRectangle from "../../../components/dots/DotsRectangle";
 
 const MultiProjects1118 = () => {
-  // Liste du carrousel
+  // Carrousel List
   const images = [
     {
       url: "/img/multiprojects_1118/homepage.webp",
@@ -49,18 +49,6 @@ const MultiProjects1118 = () => {
       projectLink: "",
       linkLabel: "",
     },
-    /*
-    {
-      url: "/img/multiprojects_1118/slide_plus-de-projets-sur-linkedin.png",
-      alt: "Message d'informations concernant plus de projets présents sur mon profil LinkedIn",
-      title: "+ de projets sur LinkedIn",
-      description: "Plus de projets de 2011 à 2018 sur mon profil LinkedIn",
-      date: "De 2011 à 2018",
-      technologies: "Javascript & Php",
-      projectLink: "https://www.linkedin.com/in/ygregoire/",
-      linkLabel: "LinkedIn",
-    },
-    */
   ];
 
   return (

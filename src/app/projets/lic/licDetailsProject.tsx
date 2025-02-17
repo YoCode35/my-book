@@ -9,19 +9,9 @@ export default function LicDetailsProject() {
     <section id={PROJECT_NAMES.LIC} className="project-section">
       <h3 className="title-project">[LIC]</h3>
 
-      {/* Texte centré sous le titre */}
       <p className="text-center text-sm lg:text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl font-medium mt-2">
         (Livret Individuel de Conduite)
       </p>
-
-      <a
-        href=""
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`link-project-portfolio`}
-      >
-        {/*Github à venir*/}
-      </a>
 
       <h4 className="project-description">
         Développement d’une application de relevés d’heures pour la répartition du temps de travail en Php et Javascript
