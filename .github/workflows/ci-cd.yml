@@ -67,29 +67,14 @@ jobs:
           fi
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: success()
+      needs: build
+      runs-on: ubuntu-latest
+      if: success()
 
-    steps:
-      - name: 📂 Cloner le repo
-        uses: actions/checkout@v4
-
-      - name: 🚀 Déploiement sur Vercel via CLI
-        run: |
-          npm install -g vercel
-          vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Vérifier si le déploiement a réussi
-        run: |
-          # Vérifie si l'URL du site est accessible après déploiement
-          URL="https://my-book-black.vercel.app/"  # Remplace par l'URL de ton projet
-          if curl --silent --head --fail "$URL"; then
-            echo "Déploiement réussi !"
-          else
-            echo "Le déploiement a échoué."
-            exit 1
-          fi
-
-      - name: Afficher les logs de déploiement
-        run: vercel logs ${{ secrets.VERCEL_PROJECT_ID }} --token=${{ secrets.VERCEL_TOKEN }}
+      steps:
+        - name: 🚀 Déploiement sur Vercel via Deploy Hook
+          run: |
+            curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{}'
