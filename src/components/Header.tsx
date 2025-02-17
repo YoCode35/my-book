@@ -213,8 +213,8 @@ export default function Header() {
             />
           </div>
           <a
-            href="/docs/CV-YGREGOIRE_(CDA_AI-Augmented).pdf"
-            download="CV-YGREGOIRE_(CDA_AI-Augmented).pdf"
+            href="/docs/CV-YGREGOIRE_(CDA).pdf"
+            download="CV-YGREGOIRE_(CDA).pdf"
             className="absolute inset-0 z-30"
             aria-label="Télécharger mon CV"
           />
