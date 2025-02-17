@@ -77,7 +77,7 @@ export default function Contact() {
       className=" bg-cover
                   bg-no-repeat
                   bg-[url('/img/colored_spots.webp')]                  
-                  pb-48 sm:pb-24"
+                  pb-48"
     >
 
       {/* SEPARATOR */}
