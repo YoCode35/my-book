@@ -83,10 +83,14 @@ jobs:
       - name: Vérifier si le déploiement a réussi
         run: |
           # Vérifie si l'URL du site est accessible après déploiement
-          URL="https://my-book.vercel.app"  # Remplace par l'URL de ton projet
+          URL="https://my-book-black.vercel.app/"  # Remplace par l'URL de ton projet
           if curl --silent --head --fail "$URL"; then
             echo "Déploiement réussi !"
           else
             echo "Le déploiement a échoué."
             exit 1
           fi
+
+      - name: Afficher les logs de déploiement
+        run: |
+          vercel logs ${{ secrets.VERCEL_PROJECT_ID }} --prod --tail
