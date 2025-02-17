@@ -24,18 +24,13 @@ const StudentsProject = () => {
 
       {/* DotsRectangle */}
       <div
-        className="w-[100%] sm:w-[40%] xl:w-[20%]
-                  xl:flex 
-                  xl:justify-start 
-                  w-full 
-                  xl:max-w-[320px] 
-                  mt-8 xl:mt-40 2xl:mt-48 
-                  relative 
-                  mx-auto 
-                  xl:ml-[0px] 3xl:ml-12 4xl:ml-48"
+        className="w-full max-w-[320px] sm:w-[40%] xl:w-[20%]
+                  flex justify-center xl:justify-start
+                  mt-8 sm:mt-10 xl:mt-40 2xl:mt-48
+                  relative mx-auto xl:ml-[0px] 3xl:ml-12 4xl:ml-48"
       >
         <DotsRectangle
-          className="rotate-0 xl:rotate-90"
+          className="rotate-0 sm:rotate-0 xl:rotate-90"
           rows={3}
           dotsPerRow={10}
           dotColor="#fff000"

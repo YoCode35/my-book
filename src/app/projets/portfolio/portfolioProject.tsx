@@ -9,7 +9,7 @@ const PortfolioProject = () => {
         title="Portfolio"
         description=""
         date="Janvier 2025"
-        technologies="React.js, Next.js, Node.js, Express, TypeScript, PostGreSQL, Tailwind"
+        technologies="React.js, Next.js, Node.js, Express, TypeScript, PostGreSQL"
         imageUrl="/img/portfolio/ref_homepage_my-portfolio.webp"
         imageAlt="Image du site web de mon Portfolio"
         projectLink={ROUTES.HOME}
@@ -18,7 +18,7 @@ const PortfolioProject = () => {
         linkClassName={"link-project-home"}
         imageWidth={1024}
         imageHeight={489}
-        isHomeLink={true} // Ajoute cette prop pour identifier ce lien spécifique
+        isHomeLink={true}
       />
 
       {/* DotsRectangle */}

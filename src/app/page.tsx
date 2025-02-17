@@ -45,23 +45,19 @@ export default function Home() {
       } else if (window.innerWidth >= 1024) {
         setDotsPerRow(20);
       } else if (window.innerWidth >= 768) {
-        setDotsPerRow(15);
+        setDotsPerRow(17);
       } else if (window.innerWidth >= 640) {
+        setDotsPerRow(14);
+      } else {
         setDotsPerRow(10);
-      } else if (window.innerWidth >= 320) {
-        setDotsPerRow(5);
       }
     };
-
-    // Execute initial function to define value at the time of posting
+  
     updateDotsPerRow();
-
-    // Update dots at each resize
-    window.addEventListener('resize', updateDotsPerRow);
-
-    // Clean up
-    return () => window.removeEventListener('resize', updateDotsPerRow);
-  }, []);
+    window.addEventListener("resize", updateDotsPerRow);
+  
+    return () => window.removeEventListener("resize", updateDotsPerRow);
+  }, []); 
 
   return (
     <main className=" bg-cover bg-no-repeat bg-center bg-[url('/img/colored_spots.webp')]">

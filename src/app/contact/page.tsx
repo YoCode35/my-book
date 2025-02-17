@@ -76,8 +76,8 @@ export default function Contact() {
     <div
       className=" bg-cover
                   bg-no-repeat
-                  bg-[url('/img/colored_spots.webp')]
-                  pb-24"
+                  bg-[url('/img/colored_spots.webp')]                  
+                  pb-48 sm:pb-24"
     >
 
       {/* SEPARATOR */}

@@ -22,18 +22,14 @@ const SeriesProject = () => {
 
       {/* DotsRectangle */}
       <div
-        className=" w-[100%] sm:w-[40%] xl:w-[20%]
-                    xl:flex 
-                    xl:justify-start 
-                    w-full 
-                    xl:max-w-[320px] 
-                    mt-8 xl:mt-28 2xl:mt-40                   
-                    relative 
-                    mx-auto 
-                    xl:ml-[800px] 2xl:ml-[800px] 3xl:ml-[1100px] 4xl:ml-[1550px]"
+        className="w-full max-w-[320px] sm:w-[40%] xl:w-[20%]
+                  flex justify-center xl:justify-start
+                  mt-8 sm:mt-10 xl:mt-28 2xl:mt-40
+                  relative mx-auto 
+                  xl:ml-[800px] 2xl:ml-[800px] 3xl:ml-[1100px] 4xl:ml-[1550px]"
       >
         <DotsRectangle
-          className="rotate-0 xl:rotate-90"
+          className="rotate-0 sm:rotate-0 xl:rotate-90"
           rows={3}
           dotsPerRow={10}
           dotColor="#fff000"
@@ -41,6 +37,7 @@ const SeriesProject = () => {
           height="45px"
         />
       </div>
+
     </section>
   );
 };

@@ -25,18 +25,14 @@ const AuctionsProject = () => {
 
       {/* DotsRectangle spécifique à cette page */}
       <div
-        className="w-[100%] sm:w-[40%] xl:w-[20%]
-                  xl:flex 
-                  xl:justify-start 
-                  w-full 
-                  xl:max-w-[320px]
-                  mt-8 xl:mt-40 2xl:mt-40 3xl:mt-48
-                  relative 
-                  mx-auto 
+        className="w-full max-w-[320px] sm:w-[40%] xl:w-[20%]
+                  flex justify-center xl:justify-start
+                  mt-8 sm:mt-10 xl:mt-40 2xl:mt-40 3xl:mt-48
+                  relative mx-auto 
                   xl:ml-[200px] 3xl:ml-[300px] 4xl:ml-[450px]"
       >
         <DotsRectangle
-          className="rotate-0 xl:rotate-90"
+          className="rotate-0 sm:rotate-0 xl:rotate-90"
           rows={3}
           dotsPerRow={10}
           dotColor="#fff000"
@@ -44,6 +40,7 @@ const AuctionsProject = () => {
           height="45px"
         />
       </div>
+
     </section>
   );
 };
