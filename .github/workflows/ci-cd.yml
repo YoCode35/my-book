@@ -17,7 +17,7 @@ jobs:
       - name: 📂 Cloner le repo
         uses: actions/checkout@v4
 
-      - name: 🏗️ Installer Node.js
+      - name: 🏠 Installer Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22  # Utilisation de Node.js 22
@@ -35,20 +35,19 @@ jobs:
       - name: Lister les fichiers de test
         run: find . -name "*.test.tsx" -o -name "*.spec.tsx"
 
-      - name: 🧪 Lancer les tests
+      - name: 🧠 Lancer les tests
         run: npm run test  # Vérifier la commande dans package.json
 
   build:
     needs: test
     runs-on: ubuntu-latest
-
     if: success()
 
     steps:
       - name: 📂 Cloner le repo
         uses: actions/checkout@v4
 
-      - name: 🏗️ Installer Node.js
+      - name: 🏠 Installer Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -56,7 +55,7 @@ jobs:
       - name: 📦 Installer les dépendances
         run: npm install
 
-      - name: 🏗️ Construire l'application
+      - name: 🏠 Construire l'application
         run: npm run build
 
       - name: Vérifier si le build a échoué
@@ -76,12 +75,10 @@ jobs:
       - name: 📂 Cloner le repo
         uses: actions/checkout@v4
 
-      - name: 🚀 Déploiement sur Vercel via Deploy Hook
+      - name: 🚀 Déploiement sur Vercel via CLI
         run: |
-          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
-          -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
-          -H "Content-Type: application/json" \
-          -d '{}'
+          npm install -g vercel
+          vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Vérifier si le déploiement a réussi
         run: |
