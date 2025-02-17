@@ -33,7 +33,7 @@ export default function PortfolioDetailsProject() {
       <div className="unordered-list text-white mb-6">
         <span className="text-colorChart underline block mb-2">Technologies utilisées</span>
         <ul className="ml-0 list-none">
-          <li>- <strong>Front-end :</strong> React.js, Next.js, TypeScript</li>
+        <li>- <strong>Front-end :</strong> React.js, Next.js (rendu hybride SSR/SSG pour de meilleures performances et un meilleur SEO), TypeScript</li>
           <li>- <strong>Back-end :</strong> Node.js, Express, TypeScript, déployé sur Railway</li>
           <li>- <strong>Base de données :</strong> PostgreSQL hébergé sur Supabase</li>
           <li>- <strong>Administration des données :</strong> Mise en place de rôles utilisateurs (admin, utilisateur), gestion des projets via API REST sécurisée</li>
@@ -52,7 +52,7 @@ export default function PortfolioDetailsProject() {
       />
 
       <Image
-        src="/img/portfolio/screen_privatespace__admin-and-user_.webp"
+        src="/img/portfolio/screen_privatespace_admin-and-user.webp"
         alt="Page écran espace privé de l'admin"
         width={968}
         height={525}
@@ -90,6 +90,21 @@ export default function PortfolioDetailsProject() {
       <div className="unordered-list text-white mb-8">
         <span className="text-colorChart underline block mb-2">Points forts techniques</span>
         <ul className="ml-0 list-none">
+          <li>- <strong>Optimisation avec Next.js :</strong> Utilisation du rendu côté serveur (SSR) et du statique (SSG) pour améliorer le temps de chargement et le SEO</li>
+          <li>- <strong>Gestion efficace des images :</strong> Optimisation automatique avec le composant `next/image`</li>
+          <li>- <strong>Tests automatisés :</strong> Mise en place de tests unitaires avec <strong>Vitest</strong> pour garantir la fiabilité du code et prévenir les régressions.</li>
+          <li>- <strong>Pipeline CI/CD :</strong> Utilisation de <strong>GitHub Actions</strong> pour automatiser le processus de test, de construction (build) et de déploiement (deploy) de l’application, garantissant une mise à jour fluide
+                                                  et sécurisée à chaque changement de code.</li>
+          <Image
+            src="/img/portfolio/screen_ci-cd.webp"
+            alt="Page écran espace privé de l'admin"
+            width={1024}
+            height={262}
+            className="img_portfolio 3xl:w-[65%] mt-8 mb-8"
+            priority
+          />
+          <li>- <strong>TypeScript :</strong> Utilisation de <strong>TypeScript</strong> pour apporter un typage statique et renforcer la sécurité du code. Cela permet de détecter les erreurs de type à la compilation, d’améliorer la lisibilité
+                                              et la maintenabilité du code, et de fournir une meilleure expérience de développement avec l’autocomplétion et les suggestions de types dans l’IDE.</li>
           <li>- <strong>Respect des bonnes pratiques de développement :</strong> Utilisation de TypeScript, gestion des erreurs, sécurité avec tokens JWT</li>
           <li>- <strong>Structure modulaire :</strong> Architecture claire et évolutive avec séparation des préoccupations</li>
           <li>- <strong>Performances :</strong> Optimisation des requêtes SQL, gestion de l’état de manière efficace dans React</li>
