@@ -134,6 +134,7 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
             <div className="ml-4 hidden lg:block">
               <Link href= {ROUTES.CONTACT_ANCHOR}>
                 <button
+                  data-testid="contact-button"
                   className={`px-6 py-2
                               w-[180px] 4xl:w-[250px]
                               rounded-full
