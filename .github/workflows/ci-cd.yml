@@ -78,7 +78,7 @@ jobs:
       - name: 🚀 Déploiement sur Vercel via CLI
         run: |
           npm install -g vercel
-          vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+          vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Vérifier si le déploiement a réussi
         run: |
