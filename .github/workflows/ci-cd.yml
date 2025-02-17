@@ -67,14 +67,35 @@ jobs:
           fi
 
   deploy:
-      needs: build
-      runs-on: ubuntu-latest
-      if: success()
+    needs: build
+    runs-on: ubuntu-latest
+    if: success()
 
-      steps:
-        - name: 🚀 Déploiement sur Vercel via Deploy Hook
-          run: |
-            curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
+    steps:
+      - name: Attente de 10 secondes avant le déploiement
+        run: sleep 10
+
+      - name: 🚀 Déploiement sur Vercel via Deploy Hook
+        id: deploy
+        run: |
+          response=$(curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
             -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d '{}'
+            -d '{}')
+          echo "Réponse du déploiement: $response"
+          if [[ "$response" == *"error"* ]]; then
+            echo "Erreur dans le déploiement Vercel"
+            exit 1
+          fi
+
+      - name: Vérification de l'état du déploiement Vercel
+        run: |
+          deployment_status="in_progress"
+          deployment_id=$(echo $response | jq -r '.deployment.id')
+          while [[ "$deployment_status" == "in_progress" ]]; do
+            deployment_status=$(curl -s "https://api.vercel.com/v2/deployments/$deployment_id" \
+              -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" | jq -r '.state')
+            echo "Statut du déploiement: $deployment_status"
+            sleep 10
+          done
+          echo "Déploiement terminé avec statut: $deployment_status"
