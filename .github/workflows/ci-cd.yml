@@ -92,5 +92,4 @@ jobs:
           fi
 
       - name: Afficher les logs de déploiement
-        run: |
-          vercel logs ${{ secrets.VERCEL_PROJECT_ID }} --prod --tail
+        run: vercel logs ${{ secrets.VERCEL_PROJECT_ID }} --token=${{ secrets.VERCEL_TOKEN }}
