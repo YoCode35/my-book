@@ -36,16 +36,13 @@ jobs:
         run: find . -name "*.test.tsx" -o -name "*.spec.tsx"
 
       - name: 🧪 Lancer les tests
-
         run: npm run test  # Vérifier la commande dans package.json
-
 
   build:
     needs: test
     runs-on: ubuntu-latest
 
     if: success()
-
 
     steps:
       - name: 📂 Cloner le repo
@@ -64,8 +61,9 @@ jobs:
 
       - name: Vérifier si le build a échoué
         run: |
-          if [ ! -f ".next" ]; then
-            echo "Le build a échoué"
+          # Vérifie si le dossier .next existe après le build
+          if [ ! -d ".next" ]; then
+            echo "Le build a échoué, le dossier .next n'a pas été trouvé."
             exit 1
           fi
 
@@ -75,9 +73,23 @@ jobs:
     if: success()
 
     steps:
+      - name: 📂 Cloner le repo
+        uses: actions/checkout@v4
+
       - name: 🚀 Déploiement sur Vercel via Deploy Hook
         run: |
           curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
           -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
           -H "Content-Type: application/json" \
           -d '{}'
+
+      - name: Vérifier si le déploiement a réussi
+        run: |
+          # Vérifie si l'URL du site est accessible après déploiement
+          URL="https://my-book.vercel.app"  # Remplace par l'URL de ton projet
+          if curl --silent --head --fail "$URL"; then
+            echo "Déploiement réussi !"
+          else
+            echo "Le déploiement a échoué."
+            exit 1
+          fi
