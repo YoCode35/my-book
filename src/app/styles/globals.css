@@ -68,9 +68,8 @@ a {
 .skills-title {
   font-family: 'orbitron';
   @apply  text-[7vw] sm:text-xl md:text-2xl lg:text-3xl 3xl:text-4xl 4xl:text-6xl
-          pb-1 sm:pb-2 3xl:pb-6
-          font-bold;
-          
+          pb-1 sm:pb-2 3xl:pb-4
+          font-bold;          
 }
 
 .skills-subtitle {
@@ -85,7 +84,7 @@ a {
   @apply  text-[5vw] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 3xl:text-[24px] 4xl:text-[34px]
           flex 
           justify-center sm:justify-between
-          mt-2;
+          mt-0;
 }
 /* Fin */
 

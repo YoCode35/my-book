@@ -242,6 +242,7 @@ export default function Home() {
             <div className="text-center sm:text-left">
               <div className="skills-title">Back end</div>
               <div className="skills-text"><span>Node.js</span></div>
+              <div className="skills-text"><span>Express</span></div>
               <div className="skills-text"><span>TypeScript</span></div>
               <div className="skills-text"><span>Symfony</span></div>
               <div className="skills-text"><span>Php</span></div>
@@ -269,8 +270,10 @@ export default function Home() {
               <div className="skills-text"><span>APIs REST</span></div>
 
               <div className="pt-6">
-                <div className="skills-title">Versioning</div>
-                <div className="skills-text"><span>GitHub</span></div>
+              <div className="skills-title">Outils & Versioning</div>
+                <div className="skills-text"><span>GitHub</span></div> 
+                <div className="skills-text"><span>GitHub Actions (automatisation, CI/CD)</span></div> 
+                <div className="skills-text"><span>Tests automatisés</span></div> 
               </div>
 
               {/* Skills Link */}
@@ -356,79 +359,79 @@ export default function Home() {
         <LicProject />
         <MultiProjects1118 />
         <CognitifProject />
+        
+      </section>
 
-        {/* SEPARATOR */}
-        <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
+      {/* SEPARATOR */}
+      <div className="min-h-[20px] sm:min-h-[0px]  4xl:min-h-[100px]"></div>
 
-        {/* Upcoming sections */}
-        <section className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
-                            text-white 
-                            w-full 
-                            text-center 
-                            mb-48
-                            min-h-[100%]"
+      {/* Upcoming sections */}
+      <section className="mt-[20px] sm:mt-[50px] lg:mt-[70px]
+                          text-white 
+                          w-full 
+                          text-center 
+                          mb-48
+                          min-h-[100%]"
+      >
+
+        {/* DotsRectangle */}
+        <div className="w-full lg:w-[100%] xl:w-full 
+                        xl:flex 
+                        xl:justify-start
+                        relative 
+                        mx-auto
+                        mb-[50px]"
         >
+          <DotsRectangle
+            className="w-full"
+            rows={3}
+            dotsPerRow={dotsPerRow}
+            dotColor="#fff000"
+            width="100%"
+            height="45px"
+          />
+        </div>
 
-          {/* DotsRectangle */}
-          <div className="w-full lg:w-[100%] xl:w-full 
-                          xl:flex 
-                          xl:justify-start
-                          relative 
-                          mx-auto
-                          mb-[50px]"
+        <div className="flex 
+                        justify-center sm:justify-center 
+                        mt-20
+                        mx-auto sm:mx-auto md:mx-0"
+        >
+          <a
+            href="https://www.linkedin.com/in/ygregoire/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" flex 
+                        items-center 
+                        text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]                        
+                        hover:text-navLinkHover group"
           >
-            <DotsRectangle
-              className="w-full"
-              rows={3}
-              dotsPerRow={dotsPerRow}
-              dotColor="#fff000"
-              width="100%"
-              height="45px"
-            />
-          </div>
-
-          <div className="flex 
-                          justify-center sm:justify-center 
-                          mt-20
-                          mx-auto sm:mx-auto md:mx-0"
-          >
-            <a
-              href="https://www.linkedin.com/in/ygregoire/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" flex 
-                          items-center 
-                          text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1.3vw]                        
-                          hover:text-navLinkHover group"
+            <span className="mr-2">Voir + de projets</span>
+            {/* Arrow */}
+            <svg
+              className="w-[20px] h-[20px] 
+                        text-[#4d94ff] 
+                        inline-block 
+                        w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
+                        group-hover:text-navLinkHover
+                        mx-2
+                        mt-1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <span className="mr-2">Voir + de projets</span>
-              {/* Arrow */}
-              <svg
-                className="w-[20px] h-[20px] 
-                          text-[#4d94ff] 
-                          inline-block 
-                          w-[3.8vw] h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
-                          group-hover:text-navLinkHover
-                          mx-2
-                          mt-1"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
-              </svg>
-              {/* Icône LinkedIn */}
-              <FaLinkedin
-                className=" inline-block ml-2 
-                            w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45px] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]
-                            group-hover:text-navLinkHover"
-              />
-            </a>
-          </div>
-        </section>
-
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5l7 7-7 7" />
+            </svg>
+            {/* Icône LinkedIn */}
+            <FaLinkedin
+              className=" inline-block ml-2 
+                          w-[40px] h-[auto] sm:w-[30px] sm:h-[auto] md:w-[35px] md:h-[auto] lg:w-[40px] lg:h-[auto] xl:w-[45px] xl:h-[auto] 2xl:w-[50px] 2xl:h-[auto]
+                          group-hover:text-navLinkHover"
+            />
+          </a>
+        </div>
       </section>
 
     </main>
