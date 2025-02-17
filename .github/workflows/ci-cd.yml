@@ -20,7 +20,7 @@ jobs:
       - name: 🏠 Installer Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22  # Utilisation de Node.js 22
+          node-version: 22
 
       - name: 📦 Installer les dépendances
         run: npm install --include=dev
@@ -36,7 +36,7 @@ jobs:
         run: find . -name "*.test.tsx" -o -name "*.spec.tsx"
 
       - name: 🧠 Lancer les tests
-        run: npm run test  # Vérifier la commande dans package.json
+        run: npm run test
 
   build:
     needs: test
@@ -60,7 +60,6 @@ jobs:
 
       - name: Vérifier si le build a échoué
         run: |
-          # Vérifie si le dossier .next existe après le build
           if [ ! -d ".next" ]; then
             echo "Le build a échoué, le dossier .next n'a pas été trouvé."
             exit 1
@@ -78,16 +77,20 @@ jobs:
       - name: 🚀 Déploiement sur Vercel via Deploy Hook
         id: deploy
         run: |
-          # Envoie les fichiers buildés (dossier .next) à Vercel
-          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
+          # Envoie la requête POST au Deploy Hook Vercel
+          response=$(curl -s -X POST "https://api.vercel.com/v1/integrations/deploy/prj_hYhuoo0p1RxCM5gfJWUNr4aM6sIB/KsyC5IgyoG" \
             -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d '{}' 
+            -d '{}' )
+          echo "Réponse du déploiement: $response"
 
       - name: Vérification de l'état du déploiement Vercel
         run: |
+          # Extraire le deployment_id de la réponse de la requête précédente
+          deployment_id=$(echo ${{ steps.deploy.outputs.response }} | jq -r '.deployment.id')
           deployment_status="in_progress"
-          deployment_id=$(echo $response | jq -r '.deployment.id')
+
+          # Boucle jusqu'à ce que le déploiement soit terminé
           while [[ "$deployment_status" == "in_progress" ]]; do
             deployment_status=$(curl -s "https://api.vercel.com/v2/deployments/$deployment_id" \
               -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" | jq -r '.state')
