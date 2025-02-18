@@ -13,6 +13,8 @@ const PortfolioProject = () => {
         imageUrl="/img/portfolio/ref_homepage_my-portfolio.webp"
         imageAlt="Image du site web de mon Portfolio"
         projectLink={ROUTES.HOME}
+        githubLink="https://github.com/YoCode35"
+        tooltipText="Consulter le code source du Front (my-book) et du Back (ongoing-projects-portal)"
         moreInfoLink={ROUTES.PROJECTS.PORTFOLIO}
         linkLabel="Web"
         linkClassName={"link-project-home"}

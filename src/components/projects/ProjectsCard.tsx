@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Tooltip } from "react-tooltip";
 
 interface ProjectProps {
   title: string;
@@ -9,7 +10,9 @@ interface ProjectProps {
   technologies: string;
   imageUrl: string;
   imageAlt: string;
-  projectLink?: string;  
+  projectLink?: string; 
+  githubLink?: string;
+  tooltipText?: string;
   moreInfoLink: string;
   linkLabel: string;  
   linkClassName?: string;
@@ -27,7 +30,9 @@ const ProjectCard = ({
   technologies,
   imageUrl,
   imageAlt,
-  projectLink,  
+  projectLink,
+  githubLink,  
+  tooltipText,
   moreInfoLink,
   linkLabel,
   linkClassName = "",
@@ -140,6 +145,30 @@ const ProjectCard = ({
           >
             {linkLabel}
           </a>
+
+          <div className="relative group">
+            {/* Lien GitHub affiché seulement si githubLink est défini */}
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-project-home"
+                data-tooltip-id={`github-tooltip-${title}`} 
+              >
+                GitHub
+              </a>
+            )}
+
+            {/* Tooltip personnalisé pour chaque projet */}
+            {tooltipText && (
+              <Tooltip 
+                id={`github-tooltip-${title}`} 
+                place="top" 
+                content={tooltipText} 
+              />
+            )}
+          </div>
         </div>
       </div>
     </section>
