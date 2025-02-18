@@ -68,9 +68,11 @@ const DashboardPage: React.FC = () => {
   }, [router]);
 
   useLayoutEffect(() => {
-    if (window.location.hash === "#privatespace" && privatespaceRef.current) {
-      privatespaceRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    setTimeout(() => {
+      if (window.location.hash === "#privatespace" && privatespaceRef.current) {
+        privatespaceRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500);
   }, []);
 
   if (loading) return <div>Chargement...</div>;
@@ -87,7 +89,7 @@ const DashboardPage: React.FC = () => {
     dotColor="#fff000"
   />
 
-  <h2 ref={privatespaceRef} className="title-privatespace-section text-xl 2xl:text-4xl 3xl:text-6xl 4xl:text-8xl 2xl:mt-8 3xl:mt-16">
+  <h2 id="privatespace" ref={privatespaceRef} className="title-privatespace-section text-xl 2xl:text-4xl 3xl:text-6xl 4xl:text-8xl 2xl:mt-8 3xl:mt-16">
     Espace privé
   </h2>
 
