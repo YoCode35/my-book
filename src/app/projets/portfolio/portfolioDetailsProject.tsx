@@ -3,21 +3,43 @@
 // import Image from "next/image";
 import { PROJECT_NAMES } from "../../../components/navbar/route";
 import Image from "next/image";
+import { Tooltip } from "react-tooltip";
 
 export default function PortfolioDetailsProject() {
   return (
-    // MyTodoList Section
+    // Portfolio Section
     <section id={PROJECT_NAMES.PORTFOLIO} className="project-section">
+
       <h3 className="title-project">[Projet Portfolio]</h3>
 
       <a
         href="https://my-book-black.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        className={`link-project-portfolio`}
+        className={`link-project-portfolio !mb-0`}
       >
         Web
       </a>
+
+      {/* Lien GitHub avec info-bulle */}
+      <a
+        href="https://github.com/YoCode35"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="link-project-github !mt-0"
+        data-tooltip-id="my-tooltip" // Id unique
+      >
+        GitHub
+      </a>
+
+      {/* Tooltip personnalisé avec l'id unique */}
+      <Tooltip
+        id="my-tooltip" // L'id correspond au data-tooltip-id
+        place="top"
+        variant="dark"
+        className="text-white text-sm px-4 py-2 rounded-lg shadow-lg"
+        content="Consulter le code source du Front (my-book) et du Back (ongoing-projects-portal)" // Utiliser content ici
+      />
 
       <h4 className="project-description">
         Développement d’un Site Web avec React.js, Next.js, Node.js, Express, TypeScript, PostGreSQL, Tailwind.

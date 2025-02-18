@@ -10,6 +10,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@types/react-tooltip": "^3.11.0",
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "esbuild": "^0.25.0",

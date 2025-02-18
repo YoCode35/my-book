@@ -260,6 +260,15 @@ h2.title-page {
           flex flex-col
           mb-12
 }
+.link-project-github {
+  @apply  text-LinkInactive 
+          hover:text-LinkHover 
+          hover:underline
+          text-[3.5vw] sm:text-[3vw] md:text-[2.2vw] lg:text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.3vw]
+          items-center
+          flex flex-col
+          mb-12
+}
 
 .paragraph-sub-title {
   @apply  text-colorChart
