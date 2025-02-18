@@ -49,6 +49,26 @@ const MultiProjects1118 = () => {
       projectLink: "",
       linkLabel: "",
     },
+    {
+      url: "/img/multiprojects_1118/les-boutiques-ambiance_home-page.webp",
+      alt: "Page d'Accueil du site Web du magasin de meubles des Boutiques Ambiance",
+      title: "Les Boutiques Ambiance",
+      description: "Page d'Accueil du site Web du magasin de meubles \"Les Boutiques Ambiance\"",
+      date: "2009",
+      technologies: "Javascript, Php et Flash",
+      projectLink: "",
+      linkLabel: "",
+    },
+    {
+      url: "/img/multiprojects_1118/les-boutiques-ambiance_product-page.webp",
+      alt: "Page Catalogue du site Web du magasin de meubles des Boutiques Ambiance",
+      title: "Les Boutiques Ambiance",
+      description: "Page Catalogue",
+      date: "2009",
+      technologies: "Javascript, Php et Flash",
+      projectLink: "",
+      linkLabel: "",
+    },
   ];
 
   return (
