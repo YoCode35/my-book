@@ -39,10 +39,9 @@ const ProjectCard = ({
   imageWidth = 0,
   imageHeight = 0,
   imageClassName = "", 
-  isHomeLink = false, // Vérifie si c'est un lien spécifique 
+  isHomeLink = false,
 }: ProjectProps) => {
   
-  // Composant interne pour éviter la répétition
   const ImageComponent = () => (
     <Image
       src={imageUrl}
