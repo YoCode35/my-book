@@ -72,7 +72,7 @@ const DashboardPage: React.FC = () => {
       if (window.location.hash === "#privatespace" && privatespaceRef.current) {
         privatespaceRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 1000);
+    }, 2000);
   }, []);
 
   if (loading) return <div>Chargement...</div>;
