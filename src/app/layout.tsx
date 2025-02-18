@@ -5,6 +5,7 @@ import Navbar from '../components/Header';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import { Orbitron, Quicksand, Rubik } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/react";
 
 const orbitron = Orbitron({
   subsets: ['latin'],
@@ -47,6 +48,7 @@ export default function Layout({
           <main>{children}</main>
         </div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
