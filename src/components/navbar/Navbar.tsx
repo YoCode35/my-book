@@ -16,8 +16,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
   const pathname = usePathname();
   const { isScrolled, scrollTop, isAboutActive, isSkillsActive, isMyProjectsActive } = useNavbarLogic();
 
-  const isActive = (path: string) =>
-    pathname === path ? "text-navText" : "text-[#3d5b79]";
+  const isActive = (path: string, isSectionActive = false) =>
+    pathname === path || isSectionActive ? "text-navLinkHover" : "text-navLinkInactive";
+
 
   return (
     <>
