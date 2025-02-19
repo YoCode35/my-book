@@ -61,7 +61,7 @@ const CognitifProject = () => {
                 <ProjectCard
                   title="Cognitif"
                   description={img.description}
-                  date="Octobre 2012"
+                  date="2012"
                   technologies="Javascript & Php"
                   imageUrl={img.url}
                   imageAlt={img.alt}

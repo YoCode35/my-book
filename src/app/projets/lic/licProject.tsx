@@ -9,7 +9,7 @@ const LicProject = () => {
       <ProjectCard
         title="LIC"
         description="Livret Individuel de Conduite numérisé permettant le relevé des heures de l'activité d'un conducteur."
-        date="Juin 2019"
+        date="2019"
         technologies="Php & JavaScript"
         imageUrl="/img/lic/worktime_app.png"
         imageAlt="Image de mon projet d'application MyTodoList"
