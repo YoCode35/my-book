@@ -31,6 +31,7 @@ export default {
         buttonColorBkgd: "#4d94ff",
         colorChart: "#fff000",
         blueNight: "#0f202e",
+        error: "red-500",
       },
       boxShadow: {
         'custom-shadow': '0 4px 6px rgba(0, 0, 0, 0.5)',

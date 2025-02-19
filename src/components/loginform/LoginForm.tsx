@@ -46,6 +46,7 @@ const LoginForm: React.FC = () => {
 
       if (response.status === 200 && response.data.token) {
         localStorage.setItem("token", response.data.token);
+        localStorage.setItem("successMessage", "Connexion réussie !");
         router.replace("/dashboard#privatespace");
       } else {
         setError("Erreur : aucun token reçu.");
@@ -99,7 +100,7 @@ const LoginForm: React.FC = () => {
             {loading ? "Chargement..." : "Se connecter"}
           </button>
         </div>
-        {error && <div>{error}</div>}
+        {error && <div className="text-red-500 mt-2">{error}</div>}
       </form>
       
     </div>
