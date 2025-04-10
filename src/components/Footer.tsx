@@ -32,13 +32,15 @@ export default function Footer() {
 >
   <span className=" text-[#2d3748] text-xs sm:text-base md:text-lg 2xl:text-xl 
                     font-orbitron 
-                    text-left sm:text-xs md:text-sm 2xl:text-xl 4xl:text-3xl"
+                    text-left 
+                    text-xs 2xl:text-base 4xl:text-3xl"
   >
     © 2025 Yoann GREGOIRE.
   </span>
   <span className=" text-[#2d3748] 
                     font-orbitron 
-                    text-left sm:text-xs md:text-sm 2xl:text-xl 4xl:text-3xl"
+                    text-left 
+                    text-xxs sm:text-xxxs md:text-xxs 2xl:text-xs 4xl:text-3xl"
   >
     Tous droits réservés.
   </span>
