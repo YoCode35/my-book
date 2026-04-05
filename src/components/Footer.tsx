@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSignInAlt } from "react-icons/fa"; // Ajoute l'icône de connexion
-
 export default function Footer() {
   return (
     <footer className="bg-black
@@ -20,8 +19,6 @@ export default function Footer() {
         backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
         backgroundSize: '10px 10px'
       }}></div>
-
-
 {/* Conteneur du texte avec disposition responsive */}
 <div className="relative 
                 z-10 
@@ -35,7 +32,7 @@ export default function Footer() {
                     text-left 
                     text-xs 2xl:text-base 4xl:text-3xl"
   >
-    © 2025 Yoann GREGOIRE.
+    © {new Date().getFullYear()} Yoann GREGOIRE.
   </span>
   <span className=" text-[#2d3748] 
                     font-orbitron 
@@ -45,8 +42,6 @@ export default function Footer() {
     Tous droits réservés.
   </span>
 </div>
-
-
       {/* Conteneur pour les icônes à droite */}
       <div className="absolute right-4 top-1/2 -translate-y-1/2 flex space-x-4 z-20">
         {/* Lien LinkedIn */}
@@ -61,7 +56,6 @@ export default function Footer() {
         >
           <FaLinkedin />
         </a>
-
         {/* Lien GitHub */}
         <a href="https://github.com/YoCode35"
           target="_blank"
@@ -74,7 +68,6 @@ export default function Footer() {
         >
           <FaGithub />
         </a>
-
         {/* Lien de connexion */}
         <Link href="/login#form" 
               className=" text-white 
