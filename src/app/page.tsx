@@ -75,7 +75,7 @@ export default function Home() {
                         px-8"
           >
             <span className="block">&quot;Explorez ici une sélection de mes travaux les plus significatifs</span>
-            <span className="block">Chaque projet reflète mon engagement, mes compétences et les défis que j’ai relevés.&quot;</span>
+            <span className="block">Chaque projet reflète mon engagement, mes compétences et les défis que j&apos;ai relevés.&quot;</span>
           </p>
           {/* Gray Lines */}
           <div className="flex 
@@ -126,7 +126,7 @@ export default function Home() {
                                   text-center 
                                   top-6 sm:top-12 md:top-6 2xl:top-12 3xl:top-12"
                 >
-                  + d’infos
+                  + d&apos;infos
                 </span>
                 <span className=" inline-block 
                                   text-[16vw] sm:text-[16vw] md:text-[12vw] lg:text-[12vw] xl:text-[12vw] 2xl:text-[12vw]
@@ -165,10 +165,10 @@ export default function Home() {
                               whitespace-normal sm:whitespace-normal md:whitespace-normal 
                               max-w-full"
             >
-              Le développement logiciel : Une véritable <span className="text-[5vw] sm:text-[1.8rem] md:text-[1.4rem] lg:text-[2.2vw] xl:text-[1.6rem] 2xl:text-[1.8rem]">vocation</span> qui m’anime au quotidien !
+              Le développement logiciel : Une véritable <span className="text-[5vw] sm:text-[1.8rem] md:text-[1.4rem] lg:text-[2.2vw] xl:text-[1.6rem] 2xl:text-[1.8rem]">vocation</span> qui m&apos;anime au quotidien !
             </span>
             <br />
-            Je m’engage pleinement dans la conception d’outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l’expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d’améliorer la vie quotidienne.
+            Je m&apos;engage pleinement dans la conception d&apos;outils novateurs, performants et réellement utiles, pensés pour transformer et enrichir l&apos;expérience utilisateur. Mon objectif est de mettre la technologie au service de solutions concrètes, capables d&apos;améliorer la vie quotidienne.
           </p>
 
           <DotsRectangle
@@ -226,6 +226,8 @@ export default function Home() {
               <div className="skills-text"><span>React.js</span></div>
               <div className="skills-text"><span>Next.js</span></div>
               <div className="skills-text"><span>TypeScript</span></div>
+              <div className="skills-text"><span>HTML</span></div>
+              <div className="skills-text"><span>Dart</span></div>
               <div className="skills-text"><span>CSS</span></div>
               <div className="skills-text"><span>Bootstrap</span></div>
               <div className="skills-text"><span>Tailwind CSS</span></div>
@@ -233,6 +235,7 @@ export default function Home() {
 
               <div className="pt-6">
                 <div className="skills-subtitle">Prototypage & Design</div>
+                <div className="skills-text"><span>Figma</span></div>
                 <div className="skills-text"><span>Balsamiq</span></div>
                 <div className="skills-text"><span>Photoshop</span></div>
               </div>
@@ -246,6 +249,8 @@ export default function Home() {
               <div className="skills-text"><span>TypeScript</span></div>
               <div className="skills-text"><span>Symfony</span></div>
               <div className="skills-text"><span>Php</span></div>
+              <div className="skills-text"><span>Java EE</span></div>
+              <div className="skills-text"><span>Python</span></div>
               <div className="skills-text"><span>Java</span></div>
               <div className="skills-text"><span>MySQL</span></div>
               <div className="skills-text"><span>PostgreSQL</span></div>
@@ -268,9 +273,11 @@ export default function Home() {
               <div className="skills-title">Web Services & APIs</div>
               <div className="skills-text"><span>Firebase</span></div>
               <div className="skills-text"><span>APIs REST</span></div>
+              <div className="skills-text"><span>Web Services</span></div>
 
               <div className="pt-6">
               <div className="skills-title">Outils & Versioning</div>
+                <div className="skills-text"><span>Docker</span></div>
                 <div className="skills-text"><span>GitHub</span></div> 
                 <div className="skills-text"><span>GitHub Actions (automatisation, CI/CD)</span></div> 
                 <div className="skills-text"><span>Tests automatisés</span></div> 
@@ -285,7 +292,7 @@ export default function Home() {
                               hover:text-navLinkHover group mb-8 
                               justify-end sm:justify-start"
               >
-                <span className="mr-2">+ d’infos</span>
+                <span className="mr-2">+ d&apos;infos</span>
                 <svg
                   className=" w-[3.8vw] 
                                 h-[auto] sm:w-[3vw] sm:h-[auto] md:w-[2.5vw] md:h-[auto] lg:w-[2vw] lg:h-[auto] xl:w-[1.4vw] xl:h-[auto]
