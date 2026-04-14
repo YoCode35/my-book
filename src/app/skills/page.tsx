@@ -30,7 +30,7 @@ export default function Skills() {
             >
                 <p className="paragraph-custom mt-4">
                     J’exerce dans le secteur du numérique depuis une vingtaine d’années. J’ai commencé par maitriser le développement front-end, avec l’HTML, le CSS, le JavaScript et quelques notions en PHP.
-                    Au gré de mes développements, je me suis toujours efforcé de factoriser mon code et à l’écrire de la manière la plus propre possible.
+                    Au gré de mes développements, je me suis toujours efforcé à factoriser mon code et à l’écrire de la manière la plus propre possible.
                 </p>
                 <p className="paragraph-custom mt-4">
                     
@@ -38,10 +38,12 @@ export default function Skills() {
                 <div className="paragraph-custom mt-4">
                     <p>J’exerce actuellement ces compétences sur des stacks modernes et pour tous mes développements :</p>
                     <ul className="mt-2">
-                        <li>- J’Exploite les patterns de conception actuels</li>
-                        <li>- J’Intégre des tests automatisés dans mon workflow</li>
-                        <li>- Je Mets en place un système de CI/CD robuste</li>
-                        <li>- J’Utilise des outils de build modernes</li>
+                        <li>◉ Conception UX / UI (définition des fonctionnalités, parcours utilisateurs, maquettes, …)</li>
+                        <li>◉ Architecture (Robustesse et évolutivité)</li>
+                        <li>◉ Développement Front (Web/Mobile) et Backend (Base de données, Web Services, ...)</li>
+                        <li>◉ Sécurité (Protection des données sensibles, prévention des vulnérabilités, ...)</li>
+                        <li>◉ Tests (unitaires, d’intégrations, fonctionnels, de non-régression, ...)</li>
+                        <li>◉ Automatisation de l’intégration et du déploiement continu</li>
                     </ul>
                 </div>
             </div>
