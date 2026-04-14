@@ -279,6 +279,7 @@ export default function Home() {
               <div className="pt-6">
               <div className="skills-title">Outils & Versioning</div>
                 <div className="skills-text"><span>Docker</span></div>
+                <div className="skills-text"><span>GitLab</span></div> 
                 <div className="skills-text"><span>GitHub</span></div> 
                 <div className="skills-text"><span>GitHub Actions (automatisation, CI/CD)</span></div> 
                 <div className="skills-text"><span>Tests automatisés</span></div> 
