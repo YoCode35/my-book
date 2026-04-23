@@ -285,6 +285,16 @@ export default function Home() {
                 <div className="skills-text"><span>Tests automatisés</span></div> 
               </div>
 
+              <div className="pt-6">
+              <div className="skills-subtitle">Tests</div>
+                <div className="skills-text"><span>Vitest</span></div>
+                <div className="skills-text"><span>Jest</span></div>
+                <div className="skills-text"><span>React Testing Library</span></div>
+                <div className="skills-text"><span>PHPUnit</span></div>
+                <div className="skills-text"><span>flutter_test</span></div>
+                <div className="skills-text"><span>mocktail</span></div>
+              </div>
+
               {/* Skills Link */}
               <Link
                 href={ROUTES.SKILLS_ANCHOR}
