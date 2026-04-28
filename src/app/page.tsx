@@ -218,81 +218,70 @@ export default function Home() {
                           gap-8
                           pb-6 sm:pb-0"
           >
-            {/* First Column */}
-            <div className="text-center sm:text-left">
-              <div className="skills-title">Front end</div>
-              <div className="skills-text"><span>JavaScript</span></div>
-              <div className="skills-text"><span>Flutter Web et Mobile - Android</span></div>
-              <div className="skills-text"><span>React.js</span></div>
-              <div className="skills-text"><span>Angular.js</span></div>
-              <div className="skills-text"><span>Next.js</span></div>
-              <div className="skills-text"><span>TypeScript</span></div>
-              <div className="skills-text"><span>HTML</span></div>
-              <div className="skills-text"><span>Dart</span></div>
-              <div className="skills-text"><span>CSS</span></div>
-              <div className="skills-text"><span>Bootstrap</span></div>
-              <div className="skills-text"><span>Tailwind CSS</span></div>
-              <div className="skills-text"><span>WordPress</span></div>
+          {/* First Column */}
+          <div className="text-center sm:text-left">
+            <div className="skills-title">Front end</div>
+            <div className="skills-text"><span>JavaScript / TypeScript</span></div>
+            <div className="skills-text"><span>React.js, Next.js, Angular</span></div>
+            <div className="skills-text"><span>Flutter (Web & Mobile - Android)</span></div>
+            <div className="skills-text"><span>HTML, CSS (Bootstrap, Tailwind)</span></div>
 
-              <div className="pt-6">
-                <div className="skills-subtitle">Prototypage & Design</div>
-                <div className="skills-text"><span>Figma</span></div>
-                <div className="skills-text"><span>Balsamiq</span></div>
-                <div className="skills-text"><span>Photoshop</span></div>
-              </div>
+            <div className="pt-6">
+              <div className="skills-subtitle">UX / UI & Design</div>
+              <div className="skills-text"><span>Figma, Balsamiq</span></div>
+              <div className="skills-text"><span>Photoshop</span></div>
+              <div className="skills-text"><span>Conception UX / UI</span></div>
+            </div>
+          </div>
+
+          {/* Second Column */}
+          <div className="text-center sm:text-left">
+            <div className="skills-title">Back end</div>
+            <div className="skills-text"><span>Node.js (Express)</span></div>
+            <div className="skills-text"><span>PHP (Symfony)</span></div>
+            <div className="skills-text"><span>Java / Java EE</span></div>
+            <div className="skills-text"><span>Python</span></div>
+
+            <div className="pt-6">
+              <div className="skills-subtitle">Base de données</div>
+              <div className="skills-text"><span>MySQL, PostgreSQL, SQL Server</span></div>
+              <div className="skills-text"><span>SQL (modélisation, requêtes)</span></div>
             </div>
 
-            {/* Second Column */}
-            <div className="text-center sm:text-left">
-              <div className="skills-title">Back end</div>
-              <div className="skills-text"><span>Node.js</span></div>
-              <div className="skills-text"><span>Express</span></div>
-              <div className="skills-text"><span>TypeScript</span></div>
-              <div className="skills-text"><span>Symfony</span></div>
-              <div className="skills-text"><span>Php</span></div>
-              <div className="skills-text"><span>Java EE</span></div>
-              <div className="skills-text"><span>Python</span></div>
-              <div className="skills-text"><span>Java</span></div>
-              <div className="skills-text"><span>MySQL</span></div>
-              <div className="skills-text"><span>PostgreSQL</span></div>
-              <div className="skills-text"><span>SQL Server</span></div>
-
-              <div className="pt-6">
-                <div className="skills-subtitle">Sécurité Web</div>
-                <div className="skills-text"><span>Protection des données sensibles</span></div>
-                <div className="skills-text"><span>Prévention des vulnérabilités</span></div>
-              </div>
-
-              <div className="pt-6">
-                <div className="skills-subtitle">Modélisation & Conception</div>
-                <div className="skills-text"><span>UML (Unified Modeling Language)</span></div>
-              </div>
+            <div className="pt-6">
+              <div className="skills-subtitle">Sécurité</div>
+              <div className="skills-text"><span>Validation des données</span></div>
+              <div className="skills-text"><span>Protection XSS / injections SQL</span></div>
+              <div className="skills-text"><span>Authentification (JWT)</span></div>
             </div>
 
-            {/* Third Column */}
-            <div className="text-center sm:text-left">
-              <div className="skills-title">Web Services & APIs</div>
-              <div className="skills-text"><span>Firebase</span></div>
-              <div className="skills-text"><span>APIs REST</span></div>
-              <div className="skills-text"><span>Web Services</span></div>
+            <div className="pt-6">
+              <div className="skills-subtitle">Conception</div>
+              <div className="skills-text"><span>Modélisation UML</span></div>
+              <div className="skills-text"><span>Architecture applicative</span></div>
+            </div>
+          </div>
 
-              <div className="pt-6">
-              <div className="skills-title">Outils & Versioning</div>
-                <div className="skills-text"><span>Docker</span></div>
-                <div className="skills-text"><span>GitLab</span></div> 
-                <div className="skills-text"><span>GitHub</span></div> 
-                <div className="skills-text"><span>GitHub Actions (automatisation, CI/CD)</span></div>
-              </div>
+          {/* Third Column */}
+          <div className="text-center sm:text-left">
+            <div className="skills-title">APIs & Web Services</div>
+            <div className="skills-text"><span>Conception et intégration d’APIs REST</span></div>
+            <div className="skills-text"><span>Appels API asynchrones (Dio)</span></div>
+            <div className="skills-text"><span>Firebase</span></div>
 
-              <div className="pt-6">
+            <div className="pt-6">
+              <div className="skills-title">Outils & DevOps</div>
+              <div className="skills-text"><span>Git (GitHub, GitLab)</span></div>
+              <div className="skills-text"><span>Docker</span></div>
+              <div className="skills-text"><span>CI/CD (GitHub Actions : build, tests, déploiement)</span></div>
+            </div>
+
+            <div className="pt-6">
               <div className="skills-subtitle">Tests</div>
-                <div className="skills-text"><span>Vitest</span></div>
-                <div className="skills-text"><span>Jest</span></div>
-                <div className="skills-text"><span>React Testing Library</span></div>
-                <div className="skills-text"><span>PHPUnit</span></div>
-                <div className="skills-text"><span>flutter_test</span></div>
-                <div className="skills-text"><span>mocktail</span></div>
-              </div>
+              <div className="skills-text"><span>Jest, Vitest, React Testing Library</span></div>
+              <div className="skills-text"><span>PHPUnit</span></div>
+              <div className="skills-text"><span>flutter_test, mocktail</span></div>
+            </div>
 
               {/* Skills Link */}
               <Link
