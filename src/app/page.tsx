@@ -222,7 +222,7 @@ export default function Home() {
             <div className="text-center sm:text-left">
               <div className="skills-title">Front end</div>
               <div className="skills-text"><span>JavaScript</span></div>
-              <div className="skills-text"><span>Flutter</span></div>
+              <div className="skills-text"><span>Flutter Web et Mobile - Android</span></div>
               <div className="skills-text"><span>React.js</span></div>
               <div className="skills-text"><span>Angular.js</span></div>
               <div className="skills-text"><span>Next.js</span></div>
