@@ -239,7 +239,7 @@ export default function Home() {
             <div className="skills-title">Back end</div>
             <div className="skills-text"><span>Node.js (Express)</span></div>
             <div className="skills-text"><span>PHP (Symfony)</span></div>
-            <div className="skills-text"><span>Java / Java EE</span></div>
+            <div className="skills-text"><span>Java</span></div>
             <div className="skills-text"><span>Python</span></div>
 
             <div className="pt-6">
@@ -266,7 +266,7 @@ export default function Home() {
           <div className="text-center sm:text-left">
             <div className="skills-title">APIs & Web Services</div>
             <div className="skills-text"><span>Conception et intégration d’APIs REST</span></div>
-            <div className="skills-text"><span>Appels API asynchrones (Dio)</span></div>
+            <div className="skills-text"><span>Appels API asynchrones</span></div>
             <div className="skills-text"><span>Firebase</span></div>
 
             <div className="pt-6">
