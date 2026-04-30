@@ -239,7 +239,7 @@ export default function Home() {
             <div className="skills-title">Back end</div>
             <div className="skills-text"><span>Node.js (Express)</span></div>
             <div className="skills-text"><span>PHP (Symfony)</span></div>
-            <div className="skills-text"><span>Java EE</span></div>
+            <div className="skills-text"><span>Java - Java EE</span></div>
             <div className="skills-text"><span>Python</span></div>
 
             <div className="pt-6">
@@ -258,7 +258,7 @@ export default function Home() {
             <div className="pt-6">
               <div className="skills-subtitle">Conception</div>
               <div className="skills-text"><span>Modélisation UML</span></div>
-              <div className="skills-text"><span>Architecture applicative</span></div>
+              <div className="skills-text"><span>Architecture applicative (MVC, MVVM)</span></div>
             </div>
           </div>
 
