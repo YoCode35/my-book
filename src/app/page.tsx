@@ -223,7 +223,7 @@ export default function Home() {
             <div className="skills-title">Front end</div>
             <div className="skills-text"><span>JavaScript / TypeScript</span></div>
             <div className="skills-text"><span>React.js, Next.js, Angular</span></div>
-            <div className="skills-text"><span>Flutter (Web & Mobile - Android)</span></div>
+            <div className="skills-text"><span>Flutter (Web & Mobile - Android) – Gestion d&apos;états : Riverpod</span></div>
             <div className="skills-text"><span>HTML, CSS (Bootstrap, Tailwind)</span></div>
 
             <div className="pt-6">
