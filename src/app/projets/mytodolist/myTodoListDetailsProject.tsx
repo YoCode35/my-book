@@ -19,7 +19,9 @@ export default function MyTodoListDetailsProject() {
       </a>
 
       <h4 className="project-description">
-        Développement d’une application PWA (Progressive Web App) Cross Platform avec Flutter & PHP/MySQL.
+        Développement d’une PWA (Progressive Web App) et Android
+        <br />
+        Stack : Flutter, PHP, MySQL
       </h4>
 
       <p className="unordered-list mb-12">
@@ -66,7 +68,27 @@ export default function MyTodoListDetailsProject() {
           - Évolution de l’architecture (v2) : Découplage complet & Clean Architecture
         </span>
         <p className="text-sm text-slate-400 mb-4 max-w-2xl pl-4">
-          Refactoring moderne vers un écosystème Client/Serveur totalement autonome. Séparation stricte des préoccupations (Presentation, Domain, Data) pour maximiser la scalabilité, l’indépendance du code et la testabilité unitaire.
+          Refactoring moderne vers un écosystème Client/Serveur totalement autonome. Séparation stricte des préoccupations (<strong className="font-semibold text-slate-200">Presentation, Domain, Data</strong>) pour maximiser la scalabilité, l’indépendance du code et la testabilité unitaire.
+          <br /><br />
+          <strong className="text-slate-100 font-bold text-base">Flutter : Clean Architecture en 3 couches</strong>
+          <br />
+          La convention quasi universelle dans l’écosystème Flutter s’inspire de la Clean Architecture de Robert C. Martin, déclinée en 3 couches strictement unidirectionnelles (les dépendances ne vont que vers l’intérieur).
+          <br /><br />
+          <strong className="text-slate-200 font-semibold">Presentation</strong> — tout ce que l’utilisateur voit et touche. Les Widget/Page ne contiennent aucune logique métier. Un Controller ou ViewModel (via Riverpod, Bloc, ou équivalent) orchestre l’état et appelle les use cases.
+          <br />
+          <strong className="text-slate-200 font-semibold">Domain</strong> — le cœur pur de l’application, sans dépendance Flutter ni réseau. On y trouve les entités métier, les interfaces de Repository (contrats abstraits), et éventuellement des UseCase si la logique est complexe. Cette couche est 100 % testable en Dart pur.
+          <br />
+          <strong className="text-slate-200 font-semibold">Data</strong> — implémentation concrète des contrats du Domain. Les RepositoryImpl font le pont entre les DataSource distantes (API HTTP) et locales (Hive, SharedPrefs), en convertissant les DTO JSON en entités métier.
+          <br /><br />
+          <strong className="text-slate-100 font-bold text-base">Back-End : Architecture MVC/3-tiers</strong>
+          <br />
+          Les mêmes 3 couches s’appliquent.
+          <br /><br />
+          <strong className="text-slate-200 font-semibold">API Layer</strong> — les Controller/Route reçoivent la requête HTTP, valident l’entrée, vérifient le JWT via un middleware d’auth, et délèguent immédiatement au service. Aucune logique métier ici.
+          <br />
+          <strong className="text-slate-200 font-semibold">Business Logic</strong> — les Service contiennent les règles métier, les calculs, les orchestrations entre entités. C’est la couche la plus testée unitairement.
+          <br />
+          <strong className="text-slate-200 font-semibold">Data Access</strong> — les Repository abstraient l’accès à la base (SQL, NoSQL, fichiers). L’ORM ou les requêtes brutes vivent ici, jamais au-dessus. Le cache (Redis, SQL query cache) se place également à ce niveau.
         </p>
 
         <Image
@@ -96,7 +118,7 @@ export default function MyTodoListDetailsProject() {
               <strong className="text-slate-100">2. Séparation des responsabilités (Clean Architecture) :</strong>
               <ul className="list-disc pl-8 mt-1 space-y-1 text-slate-400">
                 <li><span className="text-slate-200 font-medium">Couche Présentation (UI & Gestion d’état) :</span> Gère uniquement l’affichage et l’interaction utilisateur, sans aucune logique de calcul.</li>
-                <li><span className="text-slate-200 font-medium">Couche Domaine (Règles métier) :</span> Le cœur de l’application. Elle contient les entités et les contrats abstraits (<span className="font-mono text-xs bg-slate-800 px-1 rounded text-emerald-300">Repository Interfaces</span>), totalement indépendante des frameworks extérieurs.</li>
+                <li><span className="text-slate-200 font-medium">Couche Domaine (Règles métier) :</span> Le cœur de l’application. Elle contient les entités et les contrats abstraits (<span className="font-mono text-xs bg-slate-800 px-1 rounded text-emerald-300">Repository Interfaces</span>), totalement indépendante.</li>
                 <li><span className="text-slate-200 font-medium">Couche Données (Data Layer) :</span> Implémente concrètement les requêtes réseau et l’accès à la base de données (<span className="font-mono text-xs bg-slate-800 px-1 rounded text-emerald-300">Repo Implementation</span>).</li>
               </ul>
             </div>
@@ -155,7 +177,7 @@ export default function MyTodoListDetailsProject() {
       <p className="unordered-list mb-12">
         4. Développement Front-End
         <br /><br />
-        - UI/UX (Prototypage) : Balsamiq et Figma
+        - UI/UX (Prototypage) : Balsamiq
         <br />
         - Infographie : Bitmap logo/illustration
         <br />
@@ -194,8 +216,6 @@ export default function MyTodoListDetailsProject() {
         - Tests fonctionnels
         <br />
         - Tests de performance
-        <br />
-        - Tests de compatibilité
         <br />
         - Tests utilisateurs
       </p>
