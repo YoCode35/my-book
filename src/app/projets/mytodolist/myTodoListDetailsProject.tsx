@@ -19,7 +19,7 @@ export default function MyTodoListDetailsProject() {
       </a>
 
       <h4 className="project-description">
-        Développement d’une PWA (Progressive Web App) et Android
+        Développement d’une PWA (Progressive Web App) et Mobile Android.
         <br />
         Stack : Flutter, PHP, MySQL
       </h4>
@@ -27,23 +27,23 @@ export default function MyTodoListDetailsProject() {
       <p className="unordered-list mb-12">
         1. Planification et Conception
         <br /><br />
-        - Objectifs du projet : Application multiplateforme (Mobile & Web)
+        - Objectifs du projet : Application multiplateforme accessible (Mobile Android & PWA Web)
         <br />
         - Besoins : Fonctionnalités principales et optimisation de l’expérience utilisateur
         <br />
-        - Technique : Architecture de l’application, flux de données, infrastructure et déploiement
+        - Technique : Architecture de l’application, séparation front/back, modélisation des données et infrastructure
         <br />
-        - UI/UX : Interface utilisateur intuitive et ergonomique
+        - UI/UX : Interface utilisateur intuitive axée sur l’accessibilité web/mobile
         <br />
-        - Contraintes et risques : Optimisations spécifiques au développement multiplateforme, sécurité des données (RGPD), scalabilité
+        - Contraintes et risques : Optimisations de performance, sécurité des données (RGPD), scalabilité
       </p>
 
       <div className="unordered-list mb-12">
         <p className="mb-4 font-bold text-lg text-slate-100">2. Spécifications techniques et architecture de l’application</p>
         
-        - Front-end : Flutter (Progressive Web Application)
+        - Front-end : Flutter (Progressive Web Application & Android)
         <br />
-        - Back-end : PHP/MySQL (APIs sécurisées via HTTPS)
+        - Back-end : PHP/MySQL (APIs REST sécurisées via HTTPS)
         <br /><br />
 
         {/* --- ARCHITECTURE INITIALE V1 --- */}
@@ -74,26 +74,26 @@ export default function MyTodoListDetailsProject() {
           <br />
           La convention quasi universelle dans l’écosystème Flutter s’inspire de la Clean Architecture de Robert C. Martin, déclinée en 3 couches strictement unidirectionnelles (les dépendances ne vont que vers l’intérieur).
           <br /><br />
-          <strong className="text-slate-200 font-semibold">Presentation</strong> — tout ce que l’utilisateur voit et touche. Les Widget/Page ne contiennent aucune logique métier. Un Controller ou ViewModel (via Riverpod, Bloc, ou équivalent) orchestre l’état et appelle les use cases.
+          <strong className="text-slate-200 font-semibold">Presentation</strong> — Tout ce que l’utilisateur voit et touche. Les composants graphiques restent épurés grâce à une navigation déclarative gérée par <strong className="text-emerald-300 font-medium">Go Router</strong>. La gestion d’état est centralisée et réactive via <strong className="text-emerald-300 font-medium">Riverpod</strong>, orchestrant l’interface de manière fluide.
           <br />
-          <strong className="text-slate-200 font-semibold">Domain</strong> — le cœur pur de l’application, sans dépendance Flutter ni réseau. On y trouve les entités métier, les interfaces de Repository (contrats abstraits), et éventuellement des UseCase si la logique est complexe. Cette couche est 100 % testable en Dart pur.
+          <strong className="text-slate-200 font-semibold">Domain</strong> — Le cœur pur de l’application, sans dépendance extérieure. On y définit la structure des entités métier et les contrats abstraits (<strong className="font-mono text-xs text-slate-300">Repository Interfaces</strong>). Cette isolation totale garantit un code indépendant et hautement testable.
           <br />
-          <strong className="text-slate-200 font-semibold">Data</strong> — implémentation concrète des contrats du Domain. Les RepositoryImpl font le pont entre les DataSource distantes (API HTTP) et locales (Hive, SharedPrefs), en convertissant les DTO JSON en entités métier.
+          <strong className="text-slate-200 font-semibold">Data</strong> — Implémentation concrète des contrats du Domain. Les RepositoryImpl gèrent les appels asynchrones (<strong className="text-slate-300 font-medium">async calls</strong>) vers l’API REST, convertissent les DTO JSON en entités métier, et contrôlent les sources de données locales ou distantes.
           <br /><br />
           <strong className="text-slate-100 font-bold text-base">Back-End : Architecture MVC/3-tiers</strong>
           <br />
-          Les mêmes 3 couches s’appliquent.
+          Les mêmes 3 couches s’appliquent pour assurer le découplage.
           <br /><br />
-          <strong className="text-slate-200 font-semibold">API Layer</strong> — les Controller/Route reçoivent la requête HTTP, valident l’entrée, vérifient le JWT via un middleware d’auth, et délèguent immédiatement au service. Aucune logique métier ici.
+          <strong className="text-slate-200 font-semibold">API Layer</strong> — Les contrôleurs reçoivent les requêtes de l’API REST, effectuent les validations d’entrée, sécurisent les accès via un middleware d’authentification (<strong className="text-emerald-300 font-medium">Firebase Auth & validation JWT</strong>), et exposent les endpoints.
           <br />
-          <strong className="text-slate-200 font-semibold">Business Logic</strong> — les Service contiennent les règles métier, les calculs, les orchestrations entre entités. C’est la couche la plus testée unitairement.
+          <strong className="text-slate-200 font-semibold">Business Logic</strong> — Les services contiennent les règles métier pures, les calculs et les orchestrations. C’est la couche la plus testée unitairement pour valider la robustesse des traitements.
           <br />
-          <strong className="text-slate-200 font-semibold">Data Access</strong> — les Repository abstraient l’accès à la base (SQL, NoSQL, fichiers). L’ORM ou les requêtes brutes vivent ici, jamais au-dessus. Le cache (Redis, SQL query cache) se place également à ce niveau.
+          <strong className="text-slate-200 font-semibold">Data Access</strong> — Les repositories isolent la modélisation et l’accès à la base de données MySQL. Les requêtes SQL y effectuent les opérations de persistance de façon optimisée pour la performance.
         </p>
 
         <Image
           src="/img/mytodolist/evolution-architecture_2026.png"
-          alt="Architecture cible de l'application MyTodoList (v2 - Écosystème découplé Clean & Feature-First)"
+          alt="Architecture cible de l'application MyTodoList (v2 - Écosystème découplé Clean Architecture)"
           width={700}
           height={764}
           className="img_portfolio mb-6"
@@ -108,7 +108,7 @@ export default function MyTodoListDetailsProject() {
           
           <div className="space-y-4 text-sm text-slate-300">
             <div>
-              <strong className="text-slate-100">1. Découplage Client/Serveur strict :</strong>
+              <strong className="text-slate-100">1. Découplage Client/Serveur et API REST :</strong>
               <p className="text-slate-400 pl-4 mt-1">
                 Le Front-end (Flutter) et le Back-end (API PHP) sont complètement isolés. Ils communiquent exclusivement via des requêtes HTTPS sécurisées et des contrats d’interfaces clairs (JSON), permettant de faire évoluer un système sans jamais impacter l’autre.
               </p>
@@ -117,16 +117,16 @@ export default function MyTodoListDetailsProject() {
             <div>
               <strong className="text-slate-100">2. Séparation des responsabilités (Clean Architecture) :</strong>
               <ul className="list-disc pl-8 mt-1 space-y-1 text-slate-400">
-                <li><span className="text-slate-200 font-medium">Couche Présentation (UI & Gestion d’état) :</span> Gère uniquement l’affichage et l’interaction utilisateur, sans aucune logique de calcul.</li>
-                <li><span className="text-slate-200 font-medium">Couche Domaine (Règles métier) :</span> Le cœur de l’application. Elle contient les entités et les contrats abstraits (<span className="font-mono text-xs bg-slate-800 px-1 rounded text-emerald-300">Repository Interfaces</span>), totalement indépendante.</li>
-                <li><span className="text-slate-200 font-medium">Couche Données (Data Layer) :</span> Implémente concrètement les requêtes réseau et l’accès à la base de données (<span className="font-mono text-xs bg-slate-800 px-1 rounded text-emerald-300">Repo Implementation</span>).</li>
+                <li><span className="text-slate-200 font-medium">Couche Présentation (UI & Gestion d’état) :</span> Routage avec <span className="text-slate-200 font-medium">Go Router</span> et State Management synchrone/asynchrone avec <span className="text-slate-200 font-medium">Riverpod</span>.</li>
+                <li><span className="text-slate-200 font-medium">Couche Domaine (Règles métier) :</span> Modélisation stricte de la structure des entités et des interfaces de Repository abstraites.</li>
+                <li><span className="text-slate-200 font-medium">Couche Données (Data Layer) :</span> Gestion des flux réseaux, traitement des <span className="font-mono text-xs bg-slate-800 px-1 rounded text-emerald-300">async calls</span> et conversion de données.</li>
               </ul>
             </div>
           </div>
         </div>
 
         <span className="block mb-4">
-          - Base de données : MySQL avec une gestion relationnelle des utilisateurs et des tâches
+          - Base de données : MySQL avec une gestion relationnelle (modélisation de la structure des entités)
         </span>
 
         <Image
@@ -157,67 +157,61 @@ export default function MyTodoListDetailsProject() {
         />
 
         <br />
-        - Déploiement : Hébergement mutualisé, serveur web (Apache/Nginx), certificats SSL/TLS
+        - Déploiement : Mise en production sur hébergement mutualisé, serveur web (Apache/Nginx), certificats SSL/TLS
       </div>
 
       <p className="unordered-list mb-12">
         3. Développement Back-End
         <br /><br />
-        - Utilisateur : Inscription/connexion (+ Firebase Authentication)
+        - Authentification / Sécurité : Inscription/connexion sécurisée via Firebase Authentication, validation de tokens JWT et gestion des rôles
         <br />
-        - Compte : Gestion de compte, réinitialisation sécurisée e.mail/mot de passe
+        - Compte : Gestion de compte, réinitialisation sécurisée e-mail/mot de passe
         <br />
-        - Tâches/Listes : API CRUD (Create, Read, Update, Delete)
+        - API et Données : Conception d’endpoints d’une API REST pour la gestion complète des opérations CRUD
         <br />
-        - Notifications : Inscription, mise à jour e.mail, réinitialisation mot de passe
+        - Notifications : Inscription, mise à jour e-mail, réinitialisation mot de passe
         <br />
-        - Sécurité
+        - Sécurité : Validation des entrées et protection contre les failles courantes
       </p>
 
       <p className="unordered-list mb-12">
         4. Développement Front-End
         <br /><br />
-        - UI/UX (Prototypage) : Balsamiq
+        - UI/UX (Prototypage) : Balsamiq axé sur l’ergonomie et l’accessibilité web/mobile
         <br />
-        - Infographie : Bitmap logo/illustration
+        - Architecture & État : Gestion d’état prédictible avec Riverpod et exécution d’appels asynchrones (async calls) performants
         <br />
-        - Barre de navigation et menu contextuel
+        - Navigation : Routage déclaratif et sécurisé configuré avec Go Router
         <br />
-        - Écran d’accueil
+        - Écrans d’accueil & Annexes : Implémentation des interfaces de gestion des listes et des tâches (CRUD)
         <br />
-        - Pages annexes
-        <br />
-        - Écrans d’inscription/connexion
-        <br />
-        - Tâches et listes
-        <br />
-        - Sécurité
+        - Sécurité : Intercepteurs de requêtes et persistance locale sécurisée
       </p>
 
       <p className="unordered-list mb-12">
         5. Sécurité
         <br /><br />
-        - Gestion des rôles
+        - Authentification : Intégration hybride Firebase Auth et validation JWT côté serveur
         <br />
-        - Connexions sécurisées via HTTPS
+        - Gestion des rôles : Contrôle d’accès applicatif strict basé sur les privilèges utilisateurs
         <br />
-        - Sessions sécurisées
+        - Connexions sécurisées via HTTPS et chiffrement des flux de données
         <br />
-        - Mise en place de mécanismes contre les attaques courantes (XSS, injections SQL, CSRF, anti-bruteforce)
+        - Sécurisation des sessions et protection contre les injections SQL, XSS et CSRF
         <br />
-        - Cryptage des mots de passes
+        - Cryptage des mots de passe en base de données
       </p>
 
       <p className="unordered-list mb-12">
-        6. Tests
+        6. Tests et Qualité
         <br /><br />
-        - Tests unitaires
+        - Tests unitaires (Front-End) : Utilisation de flutter_test et Mocktail pour l’isolation et le mock complet des dépendances
         <br />
-        - Tests fonctionnels
+        - Tests unitaires (Back-End) : Écriture de suites de tests avec PHPUnit pour la validation de la logique métier de l’API
         <br />
-        - Tests de performance
+        - Validations fonctionnelles : Tests de conformité des entités de données et des scénarios utilisateurs
         <br />
-        - Tests utilisateurs
+        - Performance : Profilage des temps de réponse applicatifs et optimisation des requêtes de données
       </p>
     </section>
   );

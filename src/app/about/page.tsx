@@ -59,7 +59,8 @@ export default function About() {
 
         <p className="paragraph-custom mt-4">
           Aujourd’hui, je poursuis ma montée en compétences en explorant des stacks
-          modernes comme React.js, Next.js, TypeScript, Node.js ou encore Flutter.
+          modernes comme Angular.js, React.js, Next.js, TypeScript,ou encore Flutter pour le Front et Java, Php et Python pour le Back.
+          Mon approche est méthodique et aborde l’architecture logicielle (MVC, MVVM), l’optimisation des performances (Redis, cache HTTP...), la qualité du code et le responsive design.
           Mon engagement va bien au-delà du code : j’aime concevoir des solutions
           innovantes, performantes et utiles, pensées pour enrichir l’expérience
           utilisateur et optimiser les interactions numériques.
